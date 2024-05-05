@@ -1,0 +1,238 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="chapter">
+  <h1 class="topicTitle"> Változók</h1>
+
+
+  <!-- intro -->
+  <div class="section">
+    <div class="section-title"> Bevezetés </div>
+
+    <div class="celltitle"> Miről szól ez az útmutató? </div>
+    <div class="cell">
+      <p>
+        Ebből az útmutatóból két egyszerű projekten keresztül megtanulhatod, hogy használj változókat a programozásban. A változók olyan eszközök, amelyek segítenek a számítógépnek, hogy megjegyezzen adatokat, amikre később szüksége lesz egy program futtatásakor. Ez lehet szöveges adat (például felhasználónév) vagy szám (például a pontjaid száma egy játékban).
+      </p>
+      <p>
+        A változókra érdemes úgy gondolni, mint cetlikre, amelyekre felírhatod azokat a dolgokat, amiket meg kell jegyezned. Jó ötlet a cetlinek címet is adni, hogy később megtaláld, amit ráírtál: például "felhasználónév", "pont" stb.<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/variables/01.jpg" alt="figure">
+        Később, ha a felírt adat megváltozik (módosul a felhasználónév vagy további pontokat szerzett a játékos), a cetlit is átírjuk. Akár 5, akár 500 pontja van a játékosnak, megtaláljuk a pontos értéket a "pont" cetlin.<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/variables/02.jpg" alt="figure">
+      </p>
+      <p>
+        A változók is hasonlóan működnek. A változó egy olyan érték, adat (szám vagy szöveg), amelynek adtunk egy nevet. A változó neve felel meg a cetli címének, a változó értéke pedig a cím alá felírt adatnak. Ahogy a cetli tartalma, úgy a változó értéke is megváltozhat a projekted futása során; ezért is nevezik változónak.
+      </p>
+      <p>
+        Az első projekt nagyon egyszeű és rövid: egy már elkészített játékhoz fogsz hozzáadni egy változót, ezzel javítva a játékélményen. Ezzel a projekttel megtanulhatod, hogy hozz létre változót, és hogy használd a Scratch változó-blokkjait. A végeredményt itt találod:<br>
+        <iframe src="https://scratch.mit.edu/projects/997801417/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+      <p>
+        A második projekt egy kicsit összetettebb. Egy kattintásszámláló játékot fogsz elkészítei, amely négy változó használatát hangolja össze. Ennek során a változók használatának négy különböző módját tanulhatod meg. Az eredményt itt találod:
+        <iframe src="https://scratch.mit.edu/projects/997833277/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Tartalom </div>
+    <div class="cell">
+      <ul>
+        <li><a href="#switchie">Pont változó hozzáadása a Switchie játékhoz</a></li>
+        <li><a href="#click">Különféle változók a kattintásszámláló játékban</a></li>
+      </ul>
+    </div> <!-- cell -->
+  </div> <!-- intro -->
+
+    <!-- switchie -->
+    <div class="section">
+      <div class="section-title" id="switchie"> Pont változó hozzáadása a Switchie játékhoz </div>
+
+      <div class="celltitle"> Preparations </div>
+      <div class="cell">
+        <p>
+          Nyisd meg <a href="https://scratch.mit.edu/projects/997826689/">ezt a kezdőprojektet</a>, és kattints a "remixelés" gombra. Próbáld is ki a játékot, izgalmas! :) Később ez is bekerül majd a tananyagba. Hiányzik azonban belőle egy fontos rész: nem lehet nyerni, csak veszteni. Ebben a projektmunkában pontozást adunk a játékhoz, hogy ha a játékos elég sok pontot gyűjt, nyerni tudjon.<br>
+          <img class="figure" width="40%" src="curriculum/img/hun/variables/03.png" alt="figure">
+        </p>
+        <p>
+          De mielőtt belevágnánk, nézd meg, milyen szereplői vannak a játéknak, és mi a kódjuk. A kód nagy része már ismerős lesz a számodra, ha a szereplőmozgatási útmutatót már feldolgoztad. Néhány elem még új lehet neked, például a klónozás vagy az üzenetküldés, de ezek is nagyon intuitívek, meg fogod érteni, miről van szó.
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Változó létrehozása </div>
+      <div class="cell">
+        <p>
+          Görgess a blokk panel Változók csoportjához, itt tudod a "pont" változót hozzáadni a projektedhez.<br>
+          <img class="figure" width="40%" src="curriculum/img/hun/variables/04.png" alt="figure"><br>
+          Jelenleg ez a rész teljesen üres; de amint lérehozol egy változót, különféle blokkokkal telik meg. Kattints a "Változó létrehozása" gombra. Egy kis kitöltős felület ugrik fel:<br>
+          <img class="figure" width="50%" src="curriculum/img/hun/variables/05.png" alt="figure"><br>
+          A változó nevéhez írd azt, hogy "pont", és minden mást hagyj úgy, ahogy van. (A "kiválasztott szereplőé" opció akkor lesz hasznos, ha duplikálod vagy klónozod a szereplőidet, és minden példány változója más értéket kap -- ahogy a kurzusodon részt vevő gyerekek életkora s más és más; vagy ahogy egy harcolós játékban is minden karakternek más az életereje.) A megosztott változók csak az online Scratch-ben találhatók meg, és csak azoknak a scratchezőknek elérhetők, akik már megosztottak néhány projektet, és bevonódtak a Scratch közösségi életébe mások projektjeinek lájkolással, kommentelésével és követésével. A megosztott változók értéke a Scratch szerverein tárolódik, és ez az érték ugyanaz lesz mindenkinek, akér Vietnámból, akár Grönlandról nyit meg egy Scratch projektet. Az ilyen változókat többnyire egy-egy játék világrekordjának tárolására használják, vagy annak a számolására, hogy hányszor indítottak el egy Scratch projektet.
+        </p>
+        <p>
+          Miután létrehoztad az új változót, öt új blokk jelenik meg:<br>
+          <img class="figure" width="40%" src="curriculum/img/hun/variables/06.png" alt="figure"><br>
+          A felső, lekerekített blokkal tudod leolvasni egy változó értékét. Ezt fogod használni, amikor azt kell ellenőrizni, hogy a játékos pontja elért-e egy adott értéket. Mind a "legyen", mind a "változzon" blokk arra szolgál, hogy a változó új értéket kapjon, ezért ezeket eleinte könnyű összekeverni. A következő a különbség köztük. A "legyen" teljesen új értéket ad a változónak, függetlenül attól, hogy korábban mi volt az értéke. Ha például egy új szereplőt vezetsz be egy történetmesélős projektbe, akkor az illető életkorát ezzel a blokkal adhatod meg:<br>
+          <img class="figure" width="30%" src="curriculum/img/hun/variables/07.png" alt="figure"><br>
+          A "változzon" blokkot akkor használjuk, amikor van egy számváltozónk, és annak az értékét szeretnénk valamennyivel növelni vagy csökkenteni. Az imélnti példához visszatérve: ha a szereplődnek születésnapja van a történetben, a "kor" változó értéke eggyel fog változni:<br>
+          <img class="figure" width="30%" src="curriculum/img/hun/variables/08.png" alt="figure"><br>
+          Végül az utolsó két blokk hasonló a Kinézet csoport "jelenj meg" és "tűnj el" blokkjaihoz. Az újonnan létrehozott változók megjelennek a színpadon, mintha maguk is szereplők lennének:<br>
+          <img class="figure" width="60%" src="curriculum/img/hun/variables/09.png" alt="figure"><br>
+          A két blokkal eltűntetheted és megjeleníthetsz egy változót. Ugyanezt kézzel is megteheted, a lekerekített blokk melletti négyzetbe kattintva.<br>
+          <img class="figure" width="40%" src="curriculum/img/hun/variables/10.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> A pont beállítása és változtatása </div>
+      <div class="cell">
+        <p>
+          Itt az ideje, hogy használatba vegyük a "pont" változót. De mindenekelőtt: melyik szereplő feladata lesz a változó kezelése? Az a helyzet, hogy mind a "Switchie", mind a "Spikes" szereplő alkalmas a feladatra; de természetesebbnek tűnik, ha Scratchie-re bízzuk a dolgot, végtére is ő kapja a pontokat.<br>
+          <img class="figure" width="25%" src="curriculum/img/hun/variables/11.png" alt="figure">
+        </p>
+        <p>
+          A játék elején érdemes lenullázni a pontokat:<br>
+          <img class="figure" width="25%" src="curriculum/img/hun/variables/12.png" alt="figure">
+          Jó ötlet Scratchie-t ponttal jutalmazni minde sikeres ugrásért, akár alulról felülre, akár visszafelé ugrik:<br>
+          <img class="figure" width="40%" src="curriculum/img/hun/variables/13.png" alt="figure">
+        </p>
+        <p>
+          Indítsd újra a játékot, és éld át az élményt, hogy jutalmat kapsz, ha ügyesen játszol! :)<br>
+          <img class="figure" width="60%" src="curriculum/img/hun/variables/14.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> A pontszám figyelése </div>
+      <div class="cell">
+        <p>
+          A játékos akkor nyer, ha elér egy bizonyos számú pontot; mondjuk huszat. Ha belenézel a "Title" szereplőbe, láthatod, hogy itt már a jelmez is és a kód is készen áll a nyeréshez:<br>
+          <img class="figure" width="30%" src="curriculum/img/hun/variables/15.png" alt="figure"><br>
+          Azt is láthatod, <i>mit</i> kell tenni, hogy a nyerés-felirat megjelenjen; már csak azt kell kitalálni, <i>mikor</i> kellene ezt tenni. Azt mondtuk, hogy a játékos akkor nyer, ha a pontszáma elérte a huszat. A "várj eddig" blokk kínálkozk a feladatra, így a kód nagy vonalakban máris összeáll:<br>
+          <img class="figure" width="25%" src="curriculum/img/hun/variables/16.png" alt="figure"><br>
+          A hatszögű mezőből hiányzik még az a feltétel, hogy a pontszám elérte a huszat. Annyit kell még kitalálni, hogy lehet Scratch-blokkokkal megfogalmazni azt, hogy "elérte". Nos, az "elérte" nem jelent mást, mint hogy a pontszám <i>annyi mint</i> 20. Matekban ezt egyenlőségjellel fejezzük ki, és ez Scratch-ben sincs másképp. A Műveletek csoportban találsz "=" blokkot:<br>
+          <img class="figure" width="35%" src="curriculum/img/hun/variables/17.png" alt="figure">
+        </p>
+        <p>
+          Indítsd újra a játékot, és próbáld meg megnyerni. Ha nehezen megy, akkor csökkentsd a határt 20-ról 10-re vagy akár 1-re a teszteléshez; később, amikor kész vagy a projektmunkával, majd visszaállítod.
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> A változó megjelenítése és eltűntetése </div>
+      <div class="cell">
+        <p>
+          Két változó-blokk van, amit nem használtunk még; most sort kerítünk rájuk is. A kezdőképernyőn, rögtön a projekt indítása után nem szükséges látni a pontszámot. A zöld zászlós eseményblokk alá tehetsz egy "változó tűnjön el" blokkot:<br>
+          <img class="figure" width="25%" src="curriculum/img/hun/variables/18.png" alt="figure"><br>
+          Amikor aztán elindul a játék és lenullázódik a pontszám, ideje megjeleníteni a változót:<br>
+          <img class="figure" width="35%" src="curriculum/img/hun/variables/19.png" alt="figure">
+        </p>
+        <p>
+          És kész is vagy! :) Megtanultad, hogy kell változót létrehozni, és hogy kell használni a Változó csoport öt blokkját.
+        </p>
+      </div> <!-- cell -->
+
+    </div> <!-- switchie -->
+
+    <!-- click -->
+    <div class="section">
+      <div class="section-title" id="click"> Különféle változók a kattintásszámláló játékban </div>
+
+      <div class="celltitle"> Előkészületek </div>
+      <div class="cell">
+        <p>
+          A második projektben egy kattintgatós játékot fejlesztünk, amely több változót használ egyszerre. A projekt fő célja az, hog megtanuld összehangolni a különböző változókat:<br>
+          <img class="figure" width="20%" src="curriculum/img/hun/variables/20.png" alt="figure"><br>
+          A játék egy egyszerűsített változat később önálló projektként is bekerül majd a tananyagba.
+        </p>
+        <p>
+          Kezdj egy teljesen új projektet, búcsúzz el Scratchie-től, és adj a projekthez egy gomb szereplőt:<br>
+          <img class="figure" width="60%" src="curriculum/img/hun/variables/21.png" alt="figure"><br>
+          Nyisd meg a grafikus szerkesztőt, és írd rá a gombra, hogy "Kattints rám!":<br>
+          <img class="figure" width="60%" src="curriculum/img/hun/variables/22.png" alt="figure"><br>
+          Végül keress egy jó hátteret a projektnek, és helyezd el középre a gombot. A méretét is megnövelheted, hogy könnyebb legyen a kattintás:<br>
+          <img class="figure" width="60%" src="curriculum/img/hun/variables/23.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Kattintásszámlálás </div>
+      <div class="cell">
+        <p>
+          Kezdjük el számolni a kattintásokat. Kattints a "Kód" fülre, és nevezd át a beépített "az én változóm" változót arra, hogy "kattintás". A mellette lévő mezőre is kattints rá, hogy megjelenjen a színpadon:<br>
+          <img class="figure" width="45%" src="curriculum/img/hun/variables/24.png" alt="figure">
+          <img class="figure" width="35%" src="curriculum/img/hun/variables/25.png" alt="figure"><br>
+          <img class="figure" width="20%" src="curriculum/img/hun/variables/26.png" alt="figure">
+          (Természetesen törölheted is a beépített változót, és létrehozhatsz egy újat.)
+        </p>
+        <p>
+          A számlálás a projekt elején nulláról indul:<br>
+          <img class="figure" width="20%" src="curriculum/img/hun/variables/27.png" alt="figure"><br>
+          Valahányszor a szereplőre kattintunk, eggyel nő a számláló értéke:<br>
+          <img class="figure" width="25%" src="curriculum/img/hun/variables/28.png" alt="figure"><br>
+          Megvan az első siker; láthatod, hogy valahányszor a színpadon a gombra kattintasz, nő a számláló:<br>
+          <img class="figure" width="60%" src="curriculum/img/hun/variables/29.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Visszaszámlálás </div>
+      <div class="cell">
+        <p>
+          Hozz létre még egy változót "idő" néven. Mondjuk, hogy a játékosnak 30 másodperce van kattintgatni. Tehát a változó 30-ról indul, és másodpercenként csökken egyet, amíg a nullához nem ér:<br>
+          <img class="figure" width="25%" src="curriculum/img/hun/variables/31.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Nincs időn túli kattintás </div>
+      <div class="cell">
+        <p>
+          Most szépen lezajlik a visszaszámlálás, de akkor is tovább tudsz kattintgatni, ha az idő már nullán áll. Az sem segít, ha teszel a kód végére egy "minden álljon le" blokkot, hiszen a kattintás esemény újraéleszti a projektet:<br>
+          <img class="figure" width="25%" src="curriculum/img/hun/variables/32.png" alt="figure">
+        </p>
+        <p>
+          Ehelyett azt fogjuk megnézni minden kattintáskor, hogy az "idő" változó elérte-e a nullát. Már tudjuk, hogy kell változókat feltételekben használni, de most "=" helyett "<"-re lesz szükség:<br>
+          <img class="figure" width="25%" src="curriculum/img/hun/variables/33.png" alt="figure"><br>
+          Now you can't click after the countdown ended.
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Hányat kattintottál másodpercenként? </div>
+      <div class="cell">
+        <p>
+          Hozz létre még egy "kattintás per másodperc" változót us, ami azt fogja mérni, hogy hányat kattintott a játékos másodpercenként. Ennek az értékét minden alkalommal módodítjuk, amikor az idő változó frissül. A matek egyszerű: a kattintások számát osztjuk el a hátra lévő idővel. A szükséges blokkokat a Műveletek csoportban találod meg:<br>
+          <img class="figure" width="50%" src="curriculum/img/hun/variables/34.png" alt="figure"><br>
+        </p>
+        <p>
+          A műveletek ilyen egymásba ágyazása nagyon hasznos eszköz a Scratch programozásban. Annak felel meg, amikor matekban vagy szöveges programnyelvekben zárójeles kifejezéseket használunk. A Kocka Tanoda foglalkozásokon általában nem megyünk ilyen mélyre a matekban; de egyszer érdemes beleásni magadat a Scratch-nek ezekbe a bugyraiba. Ha nincs ehhez kedved, nyugodtan ugorj át a következő pontra.
+        </p>
+        <p>
+          Senki nem szereti a hosszú tizedestörteket. Használd a "kerekítve" blokkot, hogy megszabadulj tőlük:<br>
+          <img class="figure" width="50%" src="curriculum/img/hun/variables/35.png" alt="figure"><br>
+          Ha viszont egy tizedesjegyet azért szeretnél megtartani, arra is van egy trükk: kerekítés előtt szorozd meg tízzel a számot, aztán kerekítés után oszd el tízzel az eredményt:<br>
+          <img class="figure" width="55%" src="curriculum/img/hun/variables/36.png" alt="figure"><br>
+          Vagány, mi? :) Bárcsak látná a középiskolás matektanárod...
+        </p>
+        <p>
+          Most már nyomon tudod követni a másodpercenkénti átlagos kattintásszámot. Meg tudod tartani hat felett?
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Visszaszámlálás az első kattintástól </div>
+      <div class="cell">
+        <p>
+          Még egy utolsó simítás a projekten. Jó lenne, ha a visszaszámlálás csak az első kattintáskor indulna el. Hogy ezt elérd érdemes még egy "játék elindult?" változót is bevezetni. Ennek a változónak két értéke lehet: "igen" és "nem". A játék kezdetén állítsd "nem"-re, és a visszaszámlálás előtt várj addig, amíg "igen"-re vált:<br>
+          <img class="figure" width="35%" src="curriculum/img/hun/variables/37.png" alt="figure"> <br>
+        </p>
+        <p>
+          A kattintás kódjához pedig adj még egy blokkot, ami "igen"-re változtatja a változó értékét:
+          Add one more block to the script of the clicking, setting this variable to "yes":<br>
+          <img class="figure" width="30%" src="curriculum/img/hun/variables/38.png" alt="figure">
+        </p>
+        <p>
+          Az ilyen változókat állapotváltozónak hívjuk, és nagyon hasznosak abban, hogy számon tartsuk és lekérdezzük a projektünk aktuális állapotát
+        </p>
+        <p>
+          Próbáld ki még egyszer a projektedet; most már kifogástalanul fog működni. És vess egy utolsó pillantást a kódra is; nem hosszú, de meglehetősen komplex, legyél büszke rá! :) <br>
+          <img class="figure" width="70%" src="curriculum/img/hun/variables/39.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+
+    </div> <!-- click -->
+
+
+
+</div> <!-- chapter -->
+

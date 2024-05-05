@@ -1,0 +1,195 @@
+<div class="section">
+  <div class="section-title topicTitle">Space game</div>
+
+  <div class="celltitle">What is this project about?</div>
+  <div class="cell">
+    <p>
+      This is a typical arcade style "shoot and dodge" game. It is slightly more difficult than the Dino game, so it is only recommended when kids have already had a few sessions of experience with Scratch. Here is the end result:
+      <iframe src="https://scratch.mit.edu/projects/1010629481/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </p>
+    <p>
+      In this guide we will assume that the kids are already familiar with the basics of movement and cloning. If they are not, this project may be a bit too complex to introduce it.
+    </p>
+  </div>
+
+  <div class="celltitle">Preparations</div>
+  <div class="cell">
+    <p>
+      After showing the project to the group, let them open <a href="https://scratch.mit.edu/projects/1010690242/">this initial version</a>. This has all the sprites and graphics, and about half the code.<br>
+      <img class="figure" width="60%" src="curriculum/img/eng/space/01.png" alt="figure"><br>
+      In particular, 8 scripts in 3 sprites are incomplete. The project work will be the completion of the code. The incomplete parts are easy to spot:<br>
+      <img class="figure" width="80%" src="curriculum/img/eng/space/02.png" alt="figure"><br>
+      By the end of the project work, these will all be filled with code:<br>
+      <img class="figure" width="70%" src="curriculum/img/eng/space/03.png" alt="figure">
+    </p>
+    <p>
+      Start the game with the green flag. It passes the title, but then the spaceship just stays idle, and nothing happens. Discuss with the kids what features are missing, and write a list of the tasks. You will come up by something like this:
+      <ul>
+        <li>moving the spaceship</li>
+        <li>enemy ships coming</li>
+        <li>game over when touching enemy or its bullet</li>
+        <li>shooting</li>
+        <li>enemy ships are destroyed when touching bullet</li>
+        <li>enemy ships shooting</li>
+        <li>displaying score</li>
+      </ul>
+      Out of these, the last two are pre-coded and included in the project, becuse they are slightly more complicated than the previous ones. So you can cross these. Coding the rest will be your project work for the session.
+    </p>
+    <p>
+      Make shooting optional. It's very cool if you have enough time for it; but the game is playable without it just as well. So your final list of tasks will look something like this:
+      <ul>
+        <li>Must have:
+          <ul>
+            <li>moving the spaceship</li>
+            <li>enemy ships coming</li>
+            <li>game over when touching enemy or its bullet</li>
+          </ul>
+        </li>
+        <li>Nice to have:
+          <ul>
+            <li>shooting</li>
+            <li>enemy ships are destroyed when touching bullet</li>
+          </ul>
+        </li>
+        <li> Already in the code:
+          <ul>
+            <li>enemy ships shooting</li>
+            <li>displaying score</li>
+          </ul>
+        </li>
+      </ul>
+      This distinction between "must have" and "nice to have" tasks is very useful in project management.
+    </p>
+  </div>
+
+  <div class="celltitle">Step 1: Moving the spaceship</div>
+  <div class="cell">
+    <p>
+      The spaceship moves when the left or right arrow keys are pressed (of course, other keys are just as good, like A and D for gamers). You have probably done this before. Remind the kids that there are two ways to sense keypress, and ask them which one is better for game control, and clarify that the light blue sensing block is clearly better when the player holds down a key during gameplay. (This is discussed in detail at the end of the Motion guide). The hexagonal block fits in a "wait until" one (or "if-then", it doesn't matter in this case), so the first script will be straightforward:<br>
+      <img class="figure" width="40%" src="curriculum/img/eng/space/04.png" alt="figure">
+    </p>
+    <p>
+      It is a good idea to let the kids put together the code for the other direction themselves. If they get stuck, remind them of negative numbers with a guiding question: "If right is plus five, what can left be?"<br>
+      <img class="figure" width="90%" src="curriculum/img/eng/space/05.png" alt="figure">
+    </p>
+    <p>
+      Restart the project to check if the spaceship moves properly.
+    </p>
+  </div>
+
+  <div class="celltitle">Step 2: Enemies coming</div>
+  <div class="cell">
+    <p>
+      For the next task, switch to the "enemy" sprite.
+    </p>
+    <p>
+      This part of the code is pretty standard. You can find it in details in the "Rainfall" project of the Cloning guide, as well s in the "Flower shower" miniproject or the "Snowfall" project. We will assume here that the kids are already familiar with generating and moving clones. If this is not the case, make sure you use these guides when preparing and teaching. Make sure you duscuss every step with the kids.
+    </p>
+    <p>
+      Let's start with moving a single enemy spaceship from the top to the bottom. To refresh the kids' knowledge about coordinates, switch to the coorinates background (it's placed in the project for your convenience :) ) to check the coordinates of the edges:<br>
+      <img class="figure" width="60%" src="curriculum/img/eng/space/06.png" alt="figure"><br>
+      Now the script will be easy. <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/space/07.png" alt="figure"><br>
+      Restart the project to see the enemy spaceship moving.
+    </p>
+    <p>
+      Now randomize its horizontal position: <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/space/08.png" alt="figure"><br>
+      Restart the project. This is how a single enemy spaceship moves. Time to clone them.
+    </p>
+    <p>
+      As always, this requires a bit of restructuring your code. Put the movement block aside, as they will belong to the clones: <br>
+      <img class="figure" width="80%" src="curriculum/img/eng/space/09.png" alt="figure"><br>
+      The "forever" loop will generate the clones: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/space/10.png" alt="figure"><br>
+      As mentioned before, the clones will move from top to bottom, and then destroyed: <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/space/11.png" alt="figure"><br>
+      Restart the project to see the result. Uh oh, too many spaceships... :)
+    </p>
+    <p>
+      To reduce the number of enemy ships, you will need a "wait" block: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/space/12.png" alt="figure"><br>
+      It requires some experimenting to set the delay properly. It is a good idea to use another random block here, but feel free to skip this: <br>
+      <img class="figure" width="40%" src="curriculum/img/eng/space/13.png" alt="figure"><br>
+    </p>
+    <p>
+      Of course, the delay (the number in the "wait" block) and the duration of falling (the first number in the "glide" block) may differ between the kids' projects, making the gameplay harder or easier. Never force kids to copy your exact version.
+    </p>
+  </div>
+
+  <div class="celltitle">Step 3: Touch sensing and game over</div>
+  <div class="cell">
+    <p>
+      This is the last "must have" task; you are close to finishing the project with success. Switch back to the "hero" sprite, and find the incomplete script that sends the "game over" message: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/space/14.png" alt="figure"><br>
+      In fact the script is almost complete; all you have to do is fill the hexagonal slot with sensing blocks. But there is a twist. The game ends when the spaceship touches <i>either</i> an enemy ship <i>or</i> an enemy bullet. So we need two sensing blocks, but there is only one spot: <br>
+      <img class="figure" width="70%" src="curriculum/img/eng/space/15.png" alt="figure"><br>
+      This is a kind of problem that is puzzling at first, but becomes almost trivial once you have solved it once. Remember that Scratch is a language, so whatever you want from the game, if you can phrase it properly in normal language, you can also translate it. We said "either-or" when phrasing the task. Does Scratch have an "or" block? Let's see who finds it first! Kids love these block searching contests. Once they found it, completing the code will become simple: <br>
+      <img class="figure" width="80%" src="curriculum/img/eng/space/16.png" alt="figure"><br>
+    </p>
+    <p>
+      Restart the game to check if everything works as it should.
+    </p>
+  </div>
+
+  <div class="celltitle">Step 3a: Finishing the game without shooting</div>
+  <div class="cell">
+    <p>
+      The rest of the code is optional. If you have run out of time and want to finish here, just add a block for counting the score. Discuss with the kids what should be rewarded with score. If they say that it is dodging enemy ships and bullets, first switch to the "enemy" sprite and insert a "change score by 1" block before deleting a clone: <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/space/17.png" alt="figure"><br>
+      Now switch to the "enemy bullet" sprite. Also this is the first time you see its code, you will quickly find the part where the clones get deleted, and do the same as before: <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/space/18.png" alt="figure">
+    </p>
+    <p>
+      You are ready. Restart the code and enjoy the game! :)
+    </p>
+    <p>
+      Remember: if you decide to take the following two steps, skip this one.
+    </p>
+  </div>
+
+  <div class="celltitle">Step 4: Shooting</div>
+  <div class="cell">
+    <p>
+      If you still have some time, now switch to the "bullet" sprite. This is another gliding sprite, so the code will be somewhat similar to that of the enemy ships. But the differences might be new to the kids, so the description will be more detailed, and make sure you discuss every detail properly during the session, too. You can start with key sensing: <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/space/19.png" alt="figure"><br>
+      The bullet will glide upwards; but where does it start from? Wherever the spaceship is. There's a special "go to" block for this; you just have to switch it from "mouse pointer" to "hero": <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/space/20.png" alt="figure"><br>
+      The rest is easy: <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/space/21.png" alt="figure"><br>
+      Restart the project to see if now you can shoot. If you are a perfectionist and don't want the bullet to be above the ship, add a "go to back layer" block (switch to "back" in the "go to front layer" block): <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/space/22.png" alt="figure"><br>
+    </p>
+    <p>
+      What if we want to shoot rounds of bullets? This requires cloning. It will be easy, but if you are running out of time, feel free to skip it.
+    </p>
+    <p>
+      Just as you did with the spaceship, put the look and motion blocks aside: <br>
+      <img class="figure" width="90%" src="curriculum/img/eng/space/23.png" alt="figure"><br>
+      Clone generation goes in the "forever" block: <br>
+      <img class="figure" width="40%" src="curriculum/img/eng/space/24.png" alt="figure"><br>
+      The clones go to the spaceship, glide up, and get destroyed: <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/space/25.png" alt="figure"><br>
+      To avoid shooting too many bullets and thus making the game too easy, you can add a bit of delay to the cloning script: <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/space/26.png" alt="figure"><br>
+      Again, the exact amount of delay is a matter of experimentation. Let the kids try and set different numbers until they like the result.
+    </p>
+  </div>
+
+  <div class="celltitle">Step 5: Bullet destroys enemy ships</div>
+  <div class="cell">
+    <p>
+      This will very similar to touch sensing in the "Game over" step. Once again, switch back to the "enemy" sprite, and find the incomplete code labelled "touching bullet": <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/space/27.png" alt="figure"><br>
+      This is so easy now that you have completed a similar code! Just put a sensing block in the hexagonal spot: <br>
+      <img class="figure" width="35%" src="curriculum/img/eng/space/28.png" alt="figure"><br>
+      And don't forget to reward the player for successfully destroying an enemy ship: <br>
+      <img class="figure" width="35%" src="curriculum/img/eng/space/29.png" alt="figure"><br>
+    </p>
+    <p>
+      ...Aaand done! :) What a project work, enjoy the game be proud of yourselves!
+    </p>
+  </div>
+
+
+</div> <!-- section -->

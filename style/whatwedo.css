@@ -1,0 +1,26 @@
+.wwdContainer {
+  width: 100%;
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.wwdHeader {
+  margin-top: 18px;
+}
+
+.wwdHeader.ukr {
+  font-size: 48px;
+}
+
+.wwdParagraph {
+  width: 80%;
+  font-size: large;
+}
+
+.wwdImage {
+  margin-top: 12px;
+}

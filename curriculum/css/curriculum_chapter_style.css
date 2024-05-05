@@ -1,0 +1,51 @@
+.curriculumChapterContainer * { color: var(--textcolor); }
+
+.chapter-title { text-align: center; }
+
+p { font-size: 18px;}
+li { font-size: 18px;}
+
+.figure { border-radius: 6px; }
+
+.section {
+  /* position: relative; */
+  background-color: var(--bgcolor-dark);
+  width: 100%;
+  margin-top: 60px;
+  border-radius: 12px;
+  box-shadow: 6px 6px 3px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  /* display: grid;
+  grid-template-areas:
+    "title title"
+    "x     y";
+  grid-template-columns: 1fr 4fr; */
+}
+
+.section-title {
+  grid-area: title;
+  font-family: var(--fancyfont), sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  background-color: var(--bgcolor-main);
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+}
+
+.celltitle {
+  /* grid-area: celltitle; */
+  font-family: var(--fancyfont), sans-serif;
+  font-size: 30px;
+  padding: 6px;
+}
+
+.cell { padding: 6px; }
+
+.twocolumns {
+  display: flex;
+  width: 100%;
+}
+
+.column { display: 50%; }

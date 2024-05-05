@@ -1,0 +1,162 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+<div class="chapter">
+  <h1 class="topicTitle"> Messaging in Scratch</h1>
+
+
+  <div class="section">
+    <div class="section-title"> Introduction </div>
+
+    <div class="celltitle"> What is this guide about? </div>
+    <div class="cell">
+      <p>
+        This guide will let you learn how to use message broadcasting and receiving in Scratch. This is a powerful tool that lets sprites of a project interact in the background, coordinating their behavior. The guide consists of a single project work. This project is a dialogue between two sprites. Here's the result:
+      </p>
+      <iframe src="https://scratch.mit.edu/projects/1002634845/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <p>
+        This project demonstrates how you can support the interaction between your sprites by message broadcasting. Although the project is simple, it is a very important one, as it can be used as the basis of any storytelling project.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">How do messages work in Scratch?</div>
+    <div class="cell">
+      <p>
+        You can find the message blocks at the end of the Events group:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/01.png" alt="figure"><br>
+        Messages are typically used to coordinate the behavior of sprites. For example, we have a "Wile E. Coyote" sprite that at some point sends the "explode!" message with the "broadcast message" block. And we also have a "dymamite" sprite that has a "when I receive" event block with the same "explode!" message. The dynamite sprite will get the message sent by Wilde Coyote, and the blocks under the event block get executed. This is how the "broadcast" and "receive" blocks cooperate. (The third, "broadcast and wait" block is in our experience a bit confusing for kids, so we usually avoid using it.)
+      </p>
+      <p>
+        You can set the text of the message clicking on the downward white triangle on the "broadcast" or the "receive" block, and clicking on "new message":<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/02.png" alt="figure"><br>
+        The text of the message does not really matter; what matters is that the broadcaster block and the receiver block have the same message. However, it is a good idea to use meaningful text; "message1", "message2", "message3" etc. will result in chaos when you have dozens of messages in a project.
+      </p>
+      <p>
+        Kids often get confused by the apparent similarity between the message blocks and the "say" blocks of the Looks group:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/03.png" alt="figure"><br>
+        However, there is nothing in common between the "say" blocks and the message blocks, besides that both use texts. A "say" block merely alters how a sprite is displayed, putting a speech bubble over it; it is meant for the audience, the user of the project, not for other sprites. A broadcasted message, in turn, is meant for other sprites, not the audience; the user of a project will not even notice that a message is sent within the project, only its consequences. Teaching this distinction to kids will be discussed in more detail in the "Gamification" guide.
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+  <div class="section">
+    <div class="section-title" id="dialogue"> Project work: dialogue between two sprites </div>
+
+    <div class="celltitle">Preparations</div>
+    <div class="cell">
+      <p>
+        Create a new project and add two of your favorite sprites that will have a conversation. If you feel like, you can add a background, too.<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/messaging/04.png" alt="figure">
+        We will refer to the sprites of the project as "Giga" and "Nano"; of course, you can call yours as you like.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Giga starts the conversation</div>
+    <div class="cell">
+      <p>
+        Let's begin the project by Giga entering the scene. We will do this with "go to" and "glide" blocks, just as you learned in the Motion guide. Place Giga to the left edge, and pick a "go to" block with her current x and y values:<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/messaging/05.png" alt="figure"><br>
+        <img class="figure" width="25%" src="curriculum/img/eng/messaging/06.png" alt="figure"><br>
+        Now place her back in the middle, and pick a "glide" block with the new x and y values:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/07.png" alt="figure"><br>
+        Once arrived, let Giga great her friend:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/08.png" alt="figure"><br>
+        Start the project to check if everything goes as planned.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Nano enters the conversation</div>
+    <div class="cell">
+      <p>
+        Now switch to Nano to put together some code for him. You may want to start with a "say" block (and a "go to" block to set the sprite's initial position):<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/09.png" alt="figure"><br>
+        When you restart the project, you will see that it doesn't work; Nano starts speaking before Giga even arrives. A first idea might be to delay Nano's answer with a "wait" block. Giga spends 1 second to gliding and 2 seconds to talking, so the delay will be 3 seconds:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/10.png" alt="figure"><br>
+        This apparently works; the answer starts just in time.
+      </p>
+      <p>
+        Let's add some movement to make the conversation more interesting, using techniques you learned in the Motion guide. Again, place your sprite before picking a "go to" or "glide" block, so that the coordinates are set:<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/messaging/11.png" alt="figure"><br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/12.png" alt="figure">
+      </p>
+      <p>
+        So far so good; everything happens as it should, and when it should. However, the code is getting long. It is not easy to find your way around a script with too many blocks. As we will see, this is not the only problem.
+      </p>
+      <p>
+        To make Giga react to Nano's stunt in time, we need another wait block. But how many seconds should we put in it? 12 repetitions take about half a second; 2 + 2 + 0.3 + 0.5 + 0.3 = 5.1, so Giga has to wait about 5 seconds:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/13.png" alt="figure">
+      </p>
+      <p>
+        If you restart the project, you can see that once again, everything works. But doing such hard math for a simple animation is not fair; there has to be a way to avoid calculating delay times. Think about it; what if later you change your mind and add another sentence or alter the movement? You have to recalculate timing every time you modify a detail. This is a serious design problem; the code as it is is difficult to write and difficult to maintain.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Timing with messages</div>
+    <div class="cell">
+      <p>
+        Instead of hard-coding the delays, let's synchronize the conversaton with messages. When Giga finishes her greeting, she can poke Nano with a message:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/14.png" alt="figure"><br>
+        Nano can start his part when he receives this message, and poke Giga back when he finished his stunt:<br>
+        <img class="figure" width="40%" src="curriculum/img/eng/messaging/15.png" alt="figure"><br>
+        Now it's Giga's turn again:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/16.png" alt="figure">
+      </p>
+      <p>
+        If you restart the project, you can see that the story remained the same. What has changed is the design of your project. Now the code is split into small scripts, each describing one part of the conversation. And the "wait" blocks have disappeared, along with the hard math.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Continuing the conversation</div>
+    <div class="cell">
+      <p>
+        Let's add another stunt to the story, this time an unsuccessful one on Giga's side. Change the numbers in the "turn" and "repeat" blocks so that the flip will be slow and incomplete:<br>
+        <img class="figure" width="40%" src="curriculum/img/eng/messaging/17.png" alt="figure"><br>
+        It is a good idea to add a "point in direction" block at the beginning of Giga's code, so that she will be standing every time you restart the project. Do the same with Nano, too.<br>
+        <img class="figure" width="25%" src="curriculum/img/eng/messaging/18.png" alt="figure">
+        <img class="figure" width="25%" src="curriculum/img/eng/messaging/19.png" alt="figure"><br>
+      </p>
+      <p>
+        Now it's Nano's turn to react again, so let Giga poke him with another message. Make sure this is different from the one before, otherwise the story would enter into an infinite loop:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/20.png" alt="figure">
+      </p>
+      <p>
+        Can you see how this back-and-forth of messaging controls the flow of the conversation? Everything is at place, and your code is partitioned into nice and meaningful units. You can continue the story as long as you wish:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/messaging/21.png" alt="figure"><br>
+        <img class="figure" width="40%" src="curriculum/img/eng/messaging/22.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+  </div> <!-- section -->
+
+  <div class="section">
+    <div class="section-title" id="dialogue"> Challenges </div>
+
+    <div class="celltitle">Challenge 1</div>
+    <div class="cell">
+      <p>
+        Continue the conversation with two more messages: "Nano3!" and  "Giga3!".<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/messaging/23.png" alt="figure">
+
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Challenge 2</div>
+    <div class="cell">
+      <p>
+        Add a title sprite to the conversation. When the green flag is clicked, we see the title for 2 seconds; then it disappears, and the story starts with a "Start!" message.<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/messaging/24.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle">Challenge 3</div>
+    <div class="cell">
+      <p>
+        Create another short conversation, this time between three sprites. Note that now messaging will not be a simple back-and-forth; messages may be received by two sprites, so both can react at the same time.<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/messaging/25.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+
+</div> <!-- chapter -->
+

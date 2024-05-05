@@ -1,0 +1,369 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="chapter">
+  <h1 class="topicTitle"> Moving Sprites </h1>
+
+
+  <!-- Intro starts -->
+  <div class="section">
+    <div class="section-title"> Introduction </div>
+
+    <div class="celltitle"> What is it about? </div>
+    <div class="cell">
+      <p>
+        In this guide, we provide you with three ways to get sprites moving on the Scratch stage. You can use each of these three methods in a wide variety of games and animations, but each is for a different purpose.
+    </div> <!-- cell -->
+
+    <div class="celltitle">Gliding</div>
+    <div class="cell">
+      <p>Perhaps the easiest way to move is gliding. In the first section we develop an interactive ball game scene. Here is the result (control with the space bar):
+      </p>
+      <p>
+        <iframe src="https://scratch.mit.edu/projects/469772771/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Control with mouse</div>
+    <div class="cell">
+      <p>
+        In the next stage, you move your sprite with the mouse. We put together an interactive tagging game scene in which one sprite follows the mouse, and the other sprite follows the first one. Here is the end result (control with mouse):
+      </p>
+      <p>
+        <iframe src="https://scratch.mit.edu/projects/472234835/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Control with keys</div>
+    <div class="cell">
+      <p>
+        Finally, in the last section, we learn to move our sprites with keys. Here we will also create a simple project in which the user can move two sprites at the same time using the keyboard. The result (control: W-A-S-D or arrow keys):
+      </p>
+      <p>
+        <iframe src="https://scratch.mit.edu/projects/473078641/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+  </div>
+  <!-- Intro ends -->
+
+  <!-- Gliding starts -->
+  <div class="section">
+    <div class="section-title" id="gliding">Gliding</div>
+
+    <div class="celltitle"> What is it about? </div>
+    <div class="cell">
+      <p>
+        Scratch gives you two types of "glide" blocks. One takes the sprite to a random location, the other to the coordinates you specify. Both are very easy to use: every time you refresh the screen, the Scratch player calculates for you where the sprite is moving.
+      </p>
+      <p>
+        Start a new project, replace Scratchie with a ball and two other sprites of your choice, and choose a background.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Step 1</div>
+    <div class="cell">
+      <p>
+        Let's start with a very simple movement. Select one of the non-ball players, and pick the "glide to random position" from the blue motion blocks:
+        <img class="figure" height="30px" src="curriculum/img/eng/motion/g1.png" alt="figure">.
+      </p>
+      <p>
+        When you click on the block, the sprite glides to a new place on the stage. If you click again, it glides to a new location. The gliding is sometimes slower, sometimes faster, as the sprite has to move a greater or lesser distance in the given 1 second. This is how the block works.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Step 2</div>
+    <div class="cell">
+      <p>
+        But you cannot expect the user to keep clicking in the code. You can make control easier by adding an event block to the code. For example, "when space bar button is pressed" is just right. If you combine the two blocks, from now on, every time you press the space bar, the sprite will travel to a new location.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/eng/motion/g2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Step 3</div>
+    <div class="cell">
+      <p>
+        Now let's move the other sprite; for a change, let's move this one on a fixed track. Now we will use the other "glide" block, the one with "x" and "y". You may remember from school that these are coordinates. After all, the Scratch stage is a coordinate system with the point (0,0) in the center (so x is 0 and y is 0), and the x coordinates range from -240 on the left to 240 on the right, and the y coordinates range from -180 at the bottom to 180 at the top.
+      </p>
+      <p>
+        <img class="figure" width="50%" src="curriculum/img/eng/motion/g3xy.png" alt="figure">
+      </p>
+      <p>
+        But fortunately, you don't have to worry much about coordinates in this project. The Scratch developers have taken the precaution of making sure that if you place your sprite anywhere on the stage, its x and y coordinates are automatically included in the movement blocks that have not yet been taken. (Note that the coordinates in the blocks already taken out are not changed; and it's a good idea to stop the project before taking out a block, because automatic coordinate insertion doesn't always work during playback.)
+      </p>
+      <p>
+        So put your sprite in a place you think is appropriate, and pick a "glide" block with the x-y coordinates. Then drag it to another location, and pick another glide block with the new coordinates. Repeat this as many times as you like:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/eng/motion/g3a.png" alt="figure">
+      </p>
+      <p>
+        If you click on the blocks, you can see that the sprite is following the path you have specified. And if you click on it again, it will walk it through again. And with a "forever" block, you can make the walk repeat itself:
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/eng/motion/g3b.png" alt="figure">
+      </p>
+      <p>
+        And finally, we can use "wait" blocks to make our sprite's walk less agile:
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/eng/motion/g3c.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Step 4</div>
+    <div class="cell">
+      <p>
+        Finally, let's move the ball. It will find its way from one player to another, wherever they are. To avoid fiddling with coordinates, this time we return to the "glide" block we used the first time, but this time we replace “random position” with something else. Click on the little white down arrow and a menu pops up:
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/eng/motion/g4a.png" alt="figure">
+      </p>
+      <p>
+        Here you can switch to a sprite as a direction; then to the other one in another block. You can also link the launch of the ball to pressing the space bar:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/eng/motion/g4b.png" alt="figure">
+      </p>
+      <p>
+        And you can add some further dynamics to the animation by speeding up the ball, and inserting a little wait time between its outward and return travel:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/eng/motion/g4c.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Step 5</div>
+    <div class="cell">
+      <p>
+        The animation is almost perfect now; but the costumes need some adjustments to make the ball go from foot to foot. To do this, you need to enter the graphic editor, select the sprite's costume, and position it so that the center is at its feet:
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/eng/motion/g5a.png" alt="figure">
+      </p>
+      <p>
+        And if necessary, adjust the costume of the ball so that it is exactly in the middle:
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/eng/motion/g5b.png" alt="figure">
+      </p>
+      <p>
+        The precise placement of the center of the costumes is an important detail that distinguishes between a Scratch project that is slapped together, and a more elaborated one.
+      </p>
+      <p>
+        And that's it; now the animation is nice and smooth.
+      </p>
+    </div> <!-- cell -->
+
+  </div>
+  <!-- Gliding ends -->
+
+  <!-- Mouse starts -->
+  <div class="section" id="mouse">
+    <div class="section-title">Control with mouse</div>
+
+    <div class="celltitle">What is it about?</div>
+    <div class="cell">
+      <p>
+        "Glide" blocks work well if you want to move your sprite in a straight line; but what if you want it to move in a meandering way? In this section we take a look at this by creating a tapping game project.
+      </p>
+    </div>
+
+    <div class="celltitle">Step 1</div>
+    <div class="cell">
+      <p>
+        Start a new project and choose two sprites. One will be called "Hero" and the other "Enemy".
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/eng/motion/m1.png" alt="figure">
+      </p>
+    </div>
+
+    <div class="celltitle">Step 2</div>
+    <div class="cell">
+      <p>
+        Let's start with the Hero's code. (Don't forget to select the sprite before you start making its code.) It needs to move and turn at the same time; this suggests that you should start with the top two movement blocks.
+      </p>
+      <p>
+        <img class="figure" src="curriculum/img/eng/motion/m2.png" alt="figure">
+      </p>
+      <p>
+        Does this code look familiar from somewhere? :) Of course: it's the one we put together when we first got to know Scratch, and it's the one that makes the sprite start walking around in circles! :)
+      </p>
+    </div>
+
+    <div class="celltitle">Step 3</div>
+    <div class="cell">
+      <p>
+        This is a bit boring. It would be better if the sprite followed the mouse pointer rather than just walking around. This is very easy to achieve with the "point towards mouse pointer" block. As we saw earlier, the white down arrow on the block represents a menu. Here you can select the mouse pointer.
+      <p>
+        Now the code does what we want it to do. If you want to slow it down, decrease the number of steps; if you want to speed it up, increase it. And finally, if you don't like the way it sometimes turns upside down, there's a motion block to adjust the rotation style:
+      </p>
+      <p>
+        <img class="figure" src="curriculum/img/eng/motion/m3.png" alt="figure">
+      </p>
+    </div>
+
+    <div class="celltitle">Step 4</div>
+    <div class="cell">
+      <p>
+        Next is the code of “Enemy”. This will be almost exactly the same as that of “Hero", except for which way it turns. While "Hero" follows the mouse, "Enemy" follows "Hero". Again, use the drop-down menu to choose direction.
+      </p>
+      <p>
+        And of course it's worth slowing down a bit to give the poor "Hero" a chance against "Enemy".
+      <p>
+        <img class="figure" src="curriculum/img/eng/motion/m4.png" alt="figure">
+      </p>
+      <p>
+        ...And we are ready! :) We'll learn later how to turn these exercises into games. For now we'll leave them as interactive animations.
+      </p>
+    </div>
+
+  </div>
+  <!-- Mouse ends -->
+
+
+  <!-- Keys starts -->
+  <div class="section" id="keys">
+    <div class="section-title">Control with keys</div>
+
+    <div class="celltitle"> What is it about? </div>
+    <div class="cell">
+      <p>
+        In the first project, we started our sprite with the space bar; but of course we can do more than that. In classic games, you use the keys to set the direction of movement. Let's look at an example of this. Or two, as there are two ways of controlling the keys, and they are a little different. One is simpler, but the movement is a bit lagging; the other is a bit more complex, but it makes the sprite move more smoothly.
+      </p>
+    </div>
+
+    <div class="celltitle">Step 1</div>
+    <div class="cell">
+      <p>
+        Start a new project with an arbitrary background, and two sprites of your choice. We will move them in two different ways.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/eng/motion/k1.png" alt="figure">
+      </p>
+    </div>
+
+    <div class="celltitle">Step 2</div>
+    <div class="cell">
+      <p>
+        Let's start with the simpler method. In the first project, we already encountered the event block that triggers the code that follows it when you press the space bar. Like many others, this one has a small white downward-pointing arrow that opens a small menu:
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/eng/motion/k2a.png" alt="figure">
+      </p>
+      <p>
+        If you select the "right arrow" option here, you can add movement blocks that make the sprite move to the right. One obvious option is to change the x coordinate, for which there is a separate block:
+      </p>
+        <img class="figure" width="25%" src="curriculum/img/eng/motion/k2b.png" alt="figure">
+      </p>
+      <p>
+        If kids are already familiar with the use of coordinates, you should definitely use this in your sessions, as it is the easier one. However, if they are still nervous about them, there is another way: simply turn your sprite in the direction you want him to go.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/eng/motion/k2c.png" alt="figure">
+      </p>
+      <p>
+        This way, you don't have to bother with degrees or coordinates, and the code is just a touch more complicated:
+      </p>
+      <p>
+        <img class="figure" width="25%" src="curriculum/img/eng/motion/k2d.png" alt="figure">
+      </p>
+      <p>
+        But now you have to prevent the costume from turning when the sprite changes direction:
+      </p>
+      <p>
+        <img class="figure" width="25%" src="curriculum/img/eng/motion/k2e.png" alt="figure">
+      </p>
+      <p>
+        Once you have all the directions sorted, this is what your finished code will look like:
+      </p>
+      <p>
+        <img class="figure" width="60%" src="curriculum/img/eng/motion/k2f.png" alt="figure">
+      </p>
+      <p>
+        You can now use the four arrow keys to move your sprite freely around the stage, but with a few minor glitches: when changing direction, movement becomes choppy and even if you press two keys at once, your sprite still doesn't move diagonally. We will eliminate these flaws in the movement of the other sprite.
+      </p>
+    </div>
+
+    <div class="celltitle">Step 3</div>
+    <div class="cell">
+      <p>
+        There is also a block with the words "key space pressed". This is light blue and is in the "Sensing" group:
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/eng/motion/k3a.png" alt="figure">
+      </p>
+      <p>
+        Such hexagonal blocks are called conditions, and can only be used in other blocks (mainly from the yellow "Control" group). If, for example, we want to wait until the space bar is pressed, we have to insert it in the hexagonal slot of a "wait until" block:
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/eng/motion/k3b.png" alt="figure">
+      </p>
+      <p>
+        Let's put together the code for the movement this way, too! For a change, let's work with coordinates, and to avoid confusion between the two players, let's use the W-A-S-D keys like in real videogames:
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/eng/motion/k3c.png" alt="figure">
+      </p>
+      <p>
+        But this code is apparently not ready yet; it should be specifically said that this small code should be executed continuously from the start of the project. So we need to add two more blocks:
+      </p>
+      <p>
+        <img class="figure" width="35%" src="curriculum/img/eng/motion/k3d.png" alt="figure">
+      </p>
+      <p>
+        The code for the other three directions is self-explanatory:
+      </p>
+      <p>
+        <img class="figure" width="60%" src="curriculum/img/eng/motion/k3e.png" alt="figure">
+      </p>
+      <p>
+        Of course, you can also use "point" and "go" blocks here if you don't want to work with coordinates.
+      </p>
+    </div>
+
+    <div class="celltitle">Duplication</div>
+    <div class="cell">
+      <p>
+        You may have noticed that in this project, we have put together almost the same code several times. Isn't there a faster way to do this? Of course there is! You can copy complete code by right-clicking on the top block and selecting "Duplicate":
+      </p>
+      <p>
+        <img class="figure" width="25%" src="curriculum/img/eng/motion/k4a.png" alt="figure">
+      </p>
+      <p>
+        It's a very useful tool, but you should be careful with it, because if you duplicate incorrect code, you duplicate the error, too... Copying code is dangerous, and professional programmers try to avoid it.
+      </p>
+    </div>
+
+
+    <div class="celltitle">Comparison</div>
+    <div class="cell">
+      <p>
+        There are some important differences between when key control is implemented with event blocks, as in step 3, and when it is implemented with condition blocks, as in step 4. It is worth taking these in turn.
+        <ul>
+          <li>
+            When using an event block, the sprite will move on keystroke even when the project is not running. Such projects cannot therefore be stopped completely. At the beginning of the condition block version, there is a "click on the green flag", so this only works when the project is started.
+          </li>
+          <li>
+            The event block version only allows you to move in four directions, not diagonally. In the condition block version, the sprite can move diagonally.
+          </li>
+          <li>
+            You cannot put another event block on top of the event block version; so you cannot, for example, link the code to the arrival of a message or the creation of a clone. With condition blocks we have more freedom; we can change the "green flag" event on top of the code to whatever we want.
+          </li>
+          <li>
+            In the event block version, the movement of the sprite is a bit jerky at the start and when changing direction. This is because the event block asks the computer's operating system whether a keystroke event has occurred; it is not tuned for game control but for typing, and when typing it is important not to accidentally type two letters with a slightly longer keystroke. The conditional block takes the information from somewhere else, so it doesn't have lagging.
+          </li>
+        </ul>
+      </p>
+      <p>
+        In summary, although the first, event-block version is somewhat simpler, in almost all cases the second, conditional-block version works better.
+      </p>
+    </div>
+
+  </div>
+  <!-- Keys ends -->
+
+
+</div>

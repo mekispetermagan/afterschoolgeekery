@@ -1,0 +1,686 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="chapter">
+
+  <h1 class="topicTitle"> Rajzolás a Scratch szerkesztőjével </h1>
+
+  <div class="section">
+    <div class="section-title"> Bevezetés </div>
+
+    <div class="celltitle"> Miről lesz szó? </div>
+    <div class="cell">
+      <p>
+        Ez az útmutató bevezetést ad vektorgrafikák készítésébe
+        a Scratch grafikus szerkesztőjében.
+        A vektorgrafikus eszközök használata egyszerű,
+        és a rajzolást könnyűvé teszik azok számára is,
+        akiknek nincs jó kézügyessége.
+        Az útmutatóban készült képeket ebben a Scratch projektben
+        találod meg:
+      </p>
+      <p>
+        <iframe src="https://scratch.mit.edu/projects/469213561/embed"
+        allowtransparency="true" width="480" height="402" frameborder="0"
+        scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> A grafikus szerkesztő </div>
+    <div class="cell">
+      <p>
+        Az első szakaszban a Scratch grafikus szerkesztőjével ismerkedünk meg.
+        A szerkesztő kétféle módban használható; mi csak a vektorossal foglalkozunk.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Rajzolás egyszerű formákkal </div>
+    <div class="cell">
+      <p>
+        Meglepően sok mindent le lehet rajzolni egyszínű körökkel, téglalapokkal és vonalakkal.
+        A második szakaszban ezt gyakoroljuk.
+      </p>
+      <p>
+        <img class="figure" width="25%" src="curriculum/img/hun/drawing/2-9-1.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Rajzolás komplex formákkal </div>
+    <div class="cell">
+      <p>
+        Ha az egyszínű, geometrikus formák már jól mennek,
+        elkezdhetjük őket színátmenetekkel színezni és átformálni,
+        hogy életszerűbb alakzatokat kapjunk.
+        A harmadik szakaszban ebben mélyedünk el.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/drawing/3-9.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Mintázatok rajzolása </div>
+    <div class="cell">
+      <p>
+        Ha pedig már a komplex formákkal is jól bánunk,
+        elkezdhetjük őket másolni és mintázatokba rendezni,
+        hogy kevés munkával részletgazdag rajzokat készítsünk.
+        A negyedik szakaszt ennek szenteljük.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/drawing/4-12-3.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Kihívások </div>
+    <div class="cell">
+      <p>
+        Végül az utolsó szakaszban adunk neked néhány kihívást,
+        amivel begyakorolhatod a tanultakat.
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section bevezetes -->
+
+  <div class="section">
+    <div class="section-title"> A grafikus szerkesztő </div>
+
+    <div class="celltitle"> Mi az? </div>
+    <div class="cell">
+      <p>
+        <img class="figure" width="60%" src="curriculum/img/hun/drawing/1-1-0.png" alt="ábra">
+      </p>
+      <p>
+        A grafikus szerkesztőt a "Jelmezek" fülre kattintva nyithatod meg:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/1-1-1.png" alt="ábra">.
+        A szerkesztő mindig a kijelölt szereplő jelmezeit szerkeszti.
+        Ha pedig a színpad van kijelölve, háttereket tudunk szerkeszteni,
+        és ilyenkor a fül felirata is megváltozik:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/1-1-2.png" alt="ábra">.
+      </p>
+      <p>
+        A szerkesztendő jelmezt a bal oldali sávban tudod kijelölni:
+      </p>
+      <p>
+        <img class="figure" width="60px" src="curriculum/img/hun/drawing/1-1-3.png" alt="ábra">
+      </p>
+      <p>
+        Ugyanitt tudsz új jelmezt választani a jelmeztárból, üres jelmezt létrehozni,
+        vagy a saját gépedről képfájlt feltölteni jelmeznek:
+      </p>
+      <p>
+        <img class="figure" width="42px" src="curriculum/img/hun/drawing/1-1-4.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Vektorkép vs bitkép </div>
+    <div class="cell">
+      <p>
+        A Scratch grafikus szerkesztőjével kétféle rajzot készíthetsz:
+        <ul>
+          <li>
+            bitképet: ez képpontokból áll
+            (mint amikor Painttel, Gimppel vagy Photoshoppal dolgozol)
+          </li>
+          <li>
+            vektorképet: ez geometrikus formákból áll
+            (mint amikor SVG Editorral, Inkscape-pel vagy Illustratorral dolgozol)
+          </li>
+        </ul>
+        A két mód között a "Konvertálás" gombbal válthatsz:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/1-2-1.png" alt="ábra"> /
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/1-2-2.png" alt="ábra">
+        Ezt érdemes óvatosan használni, mert a konvertálás adatvesztéssel jár.
+        Kivételes esetektől eltekintve a vektorgrafikus módban elkezdett képeket
+        érdemes megtartani vektorgrafikusnak.
+      </p>
+   </div> <!-- cell -->
+
+    <div class="celltitle"> Eszköztárak </div>
+    <div class="cell">
+      <p>
+        A grafikus szerkesztőhöz két eszköztár tartozik; ezek a kép bal oldalán
+        és a kép felett helyezkednek el. A bal eszköztár tartalma állandó, míg
+        a felsőhöz tartozó eszközök aszerint változtak, hogy baloldalt melyik eszközt
+        választottad ki.
+      </p>
+      <p>
+        <img class="figure" width="15%" src="curriculum/img/hun/drawing/1-2-3.png" alt="ábra">
+        <img class="figure" width="75%" src="curriculum/img/hun/drawing/1-2-4.png" alt="ábra">
+      </p>
+      <p>
+        Ezekkel az eszköztárakkal a következő szakaszokban
+        részletesen megismerkedünk, de már most felfedezheted őket.
+        Ha nem tetszik az eredmény, csak kattints a visszavonás eszközre:
+        <img class="figure" height="40px" src="curriculum/img/hun/drawing/1-2-5.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Objektumok </div>
+    <div class="cell">
+      <p>
+        A vektorképek különálló, egymást sokszor átfedő színes objektumokból épülnek fel,
+        amelyek külön-külön kijelölhetők, átméretezhetők és áthelyezhetők.
+        Teszteld egérkattintásokkal, hány objektumból áll a macska jelmeze!
+        (Pro tipp: a "csoportbontás" eszközzel szétszedheted a kijelölt összetett objektumokat.)
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/drawing/1-2-6.png" alt="ábra">
+      </p>
+      <p>
+        Ha megvagy, vond vissza a változtatásaidat, mert a következő szakaszban a macskával
+        fogunk dolgozni... :)
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section grafikus szerkeszto -->
+
+  <div class="section">
+    <div class="section-title"> Rajzolás egyszerű formákkal </div>
+
+    <div class="celltitle"> Mi lesz? </div>
+    <div class="cell">
+      <p>
+        Kezdésnek színes téglalapokkal, és ellipszisekkel (elnyújtott körökkel) és vonalakkal
+        felöltöztetjük Scratchie macskát.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 1. lépés </div>
+    <div class="cell">
+      <p>
+        Kezdjük a színszerkesztővel. A három színes csúszka állítgatásával keress
+        magadnak egy szompatikus színt.
+      </p>
+      <p>
+        <img class="figure" width="15%" src="curriculum/img/hun/drawing/2-1.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 2. lépés </div>
+    <div class="cell">
+      <p>
+        Kattints baloldalt a kör eszközre és a rajzoló felületen húzd jobbra
+        kicsit átlósan az egeret, hogy jó elnyújtott ellipszist kapj.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/drawing/2-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 3. lépés </div>
+    <div class="cell">
+      <p>
+        Most kattints baloldalt a kijelölés eszközre:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/2-3-1.png" alt="ábra">,
+        és húzd a cica homlokára az ellipszist.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/drawing/2-3-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 4. lépés </div>
+    <div class="cell">
+      <p>
+        Rajzolj még egy, kevésbé elnyújtott ellipszist, és húzd az előző fölé.
+        Lám, néhány mozdulattal készítettünk neki egy egész elfogadható sapkát!
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/drawing/2-4.png" alt="ábra">
+      </p>
+      <p>
+        Ha nem jók a méretek vagy nincsen a helyén valamelyik objektum,
+        akkor jelöld és igazíts rajta, amíg elégedett nem leszel az eredménnyel.
+        Nem sietünk sehova! :)
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 5. lépés </div>
+    <div class="cell">
+      <p>
+        Ha a kalapokat szereted jobban, kezdheted a téglalap eszközzel
+        is a rajzolást:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/2-5-1.png" alt="ábra">.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/2-5-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 6. lépés </div>
+    <div class="cell">
+      <p>
+        Ha azt szeretnéd, hogy hetykébben álljon a kalap, billentsd meg
+         a kijelölés alatti ívelt nyílnál fogva:
+         <img class="figure" height="30px" src="curriculum/img/hun/drawing/2-6-1.png" alt="ábra">.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/2-6-2.png" alt="ábra">
+      </p>
+
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 7. lépés </div>
+    <div class="cell">
+      <p>
+        Ha meggondolod magad egy színnel kapcsolatban, kattints a kitöltés eszközre:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/2-7-1.png" alt="ábra">,
+        válassz egy másik színt a palettán, és kattintással színezd át az objektumaidat.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/2-7-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 9. lépés </div>
+    <div class="cell">
+      <p>
+        A kitöltő színt áltátszóra is állíthatod, ha az áthúzott négyzet ikonra kattintasz:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/2-8-1.png" alt="ábra">,
+        sőt a körvonal színét és vastagságát is átállíthatod:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/2-8-2.png" alt="ábra">.
+        így a kör eszközzel és a vonal eszközzel
+        (<img class="figure" height="30px" src="curriculum/img/hun/drawing/2-8-3.png" alt="ábra">)
+        akár szemüveget is adhatsz a cicára.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/2-8-4.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 10. lépés </div>
+    <div class="cell">
+      <p>
+        És így tovább: színes ellipszisekkel, téglalapokkal és vonalakkal
+        tetszés szerint felöltöztetheted Scratchie macskát.
+        Adj hozzá annyi részletet és készíts annyi változatot,
+        amennyit csak szeretnél! :)
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/2-9-1.png" alt="ábra">
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/2-9-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Hmmm... </div>
+    <div class="cell">
+      <p>
+        Várjunk csak, biztos, hogy a lány változat haja
+        egyszerű formákból van kirakva?
+        Igen. Nézd csak:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/2-10.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section egyszeru formak -->
+
+  <div class="section">
+    <div class="section-title"> Rajzolás komplex formákkal </div>
+
+    <div class="celltitle"> 1. lépés </div>
+    <div class="cell">
+      <p>
+        Öltöztessük fel még egyszer Scratchie-t, de ezúttal adjunk rá koronát.
+        Ezt a formát már nehéz lenne ellipszisekből és téglalapokból kirakni.
+        De kezdésnek itt is megteszi az ellipszis:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/3-1.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 2. lépés </div>
+    <div class="cell">
+      <p>
+        Most kattints az átformálás ikonra a kijelölésé mellett:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/3-2-1.png" alt="ábra">.
+        Ha ezután az ellipszisre kattintasz, akkor megjelenik kékkel a körvonala,
+        és rajta négy vezérpont. Ezeket elmozdíthatod, így átformálva az ellipszist.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/3-2-2.png" alt="ábra">
+      </p>
+     </div> <!-- cell -->
+
+    <div class="celltitle"> 3. lépés </div>
+    <div class="cell">
+      <p>
+        A körvonalra kattintva új vezérpontokat is beilleszthetsz.
+        Ha egy kijelölt pontot csúcsosnak vagy íveltnek szeretnél,
+        kattints a megfelelő ikonra:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/3-3-1.png" alt="ábra">.
+        Ahogy szaporodnak a pontok, kezd formát ölteni a korona.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/3-3-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 4. lépés </div>
+    <div class="cell">
+      <p>
+        Folytasd a pontok hozzáadását és igazítgatását, amíg ki nem alakul
+        egy csinos kis korona.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/3-4.png" alt="ábra">
+      </p>
+     </div> <!-- cell -->
+
+    <div class="celltitle"> 5. lépés </div>
+    <div class="cell">
+      <p>
+        Most adunk neki egy kis csillogást a kitöltés eszközzel:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/2-7-1.png" alt="ábra">.
+        A paletta tetején van négy opció színátmenetre:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/3-5-1.png" alt="ábra">.
+        Ahogy az árnyalataikból sejthető, ezek rendre a következők:
+        <ul>
+          <li>nincs színátmenet</li>
+          <li>vízszintes színátmenet</li>
+          <li>függőleges színátmenet</li>
+          <li>középpontos színátmenet</li>
+        </ul>
+      </p>
+      <p>
+        Ha a középpontos színátenetet választva a középső színt fehérre,
+        a külsőt pedig sárgára állítod, majd a korona közepére kattintasz,
+        adhatsz a koronának egy kis fényt.<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/3-5-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 6. lépés </div>
+    <div class="cell">
+      <p>
+        A koronához palást is jár! Ezt is kezdheted színes ellipszisekkel.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/3-6.png" alt="ábra">
+      </p>
+      <p>
+        A rajztudásunkkal együtt a fantáziánk is fejlődik; a kezdetleges formákba
+        most már könnyedén bele tudjuk képzelni a kész palástot.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 7. lépés </div>
+    <div class="cell">
+      <p>
+        Formáld át a palástot, hogy minél jobban megfeleljen az elképzeléseidnek.
+      </p>
+      <p>
+        Ne keseredj el, ha valami nem sikerül elsőre.
+        Vond vissza az utolsó lépést, és próbálkozz újra,
+        amíg elégedett nem leszel az eredménnyel.
+        Nem a tökéletesség a cél, hanem annak a megtapasztalása, hogy
+        lám, milyen könnyű is így rajzolni!
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/3-7.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 8. lépés </div>
+    <div class="cell">
+      <p>
+        Végül az előre-hátra eszközökkel takarásba teheted a palástot:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/3-8-1.png" alt="ábra">
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/3-8-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 9. lépés </div>
+    <div class="cell">
+      <p>
+        És így tovább: adj annyi elemeket a rajzodhoz, amennyit csak szeretnél,
+        hogy kialakuljon az általad elképzelt karakter.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/3-9.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section komplex formak -->
+
+  <div class="section">
+    <div class="section-title"> Mintázatok: ismétlődés és szimmetria </div>
+
+    <div class="celltitle"> 1. lépés </div>
+    <div class="cell">
+      <p>
+        Néha jól jön, ha egy kép ismétlődő részleteit nem kell mindig
+        újra megrajzolni. Például egy virág rajzolásához elég egyetlen
+        szirmot kidolgozni.
+      </p>
+      <p>
+        Rajzolj szívecskeformát a sziromnak. Nem kell, hogy felül középen
+        teljesen csúcsös legyen, elég, ha egérrrel kicsit rövidebbre
+        igazítod a segítő vonalakat.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/drawing/4-1.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 2. lépés </div>
+    <div class="cell">
+      <p>
+        A kitöltés eszközzel és a kedvenc színeiddel adj neki egy tetszetős színátmenetet.
+        A körvonalat pedig eltávolíthatod úgy, hogy a vonalszélességet nullára állítod.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/drawing/4-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 3. lépés </div>
+    <div class="cell">
+      <p>
+        Most jelöld ki a szirmot és kattints felül a másolás, majd a beillesztés ikonjára:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/4-3-1.png" alt="ábra">.
+        Ha úgy egyszerűbb, másolhatsz a szokásos Ctrl+C és Ctrl+V
+        (ha Mac-ed van: Cmd+C és Cmd+V) billentyűparancsokkal is.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/drawing/4-3-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 4. lépés </div>
+    <div class="cell">
+      <p>
+        Egészen kicsit billentsd meg a másolatot, és tedd szorosan azeredeti mellé.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/drawing/4-4.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 5. lépés </div>
+    <div class="cell">
+      <p>
+        Ezt ismételd egészen addig, amíg körbe nem érsz.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/drawing/4-5.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 6. lépés </div>
+    <div class="cell">
+      <p>
+        Ha tökéletesen szimmetrikusra akarod a virágodat, akkor kattints a radír eszközre:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/4-6-1.png" alt="ábra">,
+        és radírozz bele az utolsó két sziromba, mielőtt a helyükre tennéd őket.
+        Ez egy kicsit nehezebb feladat, nyugodtan ugord át, ha nem szeretnél vele bíbelődni.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/drawing/4-6-2.png" alt="ábra">
+        <img class="figure" width="30%" src="curriculum/img/hun/drawing/4-6-3.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 7. lépés </div>
+    <div class="cell">
+      <p>
+        Adj mág egy színes kört középre, és máris kész a virág.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/drawing/4-7-1.png" alt="ábra">
+      </p>
+      <p>
+        Jelöld ki az egész képet egérrel vagy a Ctrl+A billentyűkombinációval, majd
+        kattints a csoportosítás eszközre:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/4-7-2.png" alt="ábra">,
+        hogy a későbbi szerkesztések során szét ne essen válatlenül.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 8. lépés </div>
+    <div class="cell">
+      <p>
+        Most már bátran elkezdheted a virágot tetszésed szerint másolni, beilleszteni,
+        átméretezni és forgatni.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/4-8.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 9. lépés </div>
+    <div class="cell">
+      <p>
+        Jöhetnek a levelek. Ezekből is elég egyet megrajzolni a szokásos módon,
+        ellipszisből kiindulva, átformálva, és végül színátmenettel kitöltve.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/drawing/4-9-1.png" alt="ábra">
+        <img class="figure" width="20%" src="curriculum/img/hun/drawing/4-9-2.png" alt="ábra">
+        <img class="figure" width="20%" src="curriculum/img/hun/drawing/4-9-3.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 10. lépés </div>
+    <div class="cell">
+      <p>
+        Jöhet a levél sokszorosítása. Az elforgatás és átméretezés mellett
+        egy-kettőt tükrözhetsz is belőle erre az ikonra kattintva:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/4-10-1.png" alt="ábra">.
+        A virágokkal és a levelekkel formát ölt a teljes növény.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/4-10-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 11. lépés </div>
+    <div class="cell">
+      <p>
+        Ha szárakat is szeretnél bele, használd a vonal eszközt a megrajzolásukhoz,
+        és az átformálás eszközzel hajlítsd meg őket középen.
+     </p>
+     <p>
+      <img class="figure" width="20%" src="curriculum/img/hun/drawing/4-11-1.png" alt="ábra">
+      <img class="figure" width="40%" src="curriculum/img/hun/drawing/4-11-2.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+    <div class="celltitle"> 12. lépés </div>
+    <div class="cell">
+      <p>
+        Végül kattints a színpadra a jobb szélen:
+        <img class="figure" height="30px" src="curriculum/img/hun/drawing/4-12-1.png" alt="ábra">,
+        és két színátmenetes téglalapból varázsolj hátteret a növényednek.
+     </p>
+     <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/drawing/4-12-2.png" alt="ábra">
+      <img class="figure" width="40%" src="curriculum/img/hun/drawing/4-12-3.png" alt="ábra">
+    </p>
+    <p>
+      Készen is vagyunk! Ugye, milyen egyszerű volt? :)
+    </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section mintazatok -->
+
+  <div class="section">
+    <div class="section-title"> Kihívások </div>
+
+    <div class="celltitle"> 1. kihívás </div>
+    <div class="cell">
+      <p>
+        Meg tudod rajzolni ezt a házat?
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/5-1.png" alt="ábra">
+      </p>
+     </div> <!-- cell -->
+
+     <div class="celltitle"> 2. kihívás </div>
+     <div class="cell">
+      <p>
+         Hát ezt a hóembert?
+      </p>
+      <p>
+        <img class="figure" width="35%" src="curriculum/img/hun/drawing/5-2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 3. kihívás </div>
+    <div class="cell">
+      <p>
+        Na és ezt a gyümölcsfát?
+      </p>
+      <p>
+        <img class="figure" width="35%" src="curriculum/img/hun/drawing/5-3.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 4. kihívás </div>
+    <div class="cell">
+      <p>
+        Vagy ezt a hajót?
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/drawing/5-4.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 5. kihívás </div>
+    <div class="cell">
+      <p>
+        Piroskát a meséből?
+      </p>
+      <p>
+        <img class="figure" width="35%" src="curriculum/img/hun/drawing/5-5.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 6. kihívás </div>
+    <div class="cell">
+      <p>
+        Egy bogárhátú autót? (Tipp: az ablakokat radírral lyukaszd az autóba...)
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/hun/drawing/5-6.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 7. kihívás </div>
+    <div class="cell">
+      <p>
+        És végül ezt az éjszakai csendéletet?
+        (Tipp: a színátmenetben az egyik színt átlátszónak is választhatod.)
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/hun/drawing/5-7.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+</div> <!-- section kihivasok -->
+
+</div> <!-- chapter -->

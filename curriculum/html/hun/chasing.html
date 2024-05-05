@@ -1,0 +1,181 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Kergetőzős játék </div>
+
+  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="cell">
+    <p>
+      Egy végtelenül egyszerű játékot fogunk összerakni, amelyben az egyik szereplő az egérmutatót, a másik szereplő pedig az egyiket követi. A végeredményt itt találjátok meg:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/793637488/embed"
+    allowtransparency="true" width="485" height="402"
+    frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <p>
+      Ezt a játékot érdemes közvetlenül a Scratch-bemutató animáció után elkészíteni, mert a kódja szervesen követi amazt:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/90979368/embed"
+    allowtransparency="true" width="485" height="402" frameborder="0"
+    scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Előkészületek </div>
+  <div class="cell">
+    <p>
+      Kezdjétek a foglalkozást azzal, hogy közösen megnézitek a
+      <a href="https://scratch.mit.edu/projects/90979368/fullscreen" target="_blank">"Scratch is Fun!"</a>
+      animációt. Ebben Scratch-szereplők mutatják be a Scratch működését úgy, hogy megépítenek és lefuttatnak egy nagyon egyszerű Scratch-kódot:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/hun/chasing/1_1.png" alt="ábra">
+    </p>
+    <p>
+      Miután megnéztétek a videót, és megbeszéltétek, mi történt benne, mindenki hozzon létre egy új Scratch-projektet, válasszon magának egy szimpatikus szereplőt (a cicát pedig bátran töröljétek), és próbáljátok meg közösen, emlékezetből újra összeállítani a kódot. A blokkok grafikája kicsit más lesz (az animáció már több mint hét éves, és még egy korábbi Scratch-verzióhoz készült), de ez egyáltalán nem szokta zavarni a gyerekeket:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/hun/chasing/1_2.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Egérkövetés </div>
+  <div class="cell">
+    <p>
+      Beszéljétek meg, mi hiányzik a körkörös mozgásból ahhoz, hogy olyan legyen, ahogy egy játék szereplői mozognak. A sok ötlet között egészen biztosan ott lesz, hogy nekünk kellene irányjtani. A következő megbeszélendő kérdés az lehet, hogy hogy szoktunk szereplőt irányítani egy játékban; a sokféle válasz között pedig ott lesz a konzol kontrollere, a képernyőérintés, a billentyűzet és az egér. A lehetőségek közül laptopon a billentyűzetes és az egeres irányítás a legegyszerűbb; és ezt is fogjuk megcsinálni.
+    </p>
+    <p>
+      A mozgás irányát az egérmutató fogja adni. Ha elkezdtek keresni a mozgás-blokkok között, találtok egyet, amely pont erről szól. Ha kicserélitek erre a "fordulj" blokkot, egy csapásra kész lesz az egeres irányítás kódja. Még érdemes egy kicsit lassítani a szereplőn a "menj" blokkba írt szám kisebbítésével, hogy ne legyen olyan rohanós a játék:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/chasing/2_1.png" alt="ábra">
+    </p>
+    <p>
+      Ha nem szeretnétek, hogy a szereplő lefelé haladva fejen álljon, akkor a mozgás-blokkok között találtok egyet, amellyel ezt megakadályozhatjátok. Ha pedig túl nagynak találjátok a szereplőt, akkor nyugodtan kisebbre vehetitek a lila "kinézet" blokkok közt szereplő "méret legyen"-nel. (Ezeket a tulajdonságokat nemcsak blokkal lehet beállítani, hanem a színpad alatt lévő kis menüben is.)
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/chasing/egerkovetes_2.png" alt="ábra">
+    </p>
+    <p>
+      Végül hogy ne kelljen mindig egérrel megfogva helyére tenni a szereplőt a játék elindítása előtt, érdemes őt elhelyezni a bal felső sarokban, és egy "ugorj" blokkal elérni, hogy automatikusan kerüljön ide minden indításkor:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/chasing/egerkovetes_3.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Szereplőkövetés </div>
+  <div class="cell">
+    <p>
+      Ahhoz, hogy ebből egy izgalmas játék kerekedjen, szükség lesz még egy szereplőre, aki az ellenség szerepét tölti be. Válasszon mindenki egy szimpatikusat (vagy épp ellenszenveset, hiszen ő lesz az ellenség). Ez a szereplő már nem az egérmutatót követi, hanem az első szereplőt, de ez csak egészen minimális változtatást jelent a kódban, hiszen ugyanazokat a blokkokat kell használni. Csak a "nézz" blokkot kell átváltani, hogy az új szereplő jófele menjen:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/chasing/3_1.png" alt="ábra">
+    </p>
+    <p>
+      Érdemes még egy kicsit lassítani is rajta, hogy az általunk irányított szereplőnek legyen esélye elmenekülni előle:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/chasing/3_2.png" alt="ábra">
+    </p>
+    <p>
+      És végül őt is méretezhetitek, rögzíthetitek a jelmez irányát, és elindíthatjátok a jobb alsó sarokból:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/chasing/3_3.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Érintésfigyelés </div>
+  <div class="cell">
+    <p>
+      Most érdemes röviden megbeszélni, mi hiányzik <i>még</i> ahhoz, hogy mindebből egy izgalmas játék kerekedjen. A válaszok között egészen biztosan szerepelni fog, hogy történjen valami, ha az üldöző elkapja az üldözöttet. A legegyszerűbb lehetőség az, hogy ilyenkor a játék egyszerűen véget ér.
+    </p>
+    <p>
+      De mit jelent az a programozás nyelvén, hogy az egyik szereplő elkapja a másikat? Hát azt, hogy a jelmezeik egymáshoz érnek a játéktéren. A Scratch-nek külön blokkja van erre a világoskék "érzékelés" kategóriában. Ez alapértelmezésben az egérmutatóra van állítva, de egy mozdulattal átállíthatjátok:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/chasing/4_1.png" alt="ábra">
+    </p>
+    <p>
+      Fontos, hogy ez a blokk már újból az első, általunk irányított szereplőhöz fog kerülni. Ne felejtsetek el ilyenkor minden résztvevőt figyalmeztetni, hogy kattintson át a színpad alatt a megfelelő szereplő bélyegképére, mert a rossz helyre került kód sok hiba forrása. (Ami persze csak bosszantó, de nem végzetes, hiszen a kódokat könnyen át tudjátok másolni akár egérrel áthúzva, akár a Tálcára helyezve.)
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/hun/chasing/4_2.png" alt="ábra">
+    </p>
+    <p>
+      A Scratch-lejátszónak nincs más dolga, mint a zöld zászló indításától kezdve megvárni, amíg az érintés bekövetkezik:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/chasing/4_3.png" alt="ábra">
+    </p>
+    <p>
+      Könnyen lehet, hogy ez az első alkalom, amikor a gyerekek azzal találkoznak, hogy egy szereplőnek több kódja is fut egyszerre. Ez általában semmi fennakadást nem szokott okozni, hiszen csak mi, felnőttek vagyunk ráidomítva a lineárisan, egymás után következő feladatvégzésre, a gyerekeknek ez teljesen természetes. De ha mégis szóba kerül, akár meg is említhetitek, hogy ezt úgy hívják, hogy párhuzamos programozás, és iszonyú menő és modern dolog.
+    </p>
+    <p>
+      Viszont egy később jelentkező hiba megelőzésére érdemes már most betenni a kódba még egy másodperc várakozást. Ugyanis mivel a játék úgy ér véget, hogy a két szereplő érinti egymást, előfordulhat, hogy újraindításkor a párhuzamos feladatok közül az érintésfigyelés kerül sorra elsőnek, és így a játék azonnal véget is ér, még mielőtt a szereplők a helyükre kerültek volna:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/chasing/4_4.png" alt="ábra">
+    </p>
+    <p>
+      Ha idáig eljutottatok, akkor akár le is kerekíthetitek a projektet egy "álljon le minden" blokkal, és lezárhatjátok a foglalkozást, ahol a gyerekek megalkozzák életük jó eséllyel első videojátékát:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/chasing/4_5.png" alt="ábra">
+    </p>
+    <p>
+      De ha maradt még az időtökből és a leklesedésetekből, akkor egy kicsit látványosabbá is tehetitek a befejezést. Ehhez a leállítás helyett egy üzenetet érdemes küldeni egy új szereplőnek, amit a következő lépésben alkotunk majd meg:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/hun/chasing/4_6.png" alt="ábra">
+      <img class="figure" width="30%" src="curriculum/img/hun/chasing/4_7.png" alt="ábra">
+      <img class="figure" width="35%" src="curriculum/img/hun/chasing/4_8.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Játék vége </div>
+  <div class="cell">
+    <p>
+      Kattintsatok az "új szereplő festése" ikonra, mert a harmadik szereplőt magunk rajzoljuk meg:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/hun/chasing/5_1.png" alt="ábra">
+    </p>
+    <p>
+      Találjatok ki egy egyszerű szöveget, amivel a játék befejeződik: ez lehet "Game Over", "Vége", "Hamm", "Megvagy", vagy bármi, ami nektek tetszik, és a betű eszközzel és az általatok választott színnel írjátok bele az új szereplő jelmezébe:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/chasing/5_2.png" alt="ábra">
+    </p>
+    <p>
+      Ha van kedvetek, be is keretezhetitek a feliratot, sőt az újraformálás eszközzel képregényesen ki is cakkozhatjátok a keretet:
+    </p>
+    <p>
+      <img class="figure" width="20%" src="curriculum/img/hun/chasing/5_3.png" alt="ábra">
+      <img class="figure" width="25%" src="curriculum/img/hun/chasing/5_4.png" alt="ábra">
+    </p>
+    <p>
+      Ha elkészültetek a jelmezzel, jöhet a kód. Először is fontos, hogy játék közben az új szereplő ne látsszon, tehát a játék kezdetén érdemes eltűntetni:
+    </p>
+    <p>
+      <img class="figure" width="20%" src="curriculum/img/hun/chasing/5_5.png" alt="ábra">
+    </p>
+    <p>
+      A játék végén pedig megjeleníthetitek ott, ahol az ütközés történt, vagyis ahol az általunk irányított szereplő van:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/chasing/5_6.png" alt="ábra">
+      <img class="figure" width="35%" src="curriculum/img/hun/chasing/5_7.png" alt="ábra">
+    </p>
+    <p>
+      És végül leállíthatjátok a játékot:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/chasing/5_8.png" alt="ábra">
+    </p>
+    <p>
+      Ha idáig eljutottatok, legyetek nagyon büszkék magatokra! :)
+    </p>
+  </div> <!-- cell -->
+
+</div> <!-- section -->
+

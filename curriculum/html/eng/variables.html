@@ -1,0 +1,247 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="chapter">
+  <h1 class="topicTitle"> Variables Guide</h1>
+
+
+  <!-- intro -->
+  <div class="section">
+    <div class="section-title"> Introduction </div>
+
+    <div class="celltitle"> What is this guide about? </div>
+    <div class="cell">
+      <p>
+        In this guide you will learn how to use variables in programming through two simple projects. Variables are tools that help the computer remember data that will be needed later in your program. This can be text data (for example, a user name) or a number (for example, your score in a game).
+      </p>
+      <p>
+        You can think of variables as sticky notes you can use to write down things you want to remember. It is a good idea to give the sticky note a title, so you know which note to use to look up the thing you wrote on it: for example, "username", "score", etc.<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/variables/01.jpg" alt="figure">
+        Later, when the value changes (a user name is changed or new points are earned), the data is rewritten on the sticky note. Whether the user collected 5 or 500 points, we can find the exact value on the "score" sticker.<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/variables/02.jpg" alt="figure">
+      </p>
+      <p>
+        Variables work in a similar fashion. A variable is a value, a piece of data (number or text) that has a name. The variable name stands for the sticky note's title; and the value stands for whatever is written under the title on the note. Just as a sticky note's content, a variable's value can be changed while your project is running, which is why it's called a "variable".
+      </p>
+      <p>
+        The first project is very simple and short; you will add a variable to an existing game, improving the game experience. This project will let you learn how to create a variable, and how to use Scratch's variable blocks. See the end result here:<br>
+        <iframe src="https://scratch.mit.edu/projects/997801417/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+      <p>
+        The second project is slightly more complex. You will put together a click counter project that uses four variables, and requires a coordinated use of these. This will let you learn four different ways of using variables. Try the result here:<br>
+        <iframe src="https://scratch.mit.edu/projects/997833277/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Content </div>
+    <div class="cell">
+      <ul>
+        <li><a href="#switchie">Adding a Score variable to the Switchie game</a></li>
+        <li><a href="#click">Different variables in a click counter game</a></li>
+      </ul>
+    </div> <!-- cell -->
+  </div> <!-- intro -->
+
+    <!-- switchie -->
+    <div class="section">
+      <div class="section-title" id="switchie"> Adding a Score variable to the Switchie game  </div>
+
+      <div class="celltitle"> Preparations </div>
+      <div class="cell">
+        <p>
+          Open <a href="https://scratch.mit.edu/projects/997826689/">this initial project</a>, and click on the green "remix" button. Try the game, it's fun! :) Later this game will be included among the projects of the curriculum. An important part is missing from the game though; you can't win, only lose. In this section's project work, you will add scoring to the game, so that when the player collect enough points, they can win.<br>
+          <img class="figure" width="40%" src="curriculum/img/eng/variables/03.png" alt="figure">
+        </p>
+        <p>
+          But before starting, have a look at the codes of the various sprites. Most of these will be already familiar to you, if you have already read the Motion guide. Some parts may still be new to you, for example cloning or message broadcasting, but these are also very intuitive, you will get the gist of the code.
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Creating a variable </div>
+      <div class="cell">
+        <p>
+          To add a "score" variable to the project, go to the "Variables" section of the block panel:<br>
+          <img class="figure" width="40%" src="curriculum/img/eng/variables/04.png" alt="figure"><br>
+          Right now this area is pretty empty; but as soon as you create a variable, it will be populated with various blocks. Click on the "Make a variable" button. A form will pop up:<br>
+          <img class="figure" width="50%" src="curriculum/img/eng/variables/05.png" alt="figure"><br>
+          Enter "score" for the variable name, and leave the rest of the form as it is.
+        </p>
+        <p>
+          (About the other options:
+          <ul>
+            <li>Variables that are "for this sprite only" will be useful when you duplicate or clone sprites, and each of them has a different value; like the kids in your course all have their own ages; or like every character in a fighting game have their own health. This type of variable is called a <i>local variable</i>, as opposed to the <i>global variables</i> that we use in this guide. Local variables are discussed in project 3 of the Cloning guide.</li>
+            <li>Cloud variables are only used in online Scratch, and they are only available for Scratchers who have shared a few projects already, and have engaged themselves in the social part of Scratch, liking, commenting and following others' work. The values of these variables stored in Scratch's servers, and they are the same for everyone who opens a Scratch project, whether in Vietnam or in Greenland. These are typically used for saving world-wide high scores for a game, or to counter how many times a Scratch project has been opened.)</li>
+          </ul>
+        </p>
+        <p>
+          Once you've created your variable, you will see five new blocks:<br>
+          <img class="figure" width="40%" src="curriculum/img/eng/variables/06.png" alt="figure"><br>
+          The rounded block at the top reads the value of the variable. You will use it when you check whether the player's score has reached a certain limit. Both the "set" and "change" blocks are used to give a variable a new value, and they are easy to confuse, so let's clarify the difference. "Set" gives a variable a completely new value, regardless what value it had before. For example, when you introduce a new character with a certain age in a storytelling project, you can set the age with this block:<br>
+          <img class="figure" width="30%" src="curriculum/img/eng/variables/07.png" alt="figure"><br>
+          "Change" is used when you have a number variable, and you want to increase or decrease its value by a certain amount. In the previous example, when your character has their birthday in the story, the "age" variable will change its value by 1:<br>
+          <img class="figure" width="30%" src="curriculum/img/eng/variables/08.png" alt="figure"><br>
+          Finally, the last two blocks are similar to "show" and "hide" in the "Looks" section. As you can see, your variable is displayed in the stage:<br>
+          <img class="figure" width="60%" src="curriculum/img/eng/variables/09.png" alt="figure"><br>
+          The two blocks will make this display appear or disappear, as if the variable was another sprite in your project. You can also make a variable appear or disappear manually, checking or unchecking the box near the rounded block.<br>
+          <img class="figure" width="40%" src="curriculum/img/eng/variables/10.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Setting and changing the score </div>
+      <div class="cell">
+        <p>
+          It's time to start using the "score" variable. But first of all, which sprite's code will manage the score? In fact, it could be either the "Switchie" or the "Spikes" sprite; but it feels more natural to select Switchie; he (she?) will be the one who gets scored anyway.<br>
+          <img class="figure" width="25%" src="curriculum/img/eng/variables/11.png" alt="figure">
+        </p>
+        <p>
+          When the game starts, score should be set to zero:<br>
+          <img class="figure" width="25%" src="curriculum/img/eng/variables/12.png" alt="figure">
+          And it is a good idea to reward Scratchie for each successful jump, whether it is from the top to the bottom, or the other way around:<br>
+          <img class="figure" width="40%" src="curriculum/img/eng/variables/13.png" alt="figure">
+        </p>
+        <p>
+          Restart your game, and enjoy the new experience of getting rewarded for your gameplay! :)<br>
+          <img class="figure" width="60%" src="curriculum/img/eng/variables/14.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Detecting the score </div>
+      <div class="cell">
+        <p>
+          The player should win the game by collecting a certain amount of points; say, 20. As you can see, the "Title" sprite already has both the costume and the code for winning:<br>
+          <img class="figure" width="30%" src="curriculum/img/eng/variables/15.png" alt="figure"><br>
+          So, we already know <i>what to do</i> to get to the winning scene; let's figure out <i>when to do</i> it. Let's say we want the player to win when the score reaches 20. The "wait until" block suggests itself, so the main line of our code will look like this:<br>
+          <img class="figure" width="25%" src="curriculum/img/eng/variables/16.png" alt="figure"><br>
+          What is missing from the hexagonal slot is the condition that the score has reached 20, so the only remaining question is how to express "reached" with Scratch blocks. Well, "reached" just means that the score <i>is</i> 20. In math, this is expressed with the "equals" sign, and so it is in Scratch. You can find an "equals" block in the Operations group:<br>
+          <img class="figure" width="35%" src="curriculum/img/eng/variables/17.png" alt="figure">
+        </p>
+        <p>
+          Restart the project and try to win the game. If it's hard, lower the limit from 20 points to 10 or even 1 for testing; you can set it back later when you finish the project work.
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Hiding and showing variables </div>
+      <div class="cell">
+        <p>
+          There are two remaining variable blocks that we haven't used yet; let's do it now. It is not necessary to see the score on the title screen, immediately when the project starts. You can add a "hide" block to the script under the green flag block:<br>
+          <img class="figure" width="25%" src="curriculum/img/eng/variables/18.png" alt="figure"><br>
+          And when the game starts and score is reset, it's time to show the variable again:<br>
+          <img class="figure" width="35%" src="curriculum/img/eng/variables/19.png" alt="figure">
+        </p>
+        <p>
+          And we are ready! :) You have just learned how to create a variable, and use the five blocks in the Variable group.
+        </p>
+      </div> <!-- cell -->
+
+    </div> <!-- switchie -->
+
+    <!-- click -->
+    <div class="section">
+      <div class="section-title" id="click"> Different variables in a click counter game </div>
+
+      <div class="celltitle"> Preparations </div>
+      <div class="cell">
+        <p>
+          As a second project, we develop a clicker game that uses many variables. The project's main purpose is to teach you the coordinated use of multiple variables:<br>
+          <img class="figure" width="20%" src="curriculum/img/eng/variables/20.png" alt="figure"><br>
+          A simplified version of the game will be included among the projects.
+        </p>
+        <p>
+          Start with a brand new project, say good bye to Scratchie, and add a button sprite:<br>
+          <img class="figure" width="60%" src="curriculum/img/eng/variables/21.png" alt="figure"><br>
+          Open the graphic editor and write "click me" on the button sprite:<br>
+          <img class="figure" width="60%" src="curriculum/img/eng/variables/22.png" alt="figure"><br>
+          Finally, add a nice background, and place the button in the middle. You can also increase its size to make fast clicking easier:<br>
+          <img class="figure" width="60%" src="curriculum/img/eng/variables/23.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Counting clicks </div>
+      <div class="cell">
+        <p>
+          Now let's start counting clicks. Switch to the Code tab, rename the built-in "my variable" to "clicks", and check the checkbox to show its value:<br>
+          <img class="figure" width="45%" src="curriculum/img/eng/variables/24.png" alt="figure">
+          <img class="figure" width="35%" src="curriculum/img/eng/variables/25.png" alt="figure"><br>
+          <img class="figure" width="20%" src="curriculum/img/eng/variables/26.png" alt="figure">
+          (Of course, you can also delete "my variable" and create a new one.)
+        </p>
+        <p>
+          Counting starts from 0 at the beginning of the project:<br>
+          <img class="figure" width="20%" src="curriculum/img/eng/variables/27.png" alt="figure"><br>
+          Each time the sprite is clicked, the number of clicks increases:<br>
+          <img class="figure" width="25%" src="curriculum/img/eng/variables/28.png" alt="figure"><br>
+          So far so good; you can see that the value increases every time you click the button on the stage:<br>
+          <img class="figure" width="60%" src="curriculum/img/eng/variables/29.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Countdown </div>
+      <div class="cell">
+        <p>
+          Create another variable named "time". Let's say you want to give the player 30 seconds clicking time. So the variable starts from 30:<br>
+          <img class="figure" width="20%" src="curriculum/img/eng/variables/30.png" alt="figure"><br>
+          Counting down is really simple: wait 1 second, and decrease the value of the variable by 1. Decreasing means adding -1 instead of 1. Repeat this 30 times for a full countdown to zero:<br>
+          <img class="figure" width="25%" src="curriculum/img/eng/variables/31.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> No clicks after countdown </div>
+      <div class="cell">
+        <p>
+          Now the countdown carries out successfully, but you can still keep clicking after it reaches zero. Even adding a "stop all" block wouldn't help, because each click awakens the project, triggering the "when this sprite clicked" event block:<br>
+          <img class="figure" width="25%" src="curriculum/img/eng/variables/32.png" alt="figure">
+        </p>
+        <p>
+          Instead, we will check at each click whether the time variable has reached zero. We already know how to use variables in conditions, but this time we will need "less than" instead of "equals":<br>
+          <img class="figure" width="25%" src="curriculum/img/eng/variables/33.png" alt="figure"><br>
+          Now you can't click after the countdown ended.
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Calculating clicks per second </div>
+      <div class="cell">
+        <p>
+          Now add a "clicks per second" variable that will measure the average number of clicks in a second. We will set its value each time time is updated.
+          The math is simple: the number of clicks is divided by the remaining time. You can find all the necessary blocks in the Operators group:<br>
+          <img class="figure" width="50%" src="curriculum/img/eng/variables/34.png" alt="figure"><br>
+        </p>
+        <p>
+          Nesting operators in each other is very useful in programming. It works like parentheses in math formulas. We usually don't go this far into math in Afterschool Geekery sessions; however, it's worth to dig deep into this part of Scratch for once. If you are not interested, feel free to skip to the next step.
+        </p>
+        <p>
+          Noone likes long decimals; you can use "round" to avoid them:<br>
+          <img class="figure" width="50%" src="curriculum/img/eng/variables/35.png" alt="figure"><br>
+          If you want to keep one decimal place though, you can use the trick of multiplying by ten before rounding, and dividing by ten after rounding:<br>
+          <img class="figure" width="55%" src="curriculum/img/eng/variables/36.png" alt="figure"><br>
+          Fancy, isn't it? If only your math teacher from high school could see it...
+        </p>
+        <p>
+          Now you can track your average clicks per second during the game. Can you keep it above 6? :)
+        </p>
+      </div> <!-- cell -->
+
+      <div class="celltitle"> Time starts at first click </div>
+      <div class="cell">
+        <p>
+          Let's add one final touch to the project. It would be nice if the countdown only started with the first click. To achieve this, let's introduce a "game on?" variable. This variable will have two possible values, answerint the question in its name: "yes" and "no". At start, its value will be set to "no", and the countdown will only start once it switches to "yes":<br>
+          <img class="figure" width="35%" src="curriculum/img/eng/variables/37.png" alt="figure"> <br>
+        </p>
+        <p>
+          Add one more block to the script of the clicking, setting this variable to "yes":<br>
+          <img class="figure" width="30%" src="curriculum/img/eng/variables/38.png" alt="figure">
+        </p>
+        <p>
+          This kind of variable is called a state variable, and it is very useful in programming for registering and reporting the state of your project.
+        </p>
+        <p>
+          Try your project again; it should work flawlessly now. And have one more look at the code; it's not long, but complex enough to be proud of it! :) <br>
+          <img class="figure" width="70%" src="curriculum/img/eng/variables/39.png" alt="figure">
+        </p>
+      </div> <!-- cell -->
+
+
+    </div> <!-- click -->
+
+
+
+</div> <!-- chapter -->
+

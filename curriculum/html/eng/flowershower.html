@@ -1,0 +1,127 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title "> Flower Shower </div>
+
+  <div class="celltitle topicTitle"> What is this project about? </div>
+  <div class="cell">
+    <p>
+      It's a relatively quick animation to make in 45 minutes. Because of the cloning, it's not quite a beginner-level project, but you can bring it to your second session. Colorful flowers fall from the sky. You can see the end result here:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/995665353/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 1: Creating the sprite</div>
+  <div class="cell">
+    <p>
+      Although we're not working with a Scratchie kitten this time, there's no need to delete it; the easiest way to go is selecting and deletIng the drawing within Scratchie’s costume:<br>
+      <img class="figure" width="30%" src="curriculum/img/eng/flowershower/1.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/2.png" alt="figure">
+    </p>
+    <p>
+      And in the empty costume, draw the flower. Choose a nice bright color for the petals and use the "circle" tool to draw roughly equal circles. (Pro tip: if you hold down the Shift key, the result will be exactly circular.) Then, using another bright color, draw the center of the flower in the middle:<br>
+      <img class="figure" width="20%" src="curriculum/img/eng/flowershower/3.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/eng/flowershower/4.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/flowershower/5.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/flowershower/6.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/flowershower/7.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/flowershower/8.png" alt="figure"><br>
+      And there you have it, just a few simple strokes!
+    </p>
+    <p>
+      Click on the small blue image icon at the bottom right to select a background and your project is ready for coding.<br>
+      <img class="figure" width="15%" src="curriculum/img/eng/flowershower/9.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/10.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 2: Moving the flower</div>
+  <div class="cell">
+    <p>
+      The flowers will fall from the top of the stage to the bottom of the stage. It's a movement that appears in a lot of projects, so be very careful to talk through what the steps are:
+      <ol>
+        <li>
+          Place the sprite where it appears. In this case, at the top of the stage.
+        </li>
+        <li>
+          Pick a "go to x-y" block and place it in the script area. The x and y coordinates for the sprite's position are automatically included in the block, they do not need to be rewritten and do not need to be the same for everyone
+        </li>
+        <li>
+          Place the sprite where it will arrive. In this case, at the bottom of the stage.
+        </li>
+        <li>
+          Pick a "glide x-y" block and place it in the script area. The x and y coordinates are automatically adjusted in the block.
+        </li>
+      </ol>
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/11.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/flowershower/12.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/13.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/flowershower/14.png" alt="figure"><br>
+      If you try the code, you'll see that one flower is already falling from the sky.
+    </p>
+    <p>It would be useful if the flower did not always fall from the same place, but randomly from here and there. Fortunately, Scratch has a random block. But where to place it? Here it's worth taking a little of what we know about coordinates. The horizontal, left-right position of a sprite is given by its x coordinate; so that's what we need to randomize. But what are the limits of this coordinate? What is x if we are on the far left, and what is it if we are on the far right? This is another common problem, it is worth going over the steps to solve it:
+      <ol>
+        <li>Place a "random" block in the corresponding coordinate of the "go to" block (in our case, x).</li>
+        <li>Place the sprite at one of the endpoints. In our case, this is the left edge of the stage.</li>
+        <li>Copy the corresponding coordinate (in this case x) into the "random" block.</li>
+        <li>Move the sprite to the other endpoint. In our case, this is the right edge of the stage.</li>
+        <li>Copy the corresponding coordinate (in this case x) into the "random" block.</li>
+        <li>To keep the sprite at the right position, insert a block "x position" to the corresponding coordinate of the "glide" block (in our case it is x)..</li>
+      </ol>
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/15.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/16.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/17.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/18.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/19.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/20.png" alt="figure">
+    </p>
+    <p>
+      There are a few more things to adjust on the movement code:
+      <ul>
+        <li>the size of the flower (it should be small, because there will be a lot of them)</li>
+        <li>the time of the fall (well over 1 second)</li>
+        <li>end the movement with an "always" block</li>
+      </ul>
+      <img class="figure" width="40%" src="curriculum/img/eng/flowershower/21.png" alt="figure">
+    </p>
+    <p>
+      We call the above way of avoiding using an explicite use of coordinates by placing the sprite first and then picking the moveblock with the appropriate coordinates the "place and pick" method. It is very useful if you work with kids who are too small for thinking in coordinate systems, or just reluctant to do any math during the sessions.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 3: Cloning</div>
+  <div class="cell">
+    <p>
+      Cloning is a very powerful tool; once you get to grips with it, you'll move up a level in Scratch programming. By cloning, you can make a lot of tokens out of one single sprite. If you haven't used clones before, take a look at the clone blocks, and try to find out together what they do.<br>
+      <img class="figure" width="25%" src="curriculum/img/eng/flowershower/22.png" alt="figure">
+    </p>
+    <p>
+      If you place these blocks near the code you already have, it will not take long to realize that the content of the "forever" block will go under "when I start as a clone", and the clone creating block goes in the "forever" block. The "delete this clone" block is needed so that the clones don't accumulate at the bottom of the stage.<br>
+      <img class="figure" width="65%" src="curriculum/img/eng/flowershower/23.png" alt="figure"><br>
+      <img class="figure" width="65%" src="curriculum/img/eng/flowershower/24.png" alt="figure">
+    </p>
+    <p>
+      Restart the project, and take delight in the many flowers falling! :) If you have made it this far, you can close the session with a feeling of success. But if you have time and stamina to continue, you can improve the project a lot in a few more steps.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">4: Final touches</div>
+  <div class="cell">
+    <p>
+      It would be great to have the flowers in various colors. One way to do this is creating more costumes for our sprite. Open the "Costumes" tab once again, and duplicate the costume a few times, and paint the duplicates with various colors.<br>
+      <img class="figure" width="35%" src="curriculum/img/eng/flowershower/25.png" alt="figure">
+      <img class="figure" width="55%" src="curriculum/img/eng/flowershower/26.png" alt="figure">
+    </p>
+    <p>
+      Finally, you can add a bit more variety to the flowers with the "random" block:<br>
+      <img class="figure" width="45%" src="curriculum/img/eng/flowershower/27.png" alt="figure">
+      <img class="figure" width="50%" src="curriculum/img/eng/flowershower/28.png" alt="figure">
+    </p>
+    <p>
+      ...And voila, here's the final product, enjoy the view! :)<br>
+      <img class="figure" width="60%" src="curriculum/img/eng/flowershower/29.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+
+</div> <!-- section -->

@@ -1,0 +1,381 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="chapter">
+  <h1 class="topicTitle">Cloning sprites</h1>
+
+  <div class="section">
+    <div class="section-title">Introduction</div>
+
+    <div class="celltitle">What is this guide about?</div>
+    <div class="cell">
+      <p>
+        Cloning is a powerful technique in Scratch. Mastering this technique can itself turn you from a beginner to an intermediate level scratcher. Cloning will turn your animations and games from nice to amazing.
+      </p>
+      <p>
+        Cloning lets you create as many instances of a sprite as you need for your project. (In fact there is a limit of 300 clones, but as you will see in this guide, 300 clones are enough even for sophisticated animations.) These clones are all controlled by the same code, yet they don't necessarily look or behave the same.
+      </p>
+      <p>
+        This guide consists of three project works. The first one introduces the concept of cloning through a simple animation. The project descripton also discusses the difference between cloning and duplicating sprites. You can see the end result here: <br>
+        <iframe src="https://scratch.mit.edu/projects/1007109274/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+      <p>
+        The second project shows how to create clones continuously during a project, deleting the ones that have already served their purpose. Check out the result here:<br>
+        <iframe src="https://scratch.mit.edu/projects/1007248331/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+      <p>
+        The third project is a more elaborated version of the Bouncing Ball miniproject. This one is slightly more advanced than the previous two; it uses a local variable to distinguish between two types of clones of the same sprite. This is the end result:<br>
+        <iframe src="https://scratch.mit.edu/projects/1007177355/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Contents</div>
+    <div class="cell">
+      <p>
+        <ul>
+          <li><a href="#unicorns">Project 1: A herd of unicorns</a></li>
+          <li><a href="#rainfall">Project 2: Rainfall</a></li>
+          <li><a href="#balls">Project 3: Bouncing balls with tail effect</a></li>
+        </ul>
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+
+  <div class="section">
+    <div class="section-title" id="unicorns">Project 1: A herd of unicorns</div>
+
+    <div class="celltitle">What is this project about?</div>
+    <div class="cell">
+      <p>
+        This is a simple animation of many unicorns running in a field. The point is to understand the basics of cloning a sprite, and to understand the difference between duplicating and cloning. A more elaborated version of this project will be added to the Projects section of the Curriculum later.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Preparations</div>
+    <div class="cell">
+      <p>
+        Create a new project, delete Scratchie, and add the sprite named "Unicorn Running". Make the sprite small using the "size" tool under the stage, making room for many more instances. (If you don't like this unicorn, feel free to delete its horn and turn it into a horse, use any other sprite that has more than one costume, or draw your own.)
+      </p>
+      <p>
+        As a background, you can use simply a dark green rectangle; or use your favorite background if you don't mind that some of the unicorns may find themselves in funny places.<br>
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/101.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/eng/cloning/102.png" alt="figure">
+        <img class="figure" width="60%" src="curriculum/img/eng/cloning/103.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle">Animating the sprite</div>
+    <div class="cell">
+      <p>
+        If you check the costumes of the unicorn, you will see that it has six of them, one for each phase of the movement. This suggests that you can animate it with simple costume change. This code should be familiar for you from other projects, but even if it isn't, it's self-explanatory:<br>
+        <img class="figure" width="25%" src="curriculum/img/eng/cloning/104.png" alt="figure">
+      </p>
+      <p>
+        Time to start the project for the first time, and enjoy the view. If you find that the legs are moving too fast, slow down the loop a bit with a "wait" block:<br>
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/105.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle">A herd of duplicates</div>
+    <div class="cell">
+      <p>
+        One way to create many instances of the same sprite is duplication. Right-click on the thumbnail of the sprite under the stage, and choose "duplicate". Repeat this until you have a handful of sprites. <br>
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/106.png" alt="figure">
+        <img class="figure" width="50%" src="curriculum/img/eng/cloning/107.png" alt="figure">
+      </p>
+      <p>
+        When you restart the project, you can see that the unicorns move together nicely; but they are very close to each other. Wouldn't it be nicer to scatter them around the scene? You may remember that there is a motion block that places the sprite at a random position. Add it to your code:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/cloning/108.png" alt="figure">
+      </p>
+      <p>
+        But, apparently, you need to add this block to every duplicate one by one. This is not fair; from now on, every bit of change in the code has to be done many times. Even worse, if you decide to paint the horn pink, or remove it to convert the unicorn into a horse, you have to do this on every costume of every instance of the sprite. If this sounds a lot with five unicorns, just imagine having 30 of them in the stage. There has to be a better way to do this.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">A herd of clones</div>
+    <div class="cell">
+      <p>
+        Yes, there is a better way. Instead of creating many instances of a sprite manually with duplication, you can use the cloning blocks of Scratch to do it for you. This way all the instances will share the same code and the same costumes, saving you from the troubles of dealing with duplicates.
+      </p>
+      <p>
+        Delete all the duplicates, so that once again you have a single sprite:<br>
+        <img class="figure" width="25%" src="curriculum/img/eng/cloning/109.png" alt="figure">
+      </p>
+      <p>
+        The three cloning blocks are at the end of the Control group:<br>
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/110.png" alt="figure"><br>
+        One of them is in fact an event block; it is the clone equivalent of the "green flag" block. Place it in the script area, you will need it soon:<br>
+        <img class="figure" width="25%" src="curriculum/img/eng/cloning/111.png" alt="figure">
+      </p>
+      <p>
+        Once we switch to using clones, the running animation that we coded before will belong to the clones; and the only task of the original sprite will be creating these clones. So, move the code of the animation under the code event block:<br>
+        <img class="figure" width="55%" src="curriculum/img/eng/cloning/112.png" alt="figure">
+      </p>
+      <p>
+        Another clone block creates clones. This one will now belong to the original sprite, thus it gets under the "green flag" block. Add a repeat block with the number of unicorns you want to see in a herd:<br>
+        <img class="figure" width="55%" src="curriculum/img/eng/cloning/113.png" alt="figure">
+      </p>
+      <p>
+        If you restart the project, you can see a lot of unicorns running together. However, one of them isn't moving. Why? Because it is the original, the only one of them that isn't a clone. Remember that running is the clones' task, the original sprite's only task is creating clones.
+      </p>
+      <p>
+        To avoid seeing an idle unicorn in the field, you can insert a "hide" block under the "green flag" block:<br>
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/114.png" alt="figure"><br>
+        When you restart the project, you can't see the idle unicorn anymore; but, sadly, you can't see the others either. This is because a clone inherits all the properties of its original. If the original is invisible, the clones will be invisible, too. (You may wonder if this is the reason why you don't see so many unicorns in the world lately...)
+      </p>
+      <p>
+        The solution is simple; tell the clones to show up before starting to run.<br>
+        <img class="figure" width="55%" src="curriculum/img/eng/cloning/115.png" alt="figure"><br>
+        Now everything goes as planned, and the project work is ready. Yaaay! :)
+      </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle">The power of refactoring</div>
+    <div class="cell">
+      <p>
+        Why did we take such huge detours, doing and undoing staff, assembling and reassembling code? Why didn't we start straight with creating clones? Because clones are the solution of a problem; and to understand the idea behind cloning, you have to face the problem first.
+      </p>
+      <p>
+        This is what you have to do in teaching, as well. Don't prevent the kids from experiencing a problem, because that way you also prevent them from the joy of success when you finally solve it together. Remember that we teach through discovery. We don't teach kids the solution of a problem, instead we teach them how to solve it. This is the way they will become competent adults.
+      </p>
+      <p>
+        This process of solving a problem through failed solutions is not unique to learning. It can be found in virtually every human activity. If you have never made a mistake in cooking your favorite food, you have not understood the way to cook it.
+      </p>
+      <p>
+        This is especially true in computer programming, where it is simply impossible to solve a complex task at first try. Instead,
+        <ul>
+          <li>you make a plan</li>
+          <li>write your code accorning to the plan</li>
+          <li>see how it fails</li>
+          <li>spend some time finding out where it went wrong</li>
+          <li>make another plan and rewrite your code</li>
+        </ul>
+        Keep doing this until everything falls in place and your code does its job as intended. By this time the code will be completely restructured many times, and it will be much simpler and nicer than in your previous attempts. You need get through complicated failed attempts to arrive at a simple solution. This continuous restructuring a program code is called refactoring, and it is an essential part of programming.<br>
+        <img class="figure" width="70%" src="curriculum/img/eng/cloning/116.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+  <div class="section">
+    <div class="section-title" id="rainfall">Project 2: Rainfall</div>
+
+    <div class="celltitle">What is this project about?</div>
+    <div class="cell">
+      <p>
+        In this project you will create a rainfall animation, creating every raindrop by cloning, and moving them with the "glide" blocks as you have learned in the Motion guide.
+      </p>
+      <p>
+        To get a stream of rain, the creation of raindrops will be continuous. Since Scratch has a limit of 300 clones, you will need to do garbage collection, deleting the drops that have already fallen, putting to use the third cloning block.
+      </p>
+      <p>
+        The techniques introduced in this project are essential in many Scratch animations and games. You will find them in the "Flower shower" miniproject, the "Let it snow" project, and many of the game projects. Fortunately, it's not only important, but also fun. Let's go! :)
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Preparations</div>
+    <div class="cell">
+      <p>
+        Start a new project, and delete Scratchie. Choose an outdoor background. Move your mouse over the cat head icon under the stage, and click on the "Paint" option to draw the raindrop sprite. You can even name the sprite "raindrop", it is a good idea to use meaningful names instead of "Sprite1", "Sprite2" etc.<br>
+        <img class="figure" width="20%" src="curriculum/img/eng/cloning/201.png" alt="figure">
+        <img class="figure" width="60%" src="curriculum/img/eng/cloning/202.png" alt="figure">
+      </p>
+      <p>
+        In the "Costumes" tab, choose a color and draw an oval shape with the "Circle" tool. Use the "Reshape" tool to create a drop out of it, as you have learned in the Drawing guide. You can color it with a gradient, and even use transparency as one of the colors to improve its look.<br>
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/203.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/204.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/205.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/206.png" alt="figure">
+      </p>
+      <p>
+        Finally, reduce the size of the daindrop sprite under the stage so that it will not be too large for your background.<br>
+        <img class="figure" width="20%" src="curriculum/img/eng/cloning/207.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Moving a single raindrop</div>
+    <div class="cell">
+      <p>
+        Now it's time to move the raindrop. It will fall from the top of the stage to the bottom of the stage. When you work on a project with kids, make sure you spend some time figuring out the coordinates together, just as you have learned in the Motion guide. But, having mastered coordinates from that guide, by now you will know that y is 180 at the top of the stage, and -180 at the bottom, so your initial code will be something like<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/cloning/208.png" alt="figure"><br>
+        Now your raindrop falls nicely in the middle of the stage, but only once. This is easy to fix; all you need is the "forever" block:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/cloning/209.png" alt="figure">
+      </p>
+      <p>
+        Changing the horizontal (left-right) position of the raindrop every time it starts falling would further improve the animation. Being familiar with the "random" block, and knowing that x is -240 at the left edge of the stage, and 240 at the right edge, you can set a random starting position:<br>
+        <img class="figure" width="45%" src="curriculum/img/eng/cloning/210.png" alt="figure">
+      </p>
+      <p>
+        Now another problem arises; the raindrop fails to fall vertically. It starts from a random position, and ends in the middle, as the code tells it by setting x to 0 at the arrival. This is puzzling; how to tell the raindrop to fall vertically, straight from top to bottom? Another random block wouldn't help, random start and random arrival would just result in an even more chaotic behavior. The drop has to keep its original x position, whatever it was. If only Scratch had an "x position" block... Wait, it does! Let's use it: <br>
+        <img class="figure" width="50%" src="curriculum/img/eng/cloning/211.png" alt="figure"><br>
+        This is exactly what we needed.
+      </p>
+      <p>
+        Now the first blue block says: "Start falling from the top of the stage where y is 180, and from the x position of your choice, anywhere between the left edge, where x is -240, and the right edge, where x is 240". The second block says: "Arrive in 1 second at the bottom of your stage, where y is -180, and the very same x position you started from." Once you understand what's going on, even Scratch blocks with many numbers start making sense, and you can read them like lines of a poem. It all becomes so simple once you pay a little effort into learning! :) The more you understand how the code works, the better you can make kids understand it.
+      </p>
+      <p>
+        This is the best you can do with a single raindrop. Now let's create many of them.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Cloning raindrops</div>
+    <div class="cell">
+      <p>
+        Remember how you had to restructure your code in the last project when you introduced the cloning blocks? We will now do the same. Don't worry, it's easy. Start with preparing the "create" block and the clone event block, and let's find out how to integrate them in the code.<br>
+        <img class="figure" width="75%" src="curriculum/img/eng/cloning/212.png" alt="figure">
+      </p>
+      <p>
+        You don't need to memorize what goes where; you can find it out every time if you ask yourself the right questions. What does every single raindrop do? It falls down, and it falls down only once, without repetition. So the blue blocks go under the clone event block along with all their contents:<br>
+        <img class="figure" width="75%" src="curriculum/img/eng/cloning/213.png" alt="figure"><br>
+        Now the rest is easy; the original Sprite's job is to create the clones continuously. So the "create" block goes under the "green flag" one, within "forever".<br>
+        <img class="figure" width="80%" src="curriculum/img/eng/cloning/214.png" alt="figure"><br>
+        Restart your project, and enjoy the view of the rainfall! :)
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Deleting fallen raindrops</div>
+    <div class="cell">
+      <p>
+        But the view doesn't last long; in about 10 seconds the rain stops. Why? Remember that Scratch has a limit of 300 clones. With about 30 frames per second, it takes 10 seconds to create 300 clones, which, after falling, stay idle at the bottom of the stage. There are 300 clones that have finished their jobs, and prevent the Scratch player to create more. To get rid of them, it's time to use the third cloning block. Let the code instruct the clones to destroy themselves after falling.<br>
+        <img class="figure" width="40%" src="curriculum/img/eng/cloning/215.png" alt="figure"><br>
+        Now the rain never stops falling!
+      </p>
+      <p>
+        Almost everything is at place now in your code; the only glitch in the animation is the one raindrop that is not moving along with the others. You may remember from the previous project that this is the original one; and you may also remember hiding the original and showing the clones.<br>
+        <img class="figure" width="80%" src="curriculum/img/eng/cloning/216.png" alt="figure"><br>
+        And now you are ready; the rainfall is as perfect as it needs to be. You have just finished a very important project. Be proud of yourself! :)
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+  <div class="section">
+    <div class="section-title" id="balls">Project 3: Bouncing balls with tail effect</div>
+
+    <div class="celltitle">What is this project about?</div>
+    <div class="cell">
+      <p>
+        This is a more elaborated version of the Bouncing ball miniproject, using slightly more advanced cloning techniques than what you saw above.
+      </p>
+      <p>
+        The project makes use of local variables. A local variable is one that you create checking the "For this sprite only" option when making it.<br>
+        <img class="figure" width="40%" src="curriculum/img/eng/cloning/301.png" alt="figure"><br>
+        These variables cannot be seen or used by other sprites; but this is not why they are essential for cloning. What makes them really special is that they can have different values for different clone instances. You have seen in the two previous projects that different clones can have different x and y coordinates. This is true with regards to all their properties: size, direction, current costume, and many other. Similarly, the value of a local variable may differ from clone instance to clone instance, thus letting you code their behavior to be less uniform.
+      </p>
+      <p>
+        Clone instances inherit the properties of the original sprite that created them. Similarly, they inherit the values of local variables. So, if the value of a local variable changes in between creating two instances, the values will differ for these instances:<br>
+        <img class="figure" width="50%" src="curriculum/img/eng/cloning/302a.png" alt="figure"><br>
+        <img class="figure" width="25%" src="curriculum/img/eng/cloning/302b.png" alt="figure"><br>
+        Another way to make values different is to change the value of a local variable sometimes during the lifetime of a clone:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/cloning/302c.png" alt="figure">
+      </p>
+      <p>
+        In particular, this project will use clones for two different purposes: some as balls bouncing from edge to edge, and some as tails for these clones. While the bouncing ball clones are moving, the tail clones stay in place, quickly fading away, and thus creating a nice visual effect:<br>
+        <img class="figure" width="40%" src="curriculum/img/eng/cloning/302.png" alt="figure"><br>
+        For this animation to work properly, the Scratch player needs to know which clone is bouncing, and which one is fading, being part of the tail. This will be done with a local "type" variable that has one of three values: "original" for the sprite itself that creates the clones, "bouncing" for the moving ones, and "tail" for the fading ones. Whichever value it has for a particular instance will tell how it behaves in the animation.
+      </p>
+      <p>
+        But enough of talking, let's go Scratching.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Preparations</div>
+    <div class="cell">
+      <p>
+        Create a new project, delete Scratchie, and add the simple ball sprite called "Ball". It is a good choice because it has five customes with various colors, making the animation dynamic and vibrant. Of course, you can draw your own ball sprite, or use any other sprite. Reduce the size of the ball, since there will be many different clones in the stage. Finally, choose a nice background for your project.<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/cloning/303.png" alt="figure"><br>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Bouncing a single ball</div>
+    <div class="cell">
+      <p>
+        Just like in the previous two project, start with animating a single instance, so that you can experience success before turning to cloning. This will be easy for you. First, make your ball face in a random direction. You probably remember from the Motion guide that directions range from -179 to 180:<br>
+        <img class="figure" width="40%" src="curriculum/img/eng/cloning/304.png" alt="figure"><br>
+        Now let it move at a fast pace (say, 15 steps at a time; you can set it lower or higher as you like):<br>
+        <img class="figure" width="40%" src="curriculum/img/eng/cloning/305.png" alt="figure"><br>
+        If you need a more detailed explanation for this part of the code, you find it in the Bouncing balls miniproject.
+      </p>
+      <p>
+        Start the project to check if the ball starts bouncing as intended.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Cloning the ball</div>
+    <div class="cell">
+      <p>
+        This part will also be easy based on the previous projects in this guide. Let's create a bunch of clones (not too many; most of the 300 possible clones will be needed for the tail). The clone creating code gets under the "green flag" block, so put the code of bouncing aside:<br>
+        <img class="figure" width="70%" src="curriculum/img/eng/cloning/306.png" alt="figure"><br>
+        Bouncing will be the job of the clones:<br>
+        <img class="figure" width="70%" src="curriculum/img/eng/cloning/307.png" alt="figure"><br>
+        Finally, don't forget to hide the original and show the clones:<br>
+        <img class="figure" width="70%" src="curriculum/img/eng/cloning/308.png" alt="figure">
+      </p>
+      <p>
+        Restart the project and enjoy the view of the many bouncing balls:<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/cloning/309.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Clones in different colors</div>
+    <div class="cell">
+      <p>
+        At the beginning of this project description, we mentioned that the properties of a sprite are inherited to its clones. Consequently, if it changes its properties while creating clones, the clones will vary. Let's test this information. The "Ball" sprite has costumes in 5 different colors. You can duplicate and paint them to have even more:<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/cloning/310.png" alt="figure"><br>
+        Now add a "next costume" block to the clone generating code:<br>
+        <img class="figure" width="25%" src="curriculum/img/eng/cloning/311.png" alt="figure">
+      </p>
+      <p>
+        Restart your project to see the bouncing balls in many vibrant colors.<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/cloning/312.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Clones creating their own clones</div>
+    <div class="cell">
+      <p>
+        Now that the base animation is ready, start preparing for creating the tail effect. The first step is simple, yet it's another huge leap ahead. The tail effect is the result of cloning each ball. This means that clones will continuously create their own clones:<br>
+        <img class="figure" width="40%" src="curriculum/img/eng/cloning/313.png" alt="figure"><br>
+        Now let's program the fading effect. You can use the ghost effect for fading, and change the effect gradually from 0 to 100 before deleting the clone:<br>
+        <img class="figure" width="30%" src="curriculum/img/eng/cloning/314.png" alt="figure">
+      </p>
+      <p>
+        If you restart the project, you can see that it doesn't work. You can see a few fading balls, but then nothing. The reason is that the two scripts with clone event blocks are in conflict with each other:<br>
+        <img class="figure" width="75%" src="curriculum/img/eng/cloning/315.png" alt="figure"><br>
+        Don't worry, the solution is coming in the next step.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Distinguishing instances with a local variable</div>
+    <div class="cell">
+      <p>
+        Create your first local variable. Don't forget to check the "For this sprite only" box:<br>
+        <img class="figure" width="40%" src="curriculum/img/eng/cloning/316.png" alt="figure"><br>
+        The project begins with the original clone, so the variable should be set to "original" under the "green flag" block:<br>
+        <img class="figure" width="25%" src="curriculum/img/eng/cloning/317.png" alt="figure">
+      </p>
+      <p>
+        This value is inherited to the clones that the original sprite creates. Remember that these are the bouncing ones. So the code of bouncing should be nested in an "if" block that checks this value:<br>
+        <img class="figure" width="45%" src="curriculum/img/eng/cloning/318.png" alt="figure"><br>
+        (If this use of a variable in a condition is not familiar to you, check the two projects of the Variables guide.)
+        These clones obviously are not originals anymore, so the value should be set immediately to "bouncing":<br>
+        <img class="figure" width="45%" src="curriculum/img/eng/cloning/319.png" alt="figure"><br>
+        Now this value is inherited by the second generation of clones, so their code should contain the same value-checking and value-setting:<br>
+        <img class="figure" width="35%" src="curriculum/img/eng/cloning/320.png" alt="figure">
+      </p>
+      <p>
+        Now the animation works like the charm. Enjoy, and be proud of yourself, you have just levelled up in clone mastery! :)<br>
+        <img class="figure" width="60%" src="curriculum/img/eng/cloning/321.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+
+</div> <!-- chapter -->
+
+

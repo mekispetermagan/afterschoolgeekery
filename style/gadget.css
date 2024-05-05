@@ -1,0 +1,147 @@
+/*
+  brand colors
+  ============
+  blue/purple:  #91a6ff
+  pink:         #ff88dc
+  red:          #f94646
+  yellow:       #faff7f
+  white:        #ffffff
+  black:        #222222
+*/
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #edf0ff;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  box-sizing:  content-box;
+}
+
+.gadgetOuter {
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.gadget {
+  width: max(min(90%, 1728px), 668px);
+  /* height: max(min(80%, 972), 375); */
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #222222;
+  border: 18px solid #161616;
+  border-radius: 96px 96px 192px 192px;
+}
+
+.gadgetButtonArea {
+  width: max(10%, 120px);
+  height: 100%;
+  /* height: 720px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  justify-content: space-between;
+}
+
+.gadgetButtonArea.right {
+  justify-content: flex-start;
+}
+
+.gadgetScreenArea {
+  width: max(80%, 480px);
+  height: max(100%, 360px);
+  /* height: 100%; */
+  display: flex;
+  position: relative;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.gadgetScreen {
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  border-radius: 12px;
+  position: relative;
+  overflow: scroll;
+}
+
+/* .gadgetCurriculumEmbed {
+  width: 100%;
+  height: 100%;
+} */
+
+.gadgetLiteracyEmbed {
+  width: 740px;
+  height: 500px;
+  margin-left: 140px;
+  margin-top: 100px;
+}
+
+.gadgetLogo {
+  margin-top: 24px;
+}
+
+.gadgetButtonArea.left {
+  border-radius: 77px 0px 0px 173px;
+}
+
+.gadgetButtonArea.right {
+  border-radius: 0px 77px 172px 0px;
+}
+
+.gadgetButton {
+  background-color: #222222;
+  border: 9px solid #111111;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.gadgetButton.rom {
+  margin-bottom:60px;
+}
+
+.gadgetButton.power {
+  margin-top: 24px;
+}
+
+.gadgetButton.home {
+  margin-top: 24px;
+}
+
+.gadgetButtonInner {
+  border: 6px solid #111111;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.gadgetButtonInner.powerOn {
+  display: none;
+}
+
+.gadgetButtonInner.homeOn {
+  display: none;
+  margin: 10px;
+}
+
+.gadgetButtonInner.homeOff {
+  margin: 10px;
+}

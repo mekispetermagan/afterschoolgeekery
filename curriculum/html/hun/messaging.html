@@ -1,0 +1,162 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+<div class="chapter">
+  <h1 class="topicTitle"> Üzenetküldés Scratch-ben</h1>
+
+
+  <div class="section">
+    <div class="section-title"> Introduction </div>
+
+    <div class="celltitle"> Miről szól ez az útmutató? </div>
+    <div class="cell">
+      <p>
+        Ebben a tananyagrészben elsajátíthatod, hogy használd az üzenetküldést és üzenetfogadást Scratch-ben. Ezek nagyon hatékony eszközök, amik lehetővé teszik, hogy egy projekt szereplői a háttérben kapcsolatba lépjenek egymással, és összehangolják a viselkedésüket. Az útmutató egyetlen projektmunkát tartalmaz: ez egy beszélgetés két szereplő között. Itt a végeredmény:
+      </p>
+      <iframe src="https://scratch.mit.edu/projects/1002988494/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <p>
+        Ez a projekt bemutatja, hogy tudod a szereplők együttműködését  üzenetküldéssel támogatni. Bár a projekt egyszerű, egyben nagyon fontos is, hiszen bármilyen történetküldő projektet erre tudsz alapozni.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Hogy működik Scratch-ben az üzenetküldés?</div>
+    <div class="cell">
+      <p>
+        Az üzenet blokkokat az Események csoport végén találod:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/01.png" alt="figure"><br>
+        Az üzeneteket jellemzően arra használjuk, hogy szereplők viselkedését összehangoljuk. Mondjuk van egy "Prérifarkas" szereplőnk, aki a projekt futása során egy ponton elküldi a "robbanj!" üzenetet a "küldj üzenetet" blokkal. És van egy "dinamit" szereplőnk is, annak a kódjában pedig egy "üzenet érkezésekor" eseményblokk ugyanezzel a "robbanj" üzenettel. A Prérifarkas szereplő által küldött üzenetet a dinamit szereplő megkapja, és végrehajtja az eseményblokk alatti kódot. Így működik együtt a "küldj üzenetet" blokk és az "üzenet érkezésekor" blokk. (A harmadik, "küldj üzenetet és várj" blokk tapasztalatunk szerint csak összezavarja a gyerekeket, ezért ezt nem szoktuk használni.)
+      </p>
+      <p>
+        Az üzenet szövegét úgy állíthatod be, hogy rákattintasz az üzenet blokkon a kis fehér háromszögre, és az "új üzenet"-re kattintasz:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/02.png" alt="figure"><br>
+        Az üzenet szövege nem lényeges; csak annak van jelentősége, hogy a küldő és a fogadó blokk ugyanarra az üzenetre legyen állítva. Azért érdemes a szövegre is figyelni: ha egy projektben sok üzeneted van és azokat "üzenet1"-nek, "üzenet2"-nek, "üzenet3"-nak stb. nevezed, akkor nem fogsz eligazodni a saját projektedben.
+      </p>
+      <p>
+        A gyerekeket gyakran összezavarja az üzenetblokkok és a "mondd" blokkok közötti látszólagos hasonlóság:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/03.png" alt="figure"><br>
+        Valójában semmi közös nincs a "mondd" blokkokban és az üzenet blokkokban azon kívül, hogy mindegyikbe szöveg kerül. Egy "mondd" blokk csak egy szereplő kinézetét változtatja meg azzal, hogy szövegbuborékot rak fölé. A szövegbuborék a közönségnek szól, annak, aki a projektet használja, nem pedig a többi szereplőnek. Egy "küldj üzenetet" blokk üzenete viszont a többi szereplőnek szól, és nem a közönségnek; az, aki a projektet használja, észre sem veszi az üzenetet, csak a következményeit. A "Játékosítás" tananyagrészben részletesen beszélünk majd arról, hogy lehet ezt a különbségtételt jól átadni a gyerekeknek.
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+  <div class="section">
+    <div class="section-title" id="dialogue"> Projektmunka: két szereplő párbeszéde </div>
+
+    <div class="celltitle">Előkészületek</div>
+    <div class="cell">
+      <p>
+        Hozz létre egy új projektetm és tedd bele két kedvenc szereplődet, akik beszélgetni fognak. Ha van kedved, hátteret is adhatsz a projekthez.<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/messaging/04.png" alt="figure">
+        A két szereplőre úgy fogunk hivatkozni, hogy "Giga" és "Nano"; de természetesen a tieidet bárhogy hívhatják.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Giga megkezdi a beszélgetést</div>
+    <div class="cell">
+      <p>
+        Kezdheted a projektet azzal, hogy Giga megérkezik. Ezt az "ugorj" és a "csússz" blokkokkal legkönnyebb megoldani, ahogy a "Mozgás" tananyagrészben tanultad. Tedd Gigát a színpad bal szélére, és vegyél ki egy "ugorj" blokkot a benne lévő x és y értékekkel:<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/messaging/05.png" alt="figure"><br>
+        <img class="figure" width="25%" src="curriculum/img/hun/messaging/06.png" alt="figure"><br>
+        Aztán tedd vissza Gigát a színpad hözepére, és vegyél ki egy "csússz" blokkot az új x és y értékekkel:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/07.png" alt="figure"><br>
+        Amint Giga megérkezett, már üdvözölheti is a barátját:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/08.png" alt="figure"><br>
+        Indítsd el a projektet, hogy lásd, minden a tervek szerint működik-e.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Nano beszáll a beszélgetésbe</div>
+    <div class="cell">
+      <p>
+        Most válts a Nano szereplőre, hogy az ő kódját is elkezdhesd összerakni. Kezdheted mondjuk egy "mondd" blokkal (és egy "ugorj" blokkal, hogy mindig ugyanott legyen a projekt elején):<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/09.png" alt="figure"><br>
+        Ha újraindítod a projektet, látni fogod, hogy valami nem oké; Nano már azelőtt elkezd beszélni, hogy Giga egyáltalán megérkezne. Első ötletként késéeétetheted Nano válaszát egy "várj" blokkal. Giga 1 másodpercet tölt mozgással és kettőt beszéléssel, tehát 3 késleltetés pont jó lesz:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/10.png" alt="figure"><br>
+        A trükk működik; éppen időben érkezk a válasz.
+      </p>
+      <p>
+        Tegyük érdekesebbé a párbeszédet egy kis mozgással, azokat a technikákat használva, amelyeket a "Mozgás" tananyagrészben megismertél. Ne felejtsd el a szereplődet áthelyezni, mielőtt kiveszel egy "ugorj" vagy "csússz" blokkot, hogy a koordináták rendben legyenek:<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/messaging/11.png" alt="figure"><br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/12.png" alt="figure">
+      </p>
+      <p>
+        Eddig minden rendben van; minden úgy történik, ahogy akartuk, és akkor, amikor akartuk. De a kód egyre hosszabb; ennyi blokkot már nehéz átlátni. Hamarosan látni fogod, ez még a kisebbik baj.
+      </p>
+      <p>
+        Hogy Giga a megfelelő pillanatban reagáljon Nano mutatványára, neki is kell adni egy "várj" blokkot. De hány másodpercet írjunk bele? 12 ismétlés az körülbelül fél másodperc; 2 + 2 + 0.3 + 0.5 + 0.3 = 5.1 (ne feledd, a Scratch tizedespontot használ és nem tizedesvesszőt), szóval Gigának körülbelül 5 másodpercet kell várnia:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/13.png" alt="figure">
+      </p>
+      <p>
+        Ha újraindítod a projektet, láthatod, hogy még mindig minden úgy működik, ahogy kell. De nem igazság, hogy ilyen bonyolult matek kell egy egyszerű animációhoz; biztos van egyszerűbb megoldás is, mint késleltetéseket számolgatni. Gondolj csak bele; mi van, ha később meggondolod magad és beiktatsz még egy "mondj" blokkot, vagy megváltoztatod a szereplő mozgását? Csak nem fogod minden alkalommal újraszámolni a késleltetést, amikor egy részletet megváltoztatsz! Ez egy komoly design probléma; jelenlegi formájában elkészíteni is, karbantartani is nehéz a kódot.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Időzítés üznettel</div>
+    <div class="cell">
+      <p>
+        Ahelyett, hogy beleírnánk a kódba a késleltetéseket, szinkronizáljuk a beszélgetést üzenetekkel. Amikor Giga a köszönés végére ér, jelezhet Nanónak egy üzenettel:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/14.png" alt="figure"><br>
+        Nano pedig belekezdhet a mondandójába, amikor megkapja az üzenetet, és a mutatványa végén visszajelezhet Gigának egy újabb üzenettel:<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/messaging/15.png" alt="figure"><br>
+        Aztán megint Giga következik:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/16.png" alt="figure">
+      </p>
+      <p>
+        Ha újraindítod a projektet, láthatod, hogy a sztoriban semmi sem változott. Ami megváltozott, az a projekt designja. Most a kód kisebb feladatokra van feldarabolva, amelyek mindegyike a beszélgetés egy részletét írja le. A "várj" blokkok pedig eltűntek, a nehéz matekkal együtt.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">A beszélgetés folytatása</div>
+    <div class="cell">
+      <p>
+        Adj még egy kis mozgást a történethez; mondjuk Giga megpróbálja utánozni Nanót, de nem sikerül neki. Változtasd meg a számokat a "fordulj" és "ismételd" blokokban úgy, hogy a szaltó lassabb legyen, és Giga ne érkezzen talpra:<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/messaging/17.png" alt="figure"><br>
+        Mivel változtatjuk a szereplőink irányát, érdemes egy "nézz" blokkot tenni a kódjaik elejére, hogy minden újraindításkor állva kezdjék a beszélgetést:<br>
+        <img class="figure" width="25%" src="curriculum/img/hun/messaging/18.png" alt="figure">
+        <img class="figure" width="25%" src="curriculum/img/hun/messaging/19.png" alt="figure"><br>
+      </p>
+      <p>
+        Most megint Nanón a sor, hogy reagáljon, tehát Gigának jeleznie kell egy üzenettel. Vigyázz, higy az új üzenet más legyen, mint az előző, különben végtelen ismétlésbe kezd a projekt.<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/20.png" alt="figure">
+      </p>
+      <p>
+        Látod, hogy milyen jól lehet ezekkel az oda-vissza üzenetekkel irányítani a beszélgetést? Minden a helyén van, és a kódot értelmes kis egységekre bontottuk. Folytathatod a történetet, amilyen hosszan csak akarod:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/messaging/21.png" alt="figure"><br>
+        <img class="figure" width="40%" src="curriculum/img/hun/messaging/22.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+  </div> <!-- section -->
+
+  <div class="section">
+    <div class="section-title" id="dialogue"> Kihívások </div>
+
+    <div class="celltitle">1. kihívás</div>
+    <div class="cell">
+      <p>
+        Folytasd a beszélgetést két további üzenettel: "Nano3!" és  "Giga3!".<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/messaging/23.png" alt="figure">
+
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">2. kihívás</div>
+    <div class="cell">
+      <p>
+        Adj egy "cím" szereplőt a történethez. Amikor a zöld zászlóra kattintunk, két márodpercig jelenjen meg a cím, aztán tűnjön el, és egy "Start!" üzenettel induljon el a beszélgetés.<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/messaging/24.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle">3. kihívás</div>
+    <div class="cell">
+      <p>
+        Készíts még egy rövid beszélgetést, ezúttal három szereplő között. Itt már nem egyszerűen oda-vissza fog menni az üzenetküldés; egy üzenetet két szereplő is megkaphat, és akár egyszerre is reagálhat rá.<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/messaging/25.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+
+</div> <!-- chapter -->
+

@@ -1,0 +1,181 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title"> Chasing game </div>
+
+  <div class="celltitle"> What is this project about? </div>
+  <div class="cell">
+    <p>
+      We're going to put together an extremely simple game where one player follows the mouse pointer, and the other player follows the first player. You can find the result here:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/995470635/embed"
+    allowtransparency="true" width="485" height="402"
+    frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <p>
+      This game should be made immediately after the Scratch intro animation, because its code follows it organically:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/90979368/embed"
+    allowtransparency="true" width="485" height="402" frameborder="0"
+    scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Preparations </div>
+  <div class="cell">
+    <p>
+      Start the session by watching the animation
+      <a href="https://scratch.mit.edu/projects/90979368/fullscreen" target="_blank">"Scratch is Fun!"</a>
+      together. In it, Scratch sprites demonstrate how Scratch works by building and running a very simple Scratch code:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/eng/chasing/1_1.png" alt="figure">
+    </p>
+    <p>
+      After you have watched the video and discussed what happened in it, everyone should create a new Scratch project, choose a sprite they like (and feel free to delete the cat) and try to rebuild the code together from memory. The blocks will look somewhat different (the animation is over eight years old, and was created for an earlier version of Scratch), but this shouldn't bother the kids at all:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/eng/chasing/1_2.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 1: Following the mouse pointer </div>
+  <div class="cell">
+    <p>
+      Discuss what is missing from circular movement to make it look like the way sprites move in a game. Among the many ideas, there will most certainly be one that we should be about controlling the movement. The next question to discuss might be how we control sprites in a game, and among the many answers will be the console controller, screen touch, keyboard, and mouse. Of these options, keyboard and mouse control are the easiest to implement on a laptop; and that's what we're going to do.
+    </p>
+    <p>
+      The direction of movement will be given by the mouse pointer. If you start looking in the motion blocks, you will find one that says just that. If you replace the "turn" block with this one, you will have the mouse control code in one go. It's also worth slowing down the sprite a bit by making the number in the "move" block smaller, so that the game doesn't feel so rushed:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/chasing/2_1.png" alt="figure">
+    </p>
+    <p>
+      If you don't want the sprite to stand on its head while moving left, you can find a movement block to prevent this. And if you find the sprite too big, you can safely make it smaller by using the "set size to" block in the purple "look" group. (These properties can be set not only by block, but also in the sprite menu below the stage.)
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/chasing/egerkovetes_2.png" alt="figure">
+    </p>
+    <p>
+      Finally, so that you don't always have to grab and place the sprite before starting the game, you can place it in the top left corner and use a "go to" block to have it automatically moved there every time you start the game:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/chasing/egerkovetes_3.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 2: Following another sprite </div>
+  <div class="cell">
+    <p>
+      To make this an exciting game, you need another sprite to play the role of the enemy. This sprite no longer follows the mouse pointer, but the first sprite. This requires minimal change in the code, since the same blocks will be used. Only the "point towards" block needs to be switched to make the new sprite move towards the other one:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/chasing/3_1.png" alt="figure">
+    </p>
+    <p>
+      Again, it's worth slowing down a bit to give the sprite you're controlling a chance to escape:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/chasing/3_2.png" alt="figure">
+    </p>
+    <p>
+      And finally, you can resize the sprite, fix the directions of the costume, and launch it from the bottom right corner:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/chasing/3_3.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 3: Touch sensing </div>
+  <div class="cell">
+    <p>
+      Now it's worth briefly discussing what else is missing to make this an exciting game. One of the answers will most certainly be to make something happen if the chaser catches its target. The simplest option is that the game simply ends.
+    </p>
+    <p>
+      But what does it mean in programming language for one sprite to catch another? Well, it means that their costumes touch each other on the stage. Scratch has a special block for this in the light blue "perception" category. This is set to the mouse pointer by default, but you can switch it with a single move:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/chasing/4_1.png" alt="figure">
+    </p>
+    <p>
+      Importantly, this block will be assigned to the first sprite, the one we control with the mouse. Don't forget to warn all participants to click on the correct sprite’s thumbnail under the stage, because misplaced codes can be the source of many errors. (Which is annoying, but not fatal, as you can easily copy the codes either by dragging them with the mouse or by placing them in and out of the backpack.)
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/eng/chasing/4_2.png" alt="figure">
+    </p>
+    <p>
+      All the Scratch interpreter has to do is waiting until the touch event occurs:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/chasing/4_3.png" alt="figure">
+    </p>
+    <p>
+      This could easily be the first time children have encountered a sprite running several codes at the same time. This is not usually a problem, as only we adults are conditioned to perform tasks in a linear, sequential way, but for children multitasking is perfectly natural. But if it does come up, you might as well mention that it's called parallel programming, and it's a very cool and modern thing.
+    </p>
+    <p>
+      To prevent a later error, it is worth adding an extra second before touch detection starts. Since the game ends with the two sprites touching each other, it is possible that on restart the touch sensing script will be the first of the parallel tasks to be performed, and the game will end immediately before the sprites have taken their places:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/chasing/4_4.png" alt="figure">
+    </p>
+    <p>
+      If you've made it this far, you might as well round off the project with a "stop everything" block and end the session with the children creating what is likely to be the first video game of their lives:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/chasing/4_5.png" alt="figure">
+    </p>
+    <p>
+      But if you still have some time and enthusiasm left over, you can make the ending a little more spectacular. To do this, instead of stopping, you might want to send a message to a new sprite, which will be created in the next step:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/eng/chasing/4_6.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/chasing/4_7.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/chasing/4_8.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 4: Game over </div>
+  <div class="cell">
+    <p>
+      Click on the "paint new sprite" icon, because we will draw the third sprite ourselves:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/eng/chasing/5_1.png" alt="figure">
+    </p>
+    <p>
+      Come up with a simple text to end the game: it could be "Game Over", "Over", "Gotcha", or whatever you like, and write it in the new sprite's costume using the letter tool and the color of your choice:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/chasing/5_2.png" alt="figure">
+    </p>
+    <p>
+      If you like, you can frame the caption, or even use the reshape tool to zigzag the frame like in a comic book:
+    </p>
+    <p>
+      <img class="figure" width="20%" src="curriculum/img/eng/chasing/5_3.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/chasing/5_4.png" alt="figure">
+    </p>
+    <p>
+      Once you've made your costume, you're ready for the code. First of all, it's important that the new sprite is not visible during the game, so you should hide it at the beginning of the game:
+    </p>
+    <p>
+      <img class="figure" width="20%" src="curriculum/img/eng/chasing/5_5.png" alt="figure">
+    </p>
+    <p>
+      And at the end of the game, you can display it where the collision happened, i.e. where the sprite you are controlling is:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/chasing/5_6.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/chasing/5_7.png" alt="figure">
+    </p>
+    <p>
+      And finally you can stop the game:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/chasing/5_8.png" alt="figure">
+    </p>
+    <p>
+      If you have made it this far, be very proud of yourselves! :)
+    </p>
+  </div> <!-- cell -->
+
+</div> <!-- section -->
+

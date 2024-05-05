@@ -1,0 +1,370 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="chapter">
+  <h1 class="topicTitle"> Szereplőmozgatás </h1>
+
+
+  <!-- Intro starts -->
+  <div class="section">
+    <div class="section-title"> Bevezetés </div>
+
+    <div class="celltitle"> Miről lesz szó? </div>
+    <div class="cell">
+      <p>
+        Ebben az útmutatóban három módszert adunk a kezedbe ahhoz, hogy szereplőket mozgass a Scratch színpadon. Mindhárom módszert sokféle játékban és animációban használhatod, de mind másra és másra való.
+    </div> <!-- cell -->
+
+    <div class="celltitle">Csúsztatás</div>
+    <div class="cell">
+      <p>Talán a legegyszerűbb mozgatási módszer a csúsztatás. Az első szakaszban egy interaktív labdázós jelenetet. Íme a végeredmény (irányítás a szóköz gombbal):
+      </p>
+      <p>
+        <iframe src="https://scratch.mit.edu/projects/469772771/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Irányítás egérrel</div>
+    <div class="cell">
+      <p>
+        A következő szakaszban egérrel mozgatjuk meg a szereplőnket. Egy interaktív fogócska-jelenetet rakunk össze, amelyben az egyik szereplő az egeret, a másik szereplő meg az egyiket követi. Itt a végeredmény (irányítás egérrel):
+      </p>
+      <p>
+        <iframe src="https://scratch.mit.edu/projects/472234835/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Mozgatás billentyűkkel</div>
+    <div class="cell">
+      <p>
+        Végül az utolsó szakaszban megtanuljuk billentyűkkel mozgatni a szereplőinket. Itt is készítünk egy egyszerű projektet, amelyben a felhasználó két szereplőt tud egyszerre mozgatni billlentyűkkel. A végeredmény (irányítás: W-A-S-D, illetve nyíl-billentyűk):
+      </p>
+      <p>
+        <iframe src="https://scratch.mit.edu/projects/473078641/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+  </div>
+  <!-- Intro ends -->
+
+  <!-- Gliding starts -->
+  <div class="section">
+    <div class="section-title" id="gliding">Csúsztatás</div>
+
+    <div class="celltitle"> Miről lesz szó? </div>
+    <div class="cell">
+      <p>
+        A Scratch kétféle "csússz" blokkot ad a kezünkbe. Az egyik véletlen helyre viszi a szereplőt, a másik pedig az általunk megadott koordinátákra. Mindkettőt nagyon könnyű használni: a Scratch lejátszó minden képernyőfrissítéskor kiszámolja helyettünk, hogy mozgás közben mikor hol jár éppen a szereplő.
+      </p>
+      <p>
+        Indíts új projektet, cseréld le Scratchie-t három tetszésed szerinti szereplőre, és válassz hátteret.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">1. lépés</div>
+    <div class="cell">
+      <p>
+        Kezdjük egy nagyon egyszerű mozgással. Jelöld ki az egyik nem-labda szereplőt, és vedd ki a "csússz ide: véletlen hely" feliratút a kék mozgás-blokkok közül:
+        <img class="figure" height="30px" src="curriculum/img/hun/motion/g1.png" alt="ábra">.
+      </p>
+      <p>
+        Ha a blokkra kattintasz, a szereplő átcsúszik egy új helyre a színpadon. Ha még egyszer megnyomod, ismét újabb helyre csúszik. A csúszás hol lassabb, hol gyorsabb, hiszen a megadott 1 másodperc alatt hol nagyobb, hol kisebb távolságot kell megtennie. Így működik ez a blokk.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">2. lépés</div>
+    <div class="cell">
+      <p>
+        De nem várhatjuk el a felhasználótól, hogy a kódban kattintgasson. Könnyebbé teheted az irányítást, ha esemény-blokkot is adsz a kódhoz. Például a "szóköz gomb lenyomásakor" éppen megfelel. Ha összekapcsolod a két blokkot, innentől fogva valahányszor lenyomod a szóköz-billentyűt, új helyre vándorol a szereplő.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/motion/g2.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">3. lépés</div>
+    <div class="cell">
+      <p>
+        Most mozgassuk meg a másik szereplőt is; a változatosság kedvéért ezt kötött pályán. Most a másik "csússz" blokkot fogjuk használni, amelyikben "x" és "y" van. Talán emlékszel még iskolából, hogy ezek koordináták. A Scratch-színpad ugyanis egy koordinátarendszer, amelyben középen van a (0,0) pont (tehát x is 0, meg y is), és az x koordináták balról-jobbra -240-től 240-ig tartanak, az y koordináták pedig alulról-felfelé -180-tól 180-ig.
+      </p>
+      <p>
+        <img class="figure" width="50%" src="curriculum/img/hun/motion/g3xy.png" alt="ábra">
+      </p>
+      <p>
+        De szerencsére ebben a projektben nem sokat kell törődnöd a koordinátákkal. A Scratch fejlesztői ugyanis előzékenyen gondoskodtak arról, hogy ha a szereplődet elhelyezed valahol a játéktéren, akkor az x és y koordinátái automatikusan belekerülnek a még ki nem vett mozgás-blokkokba. (De vigyázat! A már kivett blokkokban nem cserélődnek a koordináták; és érdemes meg is állítani a projektet, mielőtt kivesszük a blokkot, mert a lejátszás alatt nem mindig működik az automatikus koordináta-beillesztés.)
+      </p>
+      <p>
+        Tedd tehát a szereplődet egy megfelelőnek gondolt helyre, és vegyél ki egy x-y koordinátás "csússz" blokkot. Aztán helyezd át máshova, és vegyél ki még egyet az új koordináétákkal. Ezt ismételd meg annyiszor, ahányszor csak kedved tartja:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/motion/g3a.png" alt="ábra">
+      </p>
+      <p>
+        Ha rákattintasz a blokkokra, azt láthatod, hogy a szereplő bejárja az általad megadott útvonalat. És ha még egyszer rákattintasz, akkor újra bejárja. De a "mindig" blokkal természetesen megoldhatjuk azt is, hogy magától ismétlődjön a séta:
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/hun/motion/g3b.png" alt="ábra">
+      </p>
+      <p>
+        És végül "várj" blokkokkal komótosabbá is tehetjük a szereplőnk mozgását:
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/hun/motion/g3c.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">4. lépés</div>
+    <div class="cell">
+      <p>
+        Végül a labdát mozgatjuk meg. Neki egyik szereplőtől a másikig vezet majd az útja, bárhol is vannak ezek. Hogy most se kelljen koordinátákkal bíbelődnünk, visszatérünk az elsőként használt "csússz" blokkhoz, de ezúttal lecseréljük benne a véletlent. Kattints a kis lefele mutató fehér nyílra, és felugrik egy menü:
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/hun/motion/g4a.png" alt="ábra">
+      </p>
+      <p>
+        Itt tudsz átváltani az egyik szereplőre; aztán egy másik blokkban a másikra. A labda eindulását is a szóköz lenyomásához kötheted:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/motion/g4b.png" alt="ábra">
+      </p>
+      <p>
+        És adhatsz még egy kis dinamikát az animációnak azzal, ha a labdát felgyorsítod, viszont az oda- és visszaútja közé beillesztesz egy kis várakozást:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/hun/motion/g4c.png" alt="ábra">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">5. lépés</div>
+    <div class="cell">
+      <p>
+        Már majdnem tökéletes az animáció; de a jelmezeken érdemes még annyit igazítani, hogy a labda lábtól-lábig haladjon. Ehhez be kell lépned a grafikus szerkesztőbe, kijelölni a szereplőt a jelmezén, és úgy elhelyezni, hogy a középpont a lábánál legyen:
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/motion/g5a.png" alt="ábra">
+      </p>
+      <p>
+        A labda jelmezét pedig úgy igazítsd, hogy pont középen legyen:
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/motion/g5b.png" alt="ábra">
+      </p>
+      <p>
+        A jelmezek középpontjának pontos elhelyezése fontos apróság, ami megkülönbözteti egymástől az összecsapott és az igényes Scratch-projekteket.
+      </p>
+      <p>
+        És ezzel kész is vagyunk; most már szépen és zökkenőmentesen megy az animáció.
+      </p>
+    </div> <!-- cell -->
+
+  </div>
+  <!-- Gliding ends -->
+
+  <!-- Mouse starts -->
+  <div class="section" id="mouse">
+    <div class="section-title">Irányítás egérrel</div>
+
+    <div class="celltitle">Miről lesz szó?</div>
+    <div class="cell">
+      <p>
+        A "csússz" blokkok akkor működnek jól, ha a szereeplőnket egyenes vonal mentén szeretnénk mozgatni; de mit tegyünk, ha klanyarogva kell haladnia? Ebben a szakaszban ennek nézünk utána egy fogócska-projekt fejlesztésével.
+      </p>
+    </div>
+
+    <div class="celltitle">1. lépés</div>
+    <div class="cell">
+      <p>
+        Kezdj egy új projektet, és válassz két szereplőt. Az egyiket "Hős"-nek, a másikat "Ellenség"-nek fogjuk nevezni.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/motion/m1.png" alt="ábra">
+      </p>
+    </div>
+
+    <div class="celltitle">2. lépés</div>
+    <div class="cell">
+      <p>
+        Kezdjük a "Hős" kódjával. (Ne felejtsd el kijelölni a szereplőt, mielőtt elkezded készíteni a kódját). Azt szeretnénk, ha egyszerre mozdulna és fordulna is; ez azt sugallja, hogy a felső két mozgás-blokkal érdemes kezdeni.
+      </p>
+      <p>
+        <img class="figure" src="curriculum/img/hun/motion/m2.png" alt="ábra">
+      </p>
+      <p>
+        Nem ismerős ez a kód valahonnan? :) Hát persze: ez az, amit a Scratch-csel való első ismerkedésunkkor összeraktunk, és amitől körbe-körbe kezd el járni a szereplő! :)
+      </p>
+    </div>
+
+    <div class="celltitle">3. lépés</div>
+    <div class="cell">
+      <p>
+        Ez így egy kicsit unalmas. Jobb lenne, ha körbekörbézés helyett inkább az egérmutatót követné a szereplő. Ezt nagyon könnyű elérni a "nézz véletlen irányba" blokkal. Ahogy mér korábban is láttuk, a blokkon lévő lefele mutató fehér nyíl egy menüt takar. Ebben tudod kiválasztani az eglrmutatót.
+      <p>
+        Most már azt csinálja a kód, amit szeretnénk. Ha esetleg lassítanál rajta, cseréld a megtett lépések számát kisebbre; ha gyorsítanál,   akkor pedig nagyobbra. És végül ha nem tetszik, hogy néha fejjel lefelé fordul, a forgási stílus beállítására is van egy mozgás-blokk:
+      </p>
+      <p>
+        <img class="figure" src="curriculum/img/hun/motion/m3.png" alt="ábra">
+      </p>
+    </div>
+
+    <div class="celltitle">4. lépés</div>
+    <div class="cell">
+      <p>
+        Most jöhet az "Ellenség" szereplő kódja. ez majdnem teljesen ugyanaz lesz, mint "Hősünk"-é, kivéve azt, hogy merre forduljon; hiszen míg "Hősünk" az egeret követi, az "Ellenség" "Hősünk"-et. Használd most is a legördülö menüt a választáshoz.
+      </p>
+      <p>
+        És természetesen érdemes kicsit lassabbra is venni a mozgást, hogy szegény "Hős"-nek legyen esélye az "Ellenség"-gel szemben.
+      </p>
+      <p>
+        <img class="figure" src="curriculum/img/hun/motion/m4.png" alt="ábra">
+      </p>
+      <p>
+        ...És máris kész vagyunk! :) Később majd megtanuljuk, hogy lehet ezeket az ujjgyakorlatokat játékká formálni, egyelőre meghagyjuk interaktív animációnak.
+      </p>
+    </div>
+
+  </div>
+  <!-- Mouse ends -->
+
+
+  <!-- Keys starts -->
+  <div class="section" id="keys">
+    <div class="section-title">Irányítás billentyűkkel</div>
+
+    <div class="celltitle"> Miről lesz szó? </div>
+    <div class="cell">
+      <p>
+        Az első projektben a szóköz billentyűvel indítottuk a szereplőnket; de ennél természetesen többet is tehetünk. A klasszikus játékokban a billentyűkkel a mozgás irányát adjuk meg. Lássunk erre is egy példát! Illetve mindjárt kettőt. A bi9llentyűkkel irányításnak ugyanis két módja is van, és ezek egy kicsit eltérnek egymástól. Az egyik egyszerűbb, de egy kicsit szaggatott vele a mozgatás; a másik egy kicsit összetettebb, de sokkal szebben mozog vele a szereplő.
+      </p>
+    </div>
+
+    <div class="celltitle">1. lépés</div>
+    <div class="cell">
+      <p>
+        Kezdj új projektet szabadon választott háttérrel és két tetszőleges szereplővel. Két különböző módon fogjuk megmozgatni őket.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/motion/k1.png" alt="ábra">
+      </p>
+    </div>
+
+    <div class="celltitle">2. lépés</div>
+    <div class="cell">
+      <p>
+        Kezdjük az egyszerűbb módszerrel. Az első projektben már találkoztunk azzal az esemény-blokkal, amely a szóköz lenyomására indítja el az őt követő kódot. Ebben is van egy kis lefele mutató fehér nyíl, ami kis menüt nyit meg:
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/motion/k2a.png" alt="ábra">
+      </p>
+      <p>
+        Ha itt mondjuk kiválasztod a "jobbra nyíl" opciót, egy vagy több mozgás-blokkal el kellene érni, hogy jobbra is menjen a szereplő. Az egyik kézenfekvő lehetőség az x koordináta megváltoztatása, amire van is külön blokk:
+      </p>
+        <img class="figure" width="25%" src="curriculum/img/hun/motion/k2b.png" alt="ábra">
+      </p>
+      <p>
+        Ha a gyerekek már megbarátkoztak a koordináták használatával, akkor mindenképpen ezt érdemes használni a foglalkozásokon, mert ez az egyszerűbb. Ha azonban még idegenkednek tőlük, akkor van egy másik megoldás is: egyszerűen abba az irányba fordítjuk a szereplőnket, amerre menni akarunk vele.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/motion/k2c.png" alt="ábra">
+      </p>
+      <p>
+        Így se fokokkal, se koordinátákkal nem kell bajlódni, és a kód csak egy leheletnyivel lesz bonyolultabb:
+      </p>
+      <p>
+        <img class="figure" width="25%" src="curriculum/img/hun/motion/k2d.png" alt="ábra">
+      </p>
+      <p>
+        Viszont most meg kell előzni azt, hogy a jelmez elforduljon, amikor a szereplő irányt változtat:
+      </p>
+      <p>
+        <img class="figure" width="25%" src="curriculum/img/hun/motion/k2e.png" alt="ábra">
+      </p>
+      <p>
+        Miután minden irányt sorra vettél, így fog kinézni a kész kódod:
+      </p>
+      <p>
+        <img class="figure" width="60%" src="curriculum/img/hun/motion/k2f.png" alt="ábra">
+      </p>
+      <p>
+        Most már a négy nyíl-billentyűvel szabadon tudsz mozogni a szereplőddel a színpadon, de csak kis szépséghibákkal: az irányváltásoknál szaggatottá válik a mozgás, és hiába nyomsz két gombot egyszerre, mégsem halad a szereplőd átlósan. Ezeket a szépséghibákat fogjuk kiküszöbölni a másik szereplő mozgatásában.
+      </p>
+    </div>
+
+    <div class="celltitle">3. lépés</div>
+    <div class="cell">
+      <p>
+        Van még egy blokk "szóköz lenyomva" felirattal. Ez világoskék, és az "Érzékelés" csoportban van:
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/hun/motion/k3a.png" alt="ábra">
+      </p>
+      <p>
+        Az ilyen hatszögletű blokkokat feltételeknek nevezzük, és csak más (főleg a sárga "Vezérlés" csoportból való) blokkokban tudjuk őket használni. Ha például addig szeretnénk várni, amíg a szóköz lenyomása be nem következik, akkor egy "várj eddig" blokk hatszögltű nyílásába kell illesztenünk:
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/motion/k3b.png" alt="ábra">
+      </p>
+      <p>
+        Állítsuk elő így is a mozgatás kódját! A változatosság kedvéért most dolgozzunk koordinátákkal, és hogy ne akadjon össze a két szereplő irányítása, most használjuk a W-A-S-D billentyűket, mint a profi játékokban:
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/hun/motion/k3c.png" alt="ábra">
+      </p>
+      <p>
+        De ez a kód láthatólag nincs még kész; külön meg kell mondani, hogy a projekt elindításától fogva folyamatosan legyen végrehajtva ez a kis kód. Így még két blokkal ki kell bővjtenünk:
+      </p>
+      <p>
+        <img class="figure" width="35%" src="curriculum/img/hun/motion/k3d.png" alt="ábra">
+      </p>
+      <p>
+        A másik három irány kódja pedig már magától értetődő:
+      </p>
+      <p>
+        <img class="figure" width="60%" src="curriculum/img/hun/motion/k3e.png" alt="ábra">
+      </p>
+      <p>
+        Természetesen itt is használhattok "nézz" és "menj" blokkokat, ha nem akartok koordinátákkal dolgozni.
+      </p>
+    </div>
+
+    <div class="celltitle">Duplikálás</div>
+    <div class="cell">
+      <p>
+        Észrevehetted, hogy ebben a projektben többször is összeraktuk szinte ugyanazt a kódot. Vajon nincs erre egy gyorsabb lehetőség? Dehogynem! Teljes kódokat lehet másolni úgy, hogy a legfelső blokkjukra jobb egérgombbal rákattintunk, és kiválasztjuk a "Duplikálás" opciót:
+      </p>
+      <p>
+        <img class="figure" width="25%" src="curriculum/img/hun/motion/k4a.png" alt="ábra">
+      </p>
+      <p>
+        Ez egy nagyon hasznos eszköz, de érdemes vele óvatosan bánni, mert ha hibás kódot duplikálunk, a hibáét is megnégyszerezzük... Kódot másolni veszélyes, a profi programozók igyekeznek is elkerülni.
+      </p>
+    </div>
+
+
+    <div class="celltitle">Összehasonlítás</div>
+    <div class="cell">
+      <p>
+        Van néhány fontos különbség aközött, amikor a billentyűs irányítást eseményblokkokkal valósítjuk meg, mint a 3. lépésben, és amikor feltétel-blokkokkal, mint a 4. lépésben. Érdemes ezeket sorra venni.
+        <ul>
+          <li>
+            Amikor exeményblokkot használunk, a szereplő akkor is mozogni fog a billentyűlenyomásra, amikor e projekt éppen nem fut. Az ilyen projekteket tehát nem lehet teljesen leállítani. A feltételblokkos változat elején ott van a "zöld zászlóra kattintva", tehát ez csak akkor működik, amikor a projektet elindítjuk-
+          </li>
+          <li>
+            Az eseményblokkos változat csak négy irányban enged mozgatni, átlósan nem. A feltételblokkos változatban átlósan is mozoghat a szereplő.
+          </li>
+          <li>
+            Az eseményblokkos változat tetejére nem tudunk más eseményblokkot helyezni; tehát nem tudjuk például egy üzenet megérkezéséhez vagy egy klón létrejöttéhez kötni a kódot. A feltételblokkokkal nagyobb a szabadságunk; a kódok tetején lévő "zöld zászló" eseményt arra cseréljük, amire akarjuk.
+          </li>
+          <li>
+            Az eseményblokkos változatban induláskor és irányváltáskor kicsit szaggatott a szereplő mozgása. Ennek az az oka, hogy az eseményblokk a számítógép operációs rendszerétől kérdezi meg, történt-e billentyűnyomás esemény; azt viszont nem játékirányításra, hanem gépelésre hangolták be, és gépeléskor fontos, hogy egy kicsit hosszabb billentyűnyomással ne gépeljünk véletlenül két betűt. A feltételblokk máshonnan veszi az információt, ezért itt nincs meg ez a szaggatottság.
+          </li>
+        </ul>
+      </p>
+      <p>
+        Összefoglalva: bár az első, eseményblokkos változat valamivel egyszerűbb, szinte minden esetben a második, feltételblokkos változat működik jobban.
+      </p>
+    </div>
+
+  </div>
+  <!-- Keys ends -->
+
+
+</div>

@@ -1,0 +1,126 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Virágeső villámprojekt </div>
+
+  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="cell">
+    <p>
+      Ez egy viszonylag gyorsan, 45 perc alatt elkészíthető animáció. A klónozás miatt nem teljesen kezdő szintű projekt, de akár a második foglalkozásra már bevihetitek. Színes virágok hullanak az égből. A végeredményt itt láthatjátok:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/916824357/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Szereplőrajzolás</div>
+  <div class="cell">
+    <p>
+      Bár most sem Scratchie cicával dolgozunk, ezúttal nincs szükség arra, hogy töröljétek; a legegyszerűbb az, ha a "Jelmez" fülre kattintás után a jelmezen belül jelölitek és törlitek ki a rajzot:<br>
+      <img class="ábra" width="30%" src="curriculum/img/hun/flowershower/1.png" alt="ábra">
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/2.png" alt="ábra">
+    </p>
+    <p>
+      Az üres jelmezben pedig rajzoljátok meg a virágot. Válasszatok egy jó élénk színt a szirmoknak, és a "kör" eszközzel rajzoljatok nagyjából egyforma köröket. (Pro tipp: ha nyomva tartjátok a Shift gombot, pontosan kör alakú lesz az eredmény.) Aztán egy másik élénk színnel rajzoljátok meg középre a virág közepét:<br>
+      <img class="ábra" width="20%" src="curriculum/img/hun/flowershower/3.png" alt="ábra">
+      <img class="ábra" width="15%" src="curriculum/img/hun/flowershower/4.png" alt="ábra">
+      <img class="ábra" width="20%" src="curriculum/img/hun/flowershower/5.png" alt="ábra">
+      <img class="ábra" width="20%" src="curriculum/img/hun/flowershower/6.png" alt="ábra">
+      <img class="ábra" width="20%" src="curriculum/img/hun/flowershower/7.png" alt="ábra">
+      <img class="ábra" width="20%" src="curriculum/img/hun/flowershower/8.png" alt="ábra"><br>
+      És kész is a virág, pár mozdulat volt az egész!
+    </p>
+    <p>
+      A jobb alsó kis kék kép-ikonra kattintva még válasszatok egy hátteret, és kódolásra kész a projekt.<br>
+      <img class="ábra" width="15%" src="curriculum/img/hun/flowershower/9.png" alt="ábra">
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/10.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">A virág mozgatása</div>
+  <div class="cell">
+    <p>
+      A virágok a színpad tetejéről a színpad aljáig fognak hullani. Ez egy olyan mozgás, ami nagyon sok projektben megjelenik, ezért nagyon alaposan beszéljétek át, milyen lépésekből áll:
+      <ol>
+        <li>
+          A szereplőt elhelyezzük ott, ahol meg fog jelenni. Esetünkben a színpad tetején.
+        </li>
+        <li>
+          Kiveszünk egy "ugorj x-y" blokkot, és beillesztjük a programkódba. A szereplő pozíciójához tartozó <i>x</i> és <i>y</i> koordináták automatikusan bekerülnek a blokkba, ezeket nem kell átírni, és szükségtelen, hogy mindenkinéál ugyanazok legyenek.
+        </li>
+        <li>
+          A szereplőt áthelyezzük oda, ahova érkezni fog. Esetünkben a színpad alján.
+        </li>
+        <li>
+          Kiveszünk egy "csússz x-y" blokkot, és beillesztjük a programkódba. Az <i>x</i> és <i>y</i> koordináták automatikusan bekerülnek a blokkba.
+        </li>
+      </ol>
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/11.png" alt="ábra">
+      <img class="ábra" width="30%" src="curriculum/img/hun/flowershower/12.png" alt="ábra">
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/13.png" alt="ábra">
+      <img class="ábra" width="30%" src="curriculum/img/hun/flowershower/14.png" alt="ábra"><br>
+      Ha kipróbáljátok a kódot, láthatjátok, hogy virágeső még nem hullik ugyan, de egy virág már lepottyan az égből.
+    </p>
+    <p>Hasznos lenne, ha a virág nem mindig ugyanonnan hullana le, hanem véletlenszerűen hol innen, hol onnan. Szerencsére a Scratch-nek van véletlen-blokkja is. De hova helyezzük el? Itt érdemes egy kicsit elővenni azt, amit a koordinátákról tudunk. Az-hogy vízszintesen, jobbra-balra irányban hol van valami, az <i>x</i> koordináta adja meg; tehát ezt kell véletlenné tenni. De milyen határok között lehet ez a koordináta? Mennyi az <i>x</i>, ha egészen baloldalt vagyunk, és mennyi, ha egészen jobboldalt? Ez is egy gyakori probléma, érdemes átbeszélni a megoldás lépéseit:
+      <ol>
+        <li>Tegyetek egy "véletlen" blokkot az "ugorj" blokk megfelelő koordinátájába (esetünkben az <i>x</i>-be).</li>
+        <li>Helyezzétek el a szereplőt az egyik végponton. Ez esetünkben a színpad bal széle.</li>
+        <li>Másoljátok át a megfelelő koordinátát (esetünkben az <i>x</i>-et) a "véletlen" blokkba.</li>
+        <li>Tegyétek át a szereplőt a másik végpontba. Ez esetünkben a színpad jobb széle.</li>
+        <li>Másoljátok át a megfelelő koordinátát (esetünkben az <i>x</i>-et) a "véletlen" blokkba.</li>
+        <li>Hogy a megfelelő helyre érkezzen a szereplő, illesszetek egy "x hely" blokkot a "csússz" megfelelő koordinátájához (esetünkben ez az <i>x</i>).</li>
+      </ol>
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/15.png" alt="ábra">
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/16.png" alt="ábra">
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/17.png" alt="ábra">
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/18.png" alt="ábra">
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/19.png" alt="ábra">
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/20.png" alt="ábra">
+    </p>
+    <p>
+      Még néhány apróságot érdemes beállítani a mozgatás kódján:
+      <ul>
+        <li>a virág méretét (legyen kicsi, mert sok lesz belőle)</li>
+        <li>az esés idejét (jóval több legyen, mint 1 másodperc)</li>
+        <li>egy "mindig" blokkal végtelenítsétek a mozgást.</li>
+      </ul>
+      <img class="ábra" width="40%" src="curriculum/img/hun/flowershower/21.png" alt="ábra">
+    </p>
+    <p>
+      A fentiekben úgy kerültük el a koordináták explicit használatát, hogy először elhelyeztük a szereplőt a megfelelő helyre, aztán kivettük a hozzá tartozó mozgás-blokkot. Ezt mi úgy nevezzük, hogy "leteszem a szereplőt, kiveszem a blokkot" módszer. Nagyon hasznos, ha kicsikkel dolgozol, akiknek még nem megy a koordinátarendszerben gondolkodás, vagy olyan nagyobbakkal, akik nem hajlandók semmi matekszerűre a foglalkozásokon.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Klónozás</div>
+  <div class="cell">
+    <p>
+      A klónozás nagyon hatékony eszköz; aki elsajátítja, szintet lép a Scratch programozásban. Klónozással sok példányt készíthettek egyetlen szereplőből. A Scratch magyar változata másolatkészítésnek hívja a klónozást, ezért mostantól itt is így fogjuk nevezni. Ha korábban még nem használtatok másolatokat, érdemes alaposan megnézni a másolat-blokkokat, és közösen találgatni, mire valók:<br>
+      <img class="ábra" width="25%" src="curriculum/img/hun/flowershower/22.png" alt="ábra">
+    </p>
+    <p>
+      Ha ezeket a blokkokat az eddig összerakott kód mellé helezitek, hamar rá fogtok jönni, hogy a "mindig" blokk tartalma a "másolatként kezdéskor" blokk alá kerül, a "készíts másolatot magadról" pedig a megüresedett "mindig" blokkba. Végül a "töröld ezt a másolatot" fogja megelőzni, hogy a másolatok összegyűljenek a színpad alján.<br>
+      <img class="ábra" width="65%" src="curriculum/img/hun/flowershower/23.png" alt="ábra"><br>
+      <img class="ábra" width="65%" src="curriculum/img/hun/flowershower/24.png" alt="ábra">
+    </p>
+    <p>
+      Indítsátok újra a projektet, és gyönyörködjetek a rengeteg lehulló virágban! :) Ha eddig eljutottatok, sikerélménnyel lezárhatjátok a projektmunkát. De ha még maradt időtök és energiátok, akkor néhány további lépésben sokat szépíthettek a projekten.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Végső simítások</div>
+  <div class="cell">
+    <p>
+      Mi lenne, ha a virágok tarka sokaságban hullanának? Ezt legkönnyebben úgy lehet elérni, hogy új jelmezeket készítetek a szereplőtöknek. Váltsatok újra a "Jelmezek" fülre, és néhányszor duplikáljátok a jelmezét, az új jelmezeket pedig fssétek ki különféle színekkel.<br>
+      <img class="ábra" width="35%" src="curriculum/img/hun/flowershower/25.png" alt="ábra">
+      <img class="ábra" width="55%" src="curriculum/img/hun/flowershower/26.png" alt="ábra">
+    </p>
+    <p>
+      Végül adjatok még egy kis változatosságot a virágesőnek "véletlen" blokkokkal:<br>
+      <img class="ábra" width="45%" src="curriculum/img/hun/flowershower/27.png" alt="ábra">
+      <img class="ábra" width="50%" src="curriculum/img/hun/flowershower/28.png" alt="ábra">
+    </p>
+    <p>
+      ...És íme, kész a végleges projekt, élvezzétek a látványt! :)<br>
+      <img class="ábra" width="60%" src="curriculum/img/hun/flowershower/29.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+</div> <!-- section -->

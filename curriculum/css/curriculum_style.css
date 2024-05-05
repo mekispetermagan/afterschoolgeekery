@@ -1,0 +1,160 @@
+:root {
+  --bgcolor-main: #576499;
+  --bgcolor-dark: #46507a;
+  --bgcolor-darkest: #343c5c;
+  --bgcolor-light: #7983ad;
+  --bordercolor: #2a304a7F;
+  --highlightcolor: #efd995;
+  --highlightcolor-dark: #bfae77;
+  --highlightcolor-glow: #f2e1aa;
+  --bgcolor-red-dark: #b34e4a;
+  --bgcolor-red: #c4534e;
+  --textcolor: #eaf1f0;
+  --linkcolor: #b5b9ea;
+  --mainfont: "Baloo 2";
+  --fancyfont: "Short Stack";
+}
+
+.curriculumOuter {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.curriculumContainer {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  position: relative;
+  background-color: var(--bgcolor-darkest);
+  color: var(--textcolor);
+  font-family: var(--mainfont), sans-serif;
+}
+
+.curriculumContainer * {
+  box-sizing: border-box;
+  color: var(--textcolor);
+}
+
+.curriculumHeader {
+  width: 100%;
+  padding: 6px 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.curriculumTitleContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.curriculumTitle {
+  color: var(--textcolor);
+  font-size: 36px;
+  font-family: var(--fancyfont);
+  z-index: 1;
+}
+
+.curriculumSubtitleContainer {position: relative;}
+
+.curriculumSubtitle {
+  font-size: 24px;
+  color: var(--textcolor);
+}
+
+.curriculumFlagContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.curriculumFlag {
+  border: 3px solid var(--bordercolor);
+  border-radius: 20%;
+  margin: 3px;
+  box-shadow: 6px 6px 3px 0 #00000033;
+  visibility: hidden;
+}
+
+.curriculumFlag:hover {
+  transform: scale(1.1);
+}
+
+/* .curriculumGHDFLogo {
+  margin-left: 5%;
+} */
+
+.curriculumDisplay {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .title {font-size: 24px;}
+  .subtitle {font-size: 18px;}
+  .logo {height: 72px;}
+  .display {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+.curriculumTitleAnimationOuter {
+  position: absolute;
+  bottom: -40px;
+  left: -120px;
+  width: 240px;
+  height: 180px;
+}
+
+.curriculumTitleAnimationInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.curriculumMenu {
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.curriculumSubMenu {display: none;}
+
+
+.curriculumButton {
+  flex-grow: 2;
+  /* width: 100%; */
+  background-color: var(--bgcolor-dark);
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 6px 6px 3px 0 rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  text-align: center;
+  color: var(--textcolor);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.curriculumButton:hover {
+  cursor:grab;
+  background-color: var(--bgcolor-main);
+}
+
+.curriculumErrorButton {
+  background-color: #995284;
+  border: none;
+  padding: 12px 24px;
+  margin-bottom: 12px;
+}
+
+.curriculumErrorButton * {
+  text-decoration: none;
+  font-weight: 600;
+  }

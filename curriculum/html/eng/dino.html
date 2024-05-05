@@ -1,0 +1,283 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Dinosaur game </div>
+
+  <div class="celltitle"> What is this project about? </div>
+  <div class="cell">
+    <p>
+      In this tutorial we will develop a simplified Scratch version of the "oh no internet, what now" dinosaur game. This game is known and loved by all children without exception, and is therefore an excellent project for beginners. Here is the final result:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/996286745/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <p>
+      The project consists of very simple steps and is therefore ideal for beginners.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 1: Design </div>
+  <div class="cell">
+    <p>
+      This time, do not start with a new project, but with
+        <a href="https://scratch.mit.edu/projects/472730974">this blank version</a>.
+        This already includes all the graphics and the less exciting code.
+    </p>
+    <p>
+      Show the kids the finished Fame first, but don't let them play with it, so they don't lose their motivation to develop. Then open and remix the initial version. With some disappointment, kids will see that the sprites do not move. Reassure them that this will not be the case for long! :)
+    </p>
+    <p>
+      Start by planning your work. Discuss what tasks you have ahead of you and make a list of them. Then decide which tasks to start with; and when you're done, cross them off the list and write a new one.
+    </p>
+    <p>
+      The task list will look something like this:
+      <ul>
+        <li> dino runs </li>
+        <li> dino jumps at the push of a button </li>
+        <li> szemből jönnek a kaktuszok </li>
+        <li> when touching a cactus, game over </li>
+        <li> score for cacti jumped over </li>
+        <li> birds besides the cacti </li>
+        <li> stop running when when jumping </li>
+        <li> more obstacles at once </li>
+      </ul>
+      It's OK if you miss a task from the list; you can make up for it as you go along. The last three tasks are not necessary for the game to be playable, so feel free to skip them.
+    </p>
+    <p>
+      In this project work, the order of the development steps is relatively free to change, no need to follow exactly the order given in this guide.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 2: Running </div>
+  <div class="cell">
+   <p>
+    Take a look at the dino costumes. You will see that each costume captures a phase of movement:
+    </p>
+    <p>
+      <img class="figure" width="10%" src="curriculum/img/eng/dino/1_1.png" alt="figure">
+    </p>
+    <p>
+      So if you keep switching to the next costume, the dino's legs will start moving, too. The code is very simple; just be careful that this time the event is not the click of the green flag, but the receiving of the "start" message, because clicking on the flag only starts the title scene.
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/dino/1_2.png" alt="figure">
+    </p>
+    <p>
+      If you restart the game, you'll see that the dinosaur does move, but for now it's still very fast on its feet. How can you slow it down? Of course, with a "wait" block:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/dino/1_3.png" alt="figure">
+    </p>
+    <p>
+      But now the dinosaur's feet move too slowly. If you've ever encountered decimal fractions in Scratch project work, you'll soon find the right solution. If not, it's worth talking a bit about whether there are numbers between zero (no "wait" block) and one. And if you've figured out that waiting around one tenth of a second will be enough, also make sure you write a decimal dot, not a decimal comma, as in many other languages.
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/dino/1_4.png" alt="figure">
+    </p>
+    <p>
+      Now the pace of the costume change is right; time for the next task.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 3: Jumping </div>
+  <div class="cell">
+    <p>
+      The code of jumping is also assigned to the "when I receive start" event. First of all you have to wait until your player presses a key.
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/2_1.png" alt="figure">
+    </p>
+    <p>
+      Now the dinosaur should rise in the air. This is perhaps easiest to achieve with the "glide" block, as we saw in the "Moving" guide. First, stop the project. Then, using your mouse, move the dinosaur up high so that it won't crash into the cactus, and then take a "glide" block with the appropriate coordinates:
+    </p>
+    <p>
+      <img class="figure" width="20%" src="curriculum/img/eng/dino/2_2.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/2_3.png" alt="figure">
+    </p>
+    <p>
+      And you can do the same with the landing:
+    </p>
+    <p>
+      <img class="figure" width="20%" src="curriculum/img/eng/dino/2_4.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/2_5.png" alt="figure">
+    </p>
+    <p>
+      Of course, if you want to be very precise, you can enter the coordinates yourself; but it's also perfect if the dinosaur is only roughly back in place.
+    </p>
+    <p>
+      The jump will be nicer if the dinosaur goes up and down a bit faster, and waits a bit at the top. Of course, you'll need decimals again, but they aren’t a challenge anymore. And of course, don't forget to put it all in a "forever" block, because you don't want to jump with the dinosaur only once during the game.
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/dino/2_6.png" alt="figure">
+    </p>
+    <p>
+      Do not copy the numbers from here. Keep trying until you are satisfied with the results. It is also good if not everyone in the group has the same numbers. Chances are that you will have to adjust them later anyway.
+    </p>
+    <p>
+      Of course, this code gives a rather crude approximation of the jump, and a physics teacher would certainly not be happy with it! :) Later on, when you learn to handle variables, you can make a better jump animation. But at our level, this is perfectly fine.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 4: Cacti </div>
+  <div class="cell">
+    <p> Now we can switch to the cactus sprite. But where is it? Oh, right: he's invisible. Quickly pick a "show" block and click on it to make it appear:
+    <img class="figure" height="30px" src="curriculum/img/eng/dino/3_1.png" alt="figure">
+    </p>
+    <p>
+      The cactus appears at the right edge of the stage, marches to the left edge of the stage and disappears; then it starts again soon after. Again, use the "glide" block, as we saw in the "Moving" lesson:
+      <ol>
+        <li> Stop the project. </li>
+        <li> Place the sprite to the right edge of the stage, where he starts. </li>
+        <li> Pick a "go to" block with the appropriate x and y coordinates. </li>
+        <li> Drag the sprite to the left edge, where he will arrive. </li>
+        <li> Pick a "glide" block with the new coordinates. </li>
+        <li> Insert the "show" block and the two movement blocks under the "When I receive start" event block. </li>
+      </ol>
+      You are currently here in the code (the numbers will not be exactly the same for you):
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/3_2.png" alt="figure">
+    </p>
+    <p>
+      When you restart the project, the cactus will run across the stage. Slow it down a bit and make sure it comes repeatedly:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/dino/3_3.png" alt="figure">
+    </p>
+    <p>
+      And finally, with a "switch costume" and a "random" block, you can make sure that the three types of cactus have an equal chance of arriving:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/dino/3_4.png" alt="figure">
+    </p>
+    <p>
+      After restarting the project, you will have a good opportunity to test and fine-tune the three decimal values written into the dino’s jump code; they are good if you can jump the widest cactus with them, but not too easily.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 5: Game over </div>
+  <div class="cell">
+    <p>
+      There is one more task that is absolutely necessary to get a playable game: collision detection. This is usually an important part of any action game. From the moment you receive the "start" message, you have to keep a constant eye on whether the dinosaur collides with the cactus. Again, this code belongs to the dinosaur, so don't forget to select it. Now let's use the third of the pre-loaded "start message on arrival" blocks. The collision detection block is a hexagonal condition block in the light blue "Sensing" group:
+      <img class="figure" height="25px" src="curriculum/img/eng/dino/4_1.png" alt="figure">.
+      Of course, the "mouse pointer" has to be replaced by "obstacle" in the block. So our code will start like this:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/4_2.png" alt="figure">
+    </p>
+    <p>
+      But what should happen if a collision occurs? To find out, it's worth looking at the pre-written code of the “text” sprite:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/dino/4_3.png" alt="figure">
+    </p>
+    <p>
+      The "game over" text appears when the "game over" message is broadcasted. This is what you have to do, so code you have started will be finished as follows:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/4_4.png" alt="figure">
+    </p>
+    <p>
+      If you've got to this point, you have a playable game and you can even finish the project with a feeling of success. The next few small steps are just icing on the cake.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 6: Scoring </div>
+  <div class="cell">
+    <p>
+      The next task is to score points for the cacti you have skipped. It's very simple, as everything is prepared; the challenge is to understand the code that's already there. What stores the points you've earned? Of course: the "score" variable:
+      <img class="figure" height="25px" src="curriculum/img/eng/dino/5_1.png" alt="figure">.
+      If you haven't come across a variable before, this is a great opportunity to get acquainted. And the new code consists of a single block:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/5_2.png" alt="figure">
+    </p>
+    <p>
+      So after the obstacle arrives on the left, the player's score increases by one. After restarting, you'll be pleased to see that the score is displayed; again, a pre-written piece of code will take care of this.
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 7: Birds </div>
+  <div class="cell">
+    <p>
+      If you want birds to arrive in the obstacles alongside the cacti, you must first of all allow for a number four and five when choosing your costume:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/6_1.png" alt="figure">
+    </p>
+    <p>
+      Number 4 is the initial costume of the low-flying bird and number 5 is the initial costume of the high-flying bird. But in addition, birds must also flap their wings. If you look at the costumes, you'll see that each of the five main costumes has a counterpart; this is the same as the main costume for the cacti and different for the birds. This is a trick to make sure that when you switch between a costume and its mate, nothing happens for the cacti, but animate a wing flapping for the birds.
+    </p>
+    <p>
+      Each costume has a counterpart five away; so you will need five "next costume" blocks in the code. Which, with a bit of delay, will look something like this:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/eng/dino/6_2.png" alt="figure">
+    </p>
+    <p>
+      The five consecutive "next costume" blocks don't look very nice, but they're still the easiest way to go. Because you can't use a repeat block:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/eng/dino/6_3.png" alt="figure">
+    </p>
+    <p>
+      The repeat block would not do the five costume changes all at once, but in screen refreshes, ruining the animation. (Try it, the result will look weird.)
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 8: Fine tuning </div>
+  <div class="cell">
+    <p>
+      Our next task is to fine-tune the dino's running and jumping. It would be great if the dino stopped running while jumping. To do this, we need to coordinate two processes running in parallel. We could build the two processes into one, but that would complicate the code a bit. Instead, we'll use a so-called state variable, where one process records where it is, and the other reads it and adapts. This sounds more complicated than it actually is, so let's get to the code.
+    </p>
+    <p>
+      Create a new variable that will always store the information if the dinosaur is jumping.
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/7_1.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/dino/7_2.png" alt="figure">
+    </p>
+    <p>
+      Now go back to the code for the jump and add two new blocks that will change the values of the variables at the appropriate moments:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/dino/7_3.png" alt="figure">
+    </p>
+    <p>
+      Now the code for the run. Here we make the costume change conditional on the dinosaur not jumping:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/dino/7_4.png" alt="figure">
+    </p>
+    <p>
+      And there you have it, the two processes are aligned! :) The use of state variables is a standard technique, very useful in many places where you need to coordinate processes.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 9: Several obstacles at once </div>
+  <div class="cell">
+    <p>
+      Now for the very last task. As in the original game, you want to have two obstacles on the stage at the same time; while you jump over one, the next one is coming towards you.
+    </p>
+    <p>
+      To do this, we will use clones. The only job of the original “obstacle” sprite will be to generate the clones. The wing flapping code will already be added to the clones, so replace the event block on top:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/eng/dino/8_1.png" alt="figure">
+    </p>
+    <p>
+      The right-to-left gliding is also assigned to the clone (except the "forever" surrounding it). And clones that are used up are deleted.
+    </p>
+    <p>
+      <img class="figure" width="45%" src="curriculum/img/eng/dino/8_2.png" alt="figure">
+    </p>
+    <p>
+      Finally, the emptied "forever" block will be used to generate clones, with some random waiting:
+    </p>
+    <p>
+      <img class="figure" width="45%" src="curriculum/img/eng/dino/8_3.png" alt="figure">
+    </p>
+    <p>
+      ...And that's it; no more tasks are prescribed. If you've made it this far, you should be very proud of yourselves! :)
+    </p>
+   </div> <!-- cell -->
+
+</div> <!-- section -->
+

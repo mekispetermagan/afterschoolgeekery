@@ -1,0 +1,202 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Körkörös rajzoló </div>
+
+  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="cell">
+    <p>
+      Ez egy nagyon látványos és közepesen egyszerű, de szinte kezdő szintű projekt, amely a "Toll" eszköztárat használja. Körkörös mintákat ("mandalákat") tudtok vele rajzolni. A projekt egyben könnyed bevezetést ad a másolatkészítésbe is. Első projektnek nem ajánljuk, de második alkalomra már bátran bevihetitek. A végeredményt itt láthatjátok:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/814184081/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Szereplőmozgatás </div>
+  <div class="cell">
+    <p>
+      Hozzatok létre egy vadonatúj projektet, és cseréljétek le a cicát a kedvenc szereplőtökre. Mivel most rajzolni fogunk, érdemes lekicsinyíteni a szereplőt a játéktér alatti "Méret" mező értékét 100-ról mondjuk 30-ra átírva, hogy minél kevésbé takarja el a rajzot. És hogy a rajzunk szép szimmetrikus legyen, ezúttal helyezzétek pontosan a játéktér közepére a szereplőt az "x" és "y" mező 0-ra állításával:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/mandala/1_1.png" alt="ábra">
+    </p>
+    <p>
+      A kódot is kezdjük azzal, hogy a szereplőt pontosan középre helyezzük:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/mandala/1_2.png" alt="ábra">
+    </p>
+    <p>
+      Most jöhet a mozgatás. Billentyűkkel fogjátok mozgatni a szereplőt, de egy kicsit másképpen, mint a többi játékban: úgy, ahogy egy autót kormányozunk menet közben jobbra-balra. Először is a szereplő lassan, de folyamatosan megy előre:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/mandala/1_3.png" alt="ábra">
+    </p>
+    <p>
+      Hogy a billentyűs mozgatás szép folyamatos legyen, most inkább ne használjatok hozzá esemény-blokkot, hanem világoskék érzékelés-blokkal álljtsátok össze a kódot:
+    </p>
+    <p>
+      <img class="figure" width="45%" src="curriculum/img/hun/mandala/1_4.png" alt="ábra">
+      <img class="figure" width="45%" src="curriculum/img/hun/mandala/1_5.png" alt="ábra">
+    </p>
+    <p>
+      Maga a mozgás pedig egyyszerű fordulás lesz (ahogy az autó kanyarodik kormányzáskor). Hogy pontosan hány fokot, azt érdemes kicsit próbálgatni, mert a fordulás íve adja meg majd a rajz stílusát. Ha nagy a fordulás szöge (mondjuk 5 fok), akkor kicsi lesz az ív, és sarkos lesz a rajz; ha kisebb (mondjuk 2 fok), akkor pedig kerekdedek lesznek a formák a rajzon.
+    </p>
+    <p>
+      <img class="figure" width="90%" src="curriculum/img/hun/mandala/1_6.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Csíkhúzás </div>
+  <div class="cell">
+    <p>
+      A "Toll" eszköztár egy kicsit el van rejtve. A bal alsó sarokban keressétek meg a "Bővjtmény hozzáadása" menüpontot:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/mandala/2_1.png" alt="ábra">
+    </p>
+    <p>
+      Itt sok olyan eszköztárt találtok, ami nem fért el a Scratch fő felületén. Ha a "Toll"-ra rákattintotok, egy csomó új zöld blokk jelenik meg baloldalt:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/mandala/2_2.png" alt="ábra">
+    </p>
+    <p>
+      Az új eszköz kipróbálását kezdjétek a "tollat tedd le" blokkal. Ezt érdemes a mozgatás kódjában a "mindig" fölé tenni, hiszen csak egyszer, a projekt elején tesszük le a tollat. Újraindítás után a mozgó szereplő el is kezd rajzolni:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/mandala/2_3.png" alt="ábra">
+      <img class="figure" width="40%" src="curriculum/img/hun/mandala/2_4.png" alt="ábra">
+    </p>
+    <p>
+      Ezután felfedezhetitek az eszköztár blokkjait; például hogy be tudjuk állítani a tollméretet és a tollszínt is, és hogy újraindítás után törölni lehet a rajzokat:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/mandala/2_5.png" alt="ábra">
+      <img class="figure" width="45%" src="curriculum/img/hun/mandala/2_6.png" alt="ábra">
+    </p>
+    <p>
+      Ha pedig színváltoztató blokkot tesztek a "mindig" részbe, elkezd látványossá válni a projekt. Hogy egy lépésben mennyit változzon a tollszín, az megint stílus kérdése. Ha 1-et, akkor szép folyamatos lesz az átmenet a színek között; ha 10-et, akkor vibrálni fog a rajz.
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/mandala/2_7.png" alt="ábra">
+      <img class="figure" width="30%" src="curriculum/img/hun/mandala/2_8.png" alt="ábra">
+    </p>
+    <p>
+      Ha eddig eljutottatok, de több időtök vagy energiátok nem jut a projektre, már elégedetten befejezhetitek a munkát. De ha még egy kicsit kitartotok, mindjárt megérkezünk az igazán látványos részhez.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Másolatkészítés </div>
+  <div class="cell">
+    <p>
+      Most pedig megsokszorozzuk a szereplőnket, hogy egyszerre sok irányba tudjon elindulni. Találjátok ki közösen, mennyi legyen belőlük; például 4, 6, 8, vagy akár 12. Ha nagyobb gyerekekkel dolgoztok, közösen ki is számolhatjátok, hány fokos szögben kell a szereplőmásolatokat elforgatni, hogy egyenletesen menjenek minden irányba. Mivel a teljes kör 160 fok, a 360 fokot kell elosztani annyi felé, ahány másolat lesz. De ha kicsik a gyerekek, vagy csak nem akartok számolni, meg is mondhatjátok nekik az eredményt:
+    </p>
+    <p>
+      <table>
+        <tr>
+          <th>Másolatok száma&nbsp;&nbsp;</th>
+          <th>Fordulás foka</th>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>120&#xb0;</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>90&#xb0;</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>72&#xb0;</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>60&#xb0;</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>45&#xb0;</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>36&#xb0;</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>30&#xb0;</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>15&#xb0;</td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      Most jó alaposan felforgatjuk a kódot. A mozgatás "mindig" blokkja és a billentyűérzékelős kódrészek ezentúl a másolatokhoz tartoznak:
+    </p>
+    <p>
+      <img class="figure" width="90%" src="curriculum/img/hun/mandala/3_1.png" alt="ábra">
+    </p>
+    <p>
+      A fő kódrészbe pedig a másolatok elkészítése kerül:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/mandala/3_2.png" alt="ábra">
+      <img class="figure" width="35%" src="curriculum/img/hun/mandala/3_3.png" alt="ábra">
+    </p>
+
+    <p>
+      Érdemes több változatot is kipróbálni, amíg megtaláljátok az igazit:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/mandala/3_4.png" alt="ábra">
+      <img class="figure" width="30%" src="curriculum/img/hun/mandala/3_5.png" alt="ábra">
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/mandala/3_6.png" alt="ábra">
+      <img class="figure" width="30%" src="curriculum/img/hun/mandala/3_7.png" alt="ábra">
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/mandala/3_8.png" alt="ábra">
+      <img class="figure" width="30%" src="curriculum/img/hun/mandala/3_9.png" alt="ábra">
+    </p>
+    <p>
+      Gyönyörű, látványos projektet készítettetek, legyetek rá büszkék! :)
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> A másolatok összehangolása </div>
+  <div class="cell">
+    <p>
+      Ez a rész már csak hab a tortán; egyáltalán ne zavarjon tuteket, ha nem kerül rá sor. De ha felmerül a gyerekekben az igény, hogy tökéletesen összehangolják a másolatokat, és száz százalékosan szimmetrikus ábrát szeretnétek, akkor tudjatok tróla, hogy erre is van lehetőség.
+    </p>
+    <p>
+      Ha sok másolatot készítetek, észrevehetitek, hogy a másolatok nem teljesen egyszerre indulnak el, és emiatt az ábra sem lesz teljesen szimmetrikus. Az ábrán láthatjátok, hogy az első másolat kicsit előrébb jár, mint a huszonnegyedik:
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/hun/mandala/4_1.png" alt="ábra">
+    </p>
+    <p>
+      Ennek az az oka, hogy két másolat elkészítése között eltelik egy kis idő. (Ha vannak gémerek a gyerekek között, ők talán már hallottak az fps-ről: frame per second, azt méri a játékokban, hogy hány képernyőfrissítés történik 1 másodperc alatt. A Scratch-ben ez körülbelül 30.) A megoldás pedig az, hogy képernyőfrissítés nélkül készítjük el a másolatokat. Erre a saját blokkok szerkesztésénél van lehetőség. Ilyeneket nem gyakran használunk a Kocka Tanodában, de egyszer érdemes kipróbálni. A "Blokkjaim" menüpontban a "Blokk létrehozása" gombra kattintva készítsetek egy "másolj" blokkot, és jelöljétek be a "Futtatás képertnyőfrissítés nélkül" opciót:
+    </p>
+    <p>
+      <img class="figure" width="8%" src="curriculum/img/hun/mandala/4_2.png" alt="ábra">
+      <img class="figure" width="22%" src="curriculum/img/hun/mandala/4_3.png" alt="ábra">
+      <img class="figure" width="60%" src="curriculum/img/hun/mandala/4_4.png" alt="ábra">
+    </p>
+    <p>
+      A másolatokat generáló "ismételd 10-szer" kódrészt húzzátok át az új rózsaszín blokk meghatározásába, magát az új rózsaszín blokkot pedig tegyétek a kódrész helyére:
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/hun/mandala/4_5.png" alt="ábra">
+    </p>
+    <p>
+      Ha még eddig a pontig is eljutottatok, legyetek nagyon-nagyon büszkék, mert egy apró szépséghiba megoldásáért egészen haladó programozási eszközt vettetek igénybe! :)
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/hun/mandala/4_6.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+
+</div> <!-- section -->

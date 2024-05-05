@@ -1,0 +1,26 @@
+.progressBarOuter{
+  height: 24px;
+  width: 500px;
+}
+
+.progressBarInner{
+  height: 24px;
+  width: 0px;
+  background-color: #faff7f;
+}
+
+.midElement {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}

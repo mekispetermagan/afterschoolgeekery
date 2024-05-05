@@ -1,0 +1,283 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Dínós játék </div>
+
+  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="cell">
+    <p>
+      Ebben az útmutatóban a "jaj, nincs internet, mi lesz most" dínós játék egyszerűsített Scratch-es változatát fogjuk lefejleszteni. Ezt a játékot kivétel nélkül minden gyerek ismeri és szereti, ezért kiváló projekt kezdő foglalkozásokhoz. Íme a végeredmény:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/789074660/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <p>
+       A projekt elkészítése nagyon egyszerű lépésekből áll, ezért ideális kezdő foglalkozásokra.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Tervezés </div>
+  <div class="cell">
+    <p>
+        Ezúttal nem üres projekttel, hanem
+        <a href="https://scratch.mit.edu/projects/789061571">ezzel a kiinduló változattal</a>
+        kezdjétek a munkát. Ebben már benne van az összes grafika, és a kódok kevésbé izgalmas része is.
+    </p>
+    <p>
+       Először mutassátok be a gyerekeknek a kész játékot, de őket ne engedjétek játszani vele, hogy el ne veszítsék a motivációjukat a fejlesztésre. Ezután nyissátok meg és remixeljétek a kiinduló változatot. Némi csalódással azt fogjátok látni, hogy nem mozdulnak meg a szereplők. Biztosítsátok őket, hogy ez nem lesz így sokáig! :)
+    </p>
+    <p>
+      Kezdjétek a munkát tervezéssel. Beszéljétek meg, milyen feladatok állnak előttetek, és írjatok belőlük listát. Aztán döntsétek el, melyik feladattal kezditek a munkát; és ha készen vagytok, húzzátok ki a listáról, és írjatok helyette újat.
+    </p>
+    <p>
+      A feladatlista valahogy így fog kinézni:
+      <ul>
+        <li> a dínó fut </li>
+        <li> a dínó gombnyomásra ugrik </li>
+        <li> szemből jönnek a kaktuszok </li>
+        <li> ha kaktuszhoz érünk, vége a játéknak </li>
+        <li> az átugrott kaktuszokért pontot kapunk </li>
+        <li> a kaktuszok helyett néha szárnycsapkodó madarak jönnek </li>
+        <li> ugrás közben nem fut a dínó</li>
+        <li> egyszerre több akadály jöjjön</li>
+      </ul>
+      Nem gond, ha egy-egy feladat kimarad a listából; ezeket menet közben is lehet pótolni. Az utolsó három feladat nem szükséges a játék játszhatóságához, ezért ezeket akár ki is hagyhatjátok.
+    </p>
+    <p>
+      Ebben a munkában tehát a fejlesztés lépéseinek sorrendje viszonylag szabadon változtatható, nem kell az útmutatóban megadott sorrendet követni.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Futás </div>
+  <div class="cell">
+   <p>
+      Nézzetek bele a dínó-szereplő jelmezeibe. Azt fogjátok látni, hogy minden jelmezen a mozgás egy-egy fázisa van:
+    </p>
+    <p>
+      <img class="figure" width="10%" src="curriculum/img/hun/dino/1_1.png" alt="ábra">
+    </p>
+    <p>
+      Tehát ha folyton átváltunk a következp jelmezre, a dínó lába is elkezd mozogni. A kód nagyon egyszerű; csak arra vigyázzatok, hogy eseménynek ezúttal nem a zöld sászlóra kattintást kell használni, hanem a "start" üzenet érkezését, hiszen zökd zászlóra kattintáskor még nem indul el a játék. a "start üzenet érkezésekor" blokkból néhány már be van készítve a projektbe; mindegy, melyik mögé illesztitek az új blokkokat.
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/dino/1_2.png" alt="ábra">
+    </p>
+    <p>
+      Ha újraindítjátok a játékot, láthatjátok, hogy valóban megmozdul a dínó, de egyelőre még nagyon gyorsan kapkodja a lábát. Hogy lehetne rajta lassítani? Hát persze, higy "várj" blokkal:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/dino/1_3.png" alt="ábra">
+    </p>
+    <p>
+      De így meg túl lassan mozog a dínó lába. Ha találkoztatok már tizedestörtekkel Scratch-projektmunkában, akkor hamar meglesz a helyes megoldás. Ha nem, akkor érdemes kicsit beszélni arról, hogy vajon nulla (nincs "várj" blokk) és egy között is vannak-e számok. És ha kitaláltátok, hogy egy tizedmásodperc körül elég lesz várni, akkor még azt is tisztázni kell, hogy az amerikaiak fura módon tizedespontot írnak tizedesvessző helyett.
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/dino/1_4.png" alt="ábra">
+    </p>
+    <p>
+      Most már megfelelő a jelmezváltás tempója; jöhet a következő feladat.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Ugrás </div>
+  <div class="cell">
+    <p>
+        Az ugrás kódját szintén a "start üzenet érkezése" eseményhez rendeljük. Mindenekelőtt meg kell várni, amíg a játékod lenyom egy billentyűt.
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/2_1.png" alt="ábra">
+    </p>
+    <p>
+       Most pedig felemelkedik a dínó. Ezt talán a "csússz" blokkal a legkönnyebb elérni, úgy, ahogy a "Mozgatás" tananyagban láttuk. Először is állítsátok le a projektet. Aztán egérrel megfogva tegyétek a dínót fel jó magasra, hogy bele ne ütközzön majd a kaktuszba, majd vegyetek ki egy "csússz" blokkot a megfelelő koordinátákkal:
+    </p>
+    <p>
+      <img class="figure" width="20%" src="curriculum/img/hun/dino/2_2.png" alt="ábra">
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/2_3.png" alt="ábra">
+    </p>
+    <p>
+      És a földre szállást is ugyanígy oldhatjátok meg:
+    </p>
+    <p>
+      <img class="figure" width="20%" src="curriculum/img/hun/dino/2_4.png" alt="ábra">
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/2_5.png" alt="ábra">
+    </p>
+    <p>
+      Persze ha nagyon precízek akartok lenni, akkor magatok is beírhatjátok a koordinátákat; de az is tökéletes, ha a dínó csak nagyjából kerül vissza a helyére.
+    </p>
+    <p>
+      szebb lesz az ugrás, ha kicsit gyorsabban megy fel és le a dínó, fent viszont vár egy kicsit. Ehhez persze megint tizedestörtek kellenek, de azok már nem fognak ki rajtunk. És persze ne felejtsétek el az egészet egy "mindig" blokkba is betenni, hiszen nem csak egyszer akarunk ugrani a dínóval a játék során.
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/dino/2_6.png" alt="ábra">
+    </p>
+    <p>
+      A számokat semmiképpen sem innen másoljátok, hanem próbálgassatok addig, amíg elégedettek nem lesztek az eredménnyel. Az is jó, ha nem mindenkinél ugyanazok a számok szerepelnek a csoportban. Esélyes, hogy a későbbiekben úgyis igazítani kell még rajtuk.
+    </p>
+    <p>
+      Ez a kód természetesen elég elnagyolt közelítést ad az ugrásra, egy fizikatanár biztosan nem lenne elégedett vele! :) Később, amikor már megtanulunk változókkal bánni, fogunk jobb ugrás, animációt is készíteni. De azon a szinten, ahol jelenleg tartunk, ez is tökéletesen megfelel.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Kaktuszok </div>
+  <div class="cell">
+    <p> Most átválthatunk a kaktusz-szereplőre. De hol van? Ja persze: láthatatlanná van téve. Vegyetek ki gyorsan egy "jelenj meg" blokkot, és kattintsatok rá, hogy előkerüljön:
+    <img class="figure" height="30px" src="curriculum/img/hun/dino/3_1.png" alt="ábra">
+    </p>
+    <p>
+      A kaktusz a színpad jobb szélén jelenik meg, elmasírozik a színpad bal széléig, és ott eltűnik; aztán kisvártatva újrakezdi. Ehhez ismét a "csússz" blokkot érdemes használni, úgy, ahogy a "Mozgás" tananyagban láttuk:
+      <ol>
+        <li> Állítsátok le a projektet. </li>
+        <li> Tegyétek a szereplőt a színpad jobb szélére, ahonnan indul. </li>
+        <li> Vegyetek ki egy "ugorj" blokkot, benne a megfelelő x és y koordinátákkal. </li>
+        <li> Tegyétek át a szereplőt a bal szélre, ahova érkezni fog. </li>
+        <li> Vegyetek ki egy "csússz" blokkot az új koordinátákkal. </li>
+        <li> A "jelenj meg" blokkot és a két mozgás-blokkot illesszétek a "start üzenet érkezésekor" eseményblokk alá. </li>
+      </ol>
+      Jelenleg itt tartotok a kódban (a számok nem pontosan ugyanezek lesznek nálatok):
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/3_2.png" alt="ábra">
+    </p>
+    <p>
+      Ha újraindítjátok a projektet, a kaktusz egyszer már végig is szalad a színpadon. Kicsit lelassítjuk, és gondoskodunk tóla, hogy újra jöjjön:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/dino/3_3.png" alt="ábra">
+    </p>
+    <p>
+      És végül egy "jelmez legyen" és egy "véletlen" blokkal arról is gondoskodhattok, hogy a háromféle kaktusz egyforma eséllyel érkezhessen:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/dino/3_4.png" alt="ábra">
+    </p>
+    <p>
+      A projekt újraindítása után jó alkalmatok van, hogy leteszteljétek és finomhangoljátok a dínó ugrásának kódjába írt három tizedestörtet is; akkor jók ezek az értékek, ha át lehet velük ugrani a legszélesebb kaktuszt is, de nem túl könnyen.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Játék vége </div>
+  <div class="cell">
+    <p>
+      Még egy feladat van, ami feltétlenül szükséges ahhoz, hogy  már játszható játékot kapjatok: az ütközésfigyelés. Ez általában minden akciójátéknak fontos része. A "start" üzenet érkezésétől fogva folyamatosan figyelni kell, hogy nem ütközik-e a dínó a kaktusszal. Ennek a kódnak ismét a dínónál van a helye, ezért ne fejejtsetek el visszaváltani rá. Most használjuk fel a harmadikat az előre bekészített "start üzenet érkezésekor" blokkokból. Az ütközésfigyelés blokkja egy hatszögletű feltételblokk a világoskék "Érzékelés" kategóriában:
+      <img class="figure" height="25px" src="curriculum/img/hun/dino/4_1.png" alt="ábra">. Természetesen az "egérmutató"-t "akadály"-ra kell cserélni a blokkban. A kódunk tehát így fog kezdődni:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/4_2.png" alt="ábra">
+    </p>
+    <p>
+      De mi történjen, ha bekövetkezett az ütközés? Hogy ezt kitaláljuk, érdemes belenézni a "felirat" szereplő előre megírt kódjába:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/hun/dino/4_3.png" alt="ábra">
+    </p>
+    <p>
+      A "game over" felirat a "vége" üzenet elküldésére jelenik meg. Ezt kell tehát elküldenetek, vagyis a megkezdett kód így fejeződik be:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/4_4.png" alt="ábra">
+    </p>
+    <p>
+      Ha eddig a pontig eljutottatok, már játszható játékotok van, és akár sikerrel be is fejezhetitek a programozást. A további néhány apró lépés már csak hab a tortán.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Pontszerzés </div>
+  <div class="cell">
+    <p>
+      A következő feladat az, hogy az átugrott kaktuszokért pontot kapjunk. Ez végtelenül egyszerű, hiszen minden elő van készítve hozzá; a kihívás csak annyi, hogy értelmezzétek a már meglévő kódot: vajon mi tárolja a megszerzett pontokat? Hát persze: a "pont" változó:
+      <img class="figure" height="25px" src="curriculum/img/hun/dino/5_1.png" alt="ábra">.
+      Ha még nem találkoztatok változóval, akkor ez egy kiváló alkalom az ismerkedésre. Az új kód pedig egyetlen blokknól áll:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/5_2.png" alt="ábra">
+    </p>
+    <p>
+      Tehát miután megérkezik balra az akadály, eggyel nő a játékos pontszáma. Újraindítás után örömmel nyugtázhatjátok, hogy a pontszám ki is lesz jelezve; erről is előre megírt kód gondoskodik.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Madarak </div>
+  <div class="cell">
+    <p>
+      Ha azt szeretnétek,  hogy a kaktuszok mellett madarak is érkezhessenek az akadályok között, akkor mindenekelőtt meg kell engednetek a négyes és az ötös jelmezsorszámot is a jelmezválasztáskor:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/6_1.png" alt="ábra">
+    </p>
+    <p>
+      A 4-es az alacsonyan szálló madár alapjelmeze, az 5-ös pedig a magasan szálló madáré. De ezen kívül a madaraknak még a szárnyukat is csapkodniuk kell. Ha megnézitek a jelmezeket, azt láthatjátok, hogy mind az öt fő jelmeznek van egy párja; ez a kaktuszok esetében ugyanaz, mint a fő jelmez, a madarak esetében pedig eltérő. Ezzel a trükkel tudjuk elérni, hogy ha egy jelmez és a párja között váltogatunk, akkor a kaktuszok esetében ne történjen semmi, a madarak esetében viszont szárnycsapkodást animáljunk.
+    </p>
+    <p>
+      Minden jelmeznek öttel odébb van a párja; tehát öt "következő jelmez" blokkra lesz szükség a kódban. Ami késleltetéssel együtt valahogy így fog kinézni:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/hun/dino/6_2.png" alt="ábra">
+    </p>
+    <p>
+      Az egymás utáni öt "következő jelmez" blokk nem néz ki valami szépen, de még mindig a legegyszerűbb megoldás a feladatra. Ugyanis nem használhatunk ismétlés-blokkot:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/hun/dino/6_3.png" alt="ábra">
+    </p>
+    <p>
+      Az ismétlés-blokk ugyanis nem egyszerre, hanem képernyőfrissítésenként hajtaná végre az öt jelmezváltást, ezzel tönkretéve az animációt. (Próbáljátok ki, milyen furán nézne ki az eredmény.)
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Finomhangolás </div>
+  <div class="cell">
+    <p>
+      Következő feladatunk a dínó futásának és ugrásának finomhangolása. Az lenne jó, ha ugrás közben nem futna a dínó. Ehhez két párhuzamosan futó folyamatot kell összehangolni. Egybe is építhetnénk a két folyamatot, de ez kicsit elbonyolítaná a kódot. Ehelyett egy úgynevezett állapotváltozót fogunk használni, amibe az egyik folyamat feljegyzi, hol tart éppen, a másik pedig kiolvassa, és alkalmazkodik hozzá. Ez elmondva bonyolultabb, mint leprogramozva, úgyhogy térjünk rá a kódra.
+    </p>
+    <p>
+      Hozzatok létre egy új változót, amely azt az információt fogja mindig tárolni, hogy a dínó éppen ugrik-e.
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/7_1.png" alt="ábra">
+      <img class="figure" width="25%" src="curriculum/img/hun/dino/7_2.png" alt="ábra">
+    </p>
+    <p>
+      Most térjetek vissza az ugrás kódjához, és tegyetek bele két új blokkot, amelyek a megfelelő pillanatokban átállítják a változók értékét:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/hun/dino/7_3.png" alt="ábra">
+    </p>
+    <p>
+      Most következhet a futás kódja. Itt ahhoz a feltételhez kötjük a jelmezváltást, hogy a dínó éppen nem ugrik:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/dino/7_4.png" alt="ábra">
+    </p>
+    <p>
+      És íme, a két folyamatot össze is hangoltuk! :) Az állapotváltozók használata standard technika, nagyon sok helyen jön jól, ahol össze kell hangolni folyamatokat.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Egyszerre több akadály </div>
+  <div class="cell">
+    <p>
+      Jöhet a legeslegutolsó feladat. Azt szeretnénk elérni, hogy az eredeti játékhoz hasonlóan egyszerre két akadály is legyen a színpadon; miközben az egyiket átugorjuk, a következő már közeledjen felénk.
+    </p>
+    <p>
+      Ehhez klónokat (másolatokat) fogunk használni. Az eredeti szereplőnknek csak annyi lesz a feladata, hogy a klónokat generálja. A szárnycsapkodás kódja már a klónokhoz kerül, tehát lecseréljük a tetején az esemény-blokkot:
+    </p>
+    <p>
+      <img class="figure" width="25%" src="curriculum/img/hun/dino/8_1.png" alt="ábra">
+    </p>
+    <p>
+      A jobbról-balra csúszás is a klónhoz kerül (de az azt körülvevő "mindig") már nem. Az elhasznált klónokat pedig töröljük.
+    </p>
+    <p>
+      <img class="figure" width="45%" src="curriculum/img/hun/dino/8_2.png" alt="ábra">
+    </p>
+    <p>
+      Végül az üresen maradt "mindig" blokkba a kódgenerálás kerül, egy kis random várakozással:
+    </p>
+    <p>
+      <img class="figure" width="45%" src="curriculum/img/hun/dino/8_3.png" alt="ábra">
+    </p>
+    <p>
+      ...És kész; több feladatot nem írtunk fel. Ha idáig eljutottatok, nagyon büszkék lehettek magatokra! :)
+    </p>
+   </div> <!-- cell -->
+
+</div> <!-- section -->
+

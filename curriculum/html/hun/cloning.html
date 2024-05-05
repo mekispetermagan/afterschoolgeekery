@@ -1,0 +1,381 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="chapter">
+  <h1 class="topicTitle">Szereplők klónozása</h1>
+
+  <div class="section">
+    <div class="section-title">Bevezetés</div>
+
+    <div class="celltitle">Miről szól ez a fejezet?</div>
+    <div class="cell">
+      <p>
+        A klónozás (másolatkészítés) egy hatékony eszköz a Scratch programozásban. Ha elsajátítod ezt a technikát, azzal kezdő Scratchezőből menten haladóvá válhatsz. A klónozással az animációid és a játékaid jóból nagyszerűvé válnak.
+      </p>
+      <p>
+        A Scratch magyar fordítása másolatkészítésnek nevezi a klónozást (angolul: cloning). Ez egy kicsit félrevezető, mert elfedi a kölönbséget a duplikálás és a klónozás között. Mi a továbbiakban a "klónozás" szót használjuk, néha zárójelben hozzátéve, hogy "másolatkészítés".
+      </p>
+      <p>
+        A klónozás lehetővé teszi, hogy egy szereplőből annyi példányt készítsünk a projektünkhöz, amennyit csak szeretnénk. (Valójában van egy 300 klónos felső határ, de mint az alábbi projektekből átni fogod, hogy ez még a legkifinomultabb animációkhoz is elég szokott lenni.) Ezeket a klónokat mind ugyanaz a kód irányítja, mégis tudod úgy alakítani a kódot, hogy ne mind egyformán nézzenek ki és viselkedjenek.
+      </p>
+      <p>
+        Ez a fejezet három projektmunkát tartalmaz. Az első egy egyszerű animációval bevezeti a klónozás technikáját. A projektleírás részletesen elmagyarázza a klónozás és a duplikálás közötti különbséget is. A végeredményt itt láthatod:<br>
+        <iframe src="https://scratch.mit.edu/projects/1007109274/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+      <p>
+        A második projekt azt mutatja be, hogy készíthetsz klónokat folyamatosan egy projekt során, törölve azokat a klónokat, amelyek már elvégezték a feladatukat. Nézd meg a végeredményt:<br>
+        <iframe src="https://scratch.mit.edu/projects/1007248331/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+      <p>
+        A harmadik projekt a Pattogó labda miniprojekt továbbfejlesztett változata. Ez egy kicsit haladóbb technikákat használ, mint a másik kettő; lokális változó segítségével különbözteti meg egy szereplő kétféle példányát. A végeredmény:<br>
+        <iframe src="https://scratch.mit.edu/projects/1007177355/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Tartalom</div>
+    <div class="cell">
+      <p>
+        <ul>
+          <li><a href="#unicorns">1. projekt: Unikornis-csorda</a></li>
+          <li><a href="#rainfall">2. projekt: Eső</a></li>
+          <li><a href="#balls">3. projekt: Pattogó labdák csóva effekttel</a></li>
+        </ul>
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+
+  <div class="section">
+    <div class="section-title" id="unicorns">1. projekt: Unikornis-csorda</div>
+
+    <div class="celltitle">Miről szól ez a projekt?</div>
+    <div class="cell">
+      <p>
+        Ez egy egyszerű animáció, amelyben unikornisok vágtatnak egy mezőn. A projekt célja az, hogy megértsd a szereplőklónozás alapjait, és a klónozás és duplikálás közötti különbséget. A projekt egy kidolgozottabb változata később be fog kerülni a tananyag Projektek fejezetébe is.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Előkészületek</div>
+    <div class="cell">
+      <p>
+        Hozz létre egy új projektet, töröld Scratchie-t, és add hozzá a projekthez az "Unicorn running" nevű szereplőt. Kicsinyítsd le a szereplőt a színpad alatti "méret" eszközzel, hogy legyen hely jó sok példánynak. (Nem tetszik az unikornis? Bátran töröld a szarvát, vagy válassz egy másik szereplőt, amelynek több jelmeze van, vagy akár rajzolj magadnak szereplőt.)
+      </p>
+      <p>
+        Háttérként használhatsz egyszerűen egy sötétzöld téglalapot; vagy válassz a beépített hátterek közül, ha nem bánod, hogy némelyik unikornis esetleg fura helyeken fog vágtatni.<br>
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/101.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/hun/cloning/102.png" alt="figure">
+        <img class="figure" width="60%" src="curriculum/img/hun/cloning/103.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle">A szereplő animálása</div>
+    <div class="cell">
+      <p>
+        Ha belenézel az unikornis jelmezeibe, láthatod, hogy hat van belőlük, és mindegyik a vágtatás egy-egy fázisát ábrázolja. Ebből sejthető, hogy egyszerű jelmezváltással életre lehet kelteni a szereplőt. Ez a kód alighanem már ismerős lesz a számodra más projektekből, de ha mégsem, akkor is magáért beszél:<br>
+        <img class="figure" width="25%" src="curriculum/img/hun/cloning/104.png" alt="figure">
+      </p>
+      <p>
+        Itt az ideje a projekt első futtatásának; gyönyörkodj a látványban! :) Ha úgy látod, hogy a lábak túl gyorsan mozognak, "várj" blokkal lassíthatod a ciklust:<br>
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/105.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle">Duplikátumcsorda</div>
+    <div class="cell">
+      <p>
+        A duplikálás a legegyszerűbb módja annak, hogy egy szereplőből sok példányt készíts. Jobb egérgombbal kattints a szereplőre a színpad alatt, és válaszd a "duplikálás" opciót. Ezt ismételd addig, amig elég sok szereplőd nem lesz:<br>
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/106.png" alt="figure">
+        <img class="figure" width="50%" src="curriculum/img/hun/cloning/107.png" alt="figure">
+      </p>
+      <p>
+        Amikor újraindítod a projektet, láthatod, hogy a szereplők szépen összhangban mozognak; de nagyon egymás hegyén-hátán vannak. Nem lenne jobb szétszórni őket a színpadon? Talán még emlékszel rá, hogy van egy mozgás-blokk, amely éppen ezt csinálja. Tedd hozzá a kódódhoz:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/cloning/108.png" alt="figure">
+      </p>
+      <p>
+        De a duplikálás miatt nem elég egyszer hozzátenni; minden egyes példány kódjába külön kell beillesztened a blokkot. Ez nem fair; mostantól minden változtatást sokszor kell bevinni a kódba. És ami még rosszabb: ha úgy döntesz, hogy rózsaszínre fested az unikornis szarvát, vagy törlöd a szarvat és lovat csinálsz belőle, ezt is minden egyes példány minden jelmezén meg kell csinálnod. Ha ez soknak hangzik öt unikornissal, képzeld el, mi lesz akkor, ha harmincan lesznek a színpadon. Muszáj, hogy legyen egyszerűbb megoldás.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Klón-csorda</div>
+    <div class="cell">
+      <p>
+        Igen, van egyszerűbb megoldás. Ahelyett, hogy a példányokat kézzel, duplikálással hozod létre, a Scratch klónozás (másolatkészítés) blokkjait is használhatod. Így a program maga hozza létre a másolatokat ugyanazzal a kóddal és ugyanazokkal a jelmezekkel, megspórolva neked a sok fáradságot, amivel a másolatok kezelése jár.
+      </p>
+      <p>
+        Töröld a másolatokat, hogy ismét egyetlen szereplőd legyen:<br>
+        <img class="figure" width="25%" src="curriculum/img/hun/cloning/109.png" alt="figure">
+      </p>
+      <p>
+        Keresd ki a három klón-blokkot (másolat-blokkot) a Vezérlés csoport végén:<br>
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/110.png" alt="figure"><br>
+        A háromból egy valójában eseményblokk; a klónok világában ez felel meg a "zöld zászló" blokknak. Tedd ki a feladattérre, nemsokára szükséged lesz rá:<br>
+        <img class="figure" width="25%" src="curriculum/img/hun/cloning/111.png" alt="figure">
+      </p>
+      <p>
+        Ha klónok használatára váltasz, a vágtatás animációja, amit korábban összeraktál, már a klónokhoz fog tartozni; az eredeti szereplő egyetlen feladata pedig az lesz, hogy gyártsa a klónokat. Szóval az animáció kódja a klónos eseményblokk alá kerül:<br>
+        <img class="figure" width="55%" src="curriculum/img/hun/cloning/112.png" alt="figure">
+      </p>
+      <p>
+        A klónokat egy másik klónos blokk gyártja, a "készíts másolatot magadról". Ez kerül a "zöld zászló" eseményblokk alá. Rakj köré egy "ismételd" blokkot, és írj bele, mennyi unikornist szeretnél a csordádban látni:<br>
+        <img class="figure" width="55%" src="curriculum/img/hun/cloning/113.png" alt="figure">
+      </p>
+      <p>
+        Ha újraindítod a projektet, láthatod, ahogy a sok unikornis együtt vágtat. Kivéve egyet, amelyik meg sem mozdul. Miért? Mert ő az eredeti szereplő, az egyetlen, amelyik nem klón. Emlékezz rá, hogy a vágtatás a klónok feladata, az eredeti szereplőé meg a klónok gyártása.
+      </p>
+      <p>
+        Hogy nelegyen egy tétlen unikornis a mezőn, beilleszthetsz egy "tűnj el" blokkot a "zöld zászló" blokk alá:<br>
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/114.png" alt="figure"><br>
+        És valóban, nem látszik többé a tétlen unikornis; de sajnos a többiek sem. Ennek az az oka, hogy a klónok öröklik az eredeti szereplő tulajdonságait. Ha az eredeti láthatatlan, a klónok is láthatatlanok lesznek. (Vajon ez az oka annak is, hogy a való világban nem látunk unikornisokat mostanában?...)
+      </p>
+      <p>
+        A megoldás persze kézenfekvő; szólni kell a klónoknak, hogy jelenjenek meg, mielőtt vágtatni kezdenek.<br>
+        <img class="figure" width="55%" src="curriculum/img/hun/cloning/115.png" alt="figure"><br>
+        Most már minden a tervek szerint működik, kész a projekt. Hurrá! :)
+      </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle">A refaktorálás hatékonysága</div>
+    <div class="cell">
+      <p>
+        Miért tettünk ekkora kitérőt, megtéve és visszavonva lépéseket, összerakva és szétszedve a programkódot? Miért nem kezdtük rögtön a klónozással? Azért, mert a klónozás megoldás egy problémára, és hogy megértsd a klónozás mögötti gondolatot, először szembesülnöd kell a problémával.
+      </p>
+      <p>
+        Pontosan ezt kell tenned a tanítás során is. Ha megóvod a gyerekeket attól, hogy megtapasztaljanak egy nehézséget vagy elakadjanak a munkában, akkor megvonod tőlük a probléma közös megoldásának örömét is. Tartsd észben, hogy felfedezéssel tanítunk. Nem megoldásokat tanítunk a gyerekeknek, hanem azt tanítjuk meg nekik, hogy hogy kell problémákat megoldani. Így nevelhetünk belőlük kompetens felnőtteket.
+      </p>
+      <p>
+        A problémamegoldásnak ez a folyamata, hogy sikertelen megoldási kísérleteken keresztül jutunk el a megoldásig, nem csak a tanításra jellemző, hanem az életnek jószerivel minden területére. Ha soha nem rontottad el a kedvenc ételedet, akkor nem értetted meg teljesen, hogy kell azt főzni.
+      </p>
+      <p>
+        Ez különösen igaz a programozásban, ahol egyszerűen lehetetlen egy komplex feladatot elsőre megoldani. Ehelyett az ember
+        <ul>
+          <li>tervet készít</li>
+          <li>a terv alapján megírja a programkódot</li>
+          <li>szembesül azzal, hogy az nem működik</li>
+          <li>eltölt némi időt azzal, hogy rájöjjön, hol mentek félre a dolgok</li>
+          <li>új tervet gyárt és újraírja a kódot</li>
+        </ul>
+         -- amíg minden a helyére nem kerül. Ennek a folyamatnak a végére teljesen átalakul a kód eredeti szerkezete, és jellemzően minden nagyon sokat egyszerűsödik. Az egyszerű megoldáshoz bonyolult megoldási kísérleteken át jutunk el. A kódnak ezt a folyamatos újrastrukturálását refaktorálásnak nevezik, és lényegi része a programozásnak.<br>
+        <img class="figure" width="70%" src="curriculum/img/hun/cloning/116.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+  <div class="section">
+    <div class="section-title" id="rainfall">2. projekt: Eső</div>
+
+    <div class="celltitle">Miről szól ez a projekt?</div>
+    <div class="cell">
+      <p>
+        Ebben a projektben esőt fogsz animálni, minden egyes esőcseppet klónozással hozva létre, és a "csússz" blokkal mozgatva a cseppeket felülről lefelé, a Mozgatás fejezetben tanultak szerint.
+      </p>
+      <p>
+        Hogy az eső folyamatosan essen, a cseppek gyártása is folyamatos lesz. Mivel a Scratch csak 300 klónt tud előállítani, el kell távolítani a fölösleget, törölve azokat a cseppeket, amelyek már lehullottak. Ezzel használatba vesszük a harmadik, "töröld" klón-blokkot is.
+      </p>
+      <p>
+        Az ebben a projektben bevezetett technika lényegi eleme rengeteg Scratch animációnak és játéknak. Megtalálod a "Virágeső" miniprojektben, a "Legyen hó" projektben, és sok videojáték-projektben is. Szerencsére nem csak fontos, de izgalmas is. Kezdjünk bele! :)
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Előkészületek</div>
+    <div class="cell">
+      <p>
+        Hozz létre egy új projektet, és töröld Scratchie cicát. Válassz egy hátteret a "Kültér" kategóriából (hacsak nem akarod, hogy bent essen az eső). Vidd a színpad alatti cicafej ikon fölé az egeredet, és kattints az ecset ikonra új szereplő rajzolásához. El is nevezheted a szereplőt esőcseppnek. Érdemes értelmes neveket adni a szereplőknek "Szereplő1", "Szereplő2" stb. helyett.<br>
+        <img class="figure" width="20%" src="curriculum/img/hun/cloning/201.png" alt="figure">
+        <img class="figure" width="60%" src="curriculum/img/hun/cloning/202.png" alt="figure">
+      </p>
+      <p>
+        A grafikus szerkesztőben a "kör" eszközzel rajzolj egy ovális formát. Az "újraformálás" eszközzel alakítsd cseppé a Rajzolás fejezetben tanultak szerint. Akár színátmenetet is használhatsz a színezéséhez, sőt az egyik színt átlátszónak is választhatod, hogy úgy nézzen ki, mintha tényleg vízből lenne.<br>
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/203.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/204.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/205.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/206.png" alt="figure">
+      </p>
+      <p>
+        Végül kicsinyítsd le a színpad alatti "méret" eszközzel, hogy ne legyen túl nagy a háttérhez képest.<br>
+        <img class="figure" width="20%" src="curriculum/img/hun/cloning/207.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Egyetlen esőcsepp mozgatása</div>
+    <div class="cell">
+      <p>
+        Itt az idő, hogy megmozgassuk az esőcseppet. A színpad tetejéről a színpad alrára fog esni. Ha gyerekekkel dolgozol egy ilyen projekten, mindenképpen szánjatok időt arra, hogy közösen találjátok ki a koordinátákat, ahogy a Mozgatás fejezetben láttad. De miután te már tudod ugyanebből a fejezetből, hogy a színpad tetején 180 az y koordináta, a színpad alján pedig -180, a kódod első változatát könnyedén összerakhatod:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/cloning/208.png" alt="figure"><br>
+        Ha elindítod a projektet, láthatod, hogy az esőcsepp szépen lehullik a színpad közepén, de csak egyszer. Hogy folyamatosan hulljon, illessz be egy "mindig" blokkot:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/cloning/209.png" alt="figure">
+      </p>
+      <p>
+        Még jobb lenne az animáció, ha az esőcsepp vízszintes (gyerekbarát nyelven: jobbra-balra) helyzete véletlenszerűen megváltozna az egyes lehullások között. Ha már ismerős neked a "véletlen" blokk, és tudod, hogy az x koordináta a színpad bal szélén -240, a jobb szélén pedig 240, nem nehéz az esőcsepp kiinduló helyzetét véletlenszerűvé tenni:<br>
+        <img class="figure" width="45%" src="curriculum/img/hun/cloning/210.png" alt="figure">
+      </p>
+      <p>
+        De most újabb problémával fogsz szembesülni: az esőcsepp nem függőlegesen esik, hanem mindig a színpad közepe felé. A kód ugyanis azt mondja neki, hogy érkezzen a 0 x pozícióba. Hogy lehetne az esőcseppnek megmondani, hogy essen függőlegesen, egyenesen lefelé? Ha az érkezéshez is teszel egy "véletlen" blokkot, azzal csak még kaotikusabbá teszed a viselkedését. Az esőcseppnek meg kell tartania a kiinduló vízszintes helyzetét, bármi legyen is az. Bárcsak lenne olyan blokk a Scratchben, ami a vÍzszintes helyzetet adja vissza... Várjunk csak, van ilyen, az "x hely" blokk! Éppen erre van szükség:<br>
+        <img class="figure" width="50%" src="curriculum/img/hun/cloning/211.png" alt="figure">
+      </p>
+      <p>
+        Most az első kék blokk ezt mondja: "Kezdd az esést a színpad tetején, ahol az y 180, egy találomra választott helyen a színpad két széle között, vagyis x legyen -240 (ez a bal szél) és 240 (ez a jobb szél) között." A második blokk pedig ezt mondja: "Érkezz meg 1 másodperc alatt a színpad aljára, ahol y -180, és tartsd meg az x helyzetet, ahonnan indultál." Amint megértesz minden kis részletet, úgy tudod olvasni ezeket a számokkal teli Scratch blokkokat, mint egy vers sorait. Minden egyre egyszerűbb lesz, ha teszel egy kis erőfeszítést a tanulásra. És minél jobban érted, hogy működik a programkód, annál könnyebben meg tudod értetni a gyerekekkel is.
+      </p>
+      <p>
+        Ennyit tudunk kihozni egyetlen esőcseppből. Most gyártsunk belőle sok példányt.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Az esőcseppek klónozása</div>
+    <div class="cell">
+      <p>
+        Emlékszel, hogy strukturáltad újra a kódodat az előző projektben a klón-blokkok bevezetésével? Most ugyanezt fogjuk csinálni. Most már sokkal könnyebben fog menni, legközelebb pedig már magától értetődő lesz az egész. Kezdd azzal, hogy kikészíted a "készíts másolatot" és a "másolatként kezdéskor" blokkot, és gondold végig, hogy illeszkednek majd a kódba.<br>
+        <img class="figure" width="75%" src="curriculum/img/hun/cloning/212.png" alt="figure">
+      </p>
+      <p>
+        Nem kell fejben tartanod, mi hova kerül; minden projektmunkában ki tudod találni (egyedül vagy közösen a gyerekekkel), ha felteszed magadnak a megfelelő kérdéseket. Mi az, amit minden egyes esőcsepp megtesz az eddigiekből? Hát az, hogy leesik, éspedig egyetlenegyszer, ismétlés nélkül. tehát a két kék mozgatás-blokk a tartalmával együtt átkerül a klónok eseményblokkja alá:<br>
+        <img class="figure" width="75%" src="curriculum/img/hun/cloning/213.png" alt="figure"><br>
+        A többi már gyerekjáték: az eredeti szereplő dolga a klónok előállítása lesz. Tehát a "készíts másolatot" blokk kerül a "zöld zászló" alá, a "mindig" blokkba:<br>
+        <img class="figure" width="80%" src="curriculum/img/hun/cloning/214.png" alt="figure"><br>
+        Indítsd újra a projektet, és gyönyörködj az esőben! :)
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">A lehullott esőcseppek törlése</div>
+    <div class="cell">
+      <p>
+        De a látvány nem tart sokáig: körülbelül 10 másodperc múlva eláll az eső. Miért? Emlékezz vissza, hogy a Scratch csak 300 klónt engedélyez. Másodpercenként 30 frissítéssel 10 másodpercig tart 300 klón előállítása. Ezek, miután lehullottak, tétlenül álldogálnak a színpad alján, megakadályozva, hogy újak keletkezzenek. Hogy megszabadulj tőlük, munkába kell állítanod a harmadik, "töröld ezt a másolatot" klón-blokkot. Legyen része az esőcseppek feladatának, hogy miután leestek, semmisítsék meg magukat.<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/cloning/215.png" alt="figure"><br>
+        Most már soha nem áll el az eső!
+      </p>
+      <p>
+        Szine minden a helyére került már a kódodban; az egyetlen szépséghiba az animációban az, hogy van egy esőcsepp, ami nem mozog a többivel. Emlékezhetsz az előző projektből, hogy ez az eredeti, amelyik a klónokat gyártja. Arra is emlékezhetsz, ahogy eltűntetted az eredetit és láthatóvá tetted a klónokat.<br>
+        <img class="figure" width="80%" src="curriculum/img/hun/cloning/216.png" alt="figure"><br>
+        Most már készen vagy: az eső szépséghiba nélkül pont úgy esik, ahogy kell. A végére értél egy nayon fontos projektnek. Legyél büszke magadra! :)
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+  <div class="section">
+    <div class="section-title" id="balls">3. projekt: Pattogó labdák csóva effekttel</div>
+
+    <div class="celltitle">Miről szól ez a projekt?</div>
+    <div class="cell">
+      <p>
+        Ez a Pattogó labda miniprojekt továbbfejlesztett változata, amely a két eddigi klónozós projektnél kicsit  haladóbb technikákat használ.
+      </p>
+      <p>
+        A projekt lokális változót használ. A lokális változó olyan változó, amelyet "A kiválasztott szereplőé" opció kválasztásával hozhatsz létre.<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/cloning/301.png" alt="figure"><br>
+        Az ilyen változókat a többi szereplő nem láthatja és nem is használhatja; de nem emiatt olyan fontosak a klónozásban. Az teszi őket különlegessé, hogy a különböző klón-példányoknál más és más lehet az értékük. A korábbi peojektekben már láthattad, hogy ezek a példányok lehetnek más és más helyen, vagyiis különbözhet az x és y helyük. Ez minden más tulajdonságukra is igaz: a méretükre, az irányukra, a jelmezükre, és még egy csomó más dologra. Ehhez hasonlóan egy lokális változó értéke is különböző lehet az egyes klón-példányoknál. Így tudjuk elérni, hogy különbözőképpen viselkedjenek annak ellenére, hogy ugyanaz a kód irányítja őket.
+      </p>
+      <p>
+        A klón-példányok öröklik annak a szereplőnek a tulajdonságait, amelyik létrehozta őket. Hasonlóképpen öröklik a lokális változók értékeit is. Tehát ha egy lokális változó értéke megváltozik két klón-példány előállítása között, akkor az egyes példányoknál más és más lesz a változó értéke:<br>
+        <img class="figure" width="50%" src="curriculum/img/hun/cloning/302a.png" alt="figure"><br>
+        <img class="figure" width="25%" src="curriculum/img/hun/cloning/302b.png" alt="figure"><br>
+        Az is előfordulhat, hogy egy lokális változó értéke egy klón életútja során változik meg:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/cloning/302c.png" alt="figure"><br>
+      </p>
+      <p>
+        Ebben a projektben a klónokat két külöböző feladatra használjuk: egy részükat labdaként, ami a színpadon pattog; mások pedig a pattogó labda-klónok mögötti csóva-hatást szolgáltatják. Míg az első fajta klónok vég nélkül pattogva mozognak, az utóbbiak egy helyben állnak és fokozatosan elhalványodnak, így állítva elő egy látványos csóva-hatást:<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/cloning/302.png" alt="figure"><br>
+        Ahhoz, hogy ez az animáció rendben működjön, a Scratch lejátszónak tudnia kell, melyik klónok pattognak és melyikek halványodnak. Erre egy "típus" nevű lokális változót használunk, amelynek háromféle értéke lehet: az "eredeti" típusba tartozik maga a szereplő, amely a pattogó klónokat előállítja; "pattogó" típusúak lesznek az eredeti szereplő által előállított mozgó klónok; és "csóva" típusba azok, amelyeket a pattogó klónok állítanak elő, és mozgás helyett csak elhalványodnak. A változó háromféle értéke -- "eredeti", "pattogó", "csóva" -- határozza meg, hogy egy adott példány milyen szerepet tölt be az animációban.
+      </p>
+      <p>
+        De eleget beszéltünk, gyerünk Scratchezni.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Előkészületek</div>
+    <div class="cell">
+      <p>
+        Hozz létre egy új projektet, töröld Scratchie cicát, és add a projekthez azt a színes labda-szereplőt, amit egyzserűen "Ball"-nak hívnak. Ez azért jó választás, mert öt színes jelmeze van, amelyek változatossá és vibrálóvá teszik majd az animációt. Természetesen magad is megrajzolhatod a szereplődet, vagy használhatod bármelyik másik beépített szereplőt is. Kicsinyítsd le a szereplőt, hiszen kell a hely a sok klónnak a színpadon. Végül válassz hátteret a projektedhez.<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/cloning/303.png" alt="figure"><br>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Egyetlen labda pattogtatása</div>
+    <div class="cell">
+      <p>
+        Ahogy az előző két projektben, itt is egyetlen példány animálásával kezdd, hogy legyen sikerélményed már a klónozás előtt. Ez igazán nem lesz nehéz. Először is állítsd be a labdát egy véletlen irányba. Bizonyára emlékszel a Mozgatás fejezetből, hogy egy szereplő iránya -179 és 180 között változhat:<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/cloning/304.png" alt="figure"><br>
+        Most mozgasd meg a labdát jó nagy sebességggel (mondjuk 15 lépéssel minden frissítéskor; persze lehet ennél gyorsabban vagy lassabban is):<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/cloning/305.png" alt="figure"><br>
+        Ha ez a kódrészlet elsőre nem érthető, részletes magyarázatot találsz hozzá a Pattogó labda miniprojektben.
+      </p>
+      <p>
+        Indítsd el a projektet, és ellenőrizd, hogy a labda valóban elkezd-e oda-vissza pattogni a színpadon.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">A labda klónozása</div>
+    <div class="cell">
+      <p>
+        Az előző két projekt alapján már ez a lépés is könnyen fog menni. Állíts elő néhány klónt (ne túl sokat, a 300 lehetségs klón nagy részére a csóvához lesz szükség). A klónok gyártása kerül majd a "zöld zászló" alá, tehát a pattogás kódját tedd félre:<br>
+        <img class="figure" width="70%" src="curriculum/img/hun/cloning/306.png" alt="figure"><br>
+        A pattogás a klónok feladata lesz:<br>
+        <img class="figure" width="70%" src="curriculum/img/hun/cloning/307.png" alt="figure"><br>
+        Végül ne felejtsd el az eredeti szereplőt elrejteni ésa másolatokat megjeleníteni:<br>
+        <img class="figure" width="70%" src="curriculum/img/hun/cloning/308.png" alt="figure">
+      </p>
+      <p>
+        Indítsd újra a projektet, és gyönyörködj a sok pattogó labdában:<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/cloning/309.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Különféle színű klónok</div>
+    <div class="cell">
+      <p>
+        A projektmunka elején beszéltünk arról, hogy a szereplő tulajdonságait a klónok öröklik; tehát ha két klón előállítása között megváltozik az adott tulajdonság, akkor a két klón esetében is különbözni fog. Teszteljük le ezt az információt. A "Ball" szereplőnek öt különböző színű jelmeze van. Ha van kedved, hozz létre még párat duplikálással és átszínezéssel:<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/cloning/310.png" alt="figure"><br>
+        Most adj egy "következő jelmez" blokkot :<br>
+        <img class="figure" width="25%" src="curriculum/img/hun/cloning/311.png" alt="figure">
+      </p>
+      <p>
+        Indítsd újra a projektedet, hogy tarka színekben is láthasd a sok pattogó labdát.<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/cloning/312.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Klónok hoznak létre klónokat</div>
+    <div class="cell">
+      <p>
+        Most, hogy az animáció alapja készen van, megkezdheted az előkészületeket a csóva effekthez. Az első lépés apró, mégis nagy ugrás előre. A csóva effekt úgy jön létre, hogy a pattogó labdákat is klónozzuk. Ez azt jelenti, hogy a klónok is folyamatosan klónozzák magukat:<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/cloning/313.png" alt="figure"><br>
+        Most jöhet az elhalványodás kódja. A szellem hatást erre találták ki, szóval változtasd ezt a hatást fokozatosan 1-től 100-ig, mielőtt törlöd a klónt:<br>
+        <img class="figure" width="30%" src="curriculum/img/hun/cloning/314.png" alt="figure">
+      </p>
+      <p>
+        Ha újraindítod a projektet, azt láthatod, hogy semmi sem működik. Néhány halványodó labdát  látsz mozogni, aztán ezek is eltűnnek. Ennek az az oka, hogy a két klón-eseményblokk alatti kód összeakad:<br>
+        <img class="figure" width="75%" src="curriculum/img/hun/cloning/315.png" alt="figure"><br>
+        Semmi ok az aggodalomra, a következő lépésben érkezik a megoldás.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Példányok megkülönböztetése lokális változóval</div>
+    <div class="cell">
+      <p>
+        Hozd létre az első lokális változódat "típus" néven (ha találsz jobb nevet, használd bátran azt). Ne felejtsd el kiválasztani "A kiválasztott szereplőé" opciót:<br>
+        <img class="figure" width="40%" src="curriculum/img/hun/cloning/316.png" alt="figure"><br>
+        A projekt az eredeti szereplővel indul, tehát a "zöld zászló" blokk alatt legyen a típus változó értéke az, hogy "eredeti":<br>
+        <img class="figure" width="25%" src="curriculum/img/hun/cloning/317.png" alt="figure">
+      </p>
+      <p>
+        Ezt az értéket öröklik az eredeti szereplő által előállított klónok. Emlékeztetőül: ezek azok, amik ide-oda pattognak. Szóval a pattogás kódját érdemes egy "ha-akkor" blokkba tenni, amely ellenőrzi, hogy a változó értéke "eredeti"-e:<br>
+        <img class="figure" width="45%" src="curriculum/img/hun/cloning/318.png" alt="figure"><br>
+        (Ha új neked ez a szerkezet, ahol ha-akkor blokkban használunk egy változót, akkor nézd meg a Változók tananyagfejezet két projektjét.) Ezek a klónok persze már nem eredetik, tehát rögtön állítsd is át a változó értékét arra, hogy "pattogó":<br>
+        <img class="figure" width="45%" src="curriculum/img/hun/cloning/319.png" alt="figure"><br>
+        Végül ezt az értéket öröklik a második generációs klónok, tehát az ő kódjukban már így alakul a "típus" változó értékének tesztelése és átállítása:
+        Now this value is inherited by the second generation of clones, so their code should contain the same value-checking and value-setting:<br>
+        <img class="figure" width="35%" src="curriculum/img/hun/cloning/320.png" alt="figure">
+      </p>
+      <p>
+        Most már kifogástalanul működik az animáció. Légy büszke magadra, szintet léptél a klónozás mesterségében! :)<br>
+        <img class="figure" width="60%" src="curriculum/img/hun/cloning/321.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section -->
+
+</div> <!-- chapter -->
+

@@ -1,0 +1,260 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Quiz project </div>
+
+  <div class="celltitle"> What is this project about? </div>
+  <div class="cell">
+    <p>
+      It's a relatively simple project that can be done in one session, and gives you a lot of scope for creativity. As it uses variables and a list, this project is not for beginners. You will be making a multiple-choice quiz, which everyone can fill in with questions taken from their own favorite topic. You can see the final result here:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/995695696/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 1: Topic selection</div>
+  <div class="cell">
+    <p>
+      Before you sit down at the machines, discuss who will be taking a quiz on which topic. This could even serve as an icebreaker game at the beginning of the session. To make brainstorming easier, you start with your own topic and ask a question straight away. For example:
+      <ul>
+        <li>Who was the first astronaut?
+          <ul style="list-style-type:none;">
+            <li>A: Angelina Jolie</li>
+            <li>B: Yuri Gagarin</li>
+            <li>C: John Lennon</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+    <p>
+      If the questions don't come easily, suggest a topic:
+      <div class="twocolumns">
+        <div class="column">
+          <ul>
+            <li>pokémons</li>
+            <li>Harry Potter</li>
+            <li>car brands</li>
+            <li>bicycle repair</li>
+            <li>football</li>
+            <li>math (pheeew...)</li>
+            <li>music performers</li>
+            <li>movies</li>
+            <li>K-pop</li>
+            <li>chess</li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul>
+            <li>dogs</li>
+            <li>flowers</li>
+            <li>pets</li>
+            <li>TV shows</li>
+            <li>jungle</li>
+            <li>middle ages</li>
+            <li>video games</li>
+            <li>Japan</li>
+            <li>outer space</li>
+            <li>baking and cooking</li>
+          </ul>
+        </div>
+      </div>
+      and so on, something will work for everyone. You can also come up with topics together, write them on the board or on a piece of paper and then each of you can choose one.
+    </p>
+    <p>
+      Once you have the topics, everyone formulates their first question. You can help the participants to do this together. Some examples:
+      <ul>
+        <li>Who plays Ken in the Barbie movie?
+          <ul style="list-style-type:none;">
+            <li>A: Leonardo DiCaprio</li>
+            <li>B: Brad Pitt</li>
+            <li>C: Ryan Gosling</li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>Who sings Paparazzi?
+          <ul style="list-style-type:none;">
+            <li>A: Billie Eilish</li>
+            <li>B: Lady Gaga</li>
+            <li>C: Beyoncé</li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>What is the capital of Ukraine?
+          <ul style="list-style-type:none;">
+            <li>A: Kiev</li>
+            <li>B: Moscow</li>
+            <li>C: London</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 2: Designing the interface</div>
+  <div class="cell">
+    <p>
+      Before you start coding, it's a good idea to plan what the quiz will look like (in short, design the user interface) so that kids can see what you'll be writing the code for. The simplest way to go is having both the questions and the answers written on the background, and the only sprites will be the three buttons with the letters A, B, C. Create a new project and say goodbye to Scratchie the cat; he won't be needed now.
+    </p>
+    <p>
+      Start with the background. Everyone write down the first question with the three answers as agreed and place them as you like:
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/eng/quiz/1_1.png" alt="figure">
+    </p>
+    <p>
+      If you're experienced at downloading images, you can illustrate the questions, but be aware that this is time-consuming:
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/eng/quiz/1_2.png" alt="figure">
+    </p>
+    <p>
+      Follow your own ideas in design; but just In case you want to have these coloured gradient stripes:
+      <ol>
+        <li>draw a strip half as wide as the final result</li>
+        <li>make it transparent from top to bottom by choosing one of the colors to be transparent (crossed out square)</li>
+        <li>copy the strip and mirror it vertically</li>
+        <li>join the two strips</li>
+      </ol>
+      <img class="figure" width="40%" src="curriculum/img/eng/quiz/1_3.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/eng/quiz/1_4.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/quiz/1_5.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/quiz/1_6.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/quiz/1_7.png" alt="figure">
+      </p>
+    <p>
+      Once you've got the background, choose buttons from the sprite library (you can recolor them, or even draw them yourselves if the kids like to draw). In the graphics editor, write letters on the buttons, and place them on the stage.If necessary, adjust their sizes to make them fit neatly:<br>
+      <img class="figure" width="30%" src="curriculum/img/eng/quiz/1_8.png" alt="figure">
+      <img class="figure" width="50%" src="curriculum/img/eng/quiz/1_9.png" alt="figure">
+      <br>(If you're very proficient in Scratch, the three buttons can be three clones of a single sprite; this will make the code more elegant. But even with three separate sprites, the quiz will be great and simple.)
+    </p>
+    <p>
+      Once you're happy with the way the quiz looks, write at least two more questions so you have enough to start writing the code. You do not need to design a new background for the new questions, just duplicate the existing one:
+      <img class="figure" width="75%" src="curriculum/img/eng/quiz/1_10.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 3: Code of the stage</div>
+  <div class="cell">
+    <p>
+      After all the planning, now comes the well-deserved coding! Start with the background here too, because it's the easiest. The background's job is to always show the question you're working on; the first, the second, the third, and so on. So for Scratch to know where you are, you need a variable that counts the questions; similar to how in other games you count points, lives, levels, etc. with a variable. Create a new variable called "question". At the start of the program, the value of the variable should be 1, since we start with the first question; and from then on, whatever the value of this variable is, the background should always be adjusted: first question => first background, second question => second background, and so on, always according to the value of the variable.
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/quiz/2_1.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/quiz/2_2.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/quiz/2_3.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 4: Code of the buttons</div>
+  <div class="cell">
+    <p>
+      But what will move the question counter from 1? Of course, the push of a button. Switch to the first button sprite.To make sure that it appears in the right place even if you accidentally move it while clicking, it's a good idea to start the code with a "go to" block:<br>
+      <img class="figure" width="25%" src="curriculum/img/eng/quiz/2_4.png" alt="figure"><br>
+      You don't have to type the numbers, of course. Use the ones that are already in the blocks.
+    </p>
+    <p>
+      Now  comes the code for clicking. The easiest way is to use an event block. The most important thing a button does is to increment the question counter at each click.<br>
+      <img class="figure" width="25%" src="curriculum/img/eng/quiz/2_5.png" alt="figure"><br>
+      If you restart the project, you will see that the it is already starting to work; clicking the first button will already change to the next question. But for now, it doesn’t matter whether you clicked on the right answer.
+    </p>
+    <p>
+      Really, how will Scratch know which answer is correct? Well, how will the TV presenter who hosts a quiz show know? He's holding a sheet with a list of correct answers that only he can see, the player can't. We will do the same thing, making a list of the correct answers.
+    </p>
+    <p>
+      If this is the first time you are using a list, discuss in detail what it is: a variable in which you can enter not just one piece of data, but several ones at once. Each item in the list has an index; that's how Scratch will know which answer to look at. Once you have everything clear, create the list variable: <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/quiz/2_6.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/quiz/2_7.png" alt="figure">
+    </p>
+    <p>
+      When the list is ready, a whole new set of blocks will appear in the left-hand panel, and the list itself will appear as a small rectangle on the stage. We'll get to the blocks in a moment, but first, click on the little plus sign in the corner of the rectangle to create as many list items as you have questions, and enter the correct answers in each of them. To do this, it is worth scrolling through the questions again.<br>
+      <img class="figure" width="40%" src="curriculum/img/eng/quiz/2_8.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/eng/quiz/2_9.png" alt="figure">
+      <img class="figure" width="14%" src="curriculum/img/eng/quiz/2_10.png" alt="figure">
+      Once you have created your list, don't forget to make it invisible by unchecking the box next to the list block.<br>
+      <img class="figure" width="35%" src="curriculum/img/eng/quiz/2_11.png" alt="figure">
+    </p>
+    <p>
+      Now we can get back to the code, and it's worth concentrating a bit, because the most difficult task of the whole project is coming up. The correct answer is one of the items of the list; so you should start with the "item 1 of list" block. The index of the item can be changed. But what should we set it to? Well, the number of questions we're at. And what are we looking for when we click on the "A" button? Well, whether this element is the letter "A". And that two things are the same is expressed mathematically by the equals sign. Putting all these details together, we get a nice complex block:<br>
+      <img class="figure" width="30%" src="curriculum/img/eng/quiz/2_12.png" alt="figure"><br>
+      And what happens if we click on the correct answer? Of course, you are awarded a point. So you'll need both an “if-then” block and a score variable. Be careful: the question number only changes after the "if-then"! Oh and don't forget to set the variable to zero at the start of the game! :)<br>
+      <img class="figure" width="35%" src="curriculum/img/eng/quiz/2_13.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/quiz/2_14.png" alt="figure">
+    </p>
+    <p>
+      Here is the code for the other two button sprites. Don't forget to set the starting position (the y coordinate will be different from before). And you can simply drag the rest of the code to the new sprite (or, if you're not sure about the kids’ mouse handling, you can move it to the backpack); just replace the letter "A".<br>
+      <img class="figure" width="25%" src="curriculum/img/eng/quiz/2_15.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/quiz/2_16.png" alt="figure">
+    </p>
+    <p>
+      When you're done, try the project again. If everything was done well, it will work as expected, and you get points for good answers and the wrong ones are elegantly ignored. The only problem is that the project doesn't stop after the last question.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 5: End of the game</div>
+  <div class="cell">
+    <p>
+      When does the game end? Well, when the question counter gets bigger than the number of questions we have. At this point, it's a good idea to change the background to a closing caption and remove the buttons. Start by drawing a new background:<br>
+      <img class="figure" width="40%" src="curriculum/img/eng/quiz/3_1.png" alt="figure">
+    </p>
+    <p>
+      The game ends when you run out of questions, meaning the question counter has grown larger than the number of questions you have.To do this, you could change the previous "forever" loop to "repeat until", but it might be a better idea to add another code to the background in addition to the existing one:<br>
+      <img class="figure" width="30%" src="curriculum/img/eng/quiz/3_2.png" alt="figure">
+    </p>
+    <p>
+      Now everything is working properly. You should be proud of yourselves for getting this far. And if you still have time and energy, you can add some more questions, sounds and visual elements to the quiz. But even without them, the project will be great. But very important: don't forget to present your projects at the end of the session! :)
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Bonus 1:<br>sounds</div>
+  <div class="cell">
+    <p>
+      It adds a lot to the game experience if the correct and incorrect answers are accompanied by sounds. If you haven't worked with sounds before, this is a great opportunity to try it out. To avoid having to insert sounds and new code in three places, we give the background the task of playing sounds. Make sure that the background is selected, and to avoid complications later, everyone should lower the volume on their laptops so that they can still hear the sounds, but not disturb others.
+    </p>
+    <p>
+      Click on the "Sounds" tab on the left, then click on the small speaker icon at the bottom. You can try all the many sounds that appear by hovering the mouse pointer over them (no need to click). Everyone can search for the sounds that best suit them. If you don't feel like searching, "Cheer" can be used for the right answer, and "Chee Chee" for the wrong one. Click on the sounds to insert them into the project.<br>
+      <img class="figure" width="40%" src="curriculum/img/eng/quiz/4_1.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/quiz/4_2.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/quiz/4_3.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/quiz/4_4.png" alt="figure">
+    </p>
+    <p>
+      Here's the code. The buttons will send a message to the background telling it what sound to play. The sound playback will therefore be assigned to a message receiving event. If you have worked with messages before, this should be very easy:<br>
+      <img class="figure" width="55%" src="curriculum/img/eng/quiz/4_5.png" alt="figure">
+    </p>
+    <p>
+      But you will have to tweak the button code a bit; since you now get a response not only to the right but also to the wrong answer, the "if-then" block will not be enough; you will have to replace it with "if-then-else" and insert the messaging in both branches:<br>
+      <img class="figure" width="50%" src="curriculum/img/eng/quiz/4_6.png" alt="figure">
+    </p>
+    <p>
+      Don't forget to update the code for all three buttons. When you have done that, you can test again.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Bonus 2:<br>flashing buttons</div>
+  <div class="cell">
+    <p>
+      The quiz will be even more spectacular when the buttons pop up when clicked. This is very easy to do using graphic effects. The simplest option is to increase the brightness effect for a moment. You don't even need to touch the existing code:<br>
+      <img class="figure" width="35%" src="curriculum/img/eng/quiz/5_1.png" alt="figure"><br>
+      Copy the code for the other two sprites.
+    </p>
+    <p>
+      And if you want an even more spectacular result, you can make the flash with a color effect: green for a good answer, red for a bad answer. To do this, you need to do some trial and error: select one of the "set color effect" blocks in the script area, enter various numbers between 1 and 200, then click on the block. The sprite will change color, differently for each number. The result depends on the original color, it's hard to calculate it in your head, it's easiest to try. Once you find the red and green, you can insert the color change in the if-then-else block:<br>
+      <img class="figure" width="45%" src="curriculum/img/eng/quiz/5_2.png" alt="figure"><br>
+      We've added a slightly longer delay to the flash to make it look better.
+    </p>
+  </div> <!-- cell -->
+
+
+  <div class="celltitle">Bonus 3:<br>Hiding the buttons</div>
+  <div class="cell">
+    <p>
+      It's a bit confusing that at the end of the game the buttons stay there and even react to clicking.This can be prevented by having the background send a "game over" message to the buttons right before the game ends (and then waiting a bit before the program finishes to give them time to react):<br>
+      <img class="figure" width="35%" src="curriculum/img/eng/quiz/6_1.png" alt="figure"><br>
+      If you've even got this far in one session, you're amazingly super!<br>
+      <img class="figure" width="30%" src="curriculum/img/eng/quiz/6_2.png" alt="figure">
+    </p>
+    <p>Ha még eddig is eljutottatok egyetlen foglalkozás alatt, elképesztően szuperek vagytok!</p>
+  </div> <!-- cell -->
+
+    </div> <!-- section -->

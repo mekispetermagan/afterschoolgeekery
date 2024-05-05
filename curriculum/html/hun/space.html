@@ -1,0 +1,195 @@
+<div class="section">
+  <div class="section-title topicTitle">Űrjáték</div>
+
+  <div class="celltitle">Miről lesz szó?</div>
+  <div class="cell">
+    <p>
+      Ez egy tipikus retró "kerüld ki és lődd le" videojáték. Kicsit összetettebb a dínós játéknál, ezért inkább akkorra javasoljuk, amikor már szereztek a gyerekek némi tapasztalatot a Scratch-csel. Itt a végeredmény: <br>
+      <iframe src="https://scratch.mit.edu/projects/1010629481/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </p>
+    <p>
+      Ebben az útmutatóban feltételezzük, hogy a gyerekeknek már van tapasztalata a mozgatásban és a klónozásban. Ha ez nem így van, lehet, hogy ez a projekt bonyolultabb annál, hogy érdemes legyen vele bevezetni ezeket a technikákat.
+    </p>
+  </div>
+
+  <div class="celltitle">Előkészületek</div>
+  <div class="cell">
+    <p>
+      Miután megmutattad a projekt végleges változatát a csoportnak, nyissátok meg <a href="https://scratch.mit.edu/projects/1010690242/">ezt a kiinduló változatot</a>. Ebben benne van minden szereplő és grafika, és a kód kevésbé érdekes fele is.<br>
+      <img class="figure" width="60%" src="curriculum/img/hun/space/01.png" alt="figure"><br>
+      Egészen pontosan 3 szereplőnek összesen 8 feladata szorul kiegészítésre. A projektmunka a kód kiegészítése lesz. A hiányos kódokat könnyű felismerni:<br>
+      <img class="figure" width="80%" src="curriculum/img/hun/space/02.png" alt="figure"><br>
+      A projektmunka végére ezek mind ki lesznek töltve:<br>
+      <img class="figure" width="70%" src="curriculum/img/hun/space/03.png" alt="figure">
+    </p>
+    <p>
+      Indítsátok el a játékot a zöld zászlóra kattintva. A cím után eljutunk a játék-képernyőhöz, de aztán csak áll az űrhajó tétéenül, nem történik semmi. Beszéljétek meg a gyerekekkel, mi hiányzik ahhoz, hogy játszható legyen a játék. Valami ilyesmire fogtok jutni:
+      <ul>
+        <li>űrhajó mozgatása</li>
+        <li>ellenséges űrhajók érkezése</li>
+        <li>játék vége, ha hozzáérünk az ellenséghez vagy a lövedékéhez</li>
+        <li>lövés</li>
+        <li>a kilőtt ellenséges űrhajó megsemmisül</li>
+        <li>az ellenség is lő</li>
+        <li>pontkijelzés rovátkákkal</li>
+      </ul>
+      Ezek közül az utolsó kettő már készen benne van a projektben, mert ezek egy fokkal bonyolultabbak annál, hogy a foglalkozáson kerüljenek sorra. Ezeket kihúzhatjátok.
+    </p>
+    <p>
+      Az pedig lehet opcionális, hogy mi is lövünk. Jó, ha jut rá idő, de nélküle is játszható a játék. Szóval végül valahogy így fog kinézni a feladatlista:
+      <ul>
+        <li>Kell:
+          <ul>
+            <li>űrhajó mozgatása</li>
+            <li>ellenséges űrhajók érkezése</li>
+            <li>játék vége, ha hozzáérünk az ellenséghez vagy a lövedékéhez</li>
+          </ul>
+        </li>
+        <li>Jó, ha van:
+          <ul>
+            <li>lövés</li>
+            <li>a kilőtt ellenséges űrhajó megsemmisül</li>
+          </ul>
+        </li>
+        <li> Már kész van:
+          <ul>
+            <li>az ellenség is lő</li>
+            <li>pontkijelzés rovátkákkal</li>
+          </ul>
+        </li>
+      </ul>
+      Ez a felosztás a "kell" és a "jó ha van" között nagyon hasznos a projektmenedzsmentben.
+    </p>
+  </div>
+
+  <div class="celltitle">Az űrhajó mozgatása</div>
+  <div class="cell">
+    <p>
+      Az űrhajó a bal és a jobb nyílgombok lenyomására mozdul (ezen persze lehet változtatni, ha pl. valaki nagy gamer, használhatja az A és a D billentyűket). Valószínűleg korábban már csináltatok hasonlót. Emlékeztesd a gyerekeket, hogy két blokk is van a billentyűnyomás érzékelésére, és kérdezd meg őket, vajon melyik a hasznosabb ehhez a játékirányításhoz. Hamar tisztázni fogjátok, hogy az eseményblokkal szaggatott a mozgás, a világoskék érzékelés-blokkal viszont szép folyamatos. (Ezt a kérdést a Mozgatás tananyag végén alaposan kitárgyaljuk.) A hatszögű érzékelés-blokk éppen beleillik a sárga "várj eddig"-be (de használhattok "ha-akkor"-t is, ez ebben az esetben mindegy). Innentől a kód már magától értetődő:<br>
+      <img class="figure" width="40%" src="curriculum/img/hun/space/04.png" alt="figure">
+    </p>
+    <p>
+      Érdemes hagyni, hogy a gyerekek maguk rakják össze a másik irányt. Ha elakadnak, kérdésekkel tereld őket a negatív számok felé, például: "Ha a jobbra az plusz öt, mi lehet a balra?"<br>
+      <img class="figure" width="90%" src="curriculum/img/hun/space/05.png" alt="figure">
+    </p>
+    <p>
+      Indítsátok újra a projektet, hogy lássátok, megfelelően mozog-e az űrhajó.
+    </p>
+  </div>
+
+  <div class="celltitle">Jön az ellenség</div>
+  <div class="cell">
+    <p>
+      A következő feladathoz váltsatok az "enemy" szereplőre.
+    </p>
+    <p>
+      Ez a kódrészlet nagyon sok Scratch projektben előfordul. Felbukkan a "Klónozás" fejezet "Eső" projektjében, a "Virágeső" projektben, a "Legyen hó" projektben, és egy sor játékban. Feltételezzük, hogy a gyerekek már jártasak a klónok gyártásában és mozgatásában. Ha nem ez a helyzet, mindenképpen használd a "Klónozás" és a "Virágeső" tananyagot a készüléshez. Minden lépést beszélj át a gyerekekkel.
+    </p>
+    <p>
+      Kezdjétek egyetlen ellenség mozgatásával. Hogy felfrissítsd a gyerekek emlékezetét a koordinátákkal kapcsolatban, válts a koordinátás háttérre (amit előzékenyen bekészítettünk a projektbe), és együtt olvassátok le, hogy mik az x és y koordináták a színpad szélein.<br>
+      <img class="figure" width="60%" src="curriculum/img/hun/space/06.png" alt="figure"><br>
+      Amint tisztáztátok a számokat, a kód már egyszerű lesz:<br>
+      <img class="figure" width="45%" src="curriculum/img/hun/space/07.png" alt="figure"><br>
+      Indítsátok újra a projektet, hogy megnézzétek, jól mozog-e az ellenséges űrhajó.
+    </p>
+    <p>
+      Most tegyétek véletlenszerűvé az ellenség vízszintes helyzetét:<br>
+      <img class="figure" width="50%" src="curriculum/img/hun/space/08.png" alt="figure"><br>
+      Indítsátok újra a projektet. Így mozog egyetlen ellenséges űrhajó. Most klónozzuk, hogy sokan legyenek.
+    </p>
+    <p>
+      A klónozás mindig a kód újrarendezésével is jár. Tegyétek félre a mozgás-blokkokat, ezek majd a klónokhoz tartoznak:<br>
+      <img class="figure" width="80%" src="curriculum/img/hun/space/09.png" alt="figure"><br>
+      A "mindig" ciklus fogla gyártani a klónokat: <br>
+      <img class="figure" width="30%" src="curriculum/img/hun/space/10.png" alt="figure"><br>
+      Ahogy korábban egyetlen űrhajó, most a klónok mozognak fentről lefelé, ahol megsemmisülnek: <br>
+      <img class="figure" width="50%" src="curriculum/img/hun/space/11.png" alt="figure"><br>
+      Indítsátok újra a projektet, hogy lássátok az eredményt. Jaj ne, mennyi űrhajó.... :)
+    </p>
+    <p>
+      Hogy kevesebb ellenséges űrhajó érkezzen egyszerre, illesszetek egy "várj" blokkot a klóngyártás kódjába: <br>
+      <img class="figure" width="30%" src="curriculum/img/hun/space/12.png" alt="figure"><br>
+      Kicsit kísérletezni kell ahhoz, hogy mindenki megtalálja a neki megfelelő késleltetést. Itt is használhattok egy véletlen blokkot, de az se baj, ha ez kimarad:<br>
+      <img class="figure" width="40%" src="curriculum/img/hun/space/13.png" alt="figure"><br>
+    </p>
+    <p>
+      Természetesen a késleltetés (a "várj"legyen blokkba írt szám) és a menetidő (a "csússz" blokkba írt első szám) eltérhet a gyerekek kódjában, könnyebbé vagy nehezebbé téve a játékot. Semmiképpen ne erőltesd a gyerekekre a saját változatodat.
+    </p>
+  </div>
+
+  <div class="celltitle">Érintésfigyelés és játék vége</div>
+  <div class="cell">
+    <p>
+      Ez az utolsó "kell" feladat; közel jártok ahhoz, hogy sikerrel zárhassátok le a projektet. Váltsatok vissza a "hero" szereplőre, és keressétek meg a "game over" üzenettel végződő hiányos kódot.<br>
+      <img class="figure" width="30%" src="curriculum/img/hun/space/14.png" alt="figure"><br>
+      Valójában a kód majdnem készen van; csak annyi kell hozzá, hogy a hatszögű nyílásba blokk kerüljön. De melyik? A játék akkor ér véget, ha hozzáérünk egy ellenséges űrhajóhoz <i>vagy</i> egy ellenséges lövedékhez. Két érzékelés-blokk nem kerülhet egyetlen helyre:<br>
+      <img class="figure" width="70%" src="curriculum/img/hun/space/15.png" alt="figure"><br>
+      Az ilyen kihívások elsőre zavarba ejtőek, aztán ha sikerült őket megoldani, már maguktól értetődőek lesznek. Emlékezz vissza, hogy a Scratch egy nyelv. Amit meg tudsz fogalmazni hétköznapi nyelven, azt a gépnek is el tudod magyarázni Scratch blokkokkal. Magyarul a "vagy" szót használtuk. Vajon a Scratch-ben is van "vagy" blokk? Lássuk, ki találja meg először! A gyerekek imádják az ilyen blokk-kereső versenyeket. És ha megtalálták, hamar kész lesz a kód is: <br>
+      <img class="figure" width="80%" src="curriculum/img/hun/space/16.png" alt="figure"><br>
+    </p>
+    <p>
+      Indítsátok újra a játékot, hogy lássátok, minden úgy működik-e, ahogy kell.
+    </p>
+  </div>
+
+  <div class="celltitle">A projekt befejezése lövés nélkül</div>
+  <div class="cell">
+    <p>
+      A projektmunka további része szabadon választható. Ha kifutottatok az időből és itt akarjátok befejezni a munkát, csak illesszétek be gyorsan a pontszámlálást a kódba. Beszéljétek meg, miért jutalmazza a játék ponttal a játékost. Ha mondjuk azt mondják a gyerekek, hogy a sikerrel kikerült ellenséges űrhajókért és lövedékekért, akkor váltsatok vissza az "enemy" szereplőre, és illesszétek a klóntörlés elé a "score változzon 1-gyel" blokkot:<br>
+      <img class="figure" width="45%" src="curriculum/img/hun/space/17.png" alt="figure"><br>
+      Most váltsatok az "ellenséges lövedék" szereplőre. Bár itt még nem jártatok, hamar megtaláljátok azt a részt, ahol a klón törlésre kerül, és ide is beilleszthetitek a "score" változó növelését: <br>
+      <img class="figure" width="45%" src="curriculum/img/hun/space/18.png" alt="figure">
+    </p>
+    <p>
+      Készen vagytok. Indítsátok újra a projektet, és élvezzétek a játékot! :)
+    </p>
+    <p>
+      Ne feledd: ha a következő két lépést is beleveszitek a projektmunkába, akkor ezt hagyjátok ki.
+    </p>
+  </div>
+
+  <div class="celltitle">Lövés</div>
+  <div class="cell">
+    <p>
+      Ha van még időtök, akkor most váltsatok a "bullet" (lövedék) szereplőre. Ez is egy "csússz" blokkal mozgatott szereplő, úgyhogy a kód némileg hasonló lesz az ellenséges űrhajóéhoz. De vannak különbségek, amik esetleg újak lehetnek a gyerekeknek, úgyhogy részletesen leírjuk ezt a lépést is, és te is beszélj meg részletesen minden lépést a foglalkozáson. Kezdhetitek a billentyűfigyeléssel:<br>
+      <img class="figure" width="45%" src="curriculum/img/hun/space/19.png" alt="figure"><br>
+      A lövedék felfele megy; de honnan indul? Hát onnan, ahol az űrhajó van. Erre van egy külön "ugorj" blokk; csak le kell cserélni benne az "egérmutató"-t "hero"-ra:<br>
+      <img class="figure" width="45%" src="curriculum/img/hun/space/20.png" alt="figure"><br>
+      A többi már könnyű: <br>
+      <img class="figure" width="45%" src="curriculum/img/hun/space/21.png" alt="figure"><br>
+      Indítsátok újra a projektet, hogy kiderüljön, tudtok-e már lőni. Ha tökéletességre törekedtek, és nem akarjátok, hogy induláskor rajta legyen az űrhajón a lövedék, adjatok még egy "kerülj leghátra" blokkot is a kódhoz (a "kerülj legelőre" blokkban a "legelőre" opciót "leghátrá"-ra cserélve).<br>
+      <img class="figure" width="45%" src="curriculum/img/hun/space/22.png" alt="figure"><br>
+    </p>
+    <p>
+      De mi van, ha sorozatot is akartok lőni? Ahhoz már klónozás kell. Ez is könnyű lesz, de ha nincs rá idő, nyugodtan kihagyhatjátok.
+    </p>
+    <p>
+      Ahogy az ellenséges űrhajó esetében is, tegyétek félre a Kinézet és Mozgás blokkokat: <br>
+      <img class="figure" width="90%" src="curriculum/img/hun/space/23.png" alt="figure"><br>
+      A klóngyártás kerül a "mindig"-be: <br>
+      <img class="figure" width="40%" src="curriculum/img/hun/space/24.png" alt="figure"><br>
+      A klónok pedig az űrhajóhoz ugranak, felcsúsznak a színpad tetejéig, és ott megsemmisülnek:<br>
+      <img class="figure" width="45%" src="curriculum/img/hun/space/25.png" alt="figure"><br>
+      Hogy a folyamatos lövés ne tegye túl könnyűvé a játékot, tehettek egy kis késleltetést is a klóngyártásba: <br>
+      <img class="figure" width="45%" src="curriculum/img/hun/space/26.png" alt="figure"><br>
+      Ahogy mindig, a pontos késleltetés kísérletezést igényel. Engedd, hogy a gyerekek próbálgassák a számokat, amíg elégedettek nem lesznek az eredménnyel.
+    </p>
+  </div>
+
+  <div class="celltitle">A kilőtt ellenséges űrhajó megsemmisül</div>
+  <div class="cell">
+    <p>
+      Ez a lépés nagyon hasonlít ahhoz az érintésfigyeléshez, ami a "game over" üzenethez kapcsolódott. Ismét váltsatok vissza az "enemy" szereplőre, és keressétek meg a "lövedék érintése" címkével ellátott kódrészt: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/space/27.png" alt="figure"><br>
+      A korábbiak után ez nagyon egyszerű lesz: csak be kell illeszteni egy érzékelés-blokkot a hatszögű nyílásba. <br>
+      <img class="figure" width="35%" src="curriculum/img/hun/space/28.png" alt="figure"><br>
+      És persze ne felejtsétek el ponttal jualmazni a játékost a kilőttt ellenségért: <br>
+      <img class="figure" width="35%" src="curriculum/img/hun/space/29.png" alt="figure"><br>
+    </p>
+    <p>
+      ...Ééés kész! :) Jó nagy munkát végeztetek, élvezzétek a játékot és legyetek büszkék magatokra!
+    </p>
+  </div>
+
+
+</div> <!-- section -->

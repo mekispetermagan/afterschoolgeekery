@@ -1,0 +1,214 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+
+<div class="section">
+  <div class="section-title topicTitle"> Fireworks project </div>
+
+  <div class="celltitle"> What is this project about? </div>
+  <div class="cell">
+    <p>
+      This is again a very simple but spectacular project that you can do with beginners and little ones. Although we use very simple techniques throughout, there is an advanced element of sprite cloning. Cloning is a watershed in Scratch: those who know how to use it will produce Scratch projects of a higher level than those who don't.
+    </p>
+    <p>
+      Two versions of this project have been developed; version A is simpler, and version B is more spectacular. The two versions diverge from step 4 onwards.
+    </p>
+    <p>
+      The final result of the project can be found here (both versions, but the code for version A is inactive):
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/995750220/embed"
+      allowtransparency="true" width="485" height="402" frameborder="0"
+      scrolling="no" allowfullscreen>
+    </iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 1 </div>
+  <div class="cell">
+    <p>
+      You won't need Scratchie now; you can start by clicking on the trash can icon on his thumbnail image to delete:
+      <img class="figure" src="curriculum/img/eng/firework/1_1.png" height="30px" alt="figure">.
+      You can also draw a new sprite in its place, but it's probably easiest to choose the colorful star from the ready-made ones:
+      <img class="figure" src="curriculum/img/eng/firework/1_2.png" height="30px" alt="figure">.
+      If you look at its costumes, you will see that there is only one color available. But that shouldn't stop you from duplicating it, and filling the copies with various colors to make a nice set of stars for your fireworks display.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/1_3.png" width="40%" alt="figure">
+    </p>
+    <p>
+      It's also worth making the sprite a bit smaller. You can do this with a block, but it may be easier to set the size in the sprite toolbar under the stage:
+      <img class="figure" src="curriculum/img/eng/firework/1_4.png" height="30px" alt="figure">.
+      Don't tell the kids what size to use, but guide them with questions: "If 100 is too big and zero is too small, what is the right size?" Then try out what the children say, and if it is still big, ask the same question again; if it is too small, ask the reverse.
+    </p>
+    <p>
+      Finally, choose a background that matches the mood of the project.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/1_45.png" width="40%" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 2 </div>
+  <div class="cell">
+    <p>
+      Now you can start designing the code. As a first step, it might be enough to take the challenge that the star will be launched from the bottom of the stage, from the middle, in a random direction, and pop out at the top. Later, we will have the opportunity to refine the star's behavior and make the project more spectacular; but this is enough to begin with.
+    </p>
+    <p>
+      Start looking for blocks that match these plans. First of all, you will need a "go to" block to fix the sprite’s starting position:
+      <img class="figure" src="curriculum/img/eng/firework/2_1.png" height="30px" alt="figure">,
+      and a "point towards" block to set its direction:
+      <img class="figure" src="curriculum/img/eng/firework/2_2.png" height="30px" alt="figure">.
+      But how do we know what numbers to put in these blocks? If you haven't already encountered coordinates and angles in Scratch, you can discover them together:
+      <img class="figure" src="curriculum/img/eng/firework/2_3.png" height="30px" alt="figure">,
+      in the "go to" block, the coordinates are automatically inserted when the sprite is placed on the stage: , and in the "point toward" block, a small pointer is hidden to help you find the limits within which you should keep the direction of the star:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/2_4.png" width="15%" alt="figure">
+      <img class="figure" src="curriculum/img/eng/firework/2_5.png" width="15%" alt="figure">
+    </p>
+    <p>
+      The "random" block will ensure that the direction can vary freely between the two extremes:
+      <img class="figure" src="curriculum/img/eng/firework/2_6.png" height="30px" alt="figure">.
+    </p>
+    <p>
+      To move the star,the “glide” block suggests itself:
+      <img class="figure" src="curriculum/img/eng/firework/2_7.png" height="30px" alt="figure">,
+      but it needs advanced math skills to calculate coordinates based on direction. For now it will be just easier to use the "move" block, which is based on the direction of the sprite instead of its coordinates:
+      <img class="figure" src="curriculum/img/eng/firework/2_8.png" height="30px" alt="figure">.
+    </p>
+    <p>
+      Thus, by constantly asking questions and discussing together what you should do and why, the code for moving the star is gradually being developed:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/2_9.png" width="40%" alt="figure">.
+    </p>
+    <p>
+      And when you start the project, the star finally moves and does exactly what you want it to do. These are the best moments in coding, and it's worth taking a moment to pause, celebrate your success and congratulate yourself.
+    </p>
+   </div> <!-- cell -->
+
+  <div class="celltitle"> Step 3 </div>
+  <div class="cell">
+    <p>
+      For a break, let's add a few little embellishments. First of all, it would be nice if the star didn't always look the same in the animation, but instead had its costume chosen randomly every time it started. To do this, of course, we need the "switch costume" block, with another "random" block inserted in it:
+      <img class="figure" src="curriculum/img/eng/firework/3_1.png" height="30px" alt="figure">.
+      This random number is the number of the costume selected for the star; so if you have 6 costumes, then put 1 and 6 as limits in the "random" block; if you have 7, then 1 and 7.
+    </p>
+    <p>
+      It will also improve the animation if the star doesn't always go the same height. This can also be done with the "random" block, this time inserted in the "repeat" block:
+      <img class="figure" src="curriculum/img/eng/firework/3_2.png" height="30px" alt="figure">.
+    </p>
+    <p>
+      And our good friend the "always" block will help you to make the animation repeat endlessly. This brings us to this code:
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/3_3.png" width="40%" alt="figure">
+    </p>
+    <p>
+      The animation is starting to take shape. It doesn't look bad; but Scratch can do so much more. In the sequel, we'll make our fireworks really spectacular. And we do this in two ways. Version A is a bit simpler, but offers a great opportunity to practice cloning; version B is a notch more complex, but even more spectacular, and gives you an example of how to use custom blocks as well as cloning.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 4A</div>
+  <div class="cell">
+    <p>
+      In this version, we make the animation more spectacular by not launching the stars one after the other, but continuously, so that there are many of them in the air at the same time. But how can one sprite be in several places at once? Well, that's what cloning is for. We make clones of the star sprite continuously, and each clone is launched and then deleted.
+    </p>
+    <p>
+      To do this, you need to disassemble the existing code a little. You should be careful with this, as it can easily confuse children. However, such interventions cannot be avoided in any creative process; you can't imagine anything worse than showing children the right solution to a problem from the start and depriving them of the pleasure of thinking together.
+    </p>
+    <p>
+      When splitting the code, it is important to keep in mind which task belongs to the original sprite and which to the clone. And it turns out that everything that concerns the flight of the star will belong to the clone; the original sprite will have only the repeat block used to create clones.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/4A_1.png" width="50%" alt="figure">
+    </p>
+    <p>
+      These two buildings are where the three blocks of cloning should be located:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/4A_2.png" width="25%" alt="figure">
+    </p>
+    <p>
+      As soon as it is clear that all three blocks will be needed, you will know where they will be placed:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/4A_3.png" width="50%" alt="figure">
+    </p>
+    <p>
+      And now we're done; restart the project and enjoy the spectacle! :)
+    </p>
+    <p>
+      It's worth noting that we first wrote a program code for a single sprite instance, and then refactored it with clones. This is a standard technique, not only in Scratch, but in programming in general, and in fact in practically all creative processes: first experiment on a concrete prototype, then generalize and replicate.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 4B </div>
+  <div class="cell">
+    <p>
+      Version "A" is spectacular, but more like a sparkler than a firework. Firework projectiles are used to explode in the air. That's exactly what we're going to do in this version: clones of the star will be shot up into the air, and they scatter around in a circle in all directions.
+    </p>
+    <p>
+      To do this, it is worth thinking together about what "in all directions" means. For adults, it is natural that a circle has 360 degrees, each of which represents a direction, but you cannot take for granted  that kids have learned this at school, and certainly not that they have taken it on board. It's worth getting out the “point towards” block once again, opening it up and exploring together how many different directions the pointer can point in.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/4B_1.png" width="20%" alt="figure">
+    </p>
+    <p>
+      And you can also get out, draw or search the web for a traditional clock (unfortunately Scratch doesn't have a clock sprite).
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/4B_2.png" width="20%" alt="figure">
+    </p>
+    <p>
+      Or you can recall the very first program code we used to walk our sprite around and count how many times you have to turn 15 degrees until you make a full circle.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/4B_3.png" width="25%" alt="figure">
+    </p>
+    <p>
+      Actually, it doesn't matter what you use as an illustration; the point is to get the kids involved in a counting game, at the end of which it will turn out that a 360-degree full circle is made up of 24 15-degree segments (or 12 30-degree segments, or 18 20-degree segments; it doesn't matter, let the collective reasoning guide you).
+    </p>
+    <p>
+      Now it will come as natural that a star that has reached the end of its trajectory will rotate 15 degrees 24 times, launching a clone in each direction.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/4B_4.png" width="25%" alt="figure">
+    </p>
+    <p>
+      And the clones are moved, with the same "move" block and repeat as the original star.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/4B_5.png" width="20%" alt="figure">
+    </p>
+    <p>
+      If you restart the project, you will see a beautiful sight! :) Not exactly what we expected, as the clones come in a spiral line instead of flying in sync; but that's quite a promising result.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 5B </div>
+  <div class="cell">
+    <p>
+      To understand why clones come in a spiral, it's worth thinking about how repetition works in Scratch. For example, compare the two codes below:
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/5B_1.png" width="25%" alt="figure">
+      <img class="figure" src="curriculum/img/eng/firework/5B_1.png" width="20%" alt="figure">
+    </p>
+    <p>
+      Although the two are similar, they do not run in the same way. The first one glides the sprite (which is why we used it in the fireworks animations), while the second one teleports it in one big step. The reason for the difference is that while the blocks underneath each other are executed at the same time (in the same screen refresh), Scratch delays the steps of the iterations (one step per screen refresh). The same happens when creating 24 clones: the Scratch player executes the task in 24 screen refreshes, or about one second. We could make it instantaneous by racking 24 cloning and turning blocks on top of each other, but that would be just ugly...
+    </p>
+    <p>
+      The solution is a bit hidden in Scratch. There is an option to give a piece of code a separate name and create a block for it. This is a basic tool in advanced Scratch programming; it's more or less equivalent to using functions in adult programming. Let's restructure our code by putting the generation of clones into such a separate block.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/eng/firework/5B_3.png" width="80%" alt="figure">
+    </p>
+    <p>
+      When editing the block, you get an option to have the code be executed without screen refresh:
+      <img class="figure" src="curriculum/img/eng/firework/5B_4.png" height="20px" alt="figure">.
+      This is exactly what we are looking for. If you check it, your defined block will run in the blink of an eye, and the star clones will finally appear and move in sync:
+      <img class="figure" src="curriculum/img/eng/firework/5B_5.png" height="20px" alt="figure">.
+    </p>
+    <p>
+      And with this last change, you have reached the end of the more difficult version. Of course, no one can stop you from continuing to work on the project; it's up to you to decide whether you want to sit back and be satisfied or come up with new ideas to make it even more spectacular... :)
+    </p>
+  </div> <!-- cell -->
+
+</div> <!-- section -->

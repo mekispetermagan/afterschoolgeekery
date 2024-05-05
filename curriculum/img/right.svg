@@ -1,0 +1,24 @@
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="25"
+  height="41"
+  viewBox="-2,-2,23,39">
+<g transform="translate(-225.3766,-162.15365)">
+<g
+  data-paper-data="{&quot;isPaintingLayer&quot;:true}"
+  fill="#8b4c00"
+  fill-rule="nonzero"
+  stroke="#e98c1a"
+  stroke-width="2"
+  stroke-linecap="butt"
+  stroke-linejoin="miter"
+  stroke-miterlimit="10"
+  stroke-dasharray=""
+  stroke-dashoffset="0"
+  style="mix-blend-mode: normal">
+<path d="M225.60416,194.15824c0.67419,-3.82361 2.73759,-8.56395 2.70832,-14.209c-0.02927,-5.64505 -2.18704,-10.99451 -2.85974,-14.79104c-0.41197,-2.32497 0.87266,-4.17686 3.2562,-2.10774c4.8341,4.19643 12.4164,10.75174 15.23932,13.20227c2.02336,1.75645 2.32424,5.75377 0.47575,7.33496c-2.56188,2.19142 -9.65345,8.25751 -14.6539,12.53486c-3.04443,2.60419 -4.62227,0.62372 -4.16594,-1.96432z"/>
+</g>
+</g>
+</svg>

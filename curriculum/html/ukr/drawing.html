@@ -1,0 +1,614 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="chapter">
+
+  <h1 class="topicTitle topicTitle"> Малювання в редакторі Scratch </h1>
+
+  <div class="section">
+    <div class="section-title"> Вступ </div>
+
+    <div class="celltitle"> Про що цей путівник? </div>
+    <div class="cell">
+      <p>
+        Цей посібник містить вступ до створення векторної графіки у графічному редакторі Scratch. Інструменти векторної графіки прості у використанні і полегшують малювання для тих, хто не має достатньої вправності рук. Зображення, створені в цьому посібнику, можна знайти в цьому проекті Scratch:
+      </p>
+      <p>
+        <iframe src="https://scratch.mit.edu/projects/469213561/embed"
+        allowtransparency="true" width="480" height="402" frameborder="0"
+        scrolling="no" allowfullscreen></iframe>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Графічний редактор</div>
+    <div class="cell">
+      <p>
+        Перший розділ знайомить вас з графічним редактором Scratch. Редактор можна використовувати у двох різних режимах; ми зосередимося лише на векторному режимі.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle">Малювання простими фігурами</div>
+    <div class="cell">
+      <p>
+        Дивно, як багато можна намалювати за допомогою суцільних кіл, прямокутників і ліній. У другому розділі ми попрактикуємось у цьому.
+      </p>
+      <p>
+        <img class="figure" width="25%" src="curriculum/img/ukr/drawing/2-9-1.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Малювання складних форм </div>
+    <div class="cell">
+      <p>
+        Після того, як ви відчуєте себе комфортно з твердими геометричними формами, ви можете почати розфарбовувати їх і змінювати форму за допомогою колірних переходів (градієнтів), щоб отримати більш реалістичні фігури. У третьому розділі ми заглибимося в цю тему.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/ukr/drawing/3-9.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Малювання шаблонів </div>
+    <div class="cell">
+      <p>
+        Після того, як ви відчуєте себе комфортно зі складними формами, ви можете почати копіювати їх і компонувати у візерунки, щоб створювати детальні малюнки без особливих зусиль. Цьому присвячений четвертий розділ.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/ukr/drawing/4-12-3.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Виклики </div>
+    <div class="cell">
+      <p>
+        Нарешті, в останньому розділі ми дамо вам кілька завдань, щоб ви могли застосувати вивчене на практиці.
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section bevezetes -->
+
+  <div class="section">
+    <div class="section-title"> Графічний редактор </div>
+
+    <div class="celltitle"> Що це таке? </div>
+    <div class="cell">
+      <p>
+        <img class="figure" width="60%" src="curriculum/img/ukr/drawing/1-1-0.png" alt="figure">
+      </p>
+      <p>
+        Ви можете відкрити графічний редактор, натиснувши на вкладку "Костюми" у верхньому лівому кутку:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/1-1-1.png" alt="figure">.
+        Редактор завжди редагує костюми вибраного спрайту. А якщо вибрано сцену, ви можете редагувати фони, при цьому підпис вкладки зміниться:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/1-1-2.png" alt="figure">.
+      </p>
+      <p>
+        Якщо спрайт має кілька костюмів, ви можете вибрати костюм, який хочете відредагувати, на панелі ліворуч:
+      </p>
+      <p>
+        <img class="figure" width="60px" src="curriculum/img/ukr/drawing/1-1-3.png" alt="figure">
+      </p>
+      <p>
+        Тут ви також можете вибрати новий костюм з бібліотеки костюмів, створити порожній костюм або завантажити файл зображення з власного комп'ютера:
+      </p>
+      <p>
+        <img class="figure" width="42px" src="curriculum/img/ukr/drawing/1-1-4.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Векторне зображення проти растрового </div>
+    <div class="cell">
+      <p>
+        У графічному редакторі Scratch можна створювати два типи малюнків:
+        <ul>
+          <li>
+            растрові: складаються з пікселів (як при роботі з Paint, Gimp або Photoshop)
+          </li>
+          <li>
+            векторне зображення: складається з геометричних фігур (як при роботі з редактором SVG, Inkscape або Illustrator)
+          </li>
+        </ul>
+        Ви можете перемикатися між двома режимами за допомогою кнопки "Конвертувати":
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/1-2-1.png" alt="figure"> /
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/1-2-2.png" alt="figure">
+        Слід користуватися нею з обережністю, оскільки перетворення може призвести до втрати даних. За винятком деяких рідкісних випадків, зображення, розпочаті у режимі векторної графіки, слід зберігати як векторну графіку.
+      </p>
+   </div> <!-- cell -->
+
+    <div class="celltitle"> Панелі інструментів </div>
+    <div class="cell">
+      <p>
+        Графічний редактор має дві панелі інструментів; вони розташовані зліва від зображення і над ним. Вміст лівої панелі інструментів є постійним, тоді як інструменти у верхній частині змінюються залежно від того, який інструмент ви вибрали зліва.
+      </p>
+      <p>
+        <img class="figure" width="15%" src="curriculum/img/ukr/drawing/1-2-3.png" alt="figure">
+        <img class="figure" width="75%" src="curriculum/img/ukr/drawing/1-2-4.png" alt="figure">
+      </p>
+      <p>
+        Ці панелі інструментів будуть більш детально описані в наступних розділах, але ви можете ознайомитися з ними вже зараз. Якщо вам не подобаються результати, просто клацніть інструмент "Скасувати":
+        <img class="figure" height="40px" src="curriculum/img/ukr/drawing/1-2-5.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Об'єкти </div>
+    <div class="cell">
+      <p>
+        Векторні зображення складаються з окремих кольорових об'єктів, що часто накладаються один на одного, які можна окремо виділяти, змінювати розмір і переміщати. Перевірте, скільки об'єктів складають костюм кота, клацнувши на них мишею (підказка: ви можете скористатися інструментом "Розгрупувати", щоб розбити виділені складові об'єкти).
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/ukr/drawing/1-2-6.png" alt="figure">
+      </p>
+      <p>
+        Коли закінчите, скасуйте зміни, тому що в наступному розділі ми будемо працювати з котом... :)
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section grafikus szerkeszto -->
+
+  <div class="section">
+    <div class="section-title"> Малювання простими фігурами </div>
+
+    <div class="celltitle"> Що буде далі? </div>
+    <div class="cell">
+      <p>
+        Почніть з того, що одягніть котика Скретчі кольоровими прямокутниками, еліпсами (витягнутими колами) та лініями.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 1 </div>
+    <div class="cell">
+      <p>
+        Почнемо з редактора кольорів. Знайдіть потрібний колір за допомогою трьох кольорових повзунків.
+      </p>
+      <p>
+        <img class="figure" width="15%" src="curriculum/img/ukr/drawing/2-1.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 2 </div>
+    <div class="cell">
+      <p>
+        Клацніть лівою кнопкою миші на інструменті "Коло" і проведіть мишею трохи по діагоналі вправо по поверхні малюнка, щоб отримати гарний витягнутий еліпс.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/ukr/drawing/2-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 3 </div>
+    <div class="cell">
+      <p>
+        Тепер клацніть на інструмент виділення зліва: , і перетягніть еліпс на лоб кошеняти.
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/2-3-1.png" alt="figure">,
+        and drag the ellipse onto the kitten's forehead.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/ukr/drawing/2-3-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 4 </div>
+    <div class="cell">
+      <p>
+        Намалюйте ще один, менш витягнутий еліпс і намалюйте його поверх попереднього. Дивіться, всього за кілька рухів ми зробили йому досить пристойну шапочку!
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/ukr/drawing/2-4.png" alt="figure">
+      </p>
+      <p>
+        Якщо розміри невірні або об'єкт не на своєму місці, виберіть його ще раз і відкоригуйте, поки не будете задоволені результатом. Ми нікуди не поспішаємо! :)
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 5 </div>
+    <div class="cell">
+      <p>
+        Якщо ви віддаєте перевагу капелюхам, можете почати малювати за допомогою інструмента "Прямокутник":
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/2-5-1.png" alt="figure">.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/2-5-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 6 </div>
+    <div class="cell">
+      <p>
+        Якщо ви хочете зробити шапку більш стильною, нахиліть її, утримуючи вигнуту стрілку під вибором:
+         <img class="figure" height="30px" src="curriculum/img/ukr/drawing/2-6-1.png" alt="figure">.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/2-6-2.png" alt="figure">
+      </p>
+
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 7 </div>
+    <div class="cell">
+      <p>
+        Якщо ви передумали щодо кольору, клацніть інструмент заливки:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/2-7-1.png" alt="figure">,
+        виберіть інший колір з палітри і клацніть, щоб перефарбувати об'єкти.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/2-7-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 9 </div>
+    <div class="cell">
+      <p>
+        Ви також можете змінити колір заливки на прозорий, натиснувши на перекреслений квадратний значок:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/2-8-1.png" alt="figure">,
+        і навіть змінити колір і товщину контуру:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/2-8-2.png" alt="figure">.
+        Таким чином, ви навіть можете додати кошеняті окуляри за допомогою інструмента "Коло" та інструмента "Лінія"
+        (<img class="figure" height="30px" src="curriculum/img/ukr/drawing/2-8-3.png" alt="figure">).
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/2-8-4.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 10 </div>
+    <div class="cell">
+      <p>
+        І так далі: за допомогою кольорових еліпсів, прямокутників та ліній ти можеш одягати котика Царапки так, як тобі заманеться. Додайте стільки деталей і зробіть стільки версій, скільки забажаєте! :)
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/2-9-1.png" alt="figure">
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/2-9-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Емм... </div>
+    <div class="cell">
+      <p>
+        Зачекай, ти впевнений, що волосся у дівчини простої форми? Так. Поглянь на це:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/2-10.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section egyszeru formak -->
+
+  <div class="section">
+    <div class="section-title"> Малювання складних форм </div>
+
+    <div class="celltitle"> Крок 1 </div>
+    <div class="cell">
+      <p>
+        Давайте ще раз одягнемо Царапку, але цього разу дамо йому корону. Зробити таку фігуру з еліпсів та прямокутників буде складно. Але для початку підійде еліпс:
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/3-1.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 2 </div>
+    <div class="cell">
+      <p>
+        Тепер клацніть на іконку зміни форми поруч з інструментом виділення:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/3-2-1.png" alt="figure">.
+        Якщо ви натиснете на еліпс, ви побачите його контур синього кольору з чотирма контрольними точками. Ви можете переміщати їх, щоб змінити форму еліпса.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/3-2-2.png" alt="figure">
+      </p>
+     </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 3 </div>
+    <div class="cell">
+      <p>
+        Ви також можете клацнути на контурі, щоб вставити нові контрольні точки. Якщо ви хочете, щоб вибрана точка була загостреною або вигнутою, клацніть на відповідну іконку:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/3-3-1.png" alt="figure">.
+        По мірі того, як точки множаться, крона починає набувати форми.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/3-3-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 4 </div>
+    <div class="cell">
+      <p>
+        Продовжуйте додавати та коригувати крапки, поки не отримаєте гарненьку корону.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/3-4.png" alt="figure">
+      </p>
+     </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 5 </div>
+    <div class="cell">
+      <p>
+        Тепер ми додамо йому трохи гламуру за допомогою інструмента Заливка:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/2-7-1.png" alt="figure">.
+        У верхній частині палітри є чотири варіанти градієнта:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/3-5-1.png" alt="figure">.
+        Як ви можете здогадатися з їхніх відтінків, це такі:
+        <ul>
+          <li>відсутність колірного градієнта</li>
+          <li>горизонтальний градієнт кольору</li>
+          <li>вертикальний градієнт кольору</li>
+          <li>центральний градієнт кольору</li>
+        </ul>
+      </p>
+      <p>
+        Якщо ви вибрали центральний градієнт, встановіть середній колір на білий, а зовнішній - на жовтий, а потім клацніть по центру корони, щоб надати їй трохи блиску.<br>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/3-5-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 6 </div>
+    <div class="cell">
+      <p>
+        До корони додається халат! Ви також можете почати цю роботу з кольорових еліпсів.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/3-6.png" alt="figure">
+      </p>
+      <p>
+        З розвитком навичок малювання розвивається і наша уява; тепер ми можемо легко уявити готову мантію в елементарних формах.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 7 </div>
+    <div class="cell">
+      <p>
+        Змініть форму халата, щоб він максимально відповідав вашим ідеям.
+      </p>
+      <p>
+        Не розчаровуйтеся, якщо щось не вийшло з першого разу. Відмініть останній крок і спробуйте ще раз, доки не будете задоволені результатом. Мета не в досконалості, а в тому, щоб відчути, як легко так малювати!
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/3-7.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 8 </div>
+    <div class="cell">
+      <p>
+        Нарешті, ви можете використовувати інструменти "вперед" і "назад", щоб розмістити халат попереду або позаду Скретчі:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/3-8-1.png" alt="figure">
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/3-8-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 9 </div>
+    <div class="cell">
+      <p>
+        І так далі: додайте до малюнка стільки елементів, скільки хочете, щоб створити потрібного вам персонажа.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/3-9.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section komplex formak -->
+
+  <div class="section">
+    <div class="section-title"> Візерунки: повторення та симетрія</div>
+
+    <div class="celltitle"> Крок 1 </div>
+    <div class="cell">
+      <p>
+        Іноді добре, коли не потрібно перемальовувати деталі зображення, що повторюються. Наприклад, щоб намалювати квітку, достатньо попрацювати лише над однією пелюсткою.
+      </p>
+      <p>
+        Намалюйте форму серця для пелюстки. Вона не обов'язково має бути повністю загостреною посередині вгорі, просто використовуйте мишу, щоб зробити напрямні трохи коротшими.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/ukr/drawing/4-1.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 2 </div>
+    <div class="cell">
+      <p>
+        Використовуйте інструмент заливки та ваші улюблені кольори, щоб створити гарний градієнт. І ви можете прибрати контур, встановивши ширину лінії на нуль.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/ukr/drawing/4-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 3 </div>
+    <div class="cell">
+      <p>
+        Now select the petal and click on the copy and paste icon at the top:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/4-3-1.png" alt="figure">.
+        Тепер виділіть пелюстку і натисніть на іконку копіювання та вставки вгорі: . Якщо вам простіше, ви також можете скопіювати за допомогою звичайних Ctrl+C та Ctrl+V (Cmd+C та Cmd+V, якщо у вас Mac).
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/ukr/drawing/4-3-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 4 </div>
+    <div class="cell">
+      <p>
+        Злегка нахиліть копію і покладіть її поруч з оригіналом.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/ukr/drawing/4-4.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 5 </div>
+    <div class="cell">
+      <p>
+        Повторюйте це, поки не пройдете по колу.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/ukr/drawing/4-5.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 6 </div>
+    <div class="cell">
+      <p>
+        Якщо ви хочете, щоб ваші квіти були ідеально симетричними, клацніть по інструменту "Гумка":
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/4-6-1.png" alt="figure">,
+        і зітріть останні дві пелюстки перед тим, як покласти їх на місце. Це трохи складніше, не соромтеся пропустити цей етап, якщо не хочете возитися з цим.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/ukr/drawing/4-6-2.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/ukr/drawing/4-6-3.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 7 </div>
+    <div class="cell">
+      <p>
+        Додайте кольорове коло посередині, і ви отримаєте квітку.
+      </p>
+      <p>
+        <img class="figure" width="30%" src="curriculum/img/ukr/drawing/4-7-1.png" alt="figure">
+      </p>
+      <p>
+        Виділіть все зображення за допомогою миші або клавіш Ctrl+A, а потім клацніть інструмент групування
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/4-7-2.png" alt="figure">,
+        щоб уникнути його розпаду під час подальших редагувань.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 8 </div>
+    <div class="cell">
+      <p>
+        Тепер ви можете копіювати, вставляти, змінювати розмір і обертати квітку як завгодно.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/4-8.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 9 </div>
+    <div class="cell">
+      <p>
+        Тепер настав час малювати листя. Достатньо намалювати один з них звичайним способом, починаючи з еліпса, змінюючи його форму і, нарешті, заповнюючи переходом кольору.
+      </p>
+      <p>
+        <img class="figure" width="20%" src="curriculum/img/ukr/drawing/4-9-1.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/ukr/drawing/4-9-2.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/ukr/drawing/4-9-3.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 10 </div>
+    <div class="cell">
+      <p>
+        Тепер лист можна відтворити. Окрім обертання та зміни розміру, ви також можете віддзеркалити один або два з них, натиснувши на цю іконку:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/4-10-1.png" alt="figure">.
+        Разом з квітами та листям вся рослина набуває форми.
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/4-10-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 11 </div>
+    <div class="cell">
+      <p>
+        Якщо ви хочете додати стебла, намалюйте їх за допомогою інструмента "Лінія", а інструмент "Форма" зігніть їх посередині.
+     </p>
+     <p>
+      <img class="figure" width="20%" src="curriculum/img/ukr/drawing/4-11-1.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/drawing/4-11-2.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 12 </div>
+    <div class="cell">
+      <p>
+        Нарешті, клацніть на сцені з правого краю:
+        <img class="figure" height="30px" src="curriculum/img/ukr/drawing/4-12-1.png" alt="figure">,
+        і за допомогою двох градієнтних прямокутників створіть тло для вашої рослини.
+     </p>
+     <p>
+      <img class="figure" width="40%" src="curriculum/img/ukr/drawing/4-12-2.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/drawing/4-12-3.png" alt="figure">
+    </p>
+    <p>
+      Поїхали! Це було легко, чи не так? :)
+    </p>
+    </div> <!-- cell -->
+
+  </div> <!-- section mintazatok -->
+
+  <div class="section">
+    <div class="section-title"> Виклики </div>
+
+    <div class="celltitle"> Виклик 1 </div>
+    <div class="cell">
+      <p>
+        Можеш намалювати цей будинок?
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/5-1.png" alt="figure">
+      </p>
+     </div> <!-- cell -->
+
+     <div class="celltitle"> Виклик 2 </div>
+     <div class="cell">
+      <p>
+        А як щодо цього сніговика?
+      </p>
+      <p>
+        <img class="figure" width="35%" src="curriculum/img/ukr/drawing/5-2.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Виклик 3 </div>
+    <div class="cell">
+      <p>
+        А як щодо цього фруктового дерева?
+      </p>
+      <p>
+        <img class="figure" width="35%" src="curriculum/img/ukr/drawing/5-3.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Виклик 4 </div>
+    <div class="cell">
+      <p>
+        Або цей човен?
+      </p>
+      <p>
+        <img class="figure" width="40%" src="curriculum/img/ukr/drawing/5-4.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Виклик 5 </div>
+    <div class="cell">
+      <p>
+        Червона Шапочка з казки?
+      </p>
+      <p>
+        <img class="figure" width="35%" src="curriculum/img/ukr/drawing/5-5.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Виклик 6 </div>
+    <div class="cell">
+      <p>
+        Автомобіль з коляскою ззаду? (Підказка: пробийте отвори для вікон гумкою...)
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/ukr/drawing/5-6.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Виклик 7 </div>
+    <div class="cell">
+      <p>
+        І, нарешті, цей нічний натюрморт? (Підказка: ви також можете вибрати прозорість як один з кольорів у градієнті кольорів).
+      </p>
+      <p>
+        <img class="figure" width="45%" src="curriculum/img/ukr/drawing/5-7.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+</div> <!-- section kihivasok -->
+
+</div> <!-- chapter -->

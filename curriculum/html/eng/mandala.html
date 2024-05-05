@@ -1,0 +1,205 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Mandala drawing </div>
+
+  <div class="celltitle"> What is this project about? </div>
+  <div class="cell">
+    <p>
+      This is a very impressive and moderately simple, almost beginner level project using the "Pen" toolbar. Kids will draw circular patterns ("mandalas") with it. The project also gives you an easy introduction to creating clones. It is not recommended for a first project, but you can use it in your second session. You can see the final result here:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/814184081/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Preparations</div>
+  <div class="cell">
+    <p>
+      Create a brand new project, and replace the cat with your favorite sprite. Since we're going to be drawing, it's a good idea to reduce the size of the sprite by changing the value of the "Size" field below the play area from 100 to, say, 30, to prevent it from covering the mandala that is drawn. And to make your drawing nice and symmetrical, this time place the sprite exactly in the middle of the stage by setting the "x" and "y" values to 0:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/mandala/1_1.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 1: First movements</div>
+  <div class="cell">
+    <p>
+      Also start the code by placing the sprite exactly in the middle:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/mandala/1_2.png" alt="figure">
+    </p>
+    <p>
+      Now it's time to code the movement. You'll use the keys to move the sprite, but in a slightly different way than in the other games: the way you steer a car left and right as you drive. First, the sprite moves forward slowly but steadily:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/mandala/1_3.png" alt="figure">
+    </p>
+    <p>
+      To make the key movement nice and continuous, don't use an event block this time, but instead compose the code with light blue sensing blocks:
+    </p>
+    <p>
+      <img class="figure" width="45%" src="curriculum/img/eng/mandala/1_4.png" alt="figure">
+      <img class="figure" width="45%" src="curriculum/img/eng/mandala/1_5.png" alt="figure">
+    </p>
+    <p>
+      The control keys will turn the sprite (the way the steering wheel turns your car). Exactly how many degrees to turn at once is a matter of trial and error, because the arc of the turn will give the style of the drawing. If the angle of turn is large (say 5 degrees), the arc will be small and the drawing will be angular; if it is smaller (say 2 degrees), the shapes will be rounded.
+    </p>
+    <p>
+      <img class="figure" width="90%" src="curriculum/img/eng/mandala/1_6.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 2: Drawing a line </div>
+  <div class="cell">
+    <p>
+      The "Pen" toolbar is a bit hidden. In the bottom left corner, look for the "Add an extension" menu item:
+    </p>
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/mandala/2_1.png" alt="figure">
+    </p>
+    <p>
+      Here you'll find many tools that didn't fit in the main Scratch interface. If you click on "Pen", a bunch of new green blocks appear on the left:
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/mandala/2_2.png" alt="figure">
+    </p>
+    <p>
+      To try out the new tool, start with the "pen down" block. It's a good idea to put this above "forever" in the movement code, since you only need to put the pen down once, at the beginning of the project. After restarting, the sprite will start drawing while moving:
+    <p>
+      <img class="figure" width="30%" src="curriculum/img/eng/mandala/2_3.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/mandala/2_4.png" alt="figure">
+    </p>
+    <p>
+      You can now explore the toolbar blocks; for example, you can set the pen size and pen color, and you can delete drawings after a restart:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/mandala/2_5.png" alt="figure">
+      <img class="figure" width="45%" src="curriculum/img/eng/mandala/2_6.png" alt="figure">
+    </p>
+    <p>
+      And if you put a color-changing block in the "always" section, the project starts to look really spectacular. How much the pen color changes in one step is again a matter of style. If it's 1, you'll get a nice smooth transition between colors; if it's 10, you'll get a flicker.
+    </p>
+    <p>
+      <img class="figure" width="40%" src="curriculum/img/eng/mandala/2_7.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/mandala/2_8.png" alt="figure">
+    </p>
+    <p>
+      If you've made it this far, but don't have any more time or energy for the project, you can now finish with a sense of satisfaction. But if you can hold on a little longer, we're about to get to the really spectacular part.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 3: Cloning </div>
+  <div class="cell">
+    <p>
+      Now we multiply our sprite so that it can move in many directions at once. Guess together how many of them you want; for example 4, 6, 8, or even 12. If you're working with older children, you can work out together how many degrees the sprites need to be rotated so that they move evenly in each direction. Since the total circle is 160 degrees, the 360 degrees should be divided by how many copies there will be. But if you work with young kids or you just don't bother to calculate, you can also tell them the result:
+    </p>
+    <p>
+      <table>
+        <tr>
+          <th>Number of clones &nbsp;&nbsp;</th>
+          <th>Degree of rotation</th>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>120&#xb0;</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>90&#xb0;</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>72&#xb0;</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>60&#xb0;</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>45&#xb0;</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>36&#xb0;</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>30&#xb0;</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>15&#xb0;</td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      Now we're going to give the code a good shake, disassembling and reassembling everything. The "forever" blocks of the movement and the keystroke sensing code parts now belong to the clones, since each clone will move and turn the same:
+    </p>
+    <p>
+      <img class="figure" width="90%" src="curriculum/img/eng/mandala/3_1.png" alt="figure">
+    </p>
+    <p>
+      The main code section is for creating clones:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/mandala/3_2.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/mandala/3_3.png" alt="figure">
+    </p>
+
+    <p>
+      It's worth trying several versions until you find the right one:
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/mandala/3_4.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/mandala/3_5.png" alt="figure">
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/mandala/3_6.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/mandala/3_7.png" alt="figure">
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/eng/mandala/3_8.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/mandala/3_9.png" alt="figure">
+    </p>
+    <p>
+      You have created a beautiful, spectacular project, be proud of it! :)
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 4: Synchronization </div>
+  <div class="cell">
+    <p>
+      This part is just icing on the cake; don't bother if it doesn't happen. But if you want your kids to align their clones perfectly, and you want a hundred percent symmetrical figure, you should know that this is possible.
+    </p>
+    <p>
+      If you make a lot of copies, you may notice that the copies do not start at exactly the same time, and therefore the figure will not be completely symmetrical. You can see in the diagram that the first copy is slightly ahead of the twenty-fourth:
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/eng/mandala/4_1.png" alt="figure">
+    </p>
+    <p>
+      This is because there's a time lag between creating two clones. (If there are gamers among your participants, they may have heard of fps, that is, frames per second, which measures how many screen refreshes happen in 1 second in a game. In Scratch, it's about 30, a screen refresh taking about 0.03 seconds.) We need to find a way to create clones without screen refreshes. This is possible by creating a custom block. This is not something we use often in the Afterschool Geekeries, but it's worth a try. In the "My Blocks" menu, click on the "Make a block" button to create a "create clones" block and check the "Run without screen refresh" option:
+    </p>
+    <p>
+      <img class="figure" width="8%" src="curriculum/img/eng/mandala/4_2.png" alt="figure">
+      <img class="figure" width="22%" src="curriculum/img/eng/mandala/4_3.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/eng/mandala/4_4.png" alt="figure">
+    </p>
+    <p>
+      Drag the "repeat 6 times" part of the code that generates the copies into the definition of the new pink block, and put the new pink block itself in place of the code part:
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/eng/mandala/4_5.png" alt="figure">
+    </p>
+    <p>
+      If you've even got to this point, be very, very proud, because you've used a very advanced programming tool to solve a tiny bug! :)
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/eng/mandala/4_6.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+
+</div> <!-- section -->

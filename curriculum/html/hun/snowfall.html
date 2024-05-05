@@ -1,0 +1,159 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Havazás </div>
+
+  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="cell">
+    <p>
+      Ez egy hóesés-animáció, amelyben a hó szintje folyamatosan emelkedik, amíg végül belepi a teljes Scratch színpadot. Ez is egy "potyognak a klónok" projekt, mint az "Eső" a Klónozás fejezetből, vagy a "Virágeső" miniprojekt. Van viszont benne néhány csavar.
+    </p>
+    <p>
+      Miért hasonlítanak ennyire egymásra több projektben is a kódok? Mert az, hogy más kontextusban és kicsit más feltételek között újra létrehozzák őket a gyerekek, sokat segít ennek a technikának az elsajátításában, amely több lépésből áll annál, hogy elsőre meg lehetne jegyezni; nagyon hasznos lesz viszont a jövőben, amikor a gyerekek a saját animációikon és játékaikon dolgoznak.
+    </p>
+    <p>
+      Olyan gyerekekkel kezdj bele ebbe a projektbe, akiknek már van némi tapasztalata a Scratch-ben. És bár bevezetheted ezzel a projekttel is a klónozást, talán érdemesebb egy egyszerűbb klónozós projekttel kezdeni, mint a "Virágeső" vagy a "Dínős játék". Így a klónozás már könnyebben fog menni, és marad elég idő a projekt többi részére. Ebben a projektleírásban a klónozásról rövidebben írunk (kevés szóval, de sok képpel); a fent említett "Eső" és "Virágeső" projekteknél találtok részletesebb leírást és tanítási javaslatokat.
+    </p>
+    <p>
+      Itt a projektmunka végeredménye: <br>
+      <iframe src="https://scratch.mit.edu/projects/1007276864/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Előkészületek </div>
+  <div class="cell">
+    <p>
+      Hozzatok létre egy új projektet, és búcsúzzatok el Scratchie cicától. Kattintsatok a jobb alsó cicafej-ikonra, hogy megnyíljon a szereplőtár, és válasszátok ki a "Snowflake" (hópehely) szereplőt. Kattintsatok a cicafej ikon melletti kis kép ikonra, és válasszatok hátteret. (Persze rajzolhattok is hópihét és hátteret, ha biztosak vagytok abban, hogy nem fogja elvinni az időt.) <br>
+      <img class="figure" width="20%" src="curriculum/img/hun/snowfall/01.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/hun/snowfall/02.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/hun/snowfall/03.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/hun/snowfall/04.png" alt="figure">
+    </p>
+    <p>
+      A hópihe jelmeze kékes árnyalatú. Ha úgy gondoljátok, hogy a hónak illene  fehérnek lennie, erről néhány mozdulattal gondoskodhattok. Nyissátok meg a Jelmezek fület és jelöljétek ki a teljes hópihét (egérrel vagy Ctrl A-val). Állítsátok a kitöltés színét fehérre (telítettség 0, fényerő 100), a körvonalat pedig világosszürkére (telítettség 0, fényerő 50 fölött).
+    </p>
+    <p>
+      Végül a színpa alatti "Méret" eszközzel kicsinyítsétek le a hópihét annyira, hogy sok ezer elférjen majd belóle a színpadon: <br>
+      <img class="figure" width="40%" src="curriculum/img/hun/snowfall/05.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/hun/snowfall/06.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/hun/snowfall/07.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 1. lépés: egyetlen hópehely hullik </div>
+  <div class="cell">
+    <p>
+      Szokás szerint kezdjétek egyetlen szereplő mozgatásával. Ha a csoport számára már ismerősek a koordináták, akkor kérdezzétek meg tőlük a színpad széleinek koordinátáit. Ha nem emlékeznek, hozzátok be a koordinátarendszeres hátteret a projektben, és azzal frissítsétek az emlékezeteteket. Ha viszont még túl kicsik a koordinátákhoz, akkor jöhet a "leteszem a szereplőt, kiveszem a blokkot" módszer:
+      <ol>
+        <li>Helyezzétek a szereplőt a színpad tetejére, ahonnan indulni fog.</li>
+        <li>Vegyetek ki egy "ugorj" blokkot a koordinátákkal.</li>
+        <li>Helyezzétek át a szereplőt oda, ahova érkezik.</li>
+        <li>Vagyetek ki egy "csússz" blokkot az új koordinátákkal.</li>
+        <li>Vegyétek körül a két kék blokkot egy "mindig" blokkal, hogy folyamatos legyen a szereplő mozgása.</li>
+      </ol>
+      Indítsátok újra a projektet, hogy lássátok, megfelelően mozog-e a hópehely.<br>
+      <img class="figure" width="60%" src="curriculum/img/hun/snowfall/08.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/hun/snowfall/09.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/hun/snowfall/10.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/hun/snowfall/11.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/hun/snowfall/12.png" alt="figure">
+    </p>
+    <p>
+      Most hasonló módon tegyétek véletlenszerűvé a szereplő vízszintes helyzetét:
+      <ol>
+        <li>Vegyetek ki egy "véletlen" blokkot, és illesszétek az "ugorj" blokk "x" mezőjébe.</li>
+        <li>Tegyétek ki a bal szélre a szereplőt, és olvssátok le az x koordinátáját.</li>
+        <li>Tegyétek ki a jobb szélre is, és itt is olvassátok le.</li>
+        <li>A két számot írjátok be a "véletlen" blokkba.</li>
+        <li>Tegyetek egy "x hely" blokkot a "csússz" blokk x mezőjébe, hogy az x ne változzon mozgás közben, vagyis függőlegesen essen a szereplő.</li>
+        <li>A "csússz" blokkban állítsátok be a csúszás időtartamát.</li>
+      </ol>
+      Indítsátok újra a projektet, hogy lássátok, működik-e a kód.<br>
+      <img class="figure" width="40%" src="curriculum/img/hun/snowfall/13.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/hun/snowfall/14.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/hun/snowfall/15.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/hun/snowfall/16.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">2. lépés: klónpihék hullanak</div>
+  <div class="cell">
+    <p>
+      Ha korábban már klónoztatok, ez könnyen fog menni. Ha még nem, akkor lassíts le, és adj a gyerekeknek időt, hogy teljesen megértsék, amit csinálnak. Keressétek meg a sárga Vezérlés blokkok között a három klón-blokkot. Tegyétek félre a mozgás blokkokat, ezek majd a klónokhoz kerülnek. Tegyétek a helyére a hérom klón-blokkot: a "készíts másolatot" kerül a "mindig"-be; az esemény-blokk a kék mozgás-blokkok fölé; a "töröld ezt a másolatot" blokk pedig alájuk.<br>
+      <img class="figure" width="30%" src="curriculum/img/hun/snowfall/17.png" alt="figure">
+      <img class="figure" width="80%" src="curriculum/img/hun/snowfall/18.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/hun/snowfall/19.png" alt="figure">
+      <img class="figure" width="45%" src="curriculum/img/hun/snowfall/20.png" alt="figure">
+    </p>
+    <p>
+      Ha kifutottatok az időből, akkor ezen a ponton akár sikerrel le is zárhatjátok a projektet. De ha még van időtök és energiátok, az utolsó néhány lépésben új és izgalmas dolgok következnek.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">3. lépés: megmarad a lehullott hó</div>
+  <div class="cell">
+    <p>
+      Klassz lenne, ha nem kellene törölni a lehullott hópelyheket, és hó borítaná be a színpad alját. De a Scratch csak 300 klónt enged használni, azok meg kellenek az újabb lehulló pelyheknek. Ez nehéz probléma, de van rá megoldás, mélyen elrejtve a Scratch Toll eszköztárában. Nem gond, ha most először találkoztok ezzel, úgyis csak két ritkán használt blokkra lesz szükség, azok meg eléggé maguktól értetődőek.
+    </p>
+    <p>
+      Kattintsatok a "Bővítmény hozzáadása" ikonra a bal alsó sarokban, és válasszátok a "Toll" bővítményt. Egy sor új blokk jelenik meg:<br>
+      <img class="figure" width="20%" src="curriculum/img/hun/snowfall/21.png" alt="figure">
+      <img class="figure" width="45%" src="curriculum/img/hun/snowfall/22.png" alt="figure">
+    </p>
+    <p>
+      A "készíts lenyomatot" blokk a háttérre nyomtatja a szereplő jelmezét ott, ahol éppen van. Ezek a lenyomatok a klónokkal ellentétben nem tudnak mozogni vagy bármi mást csinálni, de hótakarónak pont megfelelnek. A lehullott hópelyhek lenyomatot készítenek magukról, mielőtt törlésre kerülnek:<br>
+      <img class="figure" width="50%" src="curriculum/img/hun/snowfall/23.png" alt="figure"><br>
+      Indítsátok újra a projektet, hogy megjelenik-e a hóréteg a színpad alján:<br>
+      <img class="figure" width="60%" src="curriculum/img/hun/snowfall/24.png" alt="figure">
+    </p>
+    <p>
+      Ha még egyszer újraindítjátok a projektet, azt láthatjátok, hogy a hóréteg megmaradt. Hogy lenyomatmentes háttérrel induljon az animáció, és a leeső hópelyhek hozzák létre a hóréteget, kell még egy "töröld a rajzokat" blokk a kód elejére:<br>
+      <img class="figure" width="30%" src="curriculum/img/hun/snowfall/25.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">4. lépés: vastagszik a hótakaró</div>
+  <div class="cell">
+    <p>
+      Egészen látványos lenne az animáció, ha fel is gyűlnének a lehullott hópelyhek, szimulálva a hóesésben egyre vastagodó hótakarót. Az ötlet jó, de ahhoz, hogy beletegyük a projektbe, még le kellfordítani a Scratch nyelvére. Mit jelent a vastagodó hótakaró a leeső hópelyhekre nézve? Azt, hogy egyre hamarabb érnek le, vagyis egyre kisebb távolságot repülnek, vagy Scratch-esen szólva csúsznak. Egészen pontosan a "csússz" blokk "y" mezőjében lévő szám fog nőni, a mínusz soktól egyre közelebb kerülve a nullához, ami a színpad közepe, aztán tovább 180 felé, ami a színpad teteje. Vagyis ahogy az idő telik, egyre többet kell a -180-hoz adni.
+    </p>
+    <p>
+      Ezt sokféleképpen meg lehet valósítani. Bevezethettek egy változót, ami az időt méri (mint a Változók fejezet "Kattintásszámláló" projektjében). Vagy bevezethettek egy változót, ami a hófelszín pillanatnyi szintjét mondja meg. A Változók tananyag projektjeiben több példát is találhattok ilyen számlálóként használt változókra.
+    </p>
+    <p>
+      De van egy egyszerűbb megoldás is. A világoskék Érzékelés kategóriában van egy "időmérő" nevű blokk, ami azt mondja meg, hogy hány másodperc telt el a projekt elindítása óta. Elég ezt hozzáadni ahhoz a számhoz, amit korábban a "csússz" blokk "y" mezőjébe írtatok: <br>
+      <img class="figure" width="50%" src="curriculum/img/hun/snowfall/26.png" alt="figure"><br>
+      Természetesen ha a gyerekeknek az a kézenfekvőbb, kivonással is megfogalmazhatjátok ugyanezt: <br>
+      <img class="figure" width="50%" src="curriculum/img/hun/snowfall/27.png" alt="figure">
+    </p>
+    <p>
+      Indítsátok újra a projektet, és gyönyörködjetek az emelkedő hótakaróban. <br>
+      <img class="figure" width="60%" src="curriculum/img/hun/snowfall/28.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">5. lépés: hintáznak a hópelyhek</div>
+  <div class="cell">
+    <p>
+      Ha még mindig van egy kis időtök, akár szállingózhatnak is azok a hópelyhek, jobbra-balra kintázva a levegőben. Ehhez megint kell egy kis ötletelés és analitikus gondolkodás; de hát éppen ezt tanuljuk! :) A hópelyhek egyrészt hullanak lefelé, másrészt jobbra-balra hintáznak. A hullással már rég megvagytok. De mit is csinál a hinta? Hát hol erre, hol arra elfordul egy kicsit a tengelye körül (szóval akörül, amire fel van akasztva). Ezt meg tudjuk fogalmazni a Scratch nyelvén? Hát persze! Már jól ismeritek a "fordulj" blokkokat, használjátok őket most is. Mondjuk 30 fokot fordul a hópehely jobbra, aztán harmincat balra. Valami ilyesmi lesz az első vázlat:<br>
+      <img class="figure" width="30%" src="curriculum/img/hun/snowfall/29.png" alt="figure"><br>
+      Ez még messze van a kívánt eredménytől (őszintén szólva nem is csinál semmit), mégis jó kiindulópont. A következő ötlet az lehet, hogy "ismételd" blokkokkal lassúvá és fokozatossá teszitek a fordulást:<br>
+      <img class="figure" width="35%" src="curriculum/img/hun/snowfall/30.png" alt="figure">
+    </p>
+    <p>
+      Már majdnem jó, de a hinta nem középről indul. A klónoknak az alaphelyzetüktől 15 fokkal balra kellene indulnia. Miért? Mert összesen 30 fokot fordulnak, és annak a fele 15. Vegyetek ki egy "nézz ... fokos irányba" blokkot, nyissátok ki a számra kattintva, és a megjelenő mutatót forgassátok el 15 fokkal (egy egységnyivel) balra. Ha megvagytok, illesszétek a blokkot a kódba: <br>
+      <img class="figure" width="30%" src="curriculum/img/hun/snowfall/31.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/hun/snowfall/32.png" alt="figure">
+    </p>
+    <p>
+      Ennek már igazán illene jól működnie, mégsem teszi. A hópelyhek csak forognak, nem szállingóznak. Ezen megintcsak gondolkodni kell egy kicsit. Mi lehet a probléma? Egy szereplő a saját középpontja körül forog. A hinta viszont a tengelye körül, ami a hinta fölött van. Szóval újra meg kell nyitni a "Jelmezek" fület, kijelölni a teljes hópelyhet, és egy kicsit lejjeb tenni:<br>
+      <img class="figure" width="50%" src="curriculum/img/hun/snowfall/33.png" alt="figure">
+    </p>
+    <p>
+      Most már tökéletes az animáció, és végére értetek a projektmunkának. Legyetek büszkék magatokra és gyönyörködjetek a látványban. Van türelmetek kivárni, amíg a hó 6 perc alatt teljesen ellepi a színpadot? :)<br>
+      <img class="figure" width="60%" src="curriculum/img/hun/snowfall/34.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+
+</div> <!-- section -->

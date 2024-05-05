@@ -1,0 +1,43 @@
+.scratchie {
+  display: block;
+  width: 50px;
+  position: absolute;
+  z-index: 2;
+  bottom: 15%;
+  left: 33%;
+  opacity: 0.8;
+}
+
+.scratchie:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.scratchie-bg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.scratchie-bg.fst {
+  left: 0;
+  animation: 12s infinite linear travel-fst;
+}
+
+.scratchie-bg.snd {
+  left: 240px;
+  animation: 12s infinite linear travel-snd;
+}
+
+@keyframes travel-fst {
+  from {left: 0;}
+  50% {left: -240px;}
+  50.001% {left: 240px;}
+  to {left: 0;}
+}
+
+@keyframes travel-snd {
+  from {left: 240px;}
+  to {left: -240px;}
+}

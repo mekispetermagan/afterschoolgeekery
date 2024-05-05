@@ -1,0 +1,260 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Kvíz </div>
+
+  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="cell">
+    <p>
+      Ez egy viszonylag egyszerű, egy foglalkozás alatt is elkészíthatő projekt, ami nagyon  nagy teret ad a kreativitásnak. Mivel használ változókat és listát is, ez a projekt nem kezdő szintű. Feleletválasztós kvízt fogtok készíteni, amit mindenki a saját kedvenc témájából vett kérdésekkel tölt fel. A végeredményt itt láthatjátok:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/899890256/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Témaválasztás</div>
+  <div class="cell">
+    <p>
+      Mielőtt leültök a gépekhez, beszéljétek meg, ki milyen témában készít kvízt. Ez akár jégtörő játéknak is megteszi a foglalkozás elejére. Hogy könnyebben menjen az ötletelés, kezdjétek ti a saját témátokkal, és rögtön mondjatok is egy kérdést. Például:
+      <ul>
+        <li>Ki volt az első űrhajós?
+          <ul style="list-style-type:none;">
+            <li>A: Angelina Jolie</li>
+            <li>B: Jurij Gagarin</li>
+            <li>C: John Lennon</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Ha nem jönnek könnyen a kérdések, javasoljatok ti témát:
+      <div class="twocolumns">
+        <div class="column">
+          <ul>
+            <li>Pokémon</li>
+            <li>Harry Potter</li>
+            <li>autótípusok</li>
+            <li>bicikliszerelés</li>
+            <li>foci</li>
+            <li>matek (fúúúj...)</li>
+            <li>magyar zenei előadók</li>
+            <li>filmek</li>
+            <li>K-pop</li>
+            <li>sakk</li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul>
+            <li>kutyák</li>
+            <li>virágok</li>
+            <li>háziállatok</li>
+            <li>sorozatok</li>
+            <li>őserdő</li>
+            <li>középkor</li>
+            <li>videojátékok</li>
+            <li>Japán</li>
+            <li>világűr</li>
+            <li>sütés-főzés</li>
+          </ul>
+        </div>
+      </div>
+      - és így tovább, valami mindenkinek be fog jönni. Közösen is találhattok ki témákat, amiket felírtok a táblára vagy egy papírra, és aztán mindenki választ magának egyet.
+    </p>
+    <p>
+      Ha megvannak a témák, mindenki fogalmazza meg az első kérdését. Ebben is segíthettek közösen az elakadóknak. Néhány példa:
+      <ul>
+        <li>Ki játssza Ken-t a Barbie filmben?
+          <ul style="list-style-type:none;">
+            <li>A: Leonardo DiCaprio</li>
+            <li>B: Brad Pitt</li>
+            <li>C: Ryan Gosling</li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>Ki énekli az Introvertált dalt?
+          <ul style="list-style-type:none;">
+            <li>A: Desh</li>
+            <li>B: Azahriah</li>
+            <li>C: Opitz Barbi</li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>Mi Ukrajna fővárosa?
+          <ul style="list-style-type:none;">
+            <li>A: Kijev</li>
+            <li>B: Moszkva</li>
+            <li>C: London</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">A felület megtervezése</div>
+  <div class="cell">
+    <p>
+      Mielőtt kódolni kezdtek, érdemes megtervezni, hogy nézzen ki a kvíz (szakszóval létrehozni a felhasználói felületet), hogy a gyerekek lássák, mihez írjátok majd a kódot. A legegyszerűbb megoldás az, ha a kérdések és a válaszok is a háttérre vannak írva, és csak a három gombból lesz szereplő az "A", "B", "C" betűkkel. Hozzatok létre egy új projektet, és búcsúzzatok el Scratchie cicától; rá most nem lesz szükség.
+    </p>
+    <p>
+      Kezdjétek a háttérrel. Mindenki írja le a közösen megbeszéltek szerint az első kérdését a három válasszal, és helyezzétek el őket tetszésetek szerint:
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/hun/quiz/1_1.png" alt="ábra">
+    </p>
+    <p>
+      Ha már gyakorlottak vagytok a képletöltésben, illusztrálhatjátok is a kérdéseket, de vegyétek figyelembe, hogy ez időigényes:
+    </p>
+    <p>
+      <img class="figure" width="60%" src="curriculum/img/hun/quiz/1_2.png" alt="ábra">
+    </p>
+    <p>
+      Ha esetleg szeretnétek ti is középen színes, szélük felé átlátszóvá váló csíkokat:
+      <ol>
+        <li>rajzoljatok egy feleolyan széles csíkot, mint a végeredmény lesz</li>
+        <li>tegyétek felülről lefele színátmenetessé úgy, hogy az egyik színnek az átlátszóságot választjátok (áthúzott négyzet)</li>
+        <li>másoljátok le a csíkot és tükrözzétek függőlegesen</li>
+        <li>illesszétek össze a két csíkot</li>
+      </ol>
+      <img class="figure" width="40%" src="curriculum/img/hun/quiz/1_3.png" alt="ábra">
+      <img class="figure" width="15%" src="curriculum/img/hun/quiz/1_4.png" alt="ábra">
+      <img class="figure" width="40%" src="curriculum/img/hun/quiz/1_5.png" alt="ábra">
+      <img class="figure" width="25%" src="curriculum/img/hun/quiz/1_6.png" alt="ábra">
+      <img class="figure" width="40%" src="curriculum/img/hun/quiz/1_7.png" alt="ábra">
+      </p>
+    <p>
+      Ha a háttérrel megvagytok, válasszatok gombokat a szereplőtárból (át is színezhetitek vagy magatok is megrajzolhatjátok őket, ha szeretnek a gyerekek rajzolni). A grafikus szerkesztőben írjatok betűket a gombokra, és helyezzétek el őket a színpadon. Ha szükséges, a méretükön is igazítsatok, hogy jól elférjenek: <br>
+      <img class="figure" width="30%" src="curriculum/img/hun/quiz/1_8.png" alt="ábra">
+      <img class="figure" width="50%" src="curriculum/img/hun/quiz/1_9.png" alt="ábra">
+      <br>(Ha már nagyon profik vagytok a Scratch-ben, akkor a három gomb lehet egyetlen szereplő három klónja is; így elegánsabb lesz a kód. De három külön szereplővel is szuper lesz a kvíz.)
+    </p>
+    <p>
+      Ha már elégedettek vagytok a kvíz kinézetével, írjatok még két kérdést, hogy legyen mire kódot írni. Az új kérdésekhez nem kell új hátteret tervezni, elég a meglevőt duplikálni:
+      <img class="figure" width="75%" src="curriculum/img/hun/quiz/1_10.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">A háttér kódja</div>
+  <div class="cell">
+    <p>
+      A sok tervezés után jöhet a jól megérdemelt kódolás! Kezdjétek itt is a háttérrel, mert ez a legegyszerűbb. A háttérnek cupán annyi a feladata, hogy mindig azt a kérdést mutassa, amelyiknél éppen járunk; az elsőt, a másodikat, a harmadikat, és így tovább. Tehát hogy a Scratch tudja, épp hol járunk, szükség lesz egy változóra, ami számolja a kérdéseket; hasonlóan ahhoz, ahogy más játékokban a pontokat, az életeket, a szinteket stb. is változóval számláljuk. Hozzatok létre egy új változót "kérdés" néven. A program kezdetekor a változó értéke legyen 1, hiszen az első kérdéssel kezdünk; és innen fogva bárhogy alakuljon is ennek a változónak az értéke, a hátteret mindig igazítsuk hozzá: első kérdés => első háttér, második kérdés / második háttér, és így tovább mindig annyiadik, amennyi a változó értéke.
+    </p>
+    <p>
+      <img class="figure" width="35%" src="curriculum/img/hun/quiz/2_1.png" alt="ábra">
+      <img class="figure" width="25%" src="curriculum/img/hun/quiz/2_2.png" alt="ábra">
+      <img class="figure" width="30%" src="curriculum/img/hun/quiz/2_3.png" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">A gombok kódja</div>
+  <div class="cell">
+    <p>
+      De mitől fog elmozdulni 1-ről a kérdésszámláló? Hát persze, a gombnyomástól. Váltsatok át az első gomb-szereplőre. Hogy akkor is jó helyen jelenjen meg, ha véletlenül elmozdítottuk kattintgatás közben, érdemes egy "ugorj" gombbal kezdeni a kódot:<br>
+      <img class="figure" width="25%" src="curriculum/img/hun/quiz/2_4.png" alt="ábra"><br>
+      A számokat természetesen nem nektek kell beírni.
+    </p>
+    <p>
+      Most jöhet a kattintás kódja. A legegyszerűbb, ha esemény-blokkot használtok hozzá. A gomb legfontosabb teendője pedig az lesz, hogy a kérdésszámlálót növelje.<br>
+      <img class="figure" width="25%" src="curriculum/img/hun/quiz/2_5.png" alt="ábra"><br>
+      Ha újraindítjátok a projektet, láthatjátok, hogy a projekt máris kezd működni; az első gomb lenyomására már váltakoznak a kérdések. De egyelőre még semmi nem múlik azon, hogy a helyes válaszra kattintottatok-e.
+    </p>
+    <p>
+      Tényleg, honnan fogja tudni a Scratch, hogy melyik a helyes válasz? Honnan tudja a tévében a műsorvezető, aki kvízműsort vezet? Ott van a kezében egy puska a helyes válaszok listájával, amit csak ő lát, a játékos nem. Ugyanígy fogunk mi is eljárni: listát készítünk a helyes válaszokról.
+    </p>
+    <p>
+      Ha ez az első alkalom, hogy listát használtok, beszéljétek meg alaposan, mi is az: olyan változó, amibe nem csak egy adatot lehet felírni, hanem egyszerre többet is. A lista minden elemének van egy sorszáma; innen fogja tudni a Scratch, hogy melyik választ kell néznie. Ha pedig  már minden világos, hozzátok létre a listaváltozót: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/quiz/2_6.png" alt="ábra">
+      <img class="figure" width="35%" src="curriculum/img/hun/quiz/2_7.png" alt="ábra">
+    </p>
+    <p>
+      Ha elkészült a lista, rögtön megjelenik egy egész sor új blokk is a bal oldali panelen; a színpadon pedig kis téglalap formájában megjelenik maga a lista is. A blokkokkal mindjárt foglalkozunk; először azonban a téglalap sarkában lévő kis plusz jelre kattintva hozzatok létre annyi listaelemet, amennyi kérdésetek van, és ezekbe írjátok be a helyes válaszokat. Ehhez érdemes újra végigzongorázni a kérdéseken.<br>
+      <img class="figure" width="40%" src="curriculum/img/hun/quiz/2_8.png" alt="ábra">
+      <img class="figure" width="15%" src="curriculum/img/hun/quiz/2_9.png" alt="ábra">
+      <img class="figure" width="14%" src="curriculum/img/hun/quiz/2_10.png" alt="ábra">
+      Miután elkészültetek a listával, ne felejtsétek el láthatatlanná tenni a lista blokk melletti mezőre kattintva.<br>
+      <img class="figure" width="35%" src="curriculum/img/hun/quiz/2_11.png" alt="ábra">
+    </p>
+    <p>
+      Most visszatérhetünk a kódhoz, és érdemes kicsit koncentrálni, mert az egész projekt legnehezebb feladata következik. A helyes válasz a lista egyik eleme; tehát a "lista eleme" blokkal érdemes kezdeni. De melyik eleme? Hát annyiadik, ahányadik kérdésnél járunk. És mire vagyunk kíváncsiak, ha az "A" gombra kattintottunk? Hát arra, hogy ez az elem éppen az "A" betű-e. Azt pedig, hogy két dolog ugyanaz, matekosan az egyenlőségjellel fejezzük ki. Így szépen felépül az összetett blokkunk:<br>
+      <img class="figure" width="30%" src="curriculum/img/hun/quiz/2_12.png" alt="ábra"><br>
+      Na és mi történik, ha a helyes válaszra kattintunk? Hát persze, pontot kapunk. Tehát ha-akkor blokkra és pont-változóra is szükségetek lesz. Vigyázat: a kérdés száma csak a "ha-akkor" után változik! Ja és ne felejtsétek el a játék kezdetén nullára állítani a változót! :)<br>
+      <img class="figure" width="35%" src="curriculum/img/hun/quiz/2_13.png" alt="ábra">
+      <img class="figure" width="25%" src="curriculum/img/hun/quiz/2_14.png" alt="ábra">
+    </p>
+    <p>
+      Jöhet a másik két gomb-szereplő kódja. Itt se feledkezzetek el a kezdő pozíció beállításáról (az y koordináta más lesz, mint korábban). A kattintás kódját pedig egyszerűen áthúzhatjátok az új szereplőhöz (vagy ha nem biztos a gyerekek egérkezelése, a tálcára téve is áttehetitek); csak az "A" betűt kell lecserélni.<br>
+      <img class="figure" width="25%" src="curriculum/img/hun/quiz/2_15.png" alt="ábra">
+      <img class="figure" width="35%" src="curriculum/img/hun/quiz/2_16.png" alt="ábra">
+    </p>
+    <p>
+      Ha megvagytok, próbáljátok ki újra a projektet. Minden szépen működik benne, a jó válaszokra pontot kaptok, a rosszakat elegánsan szó nélkül hagyja a program. Már csak annyi a probléma, hogy nem áll meg a projekt az utolsó kérdés után.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">A játék vége</div>
+  <div class="cell">
+    <p>
+      Mikor is ér véget a játék? Hát akkor, amikor a kérdésszámláló nagyobbra nő, mint amennyi kérdésünk van. Ekkor érdemes a hátteret egy zárófeliratra váltani, a gombokat meg eltűntetni. Kezdjétek az új háttér megrajzolásával:<br>
+      <img class="figure" width="40%" src="curriculum/img/hun/quiz/3_1.png" alt="ábra">
+    </p>
+    <p>
+      A játék akkor ér véget, ha kifutottunk a kérdésekből, vagyis a kérdésszámláló nagyobbra nőtt, mint amennyi kérdésünk van. Ehhez lehetne módosítani a korábbi "mindig" ciklust "ismételd eddig"-re, de talán érdemesebb egy másik kódot is adni a háttérnek a meglevő mellé:<br>
+      <img class="figure" width="30%" src="curriculum/img/hun/quiz/3_2.png" alt="ábra">
+    </p>
+    <p>
+      Most már minden megfelelően működik. Büszkék lehettek magatokra, hogy idáig eljutottatok. Ha pedig van még időtök és energiátok, még pár kérdést, hangokat és látvány-elemeket is betehettek a kvízbe. De ezek nélkül is szuper lesz a projekt. Viszont nagyon fontos: ne felejtsétek el foglalkozás végén bemutatni az elkészült projekteket! :)
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Bónusz 1:<br>Hangok</div>
+  <div class="cell">
+    <p>
+      Nagyon sokat tesz hozzá a játékélményhez, ha a helyes és a helytelen válaszhoz hangok is társulnak. Ha még nem dolgoztatok hangokkal, akkor ez egy remek alkalom, hogy ebbe is belekóstoljatok. Hogy ne kelljen három helyre hangokat és új kódot illeszteni, a háttérnek adjuk a hanglejátszás feladatát. Ellenőrizzétek, hogy a háttér van-e kijelölve, és a későbbi bonyodalmak elkerülésére mindenki halkítsa le a laptopját úgy, hogy ő még hallja a hangokat, de másokat már ne zavarjon vele.
+    </p>
+    <p>
+      Kattintsatok baloldalt a "Hangok" fülre, majd alul a kis hangszóró ikonra. A felbukkanó rengeteg hangot mind ki lehet próbálni úgy, hogy fölé viszitek az egérmutatót (kattintani nem kell). Mindenki keresse meg a neki legmegfelelőbb hangokat. Ha nincs kedvetek keresgélni: a "Cheer" pont megfelel a jó válaszhoz, a "Chee Chee" pedig a rosszhoz. A hangokra kattintva behelyezhetitek őket a projektbe.<br>
+      <img class="figure" width="40%" src="curriculum/img/hun/quiz/4_1.png" alt="ábra">
+      <img class="figure" width="20%" src="curriculum/img/hun/quiz/4_2.png" alt="ábra">
+      <img class="figure" width="30%" src="curriculum/img/hun/quiz/4_3.png" alt="ábra">
+      <img class="figure" width="30%" src="curriculum/img/hun/quiz/4_4.png" alt="ábra">
+    </p>
+    <p>
+      Jöhet a kód. A gombok üzenetet fognak küldeni a háttérnek, hogy milyen hangot játsszon le. A hanglejátszás tehát üzenet érkezéséhez lesz kötve. Ha dolgoztatok már üzenetekkel, akkor ezzel nagyon könnyű dolgotok lesz:<br>
+      <img class="figure" width="55%" src="curriculum/img/hun/quiz/4_5.png" alt="ábra">
+    </p>
+    <p>
+      A gombok kódjába viszont kénytelenek lesztek egy kicsit belenyúlni; mivel most már nem csak a jó, hanem a rossz válaszra is kapunk reakciót, nem lesz elég a "ha-akkor" blokk; "ha-akkor-különben"-re kell cserélni, és a két ágába illeszteni az üzenetküldést:<br>
+      <img class="figure" width="50%" src="curriculum/img/hun/quiz/4_6.png" alt="ábra">
+    </p>
+    <p>
+      Ne felejtsétek el mindhárom gomb kódját frissíteni. Ha megvagytok, jöhet az újabb tesztelés.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Bónusz 2:<br>Felvillanó gombok</div>
+  <div class="cell">
+    <p>
+      Még látványosabb lesz a kvíz, ha a gombok kattintásra felvillannak. Ezt nagyon egyszerű megvalósítani a grafikus hatások használatával. Az egyszerűbb lehetőség az, ha a fényerő hatást növelitek meg egy pillanatra. Ehhez nem is kell belenyúlni a meglevő kódba:<br>
+      <img class="figure" width="35%" src="curriculum/img/hun/quiz/5_1.png" alt="ábra"><br>
+      A kódot másoljátok át a másik két szereplőhöz is.
+    </p>
+    <p>
+      Ha pedig még ennél is látványosabb eredményt akartok, akkor a felvillanást színhatással is megvalósíthatjátok: jó válasz esetén zölden villan a gomb, rossz válasz esetén pirosan. Ehhez némi próbálgatásra van szükség: a grafikus hatások "legyen" blokkjából tegyetek ki egyet a feladattérre, írjatok bele különféle számokat 1 és 200 között, majd kattintsatok a blokkra. A szereplő meg fogja változtatni a színét, minden számra másképpen. Az eredmény az eredeti színtől függ, nehéz fejben kiszámolni, próbálgatni a legegyszerűbb. Ha megtaláltátok a pirosat és a zöldet, beilleszthetitek a színhatás megváltoztatását a "ha-akkor-különben" blokkba:<br>
+      <img class="figure" width="45%" src="curriculum/img/hun/quiz/5_2.png" alt="ábra"><br>
+      Egy kicsit nagyobb késleltetést adtunk a villanásnak, hogy jól látsszon, helyes-e a válasz.
+    </p>
+  </div> <!-- cell -->
+
+
+  <div class="celltitle">Bónusz 3:<br>Gombok eltűntetése</div>
+  <div class="cell">
+    <p>
+      Kicsit zavaró, hogy a játék végén ott maradnak a pontok, és még reagálnak is a kattintásra. Ennek elejét vehetjük azzal, ha a háttér a játék vége előtt küld egy "vége" üzenetet a gomboknak (aztán pedig vár egy kicsit a program befejezése előtt, hogy legyen idejük reagálni):<br>
+      <img class="figure" width="35%" src="curriculum/img/hun/quiz/6_1.png" alt="ábra"><br>
+      A gombok pedig, miután megkapták az üzenetet, engedelmesen eltűnnek. De ne felejtsétek el a játék elején újra megjeleníteni őket, mert nélkülük nem lehet játszani! :)<br>
+      <img class="figure" width="30%" src="curriculum/img/hun/quiz/6_2.png" alt="ábra">
+    </p>
+    <p>Ha még eddig is eljutottatok egyetlen foglalkozás alatt, elképesztően szuperek vagytok!</p>
+  </div> <!-- cell -->
+
+    </div> <!-- section -->

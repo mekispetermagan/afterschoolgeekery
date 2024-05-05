@@ -1,0 +1,313 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Tűzijáték projekt </div>
+
+  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="cell">
+    <p>
+      Ez ismét egy nagyon egyszerű, de annál látványosabb peojekt,
+      amit kezdőkkel és kicsikkel is simán bevállalhattok.
+      Bár végig nagyon egyszerű technikákkal dolgozunk, haladó
+      elemként megjelenik a projektben a szereplőklónozás.
+      A klónozás vízválasztó a Scratch-ben: aki tud vele bánni,
+      az egészen más színvonalon készít Scratch projekteket,
+      mint aki nem.
+    </p>
+    <p>
+      Ennek a projektnek két változatát is kidolgoztuk; az "A" változat
+      egyszerűbb, a "B" változat viszont látványosabb. A két változat
+      a 4. lépéstől kezdve tér el egymástól.
+    </p>
+    <p>
+      A projekt végeredményét itt találod (mindkét változatban, de
+      az "A" változat kódja inaktív):
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/788029563/embed"
+      allowtransparency="true" width="485" height="402" frameborder="0"
+      scrolling="no" allowfullscreen>
+    </iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 1. lépés </div>
+  <div class="cell">
+    <p>
+      Scratchie-re most nem lesz szükségetek; kezdhetitek azzal,
+      hogy a bélyegképén lévő kuka-ikonra kattintva törlitek:
+      <img class="figure" src="curriculum/img/hun/firework/1_1.png" height="30px" alt="ábra">.
+      A helyére pedig akár rajzolhattok is új szereplőket, de talán
+      az a legegyszerűbb, ha a készen kapottak közül választjátok ki
+      a színes csillagot:
+      <img class="figure" src="curriculum/img/hun/firework/1_2.png" height="30px" alt="ábra">.
+      Ha belenéztek a jelmezekbe, láthatjátok, hogy csak egyetlen színben
+      áll rendelkezésre. De ez nem akadályozhat meg benneteket abban, hogy
+      kitöltéssel és duplikálással színes csillag-készletet varázsoljatok
+      magatoknak a tűzijátékhoz.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/1_3.png" width="40%" alt="ábra">
+    </p>
+    <p>
+      Érdemes kicsit kisebbre is venni a szereplőt. Ezt lehet blokkal is, de talán
+      egyszerűbb, ha a színpad alatti szereplő-ezköztárban állítjátok be a méretet:
+      <img class="figure" src="curriculum/img/hun/firework/1_4.png" height="30px" alt="ábra">.
+      Ne ti mondjátok meg, mekkora legyen, hanem segítő kérdésekkel vezessétek rá a
+      gyerekeket a megoldásra: "Ha a száz túl nagy, a nulla meg semekkora, akkor
+      mennyi lehet a pont jó méret?" Aztán próbáljátok ki, amit a gyerekek mondanak,
+      és ha még mindig nagy, tegyétek fel újra ugyanezt a kérdést; ha meg túl kicsi,
+      akkor a megfordítását.
+    </p>
+    <p>
+      Végül válasszatok egy olyan hátteret, ami illik a projekt hangulatához.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/1_45.png" width="40%" alt="ábra">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 2. lépés </div>
+  <div class="cell">
+    <p>
+      Most elkezdhetitek tervezni a programkódot. Első körben talán elég
+      annyit bevállalni, hogy a csillag a színpad aljáról, középről felszáll
+      egy véletlenszerűen választott irányba, és a magasban kipukkad.
+      Később még lesz alkalmunk finomítani a csillag viselkedésén, és még
+      látványosabbá tenni a projektet; egyelőre azonban ennyi is elég.
+    </p>
+    <p>
+      Kezdjetek blokkokat keresgélni az elképzelésekhez. Mindenekelőtt
+      szükségetek lesz a kezdőpont megtalálásához egy "ugorj" blokkra:
+      <img class="figure" src="curriculum/img/hun/firework/2_1.png" height="30px" alt="ábra">,
+      az irányba állításhoz pedig egy "nézz"  blokkra:
+      <img class="figure" src="curriculum/img/hun/firework/2_2.png" height="30px" alt="ábra">.
+      De honnan tudjuk, milyen számok kerüljenek ezekbe a blokkokba?
+      Ha ezek még nem kerültek elő, közösen felfedezhetitek: az "ugorj"
+      blokkba automatikusan bekerülnek a koordináták, ha a szereplőt
+      elhelyezzük a színpadon:
+      <img class="figure" src="curriculum/img/hun/firework/2_3.png" height="30px" alt="ábra">,
+      a "nézz" blokkban pedig egy kis mutató van elrejtve, amivel könnyen
+      megkereshetjük, milyen határok között érdemes tartani a csillag irányát:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/2_4.png" width="15%" alt="ábra">
+      <img class="figure" src="curriculum/img/hun/firework/2_5.png" width="15%" alt="ábra">
+    </p>
+    <p>
+      A "véletlen" blokk fogja biztosítani, hogy az irány a két szélsőérték között
+      szabadon változhasson:
+      <img class="figure" src="curriculum/img/hun/firework/2_6.png" height="30px" alt="ábra">.
+    </p>
+    <p>
+      A mozgatáshoz kézenfekvő lenne "csússz" blokkot használni:
+      <img class="figure" src="curriculum/img/hun/firework/2_7.png" height="30px" alt="ábra">,
+      de matekos legyen a talpán, aki ebbe az irány alapján kiszámolja
+      a koordinátákat. Most egyszerűbb lesz a "menj" blokkot használni,
+      amely koordináták helyett a szereplő irányával dolgozik:
+      <img class="figure" src="curriculum/img/hun/firework/2_8.png" height="30px" alt="ábra">.
+    </p>
+    <p>
+      Így, folyamatosan kérdezve és közösen tisztázva, hogy mit miért csinálunk,
+      fokozatosan kialakul a csillag mozgatásának kódja:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/2_9.png" width="40%" alt="ábra">.
+    </p>
+    <p>
+      És ha elindítjátok a projektet, végre meg is mozdul a csillag, és pont azt
+      csinálja, amit szeretnénk tőle. Ezek a kódolás legszebb pillanatai, érdemes
+      ilyenkor egy pillanatra megállni, örülni a sikernek, és gratulálni magatoknak.
+    </p>
+   </div> <!-- cell -->
+
+  <div class="celltitle"> 3. lépés </div>
+  <div class="cell">
+    <p>
+      Pihenésképpen illesszünk be néhány apró szépítést. Először is jó lenne, ha a
+      csillag nem mindig ugyanúgy nézne ki az animációban, hanem minden indításkor
+      véletlenszerűen választódna ki a jelmeze. Ehhez természetesen szükségünk lesz a
+      "jelmez legyen" blokkra, amibe még egy "véletlen" blokk is kerül:
+      <img class="figure" src="curriculum/img/hun/firework/3_1.png" height="30px" alt="ábra">.
+      A számok a jelmezek sorszámai; tehát ha 6 jelmezünk van, akkor 1 és 6 kerül
+      a "véletlen" blokkba; ha pedig 7, akkor 1 és 7.
+    </p>
+    <p>
+      Szintén szépíteni fog az animáción, ha a csillag nem mindig ugyanolyan magasra megy.
+      Ezt is a "véletlen" blokkal tudjátok elérni, ezúttal az "ismételd" blokkba
+      illesztve:
+      <img class="figure" src="curriculum/img/hun/firework/3_2.png" height="30px" alt="ábra">.
+    </p>
+    <p>
+      Jó barátunk, a "mindig" blokk pedig abban fog segíteni, hogy folyamatossá tegyük
+      az animációt. Így ehhez a kódhoz jutunk:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/3_3.png" width="40%" alt="ábra">
+    </p>
+    <p>
+      Kezd formát ölteni az animáció. Nem néz ki rosszul; de a Scratch ennél
+      sokkal többre képes. A folytatásban igazán látványossá tesszük a tűzijátékunkat.
+      Éspedig kétféleképpen. Az "A" verzió kicsit egyszerűbb, de nagyszerű alkalmat
+      kínál a klónozás gyakorlására; a "B" verzió egy fokkal bonyolultabb, de még
+      látványosabb, és a klónozás mellett a saját blokkok használatára is példát ad.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 4A. lépés</div>
+  <div class="cell">
+    <p>
+      Ebben a változatban azzal tesszük látványosabbá az animációt, hogy a csillagokat
+      nem egymás után, egyesével röptetjük, hanem folyamatosan, úgy, hogy egyszerre
+      sok legyen a levegőben. De hogy lehet egy szereplő egyszerre több helyen?
+      Nos, erre való a klónozás (a Scratch magyar fordtásában: másolatkészítés).
+      A csillag szereplőből folyamatosan klónokat (másolatokat) készítünk, és minden
+      egys másolatot röptetünk, majd megsemmisítünk.
+    </p>
+    <p>
+      Ehhez kicsit szét kell szedni a meglevő kódot. Ezzel érdemes óvatosan bánni, mert
+      könnyen összezavarhatjátok vele a gyerekeket. Viszont az ilyen beavatkozásokat
+      semmilyen alkotó folyamatban nem lehet elkerülni; rosszabbat el sem lehet
+      képzelni annál, ha a gyerekeknek eleve a helyes megoldást mutatnánk meg egy
+      problémára, és megfosztanánk őket a közös gondolkodás örömétől.
+    </p>
+    <p>
+      A kód kettészedésekor azt kell szem előtt tartani, hogy melyik feladat tartozik az
+      eredeti szereplőhöz, és melyik a klónhoz. És az derül ki, hogy
+      mindennek, ami a röptetéshez tartozik, a klónnál lesz a helye; az eredeti szereplőnél
+      meg csak az ismétlés-blokk marad.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/4A_1.png" width="50%" alt="ábra">
+    </p>
+    <p>
+      Ebben a két építményben kell helyet találni a klónozás három blokkjának:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/4A_2.png" width="25%" alt="ábra">
+    </p>
+    <p>
+      Amint tisztázzátok, hogy mindhárom blokkra szükség lesz, már meg is lesz,
+      hogy hova kerülnek:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/4A_3.png" width="50%" alt="ábra">
+    </p>
+    <p>
+      És máris kész vagyunk; indítsátok újra a projektet és gyönyörködjetek a látványban! :)
+    </p>
+    <p>
+      Érdemes megjegyezni, hogy először egy szereplőpéldányra írtunk meg egy programkódot,
+      és aztán klónosítottuk az eredményt. Ez sztenderd technika, nem csak a Scratch-ben,
+      hanem általában a programozásban, sőt gyakorlatilag minden alkotó folyamatban:
+      először egy konkrét prototípuson kísérletezünk, aztán jöhet az általánosítás és a
+      sokszorosítás.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 4B. lépés </div>
+  <div class="cell">
+    <p>
+      Az "A" változat látványos ugyan, de inkább hasonlít csillagszóróhoz, mint tűzijátékhoz.
+      A tűzijáték lövedékeitől azt szoktuk meg, hogy a levegőben robbannak. Pontosan ezt
+      fogjuk most megvalósítani: a levegőbe felröptetett csillag klónokat fog maga körül
+      szétszórni körben, minden irányba.
+    </p>
+    <p>
+      Ehhez érdemes közösen végiggondolni, mit is jelent az, hogy "minden irányba".
+      Felnőtt fejjel természetes, hogy a kör 360 fokból áll, és ezek mindegyikéhez
+      tartozik egy irány; de nem biztos, hogy a gyerekek ezt már tanulták az iskolában;
+      az pedig főleg nem, hogy magukévá is tették a tanultakat. Érdemes megint elővenni
+      a "nézz" blokkot, kinyitni, és közösen felfedezni, hányféle irányba állhat a mutatója.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/4B_1.png" width="20%" alt="ábra">
+    </p>
+    <p>
+      És mellé elővehettek, rajzolhattok vagy a neten kereshettek egy mutatós órát is
+      (a Scratch-nek sajnos nincs óra-szereplője).
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/4B_2.png" width="20%" alt="ábra">
+    </p>
+    <p>
+      Vagy felidézhetitek a legeslegelső programkódot is, amivel körbe járattuk a szereplőnket,
+      és összeadogatni a 15 fokokat.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/4B_3.png" width="25%" alt="ábra">
+    </p>
+    <p>
+      Igazából mindegy, hogy mit használtok fogódzónak; a lényeg az, hogy a gyerekek
+      bevonódjanak a küzüs számolásba, amelynek a végén kiderül, hogy a 360 fokos teljes kör
+      24 darab 15 fokos körcikkből áll (vagy 12 darab 30 fokosból; ez is mindegy, hagyjátok,
+      hogy vezessen benneteket a közös okoskodás).
+    </p>
+    <p>
+      Innen már magától értetődik, hogy a röppályájának végére ért csillag 24-szer fordul
+      15 fokot, és minden irányba elindít egy klónt.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/4B_4.png" width="25%" alt="ábra">
+    </p>
+    <p>
+      És a klónokat is megmozgatjuk, ugyanúgy a "menj" blokkal és ismétléssel,
+      mint az eredeti csillagot.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/4B_5.png" width="20%" alt="ábra">
+    </p>
+    <p>
+      Ha újraindítjátok a projektet, gyönyörű látványban lesz részetek! :)
+      Nem pontosan abban, amire számítottunk, hiszen csigavonalban jönnek a klónok,
+      ahelyett, hogy szinkronban repülnének; de már ez is ígéretes eredmény.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 5B. lépés </div>
+  <div class="cell">
+    <p>
+      Ahhoz, hogy megfejtsük, miért csigavonalban jönnek a klónok, érdemes végiggondolni,
+      hogy működik az ismétlés a Scratch-ben. Hasonlítsuk össze például az alábbi két
+      kódot:
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/5B_1.png" width="25%" alt="ábra">
+      <img class="figure" src="curriculum/img/hun/firework/5B_1.png" width="20%" alt="ábra">
+    </p>
+    <p>
+      Hiába hasonlít egymásra a kettő, nem ugyanúgy futnak le. Az első csúsztatja
+      a szereplőt (ezért is ezt használtuk a tűzijáték-animációkban), a második
+      viszont egy nagy lépésben ugrasztja odébb. A különbség oka, hogy míg az egymás alá helyezett
+      blokkokat egy időben (ugyanabban a képernyőfrissítésben) hajtja végre a Scratch,
+      az ismétlések lépéseit késlelteti (egy képernyőfrissítésben egy lépést hajt végre).
+      Ugyanez történik a 24 klón létrehozásakor is: a Scratch lejátszója 24 képernyőfrissítés,
+      vagyis kb. egy másodperc alatt hajtja végre a feladatot.
+      De azt mégsem várhatják tőlünk, hogy ismétlés helyett egy 48 blokkból emelt toronnyal
+      dolgozzunk...
+    </p>
+    <p>
+      A megoldás kicsit el van rejtve a Scratch-ben. Van egy olyan lehetőségünk, hogy
+      egy kódrészletet külön névvel lássunk el, és saját blokkot hozzunk létre a számára.
+      Ez a haladó Scratch-programozás egyik alapvető eszköze; többé-kevésbé annak felel meg,
+      mint a felnőtt-programozásban a függvények használata. Alakítsuk át a kódunkat úgy, hogy a
+      klónok előállítását ilyen saját blokkba tesszük.
+    </p>
+    <p>
+      <img class="figure" src="curriculum/img/hun/firework/5B_3.png" width="80%" alt="ábra">
+    </p>
+    <p>
+      A blokk szerkesztésekor opcióként megjelenik, hogy a lejátszó képernyőfrissítés nélkül
+      hajtsa végre a benne lévő kódot:
+      <img class="figure" src="curriculum/img/hun/firework/5B_4.png" height="20px" alt="ábra">.
+      Ez pont az, amit keresünk. Ha belekattintotok, a saját blokk meghatározása egy szemvillanás
+      alatt fog lefutni, és a csillag-klónok is végre szinkronban fognak mozogni:
+      <img class="figure" src="curriculum/img/hun/firework/5B_5.png" height="20px" alt="ábra">.
+    </p>
+    <p>
+      Ezzel az utolsó változtatással pedig eljutottatok a nehezebbik változat végére is.
+      Persze senki nem akadályozhat meg benne, hogy tovább dolgozzatok a projekten;
+      ti döntitek el, hogy elégedetten hátradőltök, vagy újabb ötleteket találtok ki,
+      amelyekkel még látványosabbá tehetitek... :)
+    </p>
+  </div> <!-- cell -->
+
+</div> <!-- section -->

@@ -1,0 +1,126 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Квітковий душ </div>
+
+  <div class="celltitle"> Про що вона? </div>
+  <div class="cell">
+    <p>
+      Це відносно швидка анімація, яку можна зробити за 45 хвилин. Через клонування це не зовсім проект для початківців, але ви можете принести його на друге заняття. З неба падають різнокольорові квіти. Кінцевий результат ви можете побачити тут:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/995665353/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Створення спрайту</div>
+  <div class="cell">
+    <p>
+      Хоча цього разу ми не працюємо з кошеням Скретчі, видаляти його не потрібно; найпростіший спосіб - вибрати і видалити малюнок всередині костюма Скретчі:<br>
+      <img class="figure" width="30%" src="curriculum/img/ukr/flowershower/1.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/2.png" alt="figure">
+    </p>
+    <p>
+      А в порожньому костюмі намалюйте квітку. Виберіть приємний яскравий колір для пелюсток і за допомогою інструмента "коло" намалюйте приблизно рівні кола. (Порада від професіонала: якщо ви будете утримувати клавішу Shift, результат буде точно круглим). Потім, використовуючи інший яскравий колір, намалюйте центр квітки посередині:<br>
+      <img class="figure" width="20%" src="curriculum/img/ukr/flowershower/3.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/ukr/flowershower/4.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/flowershower/5.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/flowershower/6.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/flowershower/7.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/flowershower/8.png" alt="figure"><br>
+      Ось і все, лише кілька простих мазків!
+    </p>
+    <p>
+      Натисніть на маленьку синю іконку внизу праворуч, щоб вибрати фон, і ваш проект готовий до кодування.<br>
+      <img class="figure" width="15%" src="curriculum/img/ukr/flowershower/9.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/10.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Переміщення квітки</div>
+  <div class="cell">
+    <p>
+      Квіти падатимуть з верхньої частини сцени до нижньої. Цей рух з'являється в багатьох проектах, тому будьте дуже уважні, коли говорите про те, що це за етапи:
+      <ol>
+        <li>
+          Помістіть спрайт туди, де він з'явиться. У цьому випадку - у верхній частині сцени.
+        </li>
+        <li>
+          Виберіть блок "перейти до x-y" і розмістіть його в області сценарію. Координати x і y для позиції спрайта автоматично включаються в блок, їх не потрібно переписувати і вони не повинні бути однаковими для всіх.
+        </li>
+        <li>
+          Помістіть спрайт туди, куди він прибуде. В даному випадку, внизу сцени.
+        </li>
+        <li>
+          Виберіть блок "ковзання x-y" і розмістіть його в області сценарію. Координати x та y автоматично підлаштуються у блоці.
+        </li>
+      </ol>
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/11.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/ukr/flowershower/12.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/13.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/ukr/flowershower/14.png" alt="figure"><br>
+      Якщо ви спробуєте код, то побачите, що одна квітка вже падає з неба.
+    </p>
+    <p>Було б корисно, якби квітка падала не завжди з одного і того ж місця, а випадковим чином то тут, то там. На щастя, у Скретч є блок випадковості. Але де його розмістити? Тут варто скористатися тим, що ми знаємо про координати. Горизонтальне, ліве-праве положення спрайта задається його координатою x; отже, це те, що нам потрібно рандомізувати. Але які межі цієї координати? Яким буде x, якщо ми знаходимося вкрай ліворуч, і яким воно буде, якщо ми знаходимося вкрай праворуч? Це ще одна поширена проблема, варто пройтись по кроках для її вирішення:
+      <ol>
+        <li>Помістіть "випадковий" блок у відповідну координату блоку "перейти до" (у нашому випадку, x).</li>
+        <li>Розмістіть спрайт в одній з кінцевих точок. У нашому випадку це лівий край сцени.</li>
+        <li>Скопіюйте відповідну координату (у цьому випадку x) у блок "random".</li>
+        <li>Перемістіть спрайт до іншої кінцевої точки. У нашому випадку це правий край сцени.</li>
+        <li>Скопіюйте відповідну координату (у цьому випадку x) у блок "random".</li>
+        <li>Щоб утримувати спрайт у правильному положенні, вставте блок "x position" у відповідну координату блоку "glide" (у нашому випадку це x).</li>
+      </ol>
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/15.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/16.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/17.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/18.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/19.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/20.png" alt="figure">
+    </p>
+    <p>
+      Є ще кілька речей, які потрібно налаштувати в коді руху:
+      <ul>
+        <li>розмір квітки (вона має бути невеликою, адже їх буде багато)</li>
+        <li>час падіння (значно більше 1 секунди)</li>
+        <li>закінчуйте рух блоком "завжди"</li>
+      </ul>
+      <img class="figure" width="40%" src="curriculum/img/ukr/flowershower/21.png" alt="figure">
+    </p>
+    <p>
+      Ми називаємо описаний вище спосіб уникнення явного використання координат шляхом розміщення спрайту, а потім вибору блоку з відповідними координатами методом "розмісти і вибери". Це дуже корисно, якщо ви працюєте з дітьми, які занадто малі, щоб мислити в системах координат, або просто не бажають займатися математикою під час занять.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Клонування</div>
+  <div class="cell">
+    <p>
+      Клонування - це дуже потужний інструмент; як тільки ви його освоїте, ви підніметеся на рівень вище у програмуванні на Скретч. За допомогою клонування ви можете зробити багато токенів з одного спрайту. Якщо ви ніколи раніше не використовували клонування, погляньте на блоки клонування і спробуйте разом з'ясувати, що вони роблять.<br>
+      <img class="figure" width="25%" src="curriculum/img/ukr/flowershower/22.png" alt="figure">
+    </p>
+    <p>
+      Якщо ви розмістите ці блоки поруч з кодом, який у вас вже є, то не займе багато часу, щоб зрозуміти, що вміст блоку "назавжди" потрапить під "коли я починаю як клон", а блок створення клону - в блок "назавжди". Блок "видалити цей клон" потрібен для того, щоб клони не накопичувалися внизу сцени.<br>
+      <img class="figure" width="65%" src="curriculum/img/ukr/flowershower/23.png" alt="figure"><br>
+      <img class="figure" width="65%" src="curriculum/img/ukr/flowershower/24.png" alt="figure">
+    </p>
+    <p>
+      Перезапустіть проект і насолоджуйтеся падінням великої кількості квітів! :) Якщо ви просунулися так далеко, ви можете завершити сесію з відчуттям успіху. Але якщо у вас є час і витримка продовжувати, ви можете значно покращити проект за кілька наступних кроків.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Останні штрихи</div>
+  <div class="cell">
+    <p>
+      Було б чудово мати квіти різних кольорів. Один із способів зробити це - створити більше костюмів для нашого спрайта. Знову відкрийте вкладку "Костюми" і продублюйте костюм кілька разів, а потім розфарбуйте дублікати різними кольорами.<br>
+      <img class="figure" width="35%" src="curriculum/img/ukr/flowershower/25.png" alt="figure">
+      <img class="figure" width="55%" src="curriculum/img/ukr/flowershower/26.png" alt="figure">
+    </p>
+    <p>
+      Нарешті, ви можете додати трохи більше різноманітності квітам за допомогою блоку "випадковий":<br>
+      <img class="figure" width="45%" src="curriculum/img/ukr/flowershower/27.png" alt="figure">
+      <img class="figure" width="50%" src="curriculum/img/ukr/flowershower/28.png" alt="figure">
+    </p>
+    <p>
+      ...І вуаля, ось кінцевий продукт, насолоджуйтесь переглядом! :)<br>
+      <img class="figure" width="60%" src="curriculum/img/ukr/flowershower/29.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+</div> <!-- section -->

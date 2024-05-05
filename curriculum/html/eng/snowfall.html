@@ -1,0 +1,153 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Snowfall </div>
+
+  <div class="celltitle"> What is this project about? </div>
+  <div class="cell">
+    <p>
+      This is a snowfall animation where the level of snow keeps raising, and eventually snow covers the whole Scratch stage. It is a "clones falling" project like "Rain" in the Cloning guide, or the Flower Shower miniproject, but with a few twists. The idea behind using the same code pattern in multiple projects is that repetition in a different context and setting will help kids master this technique, which consists of too many steps to memorize at first, but will be very useful in creating their own animations and games.
+    </p>
+    <p>
+      Use this project with kids who already have some experience with Scratch. Although you can introduce cloning with this project, it is a good idea to schedule it after one of the simpler cloning projects like "Flower Shower" or the Dino game, so that the cloning part goes more fluently, and enough time remains for the rest. Here in this guide, the discussion of the cloning part will be brief (few words, many pictures); see the "Rain" and "Flower Shower" projects mentioned above for more detailed guidance on the technique of teaching this technique.
+    </p>
+    <p>
+      See the end result of the project here: <br>
+      <iframe src="https://scratch.mit.edu/projects/1007276864/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Preparations </div>
+  <div class="cell">
+    <p>
+      Create a new project, and say goodbye to Scratchie. Click on the cat head icon at the bottom right to get to the sprite library, and select the sprite called "Snowflake". Click on the image icon next to the cat head to select a nice outdoor background. (Of course, you can also draw your background or snowflake if you are confident that it will not consume too much time.) <br>
+      <img class="figure" width="20%" src="curriculum/img/eng/snowfall/01.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/snowfall/02.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/snowfall/03.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/eng/snowfall/04.png" alt="figure">
+    </p>
+    <p>
+      The costume of the snowflake sprite is a bit bluish. If you think snow should be white, this can be done in a few moves. Open the Costumes tab and select the whole snowflake (with mouse or Ctrl A). Set the fill color to white (saturation to zero, brightness to 100) and the outline color to light gray (saturation to zero, brightness to any number above 50).
+    </p>
+    <p>
+      Finally, set the size of the sprite under the stage to a very small value, so that there will be room for thousands of snowflakes: <br>
+      <img class="figure" width="40%" src="curriculum/img/eng/snowfall/05.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/snowfall/06.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/snowfall/07.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 1: A single snowflake falling </div>
+  <div class="cell">
+    <p>
+      As usual, let's start with moving a single sprite before setting up a clone army. If the group is already familiar with coordinates, ask them about the coordinates of the edges of the stage. If they don't remember, use the background with coordinates to refresh their memory. If they are too small for coordinates, use the place-and-pick method:
+      <ol>
+        <li>Place the sprite at the top of the stage where it starts from.</li>
+        <li>Pick a "go to" block with the current coordinates.</li>
+        <li>Place the sprite at the bottom  where it arrives.</li>
+        <li>Pick a "glide" block with the new coordinates.</li>
+        <li>Nest the two blue blocks in a "forever" block to make the movement continuous.</li>
+      </ol>
+      Restart the project to see if the sprite falls as intended. <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/snowfall/08.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/snowfall/09.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/eng/snowfall/10.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/snowfall/11.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/snowfall/12.png" alt="figure">
+    </p>
+    <p>
+      Now randomize the horizontal position in a similar way:
+      <ol>
+        <li>Pick a "random" block and place it in the "x" slot of the "go to" block.</li>
+        <li>Place the sprite at the left edge of the stage, and read its x coordinate.</li>
+        <li>Place it at the right edge, and read the x coordinate again.</li>
+        <li>Write the two values in the "random" block.</li>
+        <li>Put an "x position" block in the "x" slot of the "glide" block to secure that the x coordinate doesn't change while gliding.</li>
+        <li>Set the duration of falling in the "glide" block.</li>
+      </ol>
+      Restart the project a few times to see if the code works. <br>
+      <img class="figure" width="40%" src="curriculum/img/eng/snowfall/13.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/eng/snowfall/14.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/eng/snowfall/15.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/snowfall/16.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 2: Cloneflakes falling</div>
+  <div class="cell">
+    <p>
+      If you have done cloning before, this will be easy. If you haven't, slow down and make sure kids get what they are doing. Find the three cloning blocks in the Control group. Put the movement blocks aside, they will belong to the clones. Now place the three clone blocks: "create clone" is nested in "forever"; the event block goes over the movement blocks; and "delete clone" under them. <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/snowfall/17.png" alt="figure">
+      <img class="figure" width="80%" src="curriculum/img/eng/snowfall/18.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/snowfall/19.png" alt="figure">
+      <img class="figure" width="45%" src="curriculum/img/eng/snowfall/20.png" alt="figure">
+    </p>
+    <p>
+      If you are running out of time, you can close project work now with success. But if you still have some time and energy left, the next few steps will be new and fascinating.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 3: Keeping the fallen snowflakes</div>
+  <div class="cell">
+    <p>
+      It would be nice not to delete the fallen snowflakes, so that they create a nice sheet of snow at the bottom. The problem is that Scratch only allows for 300 clones, and you need those for the new ones to fall. There is a solution hidden deep inside the Pen extension of Scratch. It's not a problem if you haven't used Pen blocks before; you will need only two of them, and they are rather self-explanatory.
+    </p>
+    <p>
+      Click on the extension icon at the bottom left, and select "Pen". You get a bunch of new blocks: <br>
+      <img class="figure" width="20%" src="curriculum/img/eng/snowfall/21.png" alt="figure">
+      <img class="figure" width="45%" src="curriculum/img/eng/snowfall/22.png" alt="figure">
+    </p>
+    <p>
+      The "stamp" block prints the costume of a sprite on the background, wherever it is. This print cannot move or do anything, so it is not as powerful as a clone, but it is just what we need. The fallen snowflake clones create a print of themselves before deletion: <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/snowfall/23.png" alt="figure"><br>
+      Restart the project to check if you can see the sheet at the bottom: <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/snowfall/24.png" alt="figure">
+    </p>
+    <p>
+      Restart the project once again, and you will see that the sheet remained there. To start with a clear background and let the fallen snowflakes create a new sheet, use the "erase all" block: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/snowfall/25.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 4: Raising sheet of snow</div>
+  <div class="cell">
+    <p>
+      You could make the animation even more amazing by letting the fallen snowflakes accumulate, simulating the raising sheet of snow created by the snowfall. The idea is good, but to implement it in the project, you have to find a way to translate it to Scratch. What does the raising sheet mean for the falling snowflakes? Simply that they will fall, or in Scratch terms, glide shorter and shorter distances. More precisely, the number in the "y" field of the "glide" block will keep increasing, from -180 (or whatever coordinate you got for the bottom) towards zero (which is the middle of the stage), and further towards 180 (or the number you got for the top).
+    </p>
+    <p>
+      There are many ways to do this. You can introduce a variable to measure time (like in the "Click counter" project of the Variables guide). Or you can introduce a variable for the current level of the snow, starting from -180 and gradually increasing.. You can find instructions on how to do these in the Variables guide in case kids want to go this way. But there is an even simpler way. The Sensing block category has a "timer" block that returns with great precision the number of seconds elapsed since the starting of the project. You can just add that to whatever number you had in the "y" field of the "glide" block originally: <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/snowfall/26.png" alt="figure"><br>
+      Of course you can use subtraction, too, if that comes more natural to the kids: <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/snowfall/27.png" alt="figure">
+    </p>
+    <p>
+      Restart the project and take delight in the rising level of snow. <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/snowfall/28.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Step 5: Swinging snowflakes</div>
+  <div class="cell">
+    <p>
+      If you still have time left, you can make the snowflakes swing left and right in the air while falling. This, again, requires a little bit of ideation and analytical thinking; but this is exactly what we are learning! :) The snowflakes should be falling and swinging at the same time. The falling part is done. What is swinging? How does a swing move? It turns forward around its axis (the rod it hangs from), then turns backward, and so on. Can we phrase it in Scratch language? Of course! The "turn" blocks are good friends from day one. Let's say you want the snowflake swing 30 degrees forward, and 30 degrees backward. You can start with this rather rudimentary script: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/snowfall/29.png" alt="figure"><br>
+      This is far from the desired result (to be honest, it does nothing), but don't worry, you'll get there. The next idea may be making the turning slow and gradually with "repeat" blocks: <br>
+      <img class="figure" width="35%" src="curriculum/img/eng/snowfall/30.png" alt="figure">
+    </p>
+    <p>
+      Almost good; but a swing doesn't start from the middle. Every clone should start 15 degrees left of their original direction. Why? Because 15 degrees is the half of 30 degrees, which is the full path of the swing. Pick a "point in direction" block, and click into it to open the pointer. Turn the pointer 15 degrees (one unit) to the left, and insert the block in your script: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/snowfall/31.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/snowfall/32.png" alt="figure">
+    </p>
+    <p>
+      This should work fine, but it doesn't. The snowflakes sre still just turning, not swinging. This, again, requires a bit of ideation. What can be the problem? A sprite turns around its center. The center is in the middle of the snowflake. A swing turns around its axis, which is above the swing. So, what you need to do is opening the "Costumes" block again, select the whole snowflake, and move it slightly downwards: <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/snowfall/33.png" alt="figure">
+    </p>
+    <p>
+      Now animation is perfect, and you have finished the project work. Be proud of yourselves, and enjoy the view. Are you patient enough to wait 6 minutes until the snow fills the whole stage? :) <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/snowfall/34.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+
+</div> <!-- section -->

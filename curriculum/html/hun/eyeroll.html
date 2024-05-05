@@ -1,0 +1,86 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Szemforgató cica </div>
+
+  <div class="celltitle"> Miről szól a projekt? </div>
+  <div class="cell">
+    <p>
+      Ez egy minimalista interaktív animáció: bárhova húzod az egérmutatót, a cica mindig arra fog nézni. A kód mindössze három blokk, és a rajzolós rész is könnyű. 30 perc alatt kész lesztek vele. A végeredményt itt láthatod:
+    </p>
+    <iframe src="https://scratch.mit.edu/projects/976691157/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Előkészületek</div>
+  <div class="cell">
+    <p>
+      Hozz létre egy új projektet. Jó hír: most kivételesen nem kell törölni Scratchie-t. A cicának szép nagy szeme van, ami könnyűvé teszi az animációt. A színőad aéatti "Méret" eszközzel nagyobbítsd meg Scratchie-t:<br>
+      <img class="figure" width="60%" src="curriculum/img/hun/eyeroll/01.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">Eltűntetjük a szembogarat</div>
+  <div class="cell">
+    <p>
+      Beszéljétek meg a gyerekekkel, hogy hogy a legkönnyebb eltűntetni Scratchie szembogarát. A továbbiakban abból indulunk ki, hogy a fehérre festést választottátok; de ugyanígy megfelel az is, ha a kijelölés vagy az újraformálás eszközzel és a törlés ikonnal szabadultok meg tőle (ha a kijelölés eszközt használjátok, előtte bontsátok a csoportot a képen), vagy egyszerűen csak fehér körökkel kitakarjátok őket. Kattintsatok a "Jelmezek" fülre, hogy megnyíljon a grafikus szerkesztő. Keverjétek ki a fehér színt (a telítettséget 0-ra, a fényerőt pedig 100-ra állítva). Válasszátok ki a kitöltés eszközt (festékes vödör ikon), és kattintsatok a két szembogárra. (Ha véletlenül rossz helyre kattintotok és mást is átszíneztek, akkor kattintsatok a visszavonásra.) Most vak lett szegény Scratchie, de nincs ok aggodalomra, az új szemei még cukibbak lesznek!<br>
+      <img class="figure" width="20%" src="curriculum/img/hun/eyeroll/02.png" alt="figure"><br>
+      <img class="figure" width="60%" src="curriculum/img/hun/eyeroll/03.png" alt="figure"><br>
+      <img class="figure" width="60%" src="curriculum/img/hun/eyeroll/04.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">A szembogár mint szereplő</div>
+  <div class="cell">
+    <p>
+      Most húzzátok az egereteket a színpad alatti kék cicafej ikon fölé. és ha megnyílk a kis menü, kattintsatok az ecsetre új szereplő rajzolásához. Keverjétek ki a fekete színt (a fényerőt nullára állítva). Néhányszor kattintsatok az üres jelmezen a plusz jeles nagyító ikonra, hogy jól bezoomoljatok. A kör eszközzel rajzoljatok új szembogarat a cicának. (Tipp: ha a másik kezetekkel lenyomva tartjátok a Shift billentyűt, pontosan kör alakú lesz.) A színpadon láthatjátok a szembogár valódi méretét. Kicsit lehet nagyobb, mint az eredeti, de azért férjen el a cica szemében.<br>
+      <img class="figure" width="20%" src="curriculum/img/hun/eyeroll/05.png" alt="figure"><br>
+      <img class="figure" width="20%" src="curriculum/img/hun/eyeroll/06.png" alt="figure"><br>
+      <img class="figure" width="20%" src="curriculum/img/hun/eyeroll/07.png" alt="figure"><br>
+      <img class="figure" width="40%" src="curriculum/img/hun/eyeroll/08.png" alt="figure">
+    </p>
+    <p>
+      A szembogár mindig az egérmutató felé fog nézni. Ha teljesen középen van a jelmezen, akkor nem fog látszani, ahogy fordul. Ha viszont túl messze van a középponttól, akkor ki fog mozdulni a cica szeméből. Szóval épp csak egy kicsit kell odébb tenni, mint a jelmez közepe. De merre? Hát arra, amerre a cica éppen néz. Ha a színpad alatt, az "Irány" melletti "90"-re kattintotok, láthatjátok, hogy jobbra néz a szereplő. Tehát a fekete kört is kicsit jobbra kell tenni a középponttól.<br>
+      <img class="figure" width="25%" src="curriculum/img/hun/eyeroll/09.png" alt="figure"><br>
+      <img class="figure" width="40%" src="curriculum/img/hun/eyeroll/10.png" alt="figure">
+    </p>
+    <p>
+      Ha készen vagytok, helyezzétek el a színpadon a szembogarat Scratchie szemébe; egy kicsit jobbra a közepétől, hiszen jelenleg jobbra néz a cica.<br>
+      <img class="figure" width="60%" src="curriculum/img/hun/eyeroll/11.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">A szembogár kódja</div>
+  <div class="cell">
+    <p>
+      Tehát a cica szembogara követi az egérmutatót. Ez a kódolási feladat ismerős lehet a gyerekeknek, hiszen hasonlít az egyik legelső kódra, amit készítettek: arra, ahol a cica az egérmutató után szaladt. Most annyival egyszerűbb a helyzet, hogy a szembogár nem mozdul el a helyéről. Ha ezt tisztáztátok, már könnyedén össze tudjátok rakni a blokkokat:<br>
+      <img class="figure" width="30%" src="curriculum/img/hun/eyeroll/12.png" alt="figure">
+    </p>
+    <p>
+      Most végre el tudjátok indítani a projektet, hogy első alkalommal teszteljétek, amire eddig jutottatok. Ha a szembogár túl nagy, túl kicsi, vagy túl messze van a jelmez középpontjától, csak térjetek vissza a grafikus szerkesztőhöz, és igazítsatok rajta.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">A másik szembogár</div>
+  <div class="cell">
+    <p>
+      Végül sort keríthettek a másik szemre. Jó lenne elkerülni, hogy újra el kelljen végezni a sok munkát, amivel az első szembogár járt. Kérdezzétek meg a gyerekeket, van-e ötletük, hogyan. Bizonyára eszükbe fog jutni, hogy duplikálni is lehet a szereplőket. Ha így jártok el, egy mozdulattal meglesz a másik szembogár jelmezestül és kódostul, csak a helyére kell tenni.<br>
+      <img class="figure" width="20%" src="curriculum/img/hun/eyeroll/13.png" alt="figure"><br>
+      <img class="figure" width="60%" src="curriculum/img/hun/eyeroll/14.png" alt="figure">
+    </p>
+    <p>
+      Indítsátok újra és teszteljétek a projektet.
+    </p>
+  </div> <!-- cell -->
+
+
+  <div class="celltitle">Scratchie testre szabása</div>
+  <div class="cell">
+    <p>
+      Ha még van egy kis időtök, most a gyerekek a saját elképzeléseik szerint testre szabhatják a cicát. Kifesthetik a kedvenc színükkel, vagy rajzolhatnak rá sapkát, vagy alakíthatják bárhogy, ahogy szeretnék. Mögé tehetik a kedvenc hátterüket is. És végül ne feledkezzetek el arról, hogy mindenki mutassa be a többieknek a saját projektjét! :)<br>
+      <img class="figure" width="50%" src="curriculum/img/hun/eyeroll/15.png" alt="figure"><br>
+      <img class="figure" width="60%" src="curriculum/img/hun/eyeroll/16.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+
+</div> <!-- section -->

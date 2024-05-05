@@ -1,0 +1,114 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Bouncing ball </div>
+
+  <div class="celltitle"> What is this project about? </div>
+  <div class="cell">
+    <p>
+      This short animation project can be put together in no time, and it can be a good choice for the first session, even with small kids.
+    </p>
+    <p>
+      A colorful ball will be bouncing back and forth in the stage, changing color from time to time. Optionally, the ball will also draw a colorful line. The project is flexible; if there's no time for the colors, you can still finish it with a feeling of success.
+    </p>
+    <p>
+      Here's the end result: <br>
+      <iframe src="https://scratch.mit.edu/projects/1009638318/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Preparations </div>
+  <div class="cell">
+    <p>
+      If this is the first session for the kids, watch <a href="https://scratch.mit.edu/projects/90979368/">this animation</a> together, and recreate the code together to get a first experience of how things work in Scratch.
+    </p>
+    <p>
+      Start a new project, say goodbye to Scratchie cat, and select the sprite called "Ball". This choice is not necessary; if some of the kids want another sprite, let them choose that.<br>
+      <img class="figure" width="25%" src="curriculum/img/eng/bouncing/01.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/bouncing/02.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/bouncing/03.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 1: Moving the ball </div>
+  <div class="cell">
+    <p>
+      Now let's move the ball. We will do this the simplest way, using the "move" block, as you saw in the second projekt of the Motion guide. Let's start with a single movement.
+    </p>
+    <p>
+      Ask the kids what block starts a code, some of them will surely remember that it is the "green flag". Also ask them what block moves a sprite. If they have just seen the animation, they will mention the "move" block. If this is not the first session, and they have already created a few projects, and they mention "glide", "go to" or "change x", just tell them to find a simpler motion block, and they will find it.
+    </p>
+    <p>
+      You can leave the number inside "move" as it is, or let the kids set it lower or higher, as they like.<br>
+      <img class="figure" width="25%" src="curriculum/img/eng/bouncing/04.png" alt="figure"><br>
+    </p>
+    <p>
+      Start the project for the first time. The ball moves a bit every time you click on the green flag, but then it stops. Ask the kids to make the movement continuous, they will know what to do:<br>
+      <img class="figure" width="30%" src="curriculum/img/eng/bouncing/05.png" alt="figure">
+    </p>
+    <p>
+      Start the project and see how the sprite starts to move towards the right edge, where it gets stuck. To get the sprite back to its original position, they can just grab it with the mouse. Sometimes, when a kid puts a huge number in the "move" block (they love experimenting with large numbers, and this is a good thing), the sprite gets completely lost from the stage; then they can retrieve it by typing zero in the x and y fields under the stage.<br>
+      <img class="figure" width="20%" src="curriculum/img/eng/bouncing/06.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/bouncing/07.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 2: Make the ball bounce </div>
+  <div class="cell">
+    <p>
+      Now ask the kids if they can find a motion block that tells a sprite what to do when it reaches the edge of the stage. They will find the "if on edge, bounce" block in no time. This is a smart little block that changes the direction of the sprite according to which edge the sprite has reached. Insert it in the code:<br>
+      <img class="figure" width="30%" src="curriculum/img/eng/bouncing/08.png" alt="figure"><br>
+      Restart the animation to see that the ball starts bouncing between the left and right edges.
+    </p>
+    <p>
+      To make the movement of the ball more interesting, it's time to change its direction. Ask the kids if they can find the "direction" field under the stage. When they found it, tell them to click into it, and explore how it works. Every time they change the direction of the ball with the pointer, the ball will change its movement.<br>
+      <img class="figure" width="30%" src="curriculum/img/eng/bouncing/09.png" alt="figure"><br>
+      Now the sprite behaves just as a good ball should do; it bounces in various directions, traversing the whole stage.
+    </p>
+    <p>
+      If you have reached this far, you can stop your project work with success; nice job on behalf of both you and the kids. But if you have some time left, you can make the animation more spectacular in two more steps.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 3: Costume change </div>
+  <div class="cell">
+    <p>
+      Start a new script, placing another "green flag" block in the script area. This is how Scratch works; instead of building one tall tower of blocks, you build a group of small towers, each of them serving different purposes.
+    </p>
+    <p>
+      Check out the costumes of the sprite clicking on the "Costumes" tab. Even if some of the kids chose another sprite, it will probably have more than one costume. Now click on the "Code" tab, and ask the kids to find a block that switches to the next costume, telling them that it will have a different color than the blocks that you used so far. They will find it in no time, and you can put together the new script like this:<br>
+      <img class="figure" width="30%" src="curriculum/img/eng/bouncing/10.png" alt="figure">
+    </p>
+    <p>
+      If the costume change is too fast, let them add a "wait" block, thus completing the script: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/bouncing/11.png" alt="figure">
+    </p>
+    <p>
+      Now the bouncing ball will keep changing its color while moving. (If they chose another sprite, it will walk or dance or make other funny things, according to its costumes.)
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 4: Drawing a line </div>
+  <div class="cell">
+    <p>
+      If you still have time left, and the kids enjoy the project, now you can take a huge step ahead in exploring Scratch. Tell the kids to click on the blocks icon with a little plus sign at the bottom left, and choose the "pen" extension. A whole new group of blocks will be added to the block panel.<br>
+      <img class="figure" width="20%" src="curriculum/img/eng/bouncing/12.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/bouncing/13.png" alt="figure">
+    </p>
+    <p>
+      To start drawing, add the "pen down" block to the movement script: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/bouncing/14.png" alt="figure"><br>
+      Restart the project to see how the sprite starts drawing a line wherever it goes on the stage.
+    </p>
+    <p>
+      Now explore the rest of the Pen blocks together, and add a few more to the code to make the animation even more spectacular: <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/bouncing/15.png" alt="figure">
+      <img class="figure" width="60%" src="curriculum/img/eng/bouncing/16.png" alt="figure">
+    </p>
+    <p>
+      And that's it! :) You have just created a beautiful animation; be proud of yourselves.
+    </p>
+  </div> <!-- cell -->
+
+
+</div> <!-- section -->

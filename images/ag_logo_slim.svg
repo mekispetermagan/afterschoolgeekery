@@ -1,0 +1,28 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="200" height="104" viewBox="0,0,200,104">
+  <defs>
+    <linearGradient x1="60" y1="0"
+                    x2="60" y2="104"
+                    gradientUnits="userSpaceOnUse"
+                    id="left">
+      <stop         offset="0" stop-color="#faff7f"/>
+      <stop         offset="1" stop-color="#91a6ff"/>
+    </linearGradient>
+    <linearGradient x1="140" y1="0"
+                    x2="140" y2="104"
+                    gradientUnits="userSpaceOnUse"
+                    id="right">
+      <stop         offset="0" stop-color="#ff88dc"/>
+      <stop         offset="1" stop-color="#faff7f"/>
+    </linearGradient>
+  </defs>
+  <path d="M   0.0, 103.9,    60.0,   0.0,   120.0, 103.9,   106.7, 103.9,
+              60.0,  23.1,    20.0,  92.4,    53.3,  92.4,    60.0,  80.8,
+              73.3, 103.9,     0.0, 103.9
+          z"
+        fill="url(#left)"/>
+  <path d="M 140.0, 103.9,    80.0,   0.0,   200.0,   0.0,   193.3,  11.5,
+             100,  11.5,     140.0,  80.8,   156.7,  52.0,   150.0,  40.4,
+             176.7,  40.4,     140, 104 z"
+        fill="url(#right)"/>
+</svg>
