@@ -1,167 +1,174 @@
 <!-- This file is meant to be loaded in "curriculum.html". -->
 
 <div class="section">
-  <div class="section-title topicTitle"> Flepibörd játék </div>
+  <div class="section-title topicTitle"> Flappy Bee game </div>
 
   <div class="celltitle"> What is this project about? </div>
   <div class="cell">
     <p>
-      Ez egy legendás mobiljáték, a "Flappy Bird" egyszerűsített Scratches változata. Bár a játékélmény más, kódjában ez a játék nagyon hasonlít a tananyag más játék-projktjeire. Ezzel alkalmat ad arra, hogy egyes kódolási technikákat más és más kontextusban gyakoroljanak a gyerekek, anélkül, hogy rájuk unnának. A végeredmény:<br>
+      <button class="curriculumInfoButton" id="placeandpick"></button>
+    </p>
+    <p>
+      This is a simplified remake of a legendary mobile game called Flappy Bird. The game is similar in its code to many other games in the curriculum, but different in game eperience. Thus it provides opportunity for the kids to practice coding techniques multiple times in different contexts, without getting bored. The end result:<br>
       <iframe src="https://scratch.mit.edu/projects/1004205578/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
     </p>
     <p>
-      A projektleírásban fel fogjuk tételezni, hogy a csoportnak már ismerős a klónozás, ezért ezt a részt rövidre fogjuk (kevés szóval, sok képpel). De használhatod a projektet arra is, hogy bevezesd a klónozást (sokkal egyszerűbb, mint például az "Űrjáték" projekt). Ha így döntesz, akkor a technikai részletekben támaszkodj a Klónozás tananyagra, a tanításban pedig a "Virágeső" miniprojektre.
+      In the project description we will assume that the kids in your group are somewhat familiar with the technique of cloning, so these parts will be brief (few words, many images). However, the project can also be used as a first introduction to cloning (it is much simpler than eg. the "Space game" project). If you use it so, please see the Cloning guide for more details on cloning, and the "Flower shower" miniproject on how to introduce the technique to kids.
     </p>
   </div> <!-- cell -->
 
-  <div class="celltitle"> Előkészületek </div>
+  <div class="celltitle"> Preparations </div>
   <div class="cell">
     <p>
-      Használjátok <a href="https://scratch.mit.edu/projects/1012180324/">ezt a kiinduló projektet</a> az elinduláshoz.Ebben benne van az összes szereplő a jelmezeivel együtt, és a kódnak is körülbelül a fele. A projektmunka a meglevő kód kiegészítése lesz:<br>
-      <img class="figure" width="50%" src="curriculum/img/hun/flepibord/01.png" alt="figure">
+      Start with <a href="https://scratch.mit.edu/projects/1012180324/">this initial version </a> of the project.
+      It contains all the sprites with their graphics, and about half the code. The project work consists of completing the code in multiple scripts.<br>
+      <img class="figure" width="50%" src="curriculum/img/eng/flappybee/01.png" alt="figure">
     </p>
     <p>
-      Miután megmutattad a kész projektet a gyerekeknek, nyissátok meg és remixeljétek a kiinduló változatot. Indítsátok el, hogy lássátok, mi működik már a játékban és mi nem. Beszéljétek meg, pontosan milyen elemek hiányoznak, és állítsatok össze egy listát a rátok váró kódolási feladatokból. Az eredmény valami ilyesmi lesz:
+      After you showed the full project to the group, open and remix the initial version. Start it to see which parts of the gameplay don't work. Discuss what features are missing, and make a list of coding tasks waiting for you. The result will be something like this:
       <ul>
-        <li>a madár süllyed</li>
-        <li>a madár emelkedik</li>
-        <li>jönnek az akadályok</li>
-        <li>sok akadály egyszerre, klónokkal</li>
-        <li>játék vége, ha a madár hozzáér egy akadályhoz vagy a színpad széléhez</li>
-        <li>a madár lepottyan a játék végén</li>
-        <li>pontszámlálás</li>
-        <li>pontkijelzés</li>
-        <li>nyerés egy adott ponthatárnál</li>
-        <li>a madár gyorsul, miközben süllyed</li>
+        <li>bee descending</li>
+        <li>bee rising</li>
+        <li>obstacle coming</li>
+        <li>many obstacles at once with clones</li>
+        <li>obstacles animated</li>
+        <li>game over when touching an obstacle or an edge</li>
+        <li>bird falls when dies</li>
+        <li>score counting</li>
+        <li>score displaying</li>
+        <li>winning at a certain score</li>
+        <li>bird speeding up while descending</li>
       </ul>
-      Ne csinálj belőle problémát, ha néhány elem hiányzik a listátokból, vagy valami fölösleges is rákerül. Később, a projektmunka során is igazíthattok majd rajta, amikor kiderül, hogy valami nem stimmelt benne. És nyugodtan vegyetek fel olyan elemeket is, amelyek nem voltak benne a bemutatott eredeti játékban.
+      Don't worry if there are some items missing from your list, or something is there that shouldn't be. You can edit the list during the project work, when it turns out that there is an error in it. Also feel free to include features that were not there in the project as you presented it.
     </p>
     <p>
-      Most beszéljétek meg, mi mennyire fontos. A pontszám kijelzése és a madár lepottyanása már benne van a kódban, ezekkel nem kell dolgoznotok. Valószínűleg arra fogtok jutni, hogy a madár süllyedése és emelkedése, a szembe jövő akadályok és a játék vége lesz az, amit elengedhetetlennek találtok a játszhatósághoz. Minden más csak jó, ha van: a klónozás, a pontszámlálás és a nyerés. Ha a gyerekek extrákat igényelnek (szintek, ufótámadás, <i>boss fight</i>), azokat is tehetitek az "elengedhető" csoportba. Valami ilyesmi lesz az eredmény:
+      Now discuss priorities. Score display and the bird falling when dying is already in the code, so you don't have to work on these. Probably the bird descending, bird rising, obstacles coming, and game over tasks are must have; without these you simply can't play the game. Everything else is nice to have, including scoring and winning. Mark list items with these categories. Extra features demanded by the kids (levels, ufo attack, boss fight etc.) can also end up in the "nice to have" section. You will end up with something like this:
       <ul>
         <li>
-          kell:
+          must have:
           <ul>
-            <li>a madár süllyed</li>
-            <li>a madár emelkedik</li>
-            <li>jönnek az akadályok</li>
-            <li>játék vége</li>
+            <li>bird descending</li>
+            <li>bird rising</li>
+            <li>obstacle coming</li>
+            <li>cloning of obstacles</li>
+            <li>game over</li>
           </ul>
         </li>
         <li>
-          jó, ha van:
+          nice to have:
           <ul>
-            <li>akadályok klónozása</li>
-            <li>pontozás</li>
-            <li>nyerés</li>
-            <li>a madár gyorsul</li>
+            <li>score counting</li>
+            <li>winning</li>
+            <li>bird speeding up while descending</li>
           </ul>
         </li>
         <li>
-          kész:
+          already done:
           <ul>
-            <li>pontkijelzés</li>
-            <li>lepottyanás</li>
+            <li>score display</li>
+            <li>bird falls when dies</li>
           </ul>
         </li>
       </ul>
-      Még egyszer: a listának nem kell pont így kinéznie. Csak az számít, hogy legyen egy világos elképzelésetek a foglalkozáson elvégzendő feladatokról.
+      Again, your list will not necessarily look exactly like this. What matters is that you have a clear view of what your tasks are for the session.
     </p>
     <p>
-      Az feladatok sorrendje is változhat. Ne ragaszkodj az itt a tananyagban követett sorrendhez.
-    </p>
-  </div> <!-- cell -->
-
-  <div class="celltitle"> 1: süllyed a madár </div>
-  <div class="cell">
-    <p>
-      Ez csak bemelegítés. Gyorsan tisztázzátok, hogy melyik koordináta tartozik a függőleges, fel-le irányhoz (a színpad alatti x és y melletti nyilak segítenek), és hogy pozitív vagy negatív a változás, ha egy szereplő lefele mozdul. Amint ezeket tisztáztátok és kiválasztottátok az "y változzon" blokkot, már kész is a kód: <br>
-      <img class="figure" width="25%" src="curriculum/img/hun/flepibord/02.png" alt="figure">
+      The order of completing the tasks may also vary. Don't insist on keeping the order below.
     </p>
   </div> <!-- cell -->
 
-  <div class="celltitle"> 2. lépés: emelkedik a madár </div>
+  <div class="celltitle"> Step 1: Bird descending </div>
   <div class="cell">
     <p>
-      A madár billentyűnyomásra emelkedik. Kétféleképpen lehet Scratch-ben billentyűnyomást figyelni: egy sárga esemény blokkal vagy egy világoskék érzékelés blokkal. Mivel nálunk az eseményblokk helye már foglalt (a kód végrehajtása a Start üzenet érkezésekor kezdődik), az érzékelés-blokk a kézenfekvőbb. Ezt illeszthetitek a "várj" eddig hatszögletű mezőjébe. Mindenki iválaszthatja a kedvenc billentyűjét, vagy dönthettek a "bármelyik" opció mellett is. Itt is jó ötlet "y változzon" blokkot használni. Hogy a mozgást lassabbra vagy gyorsabbra tudjátok állítani, és hogy kisebbet vagy nagyobbat tudjon emelkedni a madár, rakjatok köré egy "ismételd" blokkot, és kísérletezzetek azzal, hogy milyen számokat írtok a két blokkba:<br>
-      <img class="figure" width="35%" src="curriculum/img/hun/flepibord/03.png" alt="figure">
-      <img class="figure" width="35%" src="curriculum/img/hun/flepibord/04.png" alt="figure">
-      <img class="figure" width="35%" src="curriculum/img/hun/flepibord/05.png" alt="figure">
-      <img class="figure" width="35%" src="curriculum/img/hun/flepibord/06.png" alt="figure"><br>
-      -- és így tovább, a lehetőségek korlátlanok. De ne aggódjátok túl ezt a beállítgatást, ráértek finomhangolni a dolgokat, amikor már kész a projekt.
+      This is just a warm-up. Quickly clarify together which coordinate belongs to the horizontal, up-down direction (the arrows near x and y under the stage will help), and whether plus is up and minus is down or the other way around. Once these questions are settled, and you decided upon using the "change y" block, the script is ready: <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/02.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 2: Bird rising </div>
+  <div class="cell">
+    <p>
+      The girl goes up when a key is hit. There are two different ways to detect keypress in Scratch; with an event block, or with a sensing block. Since in our case the event position is already taken (the script starts when the Start message is received), the sensing block suggests itself. You can place it in the "wait until". Everyone can set the block to their favorite key, or can just go with the "any key" option as we do. Once again, it is a good idea to use "change y"; to make the movement faster or slower, and to make the bird go higher or not so high, experiment with combinations of numbers in "repeat" and "change y": <br>
+      <img class="figure" width="35%" src="curriculum/img/eng/flappybee/03.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/flappybee/04.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/flappybee/05.png" alt="figure">
+      <img class="figure" width="35%" src="curriculum/img/eng/flappybee/06.png" alt="figure"><br>
+      --and so on, there are countless options. Don't worry too much about the exact values though, you can fine tune these when everything is set up in the project.
     </p>
     <p>
       One last thing to set is the costume change of the bird while ascending. (The bird is called Flappy for a reason.) This can be done with a "next costume" block: <br>
-      <img class="figure" width="40%" src="curriculum/img/hun/flepibord/07.png" alt="figure"><br>
+      <img class="figure" width="40%" src="curriculum/img/eng/flappybee/07.png" alt="figure"><br>
       Wanna be a perfectionist? Add a "switch costume" block so that the bird always ends these ascending phases with the same costume: <br>
-      <img class="figure" width="40%" src="curriculum/img/hun/flepibord/08.png" alt="figure"><br>
+      <img class="figure" width="40%" src="curriculum/img/eng/flappybee/08.png" alt="figure"><br>
       </p>
   </div> <!-- cell -->
 
 
-  <div class="celltitle"> 3. lépés: jönnek az akadályok </div>
+  <div class="celltitle"> Step 3: Obstacle coming </div>
   <div class="cell">
     <p>
       Switch to the obstacle sprite. As usual, move a single obstacle first, and introduce cloning in the next step.
-      The obstacle glide from the right edge to the left edge. If the kids in your group are too small or reluctant to use coordinates explicitly, use the "place and pick" method, as discussed in the Movement guide, or the "Snowfall" project, or the "Flower shower" miniproject.
+      The obstacle glide from the right edge to the left edge. If the kids in your group are too small or reluctant to use coordinates explicitly, use the "place and pick" method.
+      <button class="curriculumInfoButton" id="placeandpick"></button>
+      <!-- , as discussed in the Movement guide, or the "Snowfall" project, or the "Flower shower" miniproject. -->
     </p>
     <p>
       But if kids are ok with coordinates, it's enough to just switch to the "x-y grid" background for a moment, and refresh everyone's memories about the x and y coordinates of the edges of the stage. (The background is included in the initial version of the project, you don't even have to search for it.) <br>
-      <img class="figure" width="60%" src="curriculum/img/hun/flepibord/09.png" alt="figure"><br>
+      <img class="figure" width="60%" src="curriculum/img/eng/flappybee/09.png" alt="figure"><br>
     </p>
     <p>
-      The code of the gliding is now almost trivial (just make sure give enough géliding time to the block, otherwise the game might be too hard): <br>
-      <img class="figure" width="40%" src="curriculum/img/hun/flepibord/10.png" alt="figure"><br>
+      The code of the gliding is now almost trivial (just make sure give enough gliding time to the block, otherwise the game might be too hard): <br>
+      <img class="figure" width="40%" src="curriculum/img/eng/flappybee/10.png" alt="figure"><br>
     </p>
     <p>
       Restart the code and see whether you can maneuver through the obstacle with the bird.
     </p>
     <p>
       To set the vertical position of the obstacle, you could use a "random" block, but to avoid future complications, we defined a custom block for this purpose. This is standard procedure. Scripts that are too complicated or time consuming to write can be carried around in these pink custom blocks, and used anywhere in your code, as if Scratch had a cool extra block. Use the custom block to change the vertical position of the obstacle between glides. Don't forget to add two "y position" blocks to the script, so that the y coordinate set by the pink block does not get overridden by the motion blocks. <br>
-      <img class="figure" width="40%" src="curriculum/img/hun/flepibord/11.png" alt="figure"><br>
+      <img class="figure" width="40%" src="curriculum/img/eng/flappybee/11.png" alt="figure"><br>
     </p>
   </div> <!-- cell -->
 
-  <div class="celltitle"> 4. lépés: érintésfigyelés és játék vége </div>
+  <div class="celltitle"> Step 4: Touch sensing and game over </div>
   <div class="cell">
     <p>
       You're almost there! Finish this small step and you can quit this session's project work with success. Switch back to the bird sprite. The game over script is almost ready. What is missing is just the touch sensor block. But there are two candidates; the game is over when the bird touches <i>either</i> the obstacle, <i>or</i> an edge of the stage. How can you put two sensor blocks in one slot?<br>
-      <img class="figure" width="50%" src="curriculum/img/hun/flepibord/16.png" alt="figure"><br>
+      <img class="figure" width="50%" src="curriculum/img/eng/flappybee/16.png" alt="figure"><br>
       If the kids have faced this problem before, they will know what to do. Otherwise just repeat the phrase "either the obstacle, <i>or</i> the edge", and ask them to find the "or" block. Once they have found it, there is no more puzzle here:<br>
-      <img class="figure" width="70%" src="curriculum/img/hun/flepibord/17.png" alt="figure"><br>
+      <img class="figure" width="70%" src="curriculum/img/eng/flappybee/17.png" alt="figure"><br>
     </p>
     <p>
       The code works like a charm, what an easy step! :) If you have made this far, you can close the session with success. The next steps are, as we said above: nice to have.
     </p>
   </div> <!-- cell -->
 
-  <div class="celltitle"> 5. lépés: az akadályok klónozása </div>
+  <div class="celltitle"> Step 5: Cloning obstacles </div>
   <div class="cell">
     <p>
       As always, introducing cloning in a code requires some rearrangement. Let's select carefully which blocks will belong to the clones, and put them to the right: <br>
-      <img class="figure" width="70%" src="curriculum/img/hun/flepibord/12.png" alt="figure"><br>
+      <img class="figure" width="70%" src="curriculum/img/eng/flappybee/12.png" alt="figure"><br>
       The blocks on the right describe the lifespan of a clone. The script starts when the clone is created, and ends when it gets destroyed: <br>
-      <img class="figure" width="40%" src="curriculum/img/hun/flepibord/13.png" alt="figure"><br>
+      <img class="figure" width="40%" src="curriculum/img/eng/flappybee/13.png" alt="figure"><br>
     </p>
     <p>
       On the other hand, the loop on the left will generate the clones: <br>
-      <img class="figure" width="30%" src="curriculum/img/hun/flepibord/14.png" alt="figure"><br>
+      <img class="figure" width="30%" src="curriculum/img/eng/flappybee/14.png" alt="figure"><br>
       To avoid facing too many clones at once, it's a good idea to include a "wait" block. The exact delay is up to everyone's consideration, and willingness to create a harder or easier game:
       <br>
-      <img class="figure" width="30%" src="curriculum/img/hun/flepibord/15.png" alt="figure"><br>
+      <img class="figure" width="30%" src="curriculum/img/eng/flappybee/15.png" alt="figure"><br>
     </p>
     <p>
       Restart your project, and check whether you can see multiple obstacles coming at the same time.
     </p>
   </div> <!-- cell -->
 
-  <div class="celltitle"> 6. lépés: pontozás </div>
+  <div class="celltitle"> Step 6: Score counting </div>
   <div class="cell">
     <p>
       Discuss with the kids what should be rewarded with increasing the score. One natural option is that every obstacle passed successfully is worth a point. If you decide so, you can add a "change score" block to the end of the life span of an obstacle.<br>
-      <img class="figure" width="40%" src="curriculum/img/hun/flepibord/18.png" alt="figure"><br>
+      <img class="figure" width="40%" src="curriculum/img/eng/flappybee/18.png" alt="figure"><br>
       Or, alternatively, you can decide to increase the score every time the bird starts rising: <br>
-      <img class="figure" width="35%" src="curriculum/img/hun/flepibord/19.png" alt="figure"><br>
+      <img class="figure" width="35%" src="curriculum/img/eng/flappybee/19.png" alt="figure"><br>
       Or you can combine these two. Or come up with a third option. What matters is that you get a taste of game design. As kids proceed in learning programming, they should gradually become more and more able to design and code their own projects. However far this goal is after a few sessions in a beginner course, this is what you are moving towards.
     </p>
     <p>
@@ -169,11 +176,11 @@
     </p>
   </div> <!-- cell -->
 
-  <div class="celltitle"> 7. lépés: nyerés </div>
+  <div class="celltitle"> Step 7: Winning the game </div>
   <div class="cell">
     <p>
       The game winning script is at the obstacle sprite. It is very similar to the "game over" script; all you have to do is find the condition to end. At the bottom of the stage there is room for 30 little obstacles  in the score display; so let's say the game should end when the score reaches 30. Once again, the task is clear, you just have to express it with Scratch blocks. What does it mean that the score "reaches" 30? Well, as the score increases, throughout the whole gameplay it is less than 30, and we want to stop the game before it becomes larger than 30. So, at the moment of winning the score is neither less nor more than 30. If there was a simpler way to say it... Equals, that is it! Who finds first the "equals" block? The script gets completed in a minute, and another step is taken forward in the development of this game. <br>
-      <img class="figure" width="30%" src="curriculum/img/hun/flepibord/20.png" alt="figure"><br>
+      <img class="figure" width="30%" src="curriculum/img/eng/flappybee/20.png" alt="figure"><br>
     </p>
     <p>
       This is the art of teaching; asking the right questions and giving the right hints so that kids will discover knowledge themselves. Guided discovery is worth 1000 times more than frontal teaching.
@@ -181,23 +188,23 @@
   </div> <!-- cell -->
 
 
-  <div class="celltitle"> 8. lépés: a madár gyorsul süllyedés közben </div>
+  <div class="celltitle"> Step 8: Bird speeding up while descending </div>
   <div class="cell">
     <p>
       You have reached the last and by any means the hardest step in the project work. In our experience animating accelerating motion is too much for kids under 12-13 years. So only take this step if the average age in your group is at least 12 years.
     </p>
     <p>
       Switch back to the bird sprite, and find the script of descending: <br>
-      <img class="figure" width="25%" src="curriculum/img/hun/flepibord/21.png" alt="figure"><br>
+      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/21.png" alt="figure"><br>
       This is the code you need to refine.
     </p>
     <p>
       What changes when a car is speeding up? Of course, its speed. Hm, so speed is a number that keeps changing... If only there was something in programming that keeps track of a changing piece of data, like score or time... Of course there is, this is what variables do. Go to the variable blocks, and you will see that there is a "speed" variable in the code. Let's use it. At the beginning the speed is 0; this is how falling (or with a technical term: gravity) works. <br>
-      <img class="figure" width="25%" src="curriculum/img/hun/flepibord/22.png" alt="figure"><br>
+      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/22.png" alt="figure"><br>
     </p>
     <p>
       Now comes the hard bit. Speed is measured in kilometers/hour; that is, how far can you get in one unit of time. In the case of falling, how far you can get is how much the y coordinate changes. So y changes by your speed! Let's put the variable block in the movement block: <br>
-      <img class="figure" width="25%" src="curriculum/img/hun/flepibord/23.png" alt="figure"><br>
+      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/23.png" alt="figure"><br>
       Look how things are finding their places in the code? The script is taking shape.
     </p>
     <p>
@@ -205,15 +212,15 @@
     </p>
     <p>
       Now let's increase the speed every time y changes. This is what speeding up means. Don't forget that the bird is moving downwards, so the change should be negative: <br>
-      <img class="figure" width="30%" src="curriculum/img/hun/flepibord/24.png" alt="figure"><br>
+      <img class="figure" width="30%" src="curriculum/img/eng/flappybee/24.png" alt="figure"><br>
     </p>
     <p>
       Restart the program to check the result. Now the bird is falling too fast. Acceleration should be somewhere between -1 and 0. Experiment a bit before you find the ideal value. (It depends on decisions kids made before, so the ideal value will be different for everyone.) <br>
-      <img class="figure" width="30%" src="curriculum/img/hun/flepibord/25.png" alt="figure"><br>
+      <img class="figure" width="30%" src="curriculum/img/eng/flappybee/25.png" alt="figure"><br>
     </p>
     <p>
       Something is still off; you can't fight gravity off by hitting the keyboard. When the bird is rising, the speed should be set to zero. Can you find the script that is about the bird rising, kids? <br>
-      <img class="figure" width="40%" src="curriculum/img/hun/flepibord/26.png" alt="figure"><br>
+      <img class="figure" width="40%" src="curriculum/img/eng/flappybee/26.png" alt="figure"><br>
     </p>
     <p>
       That's it! Now the bird behaves as it should. Test your games, and adjust the different values as needed; the way the bird rises, the way it is speeding up when descending, and the speed of the obstacles.
