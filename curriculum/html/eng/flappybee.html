@@ -33,40 +33,42 @@
         <li>many obstacles at once with clones</li>
         <li>obstacles animated</li>
         <li>game over when touching an obstacle or an edge</li>
-        <li>bird falls when dies</li>
+        <li>bee falls when dies</li>
         <li>score counting</li>
         <li>score displaying</li>
         <li>winning at a certain score</li>
-        <li>bird speeding up while descending</li>
+        <li>bee speeding up while descending</li>
+        <li>obstacles open and close</li>
       </ul>
-      Don't worry if there are some items missing from your list, or something is there that shouldn't be. You can edit the list during the project work, when it turns out that there is an error in it. Also feel free to include features that were not there in the project as you presented it.
+      Don't worry if there are some items missing from your list, or something is there that shouldn't be. You can edit the list during the project work, when it turns out that something is off. Also feel free to include features that were not there in the project as you presented it.
     </p>
     <p>
-      Now discuss priorities. Score display and the bird falling when dying is already in the code, so you don't have to work on these. Probably the bird descending, bird rising, obstacles coming, and game over tasks are must have; without these you simply can't play the game. Everything else is nice to have, including scoring and winning. Mark list items with these categories. Extra features demanded by the kids (levels, ufo attack, boss fight etc.) can also end up in the "nice to have" section. You will end up with something like this:
+      Now discuss priorities. Score display and the bee falling when dying are already in the code, so you don't have to work on these. Probably the bee descending, bee rising, obstacles coming, and game over tasks are the ones to label as "must have"; without these you simply can't play the game. Everything else is nice to have, including scoring and winning. Mark list items with these categories. Extra features demanded by the kids (levels, ufo attack, boss fight etc.) can also end up in the "nice to have" section. You will end up with something like this:
       <ul>
         <li>
           must have:
           <ul>
-            <li>bird descending</li>
-            <li>bird rising</li>
+            <li>bee descending</li>
+            <li>bee rising</li>
             <li>obstacle coming</li>
-            <li>cloning of obstacles</li>
             <li>game over</li>
           </ul>
         </li>
         <li>
           nice to have:
           <ul>
+            <li>cloning of obstacles</li>
             <li>score counting</li>
             <li>winning</li>
-            <li>bird speeding up while descending</li>
+            <li>bee speeding up while descending</li>
+            <li>obstacles open and close</li>
           </ul>
         </li>
         <li>
           already done:
           <ul>
             <li>score display</li>
-            <li>bird falls when dies</li>
+            <li>bee falls when dies</li>
           </ul>
         </li>
       </ul>
@@ -77,7 +79,7 @@
     </p>
   </div> <!-- cell -->
 
-  <div class="celltitle"> Step 1: Bird descending </div>
+  <div class="celltitle"> Step 1: Bee descending </div>
   <div class="cell">
     <p>
       This is just a warm-up. Quickly clarify together which coordinate belongs to the horizontal, up-down direction (the arrows near x and y under the stage will help), and whether plus is up and minus is down or the other way around. Once these questions are settled, and you decided upon using the "change y" block, the script is ready: <br>
@@ -85,10 +87,10 @@
     </p>
   </div> <!-- cell -->
 
-  <div class="celltitle"> Step 2: Bird rising </div>
+  <div class="celltitle"> Step 2: Bee rising </div>
   <div class="cell">
     <p>
-      The girl goes up when a key is hit. There are two different ways to detect keypress in Scratch; with an event block, or with a sensing block. Since in our case the event position is already taken (the script starts when the Start message is received), the sensing block suggests itself. You can place it in the "wait until". Everyone can set the block to their favorite key, or can just go with the "any key" option as we do. Once again, it is a good idea to use "change y"; to make the movement faster or slower, and to make the bird go higher or not so high, experiment with combinations of numbers in "repeat" and "change y": <br>
+      The bee goes up when a key is hit. There are two different ways to detect keypress in Scratch; with an event block, or with a sensing block. Since in our case the event position is already taken (the script starts when the Start message is received), the sensing block suggests itself. You can place it in the "wait until" block. Everyone can set the block to their favorite key, or can just go with the "any key" option as we did. Once again, it is a good idea to use "change y"; to make the movement faster or slower, and to make the bee go higher or not so high, experiment with combinations of numbers in "repeat" and "change y": <br>
       <img class="figure" width="35%" src="curriculum/img/eng/flappybee/03.png" alt="figure">
       <img class="figure" width="35%" src="curriculum/img/eng/flappybee/04.png" alt="figure">
       <img class="figure" width="35%" src="curriculum/img/eng/flappybee/05.png" alt="figure">
@@ -96,9 +98,9 @@
       --and so on, there are countless options. Don't worry too much about the exact values though, you can fine tune these when everything is set up in the project.
     </p>
     <p>
-      One last thing to set is the costume change of the bird while ascending. (The bird is called Flappy for a reason.) This can be done with a "next costume" block: <br>
+      One last thing to set is the costume change of the bee while ascending. (The bee is called Flappy for a reason.) This can be done with a "next costume" block: <br>
       <img class="figure" width="40%" src="curriculum/img/eng/flappybee/07.png" alt="figure"><br>
-      Wanna be a perfectionist? Add a "switch costume" block so that the bird always ends these ascending phases with the same costume: <br>
+      Want to be be a perfectionist? Add a "switch costume" block so that the bee always ends these ascending phases with the same costume: <br>
       <img class="figure" width="40%" src="curriculum/img/eng/flappybee/08.png" alt="figure"><br>
       </p>
   </div> <!-- cell -->
@@ -107,21 +109,20 @@
   <div class="celltitle"> Step 3: Obstacle coming </div>
   <div class="cell">
     <p>
-      Switch to the obstacle sprite. As usual, move a single obstacle first, and introduce cloning in the next step.
-      The obstacle glide from the right edge to the left edge. If the kids in your group are too small or reluctant to use coordinates explicitly, use the "place and pick" method.
+      Switch to the obstacle sprite. As usual, move a single obstacle first, and introduce cloning in a later step.
+      The obstacle glides from the right edge to the left edge. If the kids in your group are too small or reluctant to use coordinates explicitly, use the "place and pick" method.
       <button class="curriculumInfoButton" id="placeandpick"></button>
-      <!-- , as discussed in the Movement guide, or the "Snowfall" project, or the "Flower shower" miniproject. -->
     </p>
     <p>
       But if kids are ok with coordinates, it's enough to just switch to the "x-y grid" background for a moment, and refresh everyone's memories about the x and y coordinates of the edges of the stage. (The background is included in the initial version of the project, you don't even have to search for it.) <br>
       <img class="figure" width="60%" src="curriculum/img/eng/flappybee/09.png" alt="figure"><br>
     </p>
     <p>
-      The code of the gliding is now almost trivial (just make sure give enough gliding time to the block, otherwise the game might be too hard): <br>
+      The code of the gliding is now almost trivial (just make sure to enter a large enough enough gliding time in the block, otherwise the game might be too hard): <br>
       <img class="figure" width="40%" src="curriculum/img/eng/flappybee/10.png" alt="figure"><br>
     </p>
     <p>
-      Restart the code and see whether you can maneuver through the obstacle with the bird.
+      Restart the code and see whether you can maneuver through the obstacle with the bee.
     </p>
     <p>
       To set the vertical position of the obstacle, you could use a "random" block, but to avoid future complications, we defined a custom block for this purpose. This is standard procedure. Scripts that are too complicated or time consuming to write can be carried around in these pink custom blocks, and used anywhere in your code, as if Scratch had a cool extra block. Use the custom block to change the vertical position of the obstacle between glides. Don't forget to add two "y position" blocks to the script, so that the y coordinate set by the pink block does not get overridden by the motion blocks. <br>
@@ -132,9 +133,9 @@
   <div class="celltitle"> Step 4: Touch sensing and game over </div>
   <div class="cell">
     <p>
-      You're almost there! Finish this small step and you can quit this session's project work with success. Switch back to the bird sprite. The game over script is almost ready. What is missing is just the touch sensor block. But there are two candidates; the game is over when the bird touches <i>either</i> the obstacle, <i>or</i> an edge of the stage. How can you put two sensor blocks in one slot?<br>
+      You're almost there! Finish this small step and you can close this session's project work with success. Switch back to the bee sprite. The game over script is almost ready. What is missing is just the touch sensor block. But there are two candidates; the game is over when the bee touches <i>either</i> the obstacle, <i>or</i> an edge of the stage. How can you put two sensor blocks in one slot?<br>
       <img class="figure" width="50%" src="curriculum/img/eng/flappybee/16.png" alt="figure"><br>
-      If the kids have faced this problem before, they will know what to do. Otherwise just repeat the phrase "either the obstacle, <i>or</i> the edge", and ask them to find the "or" block. Once they have found it, there is no more puzzle here:<br>
+      If the kids have faced this problem before, they will probably know what to do. Otherwise just repeat the phrase "either the obstacle, <i>or</i> the edge", and ask them to find the "or" block. Once they have found it, there is no more puzzle here:<br>
       <img class="figure" width="70%" src="curriculum/img/eng/flappybee/17.png" alt="figure"><br>
     </p>
     <p>
@@ -167,9 +168,9 @@
     <p>
       Discuss with the kids what should be rewarded with increasing the score. One natural option is that every obstacle passed successfully is worth a point. If you decide so, you can add a "change score" block to the end of the life span of an obstacle.<br>
       <img class="figure" width="40%" src="curriculum/img/eng/flappybee/18.png" alt="figure"><br>
-      Or, alternatively, you can decide to increase the score every time the bird starts rising: <br>
+      Or, alternatively, you can decide to increase the score every time the bee starts rising: <br>
       <img class="figure" width="35%" src="curriculum/img/eng/flappybee/19.png" alt="figure"><br>
-      Or you can combine these two. Or come up with a third option. What matters is that you get a taste of game design. As kids proceed in learning programming, they should gradually become more and more able to design and code their own projects. However far this goal is after a few sessions in a beginner course, this is what you are moving towards.
+      Or you can combine these two. Or come up with a third option. What matters is that you get a taste of game design. As kids proceed in learning programming, they should gradually become more and more able to design and code their own projects. However far this goal seems to be after a few sessions in a beginner course, this is what you are moving towards.
     </p>
     <p>
       Restart the project and test if scoring works as you imagined. You will see that the score display starts working automatically.
@@ -187,43 +188,51 @@
     </p>
   </div> <!-- cell -->
 
+  <div class="celltitle"> Step 8: obstacles opening and closing </div>
+  <div class="cell">
+    <p>
+      Although it doesn't affect the gameplay, animating the obstacles with costume change can spice up the game experience. This task belongs to the clones, and it is a good idea to start a new script for it. Costume change is a tecnique you've practiced a lot already (even in this game when making the bee flap its wings), so this step will be easy: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/flappybee/21.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
 
-  <div class="celltitle"> Step 8: Bird speeding up while descending </div>
+
+  <div class="celltitle"> Step 9: Bee speeding up while descending </div>
   <div class="cell">
     <p>
       You have reached the last and by any means the hardest step in the project work. In our experience animating accelerating motion is too much for kids under 12-13 years. So only take this step if the average age in your group is at least 12 years.
     </p>
     <p>
-      Switch back to the bird sprite, and find the script of descending: <br>
-      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/21.png" alt="figure"><br>
+      Switch back to the bee sprite, and find the script of descending: <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/22.png" alt="figure"><br>
       This is the code you need to refine.
     </p>
     <p>
       What changes when a car is speeding up? Of course, its speed. Hm, so speed is a number that keeps changing... If only there was something in programming that keeps track of a changing piece of data, like score or time... Of course there is, this is what variables do. Go to the variable blocks, and you will see that there is a "speed" variable in the code. Let's use it. At the beginning the speed is 0; this is how falling (or with a technical term: gravity) works. <br>
-      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/22.png" alt="figure"><br>
+      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/23.png" alt="figure"><br>
     </p>
     <p>
       Now comes the hard bit. Speed is measured in kilometers/hour; that is, how far can you get in one unit of time. In the case of falling, how far you can get is how much the y coordinate changes. So y changes by your speed! Let's put the variable block in the movement block: <br>
-      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/23.png" alt="figure"><br>
+      <img class="figure" width="25%" src="curriculum/img/eng/flappybee/24.png" alt="figure"><br>
       Look how things are finding their places in the code? The script is taking shape.
     </p>
     <p>
-      If you restart the program, you see that the bird does not descend at all. It makes sense; we set its speed to zero.
+      If you restart the program, you see that the bee does not descend at all. It makes sense; we set its speed to zero.
     </p>
     <p>
-      Now let's increase the speed every time y changes. This is what speeding up means. Don't forget that the bird is moving downwards, so the change should be negative: <br>
-      <img class="figure" width="30%" src="curriculum/img/eng/flappybee/24.png" alt="figure"><br>
-    </p>
-    <p>
-      Restart the program to check the result. Now the bird is falling too fast. Acceleration should be somewhere between -1 and 0. Experiment a bit before you find the ideal value. (It depends on decisions kids made before, so the ideal value will be different for everyone.) <br>
+      Now let's increase the speed every time y changes. This is what speeding up means. Don't forget that the bee is moving downwards, so the change should be negative: <br>
       <img class="figure" width="30%" src="curriculum/img/eng/flappybee/25.png" alt="figure"><br>
     </p>
     <p>
-      Something is still off; you can't fight gravity off by hitting the keyboard. When the bird is rising, the speed should be set to zero. Can you find the script that is about the bird rising, kids? <br>
-      <img class="figure" width="40%" src="curriculum/img/eng/flappybee/26.png" alt="figure"><br>
+      Restart the program to check the result. Now the bee is falling too fast. Acceleration should be somewhere between -1 and 0. Experiment a bit before you find the ideal value. (It depends on decisions kids made before, so the ideal value will be different for everyone.) <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/flappybee/26.png" alt="figure"><br>
     </p>
     <p>
-      That's it! Now the bird behaves as it should. Test your games, and adjust the different values as needed; the way the bird rises, the way it is speeding up when descending, and the speed of the obstacles.
+      Something is still off; you can't fight gravity off by hitting the keyboard. When the bee is rising, the speed should be set to zero. Can you find the script that is about the bee rising, kids? <br>
+      <img class="figure" width="40%" src="curriculum/img/eng/flappybee/27.png" alt="figure"><br>
+    </p>
+    <p>
+      That's it! Now the bee behaves as it should. Test your games, and adjust the different values as needed; the way the bee rises, the way it is speeding up when descending, and the speed of the obstacles.
     </p>
     <p>
       You have completed a huge project. Nice job!

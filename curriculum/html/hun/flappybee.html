@@ -33,6 +33,7 @@
         <li>pontkijelzés</li>
         <li>nyerés egy adott ponthatárnál</li>
         <li>a méhecske gyorsul, miközben süllyed</li>
+        <li>az akadályok tátognak</li>
       </ul>
       Ne csinálj belőle problémát, ha néhány elem hiányzik a listátokból, vagy valami fölösleges is rákerül. Később, a projektmunka során is igazíthattok majd rajta, amikor kiderül, hogy valami nem stimmelt benne. És nyugodtan vegyetek fel olyan elemeket is, amelyek nem voltak benne a bemutatott eredeti játékban.
     </p>
@@ -55,6 +56,7 @@
             <li>pontozás</li>
             <li>nyerés</li>
             <li>a méhecske gyorsul</li>
+            <li>akadályok tátogása</li>
           </ul>
         </li>
         <li>
@@ -102,21 +104,24 @@
   <div class="celltitle"> 3. lépés: jönnek az akadályok </div>
   <div class="cell">
     <p>
-      Váltsatok az akadály szereplőre. Szokás szerint most is egyet érdemes elsőre megmozgatni, aztán ha eljuttok odáig, akkor jöhet a klónozás. Ha a gyerekek kicsik még ahhoz, hogy koordinátákban gondolkodjanak, vagy ellenállást mutatnak ezzel szemben, használjátok a "tedd oda és vedd ki" módszert, ahogy a Mozgatás tananyagban vagy a "Virágeső" projektben láttátok.
+      Váltsatok az akadály szereplőre. Szokás szerint most is egy példányt érdemes elsőre megmozgatni, aztán ha eljuttok odáig, akkor jöhet a klónozás is. Ha a gyerekek kicsik még ahhoz, hogy koordinátákban gondolkodjanak, vagy ellenállást mutatnak ezzel szemben, használjátok a "tedd oda és vedd ki" módszert, ahogy a Mozgatás tananyagban vagy a "Virágeső" projektben láttátok.
     </p>
     <p>
       De ha a gyerekeknek jól megy a koordinátázás, akkor váltsatok egy rövid időre az "x-y grid" háttérre, és frissítsétek fel az emlékezeteteket azzal kapcsolatban, hogy mik az x és y koordináták a színpad szélein. (A háttér előre be van készítve a projektbe, hogy ezzel se menjen el idő.) <br>
       <img class="figure" width="60%" src="curriculum/img/hun/flappybee/09.png" alt="figure"><br>
     </p>
     <p>
-      A csúszás kódja szinte triviális (csak a csúszás idejét állítsa be mindenki az ízlése szerint, hogy se túl nehéz, se túl könnyű ne legyen a jték): <br>
+      A csúszás kódja szinte triviális (csak a csúszás idejét állítsa be mindenki az ízlése szerint, hogy se túl nehéz, se túl könnyű ne legyen a játék): <br>
       <img class="figure" width="40%" src="curriculum/img/hun/flappybee/10.png" alt="figure"><br>
     </p>
     <p>
       Indítsátok újra a projektet, és nézzétek meg, át tudtok-e manőverezni a méhecskével az akadályok között.
     </p>
     <p>
-      To set the vertical position of the obstacle, you could use a "random" block, but to avoid future complications, we defined a custom block for this purpose. This is standard procedure. Scripts that are too complicated or time consuming to write can be carried around in these pink custom blocks, and used anywhere in your code, as if Scratch had a cool extra block. Use the custom block to change the vertical position of the obstacle between glides. Don't forget to add two "y position" blocks to the script, so that the y coordinate set by the pink block does not get overridden by the motion blocks. <br>
+      Az akadály függőleges helyzetének beállításához (gyereknyelven: hogy fentebb legyen vagy lentebb) használhatnátok "véletlen" blokkot, de hogy elkerüljétek a későbbi nehézségeket, bekészítettünk egy daját blokkot a projektbe, ami ezt a feladatot elvégzi. Ez bevett eljárás. Ha egy kódrészlet megírása túl bonyolult vagy túl időigényes, akkor érdemes előre megírni, és rózsaszín saját blokkokba bekészítve felhasználni a megfelelő helyen a projektmunka során, mintha csak a Scratch hirtelen növesztett volna egy vagány új blokkot.
+    </p>
+    <p>
+      Használjátok ezt a saját blokkot az akadály két csúszása között. Ne felejtsetek el "y hely" blokkokat tenni a kódba, hogy az akadály tényleg olyan magasan csússzon, ahova a saját blokk tette.<br>
       <img class="figure" width="40%" src="curriculum/img/hun/flappybee/11.png" alt="figure"><br>
     </p>
   </div> <!-- cell -->
@@ -124,101 +129,108 @@
   <div class="celltitle"> 4. lépés: érintésfigyelés és játék vége </div>
   <div class="cell">
     <p>
-      You're almost there! Finish this small step and you can quit this session's project work with success. Switch back to the bird sprite. The game over script is almost ready. What is missing is just the touch sensor block. But there are two candidates; the game is over when the bird touches <i>either</i> the obstacle, <i>or</i> an edge of the stage. How can you put two sensor blocks in one slot?<br>
+      Majdnem kész vagyok! Még ezt a kis lépést kell megtennetek, hogy sikerrel zárhassátok a projektmunkát. Váltsatok vissza a méhecske szereplőre. A játék végéhez tartozó kód már majdnem készen van, csak az érintésfigyelő blokkot kell beletenni. De két jelöltünk is van; a játék akkor ér végetm ha a méhecske <i>vagy</i> egy akadályhoz, <i>vagy</i> a színpad széléhez hozzáér. Hogy fér el két érzékelés-blokk egy helyen?<br>
       <img class="figure" width="50%" src="curriculum/img/hun/flappybee/16.png" alt="figure"><br>
-      If the kids have faced this problem before, they will know what to do. Otherwise just repeat the phrase "either the obstacle, <i>or</i> the edge", and ask them to find the "or" block. Once they have found it, there is no more puzzle here:<br>
+      Ha a gyerekek szembesültek már ezzel a problémával, akkor lehet, hogy maguktól is tudni fogják, mit kell tenni. Ha nem ez a helyzet, akkor ismételd meg nyomatékosan, hogy <i>vagy</i> ehhez, <i>vagy</i> ahhoz ér hozzá a méhecske, és versenyezzetek, ki találja meg először a "vagy" blokkot. Amint megtaláltátok, minden a helyére kerül:<br>
       <img class="figure" width="70%" src="curriculum/img/hun/flappybee/17.png" alt="figure"><br>
     </p>
     <p>
-      The code works like a charm, what an easy step! :) If you have made this far, you can close the session with success. The next steps are, as we said above: nice to have.
+      A kód tökéletesen működik, bár minden lépés ilyen könnyű lenne a projektmunkában!:) Ha eljutottatok eddig, sikerrel lezárhatjátok a projektmunkát. Minden további lépés "jó ha van", ahogy fentebb fogalmaztunk.
     </p>
   </div> <!-- cell -->
 
   <div class="celltitle"> 5. lépés: az akadályok klónozása </div>
   <div class="cell">
     <p>
-      As always, introducing cloning in a code requires some rearrangement. Let's select carefully which blocks will belong to the clones, and put them to the right: <br>
+      Ha még tart az időtökből és energiátokból, akkor nagyot javíthattok a játékélményen a klónozás bevezetésével. Mint mindig, ez a kód újrarendezésével jár. Válasszátok ki, melyik blokkok fogják a klónokat mozgatni, és azokat tegyétek félre: <br>
       <img class="figure" width="70%" src="curriculum/img/hun/flappybee/12.png" alt="figure"><br>
-      The blocks on the right describe the lifespan of a clone. The script starts when the clone is created, and ends when it gets destroyed: <br>
+      Ezek a blokkok határozzák meg, mit csinál egy klón a maga kis élete során. A kód ott kezdődik, ahol a klón létrejön ("másolatként kezdéskor"), és ott végződik, ahol megsemmisül ("töröld ezt a másolatot"): <br>
       <img class="figure" width="40%" src="curriculum/img/hun/flappybee/13.png" alt="figure"><br>
     </p>
     <p>
-      On the other hand, the loop on the left will generate the clones: <br>
+      A másik oldalon a "mindig" ciklus fogja nekünk gyártani a klónokat: <br>
       <img class="figure" width="30%" src="curriculum/img/hun/flappybee/14.png" alt="figure"><br>
-      To avoid facing too many clones at once, it's a good idea to include a "wait" block. The exact delay is up to everyone's consideration, and willingness to create a harder or easier game:
-      <br>
+      Hogy ne zúduljon az összes klón egyszerre a játékosra, érdemes betenni egy "várj" blokkot a kódba. Hogy pontosan mennyi idő teljen el két akadály elindulása között, azt ki-ki magának állítsa be aszerint, hogy mennyire akar nehéz játékot magának: <br>
       <img class="figure" width="30%" src="curriculum/img/hun/flappybee/15.png" alt="figure"><br>
     </p>
     <p>
-      Restart your project, and check whether you can see multiple obstacles coming at the same time.
+      Indítsátok újra a projektet, és ellenőrizzétek, hogy rendben érkeznek-e az akadályok.
     </p>
   </div> <!-- cell -->
 
   <div class="celltitle"> 6. lépés: pontozás </div>
   <div class="cell">
     <p>
-      Discuss with the kids what should be rewarded with increasing the score. One natural option is that every obstacle passed successfully is worth a point. If you decide so, you can add a "change score" block to the end of the life span of an obstacle.<br>
+      Beszéljétek meg a gyerekekkel, mit jutalmazzon ponttal a játék. Az egyik kézenfekvő lehetőség az, hogy minden sikerrel átvitt akadályért pont jár. Ha így döntötök, akkor érdemesegy "score változzon" blokkot tenni a klónok kódjának végére.<br>
       <img class="figure" width="40%" src="curriculum/img/hun/flappybee/18.png" alt="figure"><br>
-      Or, alternatively, you can decide to increase the score every time the bird starts rising: <br>
+      De dönthettek úgy is, hogy akkor kap pontot a játékos, ha emelkedik a méhecske: <br>
       <img class="figure" width="35%" src="curriculum/img/hun/flappybee/19.png" alt="figure"><br>
-      Or you can combine these two. Or come up with a third option. What matters is that you get a taste of game design. As kids proceed in learning programming, they should gradually become more and more able to design and code their own projects. However far this goal is after a few sessions in a beginner course, this is what you are moving towards.
+      Vagy össze is kombinálhatjátok ezt a két lehetőséget. Vagy dönthettek egy harmadik mellett is. Az a lényeg, hogy a gyerekek kódtoljanak bele egy kicsit a projektmunka során a játéktervezésbe. Ahogy haladnak előre a gyerekek e programozás tanulásában, egyre inkább készen lesznek arra, hogy a saját projektjeiket tervezzék meg és kódolják le. Bármilyen távolinak is tűnik ez a cél egy kezdő kurzuson, ez az, ami fele haladtok.
     </p>
     <p>
-      Restart the project and test if scoring works as you imagined. You will see that the score display starts working automatically.
+      Indítsátok újra a projektet, és teszteljétek le, hogy az elképzeléseitek szerint működik-e a pontozás. Látni fogjátok, hogy a pontkijelzés magától elindul.
     </p>
   </div> <!-- cell -->
 
   <div class="celltitle"> 7. lépés: nyerés </div>
   <div class="cell">
     <p>
-      The game winning script is at the obstacle sprite. It is very similar to the "game over" script; all you have to do is find the condition to end. At the bottom of the stage there is room for 30 little obstacles  in the score display; so let's say the game should end when the score reaches 30. Once again, the task is clear, you just have to express it with Scratch blocks. What does it mean that the score "reaches" 30? Well, as the score increases, throughout the whole gameplay it is less than 30, and we want to stop the game before it becomes larger than 30. So, at the moment of winning the score is neither less nor more than 30. If there was a simpler way to say it... Equals, that is it! Who finds first the "equals" block? The script gets completed in a minute, and another step is taken forward in the development of this game. <br>
+      A játék megnyerésének kódja az akadály szereplőhöz van bekészítve. Abban hasonlít a vesztés kódjához, hogy csak a nyerés feltételét kell kitalálni és a kódba illeszteni. A színpad alján 30 kis akadálynak van hely a pontkijelzésben, tehát dönthettek mondjuk úgy, hogy 30 pont elérésekor ér véget a játék. A feladat így már világos, csak azt kell kitalálni, hogy fogalmazhatjátok át a Scratch blokkok nyelvére. Mit is jelent az, hogy a pont "eléri" a 30-at? A játék mindaddig folytatódk, amíg a pontszám kisebb 30-nál, és véget ér, mielőtt 30 fölé emelkedne. Tehát a játék megnyerésének pllanatában a pontszám se nem több, se nem kevesebb, mint 30. Bárcsak lenne egy szó, ami pont ezt fejezi ki... Egyenlő, ez az! Ki találja meg előbb az "egyenlő" blokkot? A közös gondolkodás után egy perc alatt kész a kód, és ismét egy lépéssel előrébb vagyto a játékfejlesztésben.<br>
       <img class="figure" width="30%" src="curriculum/img/hun/flappybee/20.png" alt="figure"><br>
     </p>
     <p>
-      This is the art of teaching; asking the right questions and giving the right hints so that kids will discover knowledge themselves. Guided discovery is worth 1000 times more than frontal teaching.
+      Ez a művészet a tanításban: feltenni a megfelelő kérdéseket és segíteni a gyerekeket abban, hogy maguk fedezzék fel az ismereteket. A felfedeztetés ezerszer többet ér, mint a frontális tanítás.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 8. lépés: az akadályok jelmezváltása </div>
+  <div class="cell">
+    <p>
+      Apróság ugyan, de sokat ad a játékélményhez, ha az akadályok a két jelmezüket váltogatva tátognak csúszás közben. Ez is a klónok dolga, de érdemes hozzá új kódot kezdeni. A jelmezváltásos animácóban már nagy gyakorlatotok van (a méhecske szárnycsapkodása is ilyen volt), úgyhogy ez a lépés nagyon könnyű lesz: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/flappybee/21.png" alt="figure">
     </p>
   </div> <!-- cell -->
 
 
-  <div class="celltitle"> 8. lépés: a méhecske gyorsul süllyedés közben </div>
+  <div class="celltitle"> 9. lépés: a méhecske gyorsul süllyedés közben </div>
   <div class="cell">
     <p>
-      You have reached the last and by any means the hardest step in the project work. In our experience animating accelerating motion is too much for kids under 12-13 years. So only take this step if the average age in your group is at least 12 years.
+      Elértetek az utolsó és legnehezebb lépéshez a játékfejlesztésben. Tapasztalatunk szerint a gyorsuló mozgáás animálása 12-13 éves kor alatt még túl nehéz a gyerekeknek. Ebbe a lépésbe tehát csak akkor kezdjetek bele, ha a gyerekek átlagéletkora legalább 12 év a csoportban.
     </p>
     <p>
-      Switch back to the bird sprite, and find the script of descending: <br>
-      <img class="figure" width="25%" src="curriculum/img/hun/flappybee/21.png" alt="figure"><br>
-      This is the code you need to refine.
-    </p>
-    <p>
-      What changes when a car is speeding up? Of course, its speed. Hm, so speed is a number that keeps changing... If only there was something in programming that keeps track of a changing piece of data, like score or time... Of course there is, this is what variables do. Go to the variable blocks, and you will see that there is a "speed" variable in the code. Let's use it. At the beginning the speed is 0; this is how falling (or with a technical term: gravity) works. <br>
+      Váltsatok vissza a méhecske szereplőre, és keressétek meg a süllyedés kódját: <br>
       <img class="figure" width="25%" src="curriculum/img/hun/flappybee/22.png" alt="figure"><br>
+      Ezen fogunk egy kicsit finomítani.
     </p>
     <p>
-      Now comes the hard bit. Speed is measured in kilometers/hour; that is, how far can you get in one unit of time. In the case of falling, how far you can get is how much the y coordinate changes. So y changes by your speed! Let's put the variable block in the movement block: <br>
+      Mi változik akkor, amikor az autó gyorsul? Hát persze, a sebessége. Hm, szóval a sebesség egy olyan szám, ami folyton változik... Bárcsak lenne egy olyan eszköz a programozásban, ami az ilyen folyton változó adatokat kezelhetővé teszi, mint például egy játékban a pontszám... Hát persze, hogy van ilyen eszköz, pont ezt csinálja egy változó. Ha megnézitek a változó-blokkokat, láthatjátok, hogy már be is van készítve a projektbe egy "speed" (sebesség) nevű változó. Ezt fogjuk használni. A játék elején a sebesség nulla; így működik az esés (vagy felnőtt szóval: a gravitáció). <br>
       <img class="figure" width="25%" src="curriculum/img/hun/flappybee/23.png" alt="figure"><br>
-      Look how things are finding their places in the code? The script is taking shape.
     </p>
     <p>
-      If you restart the program, you see that the bird does not descend at all. It makes sense; we set its speed to zero.
+      Most jön az a rész, ami kicsit nehezebb a szokásosnál. Miben márjük a sebességet? Kilométer per órában, vagyis abban, hogy mennyit tesz meg az autó egy időegység alatt. Ezt kellene átfogalmazni Scratch-re. Mivel a szereplőnk esik, a "mennyit tesz meg" azt jelenti, hogy mennyivel változik az y koordinátája. Tehát az "y változzon" blokkba a sebesség kerül, bármennyi is legyen az éppen. A kerekded változó-blokk belekerül a kék mozgás-blokkba: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/flappybee/24.png" alt="figure"><br>
+      Látjátok, milyen szépen megtalálja minden elem a helyét? Így ölt formát a közös gondolkodás során a programkód.
     </p>
     <p>
-      Now let's increase the speed every time y changes. This is what speeding up means. Don't forget that the bird is moving downwards, so the change should be negative: <br>
-      <img class="figure" width="30%" src="curriculum/img/hun/flappybee/24.png" alt="figure"><br>
+      A projekt újraindításakor most azt látjátok, hogy a méhecske egyáltalán nem süllyed. Ez érthető, hiszen nullára állítottátok a sebességét.
     </p>
     <p>
-      Restart the program to check the result. Now the bird is falling too fast. Acceleration should be somewhere between -1 and 0. Experiment a bit before you find the ideal value. (It depends on decisions kids made before, so the ideal value will be different for everyone.) <br>
+      Nosza növeljük azt a sebességet minden alkalommal, amikor y megváltozik. Ne feledjétek, hogy a méhecske lefele esik, tehát a sebesség is negatív: <br>
       <img class="figure" width="30%" src="curriculum/img/hun/flappybee/25.png" alt="figure"><br>
     </p>
     <p>
-      Something is still off; you can't fight gravity off by hitting the keyboard. When the bird is rising, the speed should be set to zero. Can you find the script that is about the bird rising, kids? <br>
-      <img class="figure" width="40%" src="curriculum/img/hun/flappybee/26.png" alt="figure"><br>
+      Indítsátok újra a projektet, hogy lássátok az eredményt. Most meg túl gyorsan esik a méhecske. A nulla túl kicsi gyorsulásnak, az egy túl nagy. Kísérletezzetek a 0 és 1 közötti titedestörtekkel, hogy megtaláljátok a gyorsulás ideáls mértékét. (Ez azon is múlik, hogy máshol milyen számok mellett döntöttek a gyerekek, tehát a végeredmény itt is mindenkinél más lesz.) <br>
+      <img class="figure" width="30%" src="curriculum/img/hun/flappybee/26.png" alt="figure"><br>
     </p>
     <p>
-      That's it! Now the bird behaves as it should. Test your games, and adjust the different values as needed; the way the bird rises, the way it is speeding up when descending, and the speed of the obstacles.
+      Valami még mindig nem stimmel; az egyre gyorsuló esést nem lehet leküzdeni a madár emelkedésével. Amikor a madár emelkedik, a sebességét le kellene nullázni. Meg tudjátok találni az emelkedés kódját, gyerekek? <br>
+      <img class="figure" width="40%" src="curriculum/img/hun/flappybee/27.png" alt="figure"><br>
     </p>
     <p>
-      You have completed a huge project. Nice job!
+      És kész! Most már pont úgy viselkedik a méhecske, ahogy kell. Teszteljétek a játékot, és ha kell, állítsátok be újra a különféle számokat, hogy minden flottul menjen: azt, hogy mennyit emelkedik a madár, milyen sűrűn jönnek az akadályok, milyen gyorsan jönnek az akadályok, és így tovább.
+    </p>
+    <p>
+      Végére értetek egy nagy projektnek. Szép munka, legyetek büszkék!
     </p>
   </div> <!-- cell -->
 
