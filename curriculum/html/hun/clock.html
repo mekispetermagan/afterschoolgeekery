@@ -1,0 +1,129 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Óra miniprojekt </div>
+
+  <table class="iconTable">
+    <tr>
+      <th class="iconTableHead"> Korosztály: </th>
+      <td>
+        <img src="curriculum/img/icons/age_2_3.png" height="84px" alt="11+">
+      </td>
+    </tr>
+    <tr>
+      <th class="iconTableHead"> Szint: </th>
+      <td>
+        <img src="curriculum/img/icons/hun/level_2.png" height="84px" alt="novice">
+      </td>
+    </tr>
+    <tr>
+      <th class="iconTableHead"> Technikák: </th>
+      <td>
+        <img src="curriculum/img/icons/hun/motion.png" height="60px" alt="motion">
+        <img src="curriculum/img/icons/hun/math.png" height="60px" alt="math">
+      </td>
+    </tr>
+  </table>
+
+  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="cell">
+    <p>
+      Ebben a projektben a gyerekek Scratch kód segítségével működésbe hoznak egy előre megtervezett mutatós órát. Itt láthatod a végeredményt: <br>
+      <iframe src="https://scratch.mit.edu/projects/1012947664/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </p>
+    <p>
+      Ha a gyerekeknek már van valamennyi fogalma a szögekről és a fokokról, akkor a projektmunkát könnyedén befejezhetitek 30 perc alatt. 60 percben még arra is lesz elég időtök, hogy bevezessétek és begyakoroljátok ezeket a fogalmakat.
+    </p>
+    <p>
+      Hasonlóképpen ha a gyerekek nem kellően magabiztosak még a mutatós órák leolvasásában, ez a projekt jó lehetőséget kínál ennek a készségnek a gyakorlására. Ha azonban mind a mutatós óra, mind a fokok és a szögek teljesen idegenek a gyerekeknek, akkor elhúzódhat a projektmunka, és azt kockáztatod, hogy túlterheled őket az új ismeretekkel.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Előkészületek </div>
+  <div class="cell">
+    <p>
+      Present the group the final version of the project. Then let everyone open and remix <a href="">this initial version</a>. It contains all the sprites and graphics you need for the project work: <br>
+      <img class="figure" width="60%" src="curriculum/img/hun/clock/01.png" alt="figure">
+    </p>
+    <p>
+      Mielőtt belekezdtek a projektmunkába, beszélgessetek az analóg órákról és az egyes mutatók funkciójáról. Pár percet azzal is eltölthettek, hogy gyakoroljátok az óra beállítását. A gyerekek mondják az időpontokat, és közösen állítjátok be az órát.
+    </p>
+    <p>
+      Eközben azt is tisztázhatjátok, hogy minden a három mutató szereplő "irány" tulajdonságán múlik. Kattintsatok bele a színpad alatti irány eszköz értékébe, és forgassátok az ott megjelenő mini mutatót az óra beállításához. Eközben leolvashatjátok az időpontokhoz tartozó fokokat is: például a 0 fok a 12 órához tartozik a kismutató esetében; és a 90 fok a 15 másodperchez a másodpercmutató esetében. <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/clock/diranim.webp" alt="figure">
+    </p>
+    <p>
+      Végül ha szükségét érzed, mutasd be a gyerekeknek <a href="https://scratch.mit.edu/projects/1018292563/">ezt a projektet, amely megmutatja, milyen fokok tartoznak a szélrózsa irányaihoz</a>, 0-tól 360-ig. (Sajnos a Scratch a bal felé tartó irányokra negatív fokokat használ, ami a kisebb gyerekeket összezavarhatja.) <br>
+      <img class="figure" width="60%" src="curriculum/img/hun/clock/02.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 1. lépés: A másodpercek beállítása </div>
+  <div class="cell">
+    <p>
+      Érdemes a másodpercmutatóval kezdeni a kódolást, mert ennek látható a mozgása, és így már az első lépés sikerélményt fog adni a gyerekeknek. Először is azt kell kitalálnotok, hogy lehet kinyerni a Scratch-ből, mennyi az idő. Kicsit el van rejtve az a blokk, ami megmondja, hány óra, perc és másodperc van éppen, de a megfelelő kérdésekkel segítheted a gyerekeket, hogy megtalálják. Hol vannak az időről szóló blokkok? A "várj" blokk kivételével, amely a Vezérlés csoportban van, minden ilyen blokkot az Érzékelés csoportban találtok. Emlékeztek, hogy fel is lehet nyitni a Scratch blokkokat? Melyik blokk felnyitásakor láttok olyat, hogy óra, perc, másodperc? Meg is van, a "jelenlegi év"!<br>
+      <img class="figure" width="30%" src="curriculum/img/hun/clock/03.png" alt="figure">
+    </p>
+    <p>
+      Amint megvan a legfontosabb blokk, a többi már szimpla matek. Azt már megállapítottátok, hogy az óra az irányokról szól. Egy teljes kör 360 fok, amin 60 másodperc alatt megy végig a mutató. Vagyis egy másodperc az 360/60 fok, vagyis 6 fokot tesz meg másodpercenként a mutató. A mutató iránya a jelenlegi másodperc hatszorosa: <br>
+      <img class="figure" width="50%" src="curriculum/img/hun/clock/04.png" alt="figure"><br>
+      Ha nehezen mega a fejben számolás, nyugodtan használjatok osztás blokkot, elvégre azért van számítógépetek, hogy ne nektek kelljen számolni: <br>
+      <img class="figure" width="55%" src="curriculum/img/hun/clock/05.png" alt="figure">
+    </p>
+    <p>
+      Indítsátok el a projektet, hogy lássátok, megfelelően megy-e körbe a másodpercmutató.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">
+    2. lépés: A perc és az óra beállítása
+    <img width="40" src="curriculum/img/exit.gif" alt="exit">
+  </div>
+  <div class="cell">
+    <p>
+      A percmutató kódja majdnem ugyanaz, mint a másodpercmutatóé; még a fokok is ugyanazok, mert a teljes kör 60 perc. Nyugodtan másoljátok át a kódot az egyik szereplőtől a másikhoz a kedvenc módszeretekkel: egérrel áthózva, Ctrl C-vel és Ctrl V-vel, vagy a tálcát használva.<br>
+      <img class="figure" width="50%" src="curriculum/img/hun/clock/06.png" alt="figure">
+    </p>
+    <p>
+      A kismutató kódja egy árnyalatnyit más lesz, hiszen a teljes kör az 12 óra, nem hatvan, vagyis egy óra alatt 360/12 = 30 fokot tesz meg a mutató: <br>
+      <img class="figure" width="50%" src="curriculum/img/hun/clock/07.png" alt="figure">
+    </p>
+    <p>
+      Később még finomíthatjátok ezt a kódot, de elsőre jó lesz így. Programoztatok egy működő órát, legyetek büszkék magatokra! :)
+      <img width="30" src="curriculum/img/exit.gif" alt="exit">
+      De ha van még egy kis időtök, a következő lépés igazán látványos lesz.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 3. lépés: A Föld forgatása </div>
+  <div class="cell">
+    <p>
+      Az óramutatók után itt az ideje, hogy a Földet is megmozgassátok. Ha belenéztek az "Earth" szereplő, vagyis a Föld jelmezeibe, azt láthatjátok, hogy rengeteg van neki, a forgás minden fázisához egy. Ilyen sok jelmez általában akkor keletkezik, ha animált gif képet töltetek fel szereplőnek.
+    </p>
+    <p>
+      A sok jelmez azt sugallja, hogy egyszerű jelmezváltással érdemes a szereplőt animálni:<br>
+      <img class="figure" width="25%" src="curriculum/img/hun/clock/08.png" alt="figure"><br>
+      Vagy ha a folyamatos forgás tetszik jobban: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/clock/09.png" alt="figure">
+    </p>
+    <p>
+      De azt is megtehetitek, hogy szinkronizáljátok a másodpercmutató és a Föld mozgását: <br>
+      <img class="figure" width="40%" src="curriculum/img/hun/clock/10.png" alt="figure"> <br>
+      Mivel a Földnek csak 44 jelmeze van, ezzel a kóddal lesz egy kis ugrás a Föld forgásában, de ez alig észrevehető. Az ugrást el lehet kerülni egy változó bevezetésével, de semmi szükség rá, hogy így elbonyolítsátok a kódot. Azért idetesszük ezt a változatot is, hogy minél több lehetőséget lássatok: <br>
+      <img class="figure" width="40%" src="curriculum/img/hun/clock/11.png" alt="figure"> <br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 4. lépés: Az óramutató finomhangolása </div>
+  <div class="cell">
+    <p>
+      Előfordulhat, hogy a gyerekek egy része nehezményezi, hogy az óramutató nagyon szaggatottan mozog. 4:30-kor, de még 4:59-kor is 4-nél van az óramutató, és csak 5:00-kor ugrik tovább 5-re. Hogy folyamatos legyen a mozgása, figyelembe kellene venni az adott órában eltelt perceket is. Minden perc egy nagyon kicsit odébb tolja az óramutatót. De pontosan mennyivel is? Számoljuk ki. Már láttátok, hogy egy óra alatt, ami 60 perc, 30 fokot tesz meg a kismutató. Tehát egy perc alatt fél fokot. Ezzel kell kiegészíteni a kódot, hogy egészen pontos legyen:<br>
+      <img class="figure" width="60%" src="curriculum/img/hun/clock/12.png" alt="figure"> <br>
+    </p>
+    <p>
+      Eljutottatok idáig és minden lépést végigcsináltatok? Szép munka, elismerést érdemel! :)
+    </p>
+  </div> <!-- cell -->
+
+
+</div> <!-- section -->

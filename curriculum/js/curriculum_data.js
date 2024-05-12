@@ -53,6 +53,7 @@ const curriculumTopics = {
       ["Balloon",             "balloon"      ],
       ["Rolling eyes",        "eyeroll"      ],
       ["Birthday card",       "birthday"     ],
+      ["Clock",               "clock"        ],
     ]]
   ],
 
@@ -89,6 +90,7 @@ const curriculumTopics = {
       ["Lufifújás",           "balloon"      ],
       ["Szemforgatás",        "eyeroll"      ],
       ["Szülinap",            "birthday"     ],
+      ["Óra",                 "clock"        ],
     ]]
   ],
 
@@ -125,6 +127,7 @@ const curriculumTopics = {
       ["Повітряна кульк",      "balloon"      ],
       ["Закочує очі",          "eyeroll"      ],
       ["День народження",      "birthday"     ],
+      ["Годинник",             "clock"        ],
     ]]
   ],
 }

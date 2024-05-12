@@ -49,3 +49,14 @@ li { font-size: 18px;}
 }
 
 .column { display: 50%; }
+
+.iconTable {
+  margin: 36px 0;
+}
+
+.iconTableHead {
+  font-family: var(--fancyfont), sans-serif;
+  font-size: 24px;
+  text-align: right;
+  padding: 24px 12px;
+}

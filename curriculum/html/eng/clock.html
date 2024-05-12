@@ -1,0 +1,126 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Clock miniproject </div>
+
+  <table class="iconTable">
+    <tr>
+      <th class="iconTableHead"> Age group: </th>
+      <td>
+        <img src="curriculum/img/icons/age_2_3.png" height="84px" alt="11+">
+      </td>
+    </tr>
+    <tr>
+      <th class="iconTableHead"> Level: </th>
+      <td>
+        <img src="curriculum/img/icons/eng/level_2.png" height="84px" alt="novice">
+      </td>
+    </tr>
+    <tr>
+      <th class="iconTableHead"> Techniques: </th>
+      <td>
+        <img src="curriculum/img/icons/eng/motion.png" height="60px" alt="motion">
+        <img src="curriculum/img/icons/eng/math.png" height="60px" alt="math">
+      </td>
+    </tr>
+  </table>
+
+  <div class="celltitle"> What is this project about? </div>
+  <div class="cell">
+    <p>
+      In this project kids will use Scratch code to make a pre-designed analog clock work. See the final result here: <br>
+      <iframe src="https://scratch.mit.edu/projects/1012947664/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </p>
+    <p>
+      With kids who already have some grasp of the ideas of angles and degrees, the project work can be completed in 30 minutes. In 60 minutes you will have enough time to introduce and practice these concepts.
+    </p>
+    <p>
+      Similarly, if kids in your group are not hundred percent confident about reading time from an analog clock, this project is a good opportunity to practice this skill. However, if both clocks and degrees are completely alien to them, the project work may take longer, and you may risk overwhelming them.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Preparations </div>
+  <div class="cell">
+    <p>
+      Present the group the final version of the project. Then let everyone open and remix <a href="">this initial version</a>. It contains all the sprites and graphics you need for the project work: <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/clock/01.png" alt="figure">
+    </p>
+    <p>
+      Before starting the project work, discuss the functions and the different hands, and for a few minutes practice setting up different times. Kids take turns telling different times of the day, and you set the clocks together. Meanwhile, you can clarify that all you need for this project is setting the "direction" property of the three hand sprites. Click into the value of the direction tool under the stage, and use the pointer to turn the hands of the clock in the required directions. Meanwhile, you can read the corresponding degrees: for example, 0 degrees is 12 o'clock in case of the hours hand; and 90 degrees is 15 second in case of the seconds hand. <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/clock/diranim.webp" alt="figure">
+    </p>
+    <p>
+      Finally, if it feels necessary, you can present to the kids <a href="https://scratch.mit.edu/projects/1018292563/">this project demonstrating how degrees represent directions</a>, from from 0 to 360. (Unfortunately, Scratch uses negative degrees for directions towards the left, which can be confusing for smaller kids.) <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/clock/02.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 1: Setting the seconds </div>
+  <div class="cell">
+    <p>
+      It is a good idea to start coding with the seconds hand, because this is moving visibly, so that the first step will already provide kids with a feeling of success. First you need to figure out how you can get the current time from Scratch. The block reporting the current hour, minute, and second is a bit hidden, but with the appropriate questions you can help the kids finding it. Where are the blocks related to time? Except for the "wait" block which is in the Control group, all of them are in Sensing. Can you remember that some blocks open up when clicked, and shows options? Which block will show the "hours, "minute", and "second" options? Found it? Use it! <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/clock/03.png" alt="figure">
+    </p>
+    <p>
+      Now that you have the key block, the rest is just simple math. You have already concluded that coding a clock is all about directions. A full circle is 360 degrees, and it is 60 seconds. Thus, one second is 360/60 degrees, that is, 6 degrees. The direction of the hand is 6 times the number of seconds passed in the current minute: <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/clock/04.png" alt="figure"><br>
+      If mental calculation is a problem, feel free to use the division block (a computer's job is to compute after all): <br>
+      <img class="figure" width="55%" src="curriculum/img/eng/clock/05.png" alt="figure">
+    </p>
+    <p>
+      Start the project for the first time to see if the seconds hand moves around properly.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">
+    Step 2: Setting the minutes and hours
+    <img width="40" src="curriculum/img/exit.gif" alt="exit">
+  </div>
+  <div class="cell">
+    <p>
+      The code of the minutes hand is almost the same as that of the seconds hand; even the degrees are the same, since a full circle is 60 minutes. Feel free to copy the code from one sprite to the other using the backpack, Ctrl C and Ctrl V, or dragging and dropping: <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/clock/06.png" alt="figure">
+    </p>
+    <p>
+      The code of the hours hand will be slightly different, because a full circle is 12 hours, not 60, so one hour takes 360/12 = 30 degrees: <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/clock/07.png" alt="figure">
+    </p>
+    <p>
+      Later you can refine the hours' code, but it is good enough for now as it is. If you are running out of time, you can call it a day at this point, closing the project word with success. You have programmed a working clock, be proud of yourselves!
+      <img width="30" src="curriculum/img/exit.gif" alt="exit">
+      But if you have a bit of time left, the next step will be really spectalular.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 3: Rotating the globe </div>
+  <div class="cell">
+    <p>
+      After the clock's hands, let's move the Earth. If you have a look at the costumes of the Earth sprite, you can see that it has many of them, one for each phase of its rotation. These costumes are the result of uploading an animated gif as a sprite.
+    </p>
+    <p>
+      The many costumes suggest an easy animation with costume change: <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/clock/08.png" alt="figure"><br>
+      Or if you prefer continuous rotation: <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/clock/09.png" alt="figure">
+    </p>
+    <p>
+      Or you can even synchronize the rotation with the movement of the seconds hand: <br>
+      <img class="figure" width="40%" src="curriculum/img/eng/clock/10.png" alt="figure"> <br>
+      Since the Earth only has 44 phases, there will be a skip in the movement if coded this way, but it is barely noticable. This could be eliminated as well introducing a variable, but there's no need to overcomplicate a miniproject. We include the code here only to deonstrate possibilities: <br>
+      <img class="figure" width="40%" src="curriculum/img/eng/clock/11.png" alt="figure"> <br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 4: Fine tuning the hours hand </div>
+  <div class="cell">
+    <p>
+      Some of the kids may notice that the hours hand doesn't move as it is usual in a clock. At 4:30 and even at 4:55 the hours hand still hasn't moved away from 4 o'clock, only jumping to 5 at 5:00. To make the movement continuous, you need to realize that minutes also matter in the movement, each minute pushing the hand a little bit further. But how much is a little bit exactly? Let's do the math. As you saw before, one hour, whch is 60 minutes, takes 30 degrees. So, the hours hand moves half a degree further every minute. Thus the precise code is <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/clock/12.png" alt="figure"> <br>
+    </p>
+    <p>
+      Have you reached this far and done every step? Wow, great job! :)
+    </p>
+  </div> <!-- cell -->
+
+
+</div> <!-- section -->
