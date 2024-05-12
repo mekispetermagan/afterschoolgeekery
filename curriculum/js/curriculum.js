@@ -78,6 +78,16 @@ class CurriculumApp {
     }
   }
 
+  fixPaths(html) {
+    let result;
+    if (this.isStandalone) {
+      result = html.replaceAll("curriculum/", "./");
+    } else {
+      result = html;
+    }
+    return result;
+  }
+
   getDomElements() {
     this.container              = gCN("curriculumContainer");
     this.chapterContainer       = gCN("curriculumChapterContainer");
@@ -176,6 +186,8 @@ class CurriculumApp {
         }
         );
       }
+      const iconTable = gCN("iconTable");
+      iconTable.innerHTML = this.fixPaths(generateIconTable(this.language, this.currentTopic));
     })
     .catch((error) => {
         console.warn(error);
