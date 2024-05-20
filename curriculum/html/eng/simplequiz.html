@@ -1,0 +1,206 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Simple quiz project </div>
+
+  <div class="celltitle">
+    What is this project about?
+  </div>
+  <div class="cell">
+    <p>
+      Quiz projects are very popular among kids, but they can be quite challenging, because the logic of a quiz is not as simple as that of an animation or a shooting videogame. The intention of this project is making quiz accessible to kids at less advanced level of scratch skills.
+    </p>
+    <p>
+      The main differences between this and the more advanced quiz project:
+      <ul>
+        <li>
+          Instead of multiple choice questions, this one has "yes-now" questions, thus simplifying the creative process, reducing the amount of text to type, and the code to put together.
+        </li>
+        <li>
+          In the advancd quiz project solutions are stored in a list, which is an advanced data type, and can be difficult to grasp for some kids. In this simplified version solutions are stored in nackground names, which can be accessed with a much simpler code.
+        </li>
+      </ul>
+    </p>
+    <p>
+      All in all, it is a good idea to start with this simple quiz project, and move on to the more advanced one a few weeks later.
+    </p>
+    <p>
+      You can see the end result here: <br>
+      <iframe src="https://scratch.mit.edu/projects/1020341285/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">
+    Step 1: Topic selection
+  </div>
+  <div class="cell">
+    <p>
+      Before you sit down at the computers, let each kid choose a topic their quiz. This can be your icebreaker game for the session. To make brainstorming easier, you start with your own topic and show them a true and a false sentence straight away. For example if your topic is geography:
+      <ul>
+        <li>
+          Geography:
+          <ul>
+            <li>Morocco is in Africa.</li>
+            <li>Bucharest is the capital of Hungary.</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+    <p>
+      If the questions don't come easily, collect topics first, eg:
+      <div class="twocolumns">
+        <div class="column">
+          <ul>
+            <li>pokémons</li>
+            <li>Harry Potter</li>
+            <li>car brands</li>
+            <li>bicycle repair</li>
+            <li>football</li>
+            <li>math (pheeew...)</li>
+            <li>music performers</li>
+            <li>movies</li>
+            <li>K-pop</li>
+            <li>chess</li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul>
+            <li>dogs</li>
+            <li>flowers</li>
+            <li>pets</li>
+            <li>TV shows</li>
+            <li>jungle</li>
+            <li>middle ages</li>
+            <li>video games</li>
+            <li>Japan</li>
+            <li>outer space</li>
+            <li>baking and cooking</li>
+          </ul>
+        </div>
+      </div>
+      and so on, something will work for everyone. (Of course, a much shorter list will do as well.)
+    </p>
+    <p>
+      Once you have the topics, everyone formulates a true and a false sentence. You can help the kids to do this together. Some examples:
+      <ul>
+        <li>Fantasy:
+          <ul>
+            <li>Harry Potter is a jedi.</li>
+            <li>Gandalf is a wizard.</li>
+          </ul>
+        </li>
+        <li>Dogs:
+          <ul>
+            <li>Newfoundlands are black.</li>
+            <li>Chihuahuas are very large.</li>
+          </ul>
+        </li>
+        <li>Jungle:
+          <ul>
+            <li>Chimpanzees and orangutans often share the same forest.</li>
+            <li>Tigers come from Asia.</li>
+          </ul>
+        </li>
+      </ul>
+      --and so on. After each pair of sentences, try to guess collectively which is true and which is false.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">
+    Step 2: interface design
+  </div>
+  <div class="cell">
+    <p>
+      Probabaly the easiest way to put together a quiz interface is writing the questions on different backgrounds, and using button sprites for answer options. To get the buttons, click on the cat head icon under the stage, and choose any of the button sprites:<br>
+      <img class="figure" width="25%" src="curriculum/img/eng/simplequiz/01.png" alt="figure">
+      <img class="figure" width="40%" src="curriculum/img/eng/simplequiz/02.png" alt="figure"><br>
+      Of course, you can also draw your own buttons.
+    </p>
+    <p>
+      Use the text tool to indicate the functions of the buttons, and if you feel like, customize them. <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/simplequiz/03.png" alt="figure">
+      <img class="figure" width="45%" src="curriculum/img/eng/simplequiz/04.png" alt="figure">
+      <img class="figure" width="45%" src="curriculum/img/eng/simplequiz/05.png" alt="figure">
+    </p>
+    <p>
+      Besides the two buttons, the quiz interface will contain the current sentences. Write your first few sentences on backgrounds, and decorate them  as you like. Place the buttons below the sentence in the stage. <br>
+      <img class="figure" width="45%" src="curriculum/img/eng/simplequiz/06.png" alt="figure">
+      <img class="figure" width="45%" src="curriculum/img/eng/simplequiz/07.png" alt="figure"><br>
+      Would you like to know how to make your letters bold? :) It's tricky and fun!
+      <button class="curriculumInfoButton" id="boldletter"></button>
+    </p>
+    <p>
+      The names of these backgrounds matter; the program will use background names to tell which sentence is true and which isn't. Name the true ones "true", and the false ones "false" (or whatever you like; just make sure you know which is which, and that their first letters differ; that is what we will use.) The editor will automatically rename the second true one as "true2", the third as "true3" etc. <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/simplequiz/08.png" alt="figure">
+    </p>
+    <p>
+      Now that you have the design and at least some of the content, you can start coding. <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/simplequiz/09.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">
+    Step 3: Showing and switching sentences
+  </div>
+  <div class="cell">
+    <p>
+      The quiz starts with the first sentence; then it moves to the second, the third, and so on. But how does Scratch know at any point of the quiz which is the current queston? It looks like we have to keep track of the number of the current question; a number that keeps changing during the gameplay, much like score or speed or ammunition keep changing in videogames. The tool that we use for this purpose is called a variable; a piece of storage that holds a value that keeps changing (hence the name <i>variable</i>), and makes it accessible by a name: "score", "speed", or, in our case, "question". You can learn more about this in the Variables guide. If you introduce variables in this session, take your time, and make sure you discuss every step with the kids.
+    </p>
+    <p>
+      Scroll down to the Variable group in the blocks panel at the left, and create a variable called "question". Both the stage and the buttons have business with this variable; let's see them one at a time. <br>
+      <img class="figure" width="50%" src="curriculum/img/eng/simplequiz/10.png" alt="figure">
+    </p>
+    <p>
+      Let's start with the stage. What is the initial value of the variable "question"? This sounds very abstract, so let's put it another way: Which question does a quiz start with? This is the kind of question that a kid is ready to answer: the first, of course, question number one. So, at the beginning of the project "question" should be set to 1.
+    </p>
+    <p>
+      We said before that the baskground should always be set to the current question. This is now easy to implement: <br>
+      <img class="figure" width="35%" src="curriculum/img/eng/simplequiz/11.png" alt="figure">
+    </p>
+    <p>
+      As for the buttons, every click on these, among other things, increments the "question" variable; or in simpler terms, it switches from one question to the next: <br>
+      <img class="figure" width="35%" src="curriculum/img/eng/simplequiz/12.png" alt="figure">
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">
+    Step 4: Rewarding good answers
+    <img width="40" src="curriculum/img/exit.gif" alt="exit">
+  </div>
+  <div class="cell">
+    <p>
+      This step is the first exit point; if you make it until the end of it, you can close your session with success.
+    </p>
+    <p>
+      Good answers should be rewarded with score.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">
+    Step 5: Closing screen
+  </div>
+  <div class="cell">
+    <p>
+
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">
+    Step 6: Sound effects
+  </div>
+  <div class="cell">
+    <p>
+
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle">
+    Step 7: Graphic effects
+  </div>
+  <div class="cell">
+    <p>
+
+    </p>
+  </div> <!-- cell -->
+
+</div> <!-- section -->

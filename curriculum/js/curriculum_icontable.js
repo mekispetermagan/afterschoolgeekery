@@ -19,13 +19,13 @@ const generateIconTable = (language, topic) => {
   <tr>
     <th class="iconTableHead"> ${ageTerm}: </th>
     <td>
-      <img src="curriculum/img/icons/age_${age.join("_")}.png" height="84px" alt="11+">
+      <img src="curriculum/img/icons/age_${age.join("_")}.png" height="84px" alt="age: ${age.join("_")}">
     </td>
   </tr>
   <tr>
     <th class="iconTableHead"> ${levelTerm}: </th>
     <td>
-      <img src="curriculum/img/icons/${language}/level_${level}.png" height="84px" alt="novice">
+      <img src="curriculum/img/icons/${language}/level_${level}.png" height="84px" alt="level: ${level}">
     </td>
   </tr>
   <tr>

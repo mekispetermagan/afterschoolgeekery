@@ -42,7 +42,8 @@ const curriculumTopics = {
       ["Space game",          "space"        ],
       ["Flappy Bee game",     "flappybee"    ],
       // ["Storytelling",        "storytelling" ],
-      ["Quiz",                "quiz"         ],
+      ["Simple quiz",         "simplequiz"   ],
+      ["Advanced quiz",       "quiz"         ],
     ]],
     ["Miniprojects (30-45 min)", [
       ["Dressing game",       "dressing"     ],
