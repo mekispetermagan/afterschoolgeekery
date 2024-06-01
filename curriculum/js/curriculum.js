@@ -5,10 +5,12 @@ const curriculumBgColor = {
   light  : "#7983ad"
 }
 
+// Menubuttons for the curriculum app.
+// The class has two subclasses instantiated in the app.
+// dom is the html element corresponding to an abstract button object.
 class CurriculumButton {
-
   constructor() {
-    this.dom = document.createElement("div");
+    this.dom = document.createElement("button");
     this.dom.classList.add("curriculumButton");
   }
 
@@ -54,18 +56,42 @@ class CurriculumSubButton extends CurriculumButton {
   }
 }
 
+/*
+  This is the main curriculum app class. It can be instantiated two ways:
+  - from "afterschoolgeekery.org":
+    - "main_script.js"'s 'gadgetApp.loadApp()' calls the constructor
+    - 'standalone' is false
+    - paths are unchanged
+    - language selection by gadget buttons
+  - from "afterschoolgeekery.org/curriculum":
+    - "curriculum_standalone.js"'s 'main()' calls the constructor
+    - 'standalone' is true
+    - paths are changed
+    - language selection by header buttons
+
+  Curriculum chapters are fetched from separate html files that have no
+  standalone use. The user selects chapters using the buttons of the main menu
+  and the submenus, defined above.
+
+  Both the page and the currently fetched chapter are displayed in one of
+  three languages: English, Hungarian, or Ukrainian. If the language is
+  changed, both the page and the current chapter are reloaded.
+*/
+
 class CurriculumApp {
-  currentTopic   = null;
-  mainButtons = [];
-  subButtons = [];
-  infoButtons = [];
-  path = "";
+  currentTopic  = null;
+  mainButtons   = [];
+  subButtons    = [];
+  infoButtons   = [];
+  path          = "";
+  imageSizes    = [];
 
   constructor(language="eng", isStandalone = false) {
     this.isStandalone = isStandalone;
     this.setPath();
+    this.setImageSizes();
     this.getDomElements();
-    this.quiz = new CurriculumQuiz(language, this.currentTopic, this.isStandalone);
+    this.quiz = new CurriculumQuiz(language, null, isStandalone);
     this.infoBox = new InfoBox(this.path);
     this.setLanguage(language);
   }
@@ -78,6 +104,18 @@ class CurriculumApp {
     }
   }
 
+  // this is temporary
+  // a further version should make images properly responsive
+  // Preares values for 'fixImageSizes'
+  setImageSizes() {
+    for (let i=5; i<100; i+=5) {
+      const source = `width="${i}%"`;
+      const target = `max-width="${i*8}"`;
+      this.imageSizes.push([source, target]);
+    }
+    console.log(this.imageSizes);
+  }
+
   fixPaths(html) {
     let result;
     if (this.isStandalone) {
@@ -88,18 +126,27 @@ class CurriculumApp {
     return result;
   }
 
+  // this is temporary
+  fixImageSizes(html) {
+    let result = html;
+    for (let [s, t] of this.imageSizes) {
+      result = result.replaceAll(s, t);
+    }
+    return result;
+  }
+
   getDomElements() {
-    this.container              = gCN("curriculumContainer");
-    this.chapterContainer       = gCN("curriculumChapterContainer");
-    this.title                  = gCN("curriculumTitle");
-    this.subTitle               = gCN("curriculumSubtitle");
-    this.errorButton            = gCN("curriculumErrorButtonInner");
-    this.mainButtonsContainer   = gCN("curriculumMainMenu");
-    this.subMenuContainers      = gCNs("curriculumSubMenu");
+    this.container            = gCN("curriculumContainer");
+    this.chapterContainer     = gCN("curriculumChapterContainer");
+    this.title                = gCN("curriculumTitle");
+    this.subTitle             = gCN("curriculumSubtitle");
+    this.errorButton          = gCN("curriculumErrorButtonInner");
+    this.mainButtonsContainer = gCN("curriculumMainMenu");
+    this.subMenuContainers    = gCNs("curriculumSubMenu");
     if (this.isStandalone) {
-      this.languageButtons      = gCNs("curriculumFlag");
+      this.languageButtons    = gCNs("curriculumFlag");
     } else {
-      this.languageButtons      = gCNs("gadgetButtonInner language");
+      this.languageButtons    = gCNs("gadgetButtonInner language");
     }
     for (let button of this.languageButtons) {
       button.addEventListener("click", () => {
@@ -118,9 +165,9 @@ class CurriculumApp {
 
   loadPageContent() {
     this.clearButtons();
-    this.title.innerHTML = curriculumTitle[this.language];
-    this.subTitle.innerHTML = curriculumSubTitle[this.language];
-    this.errorButton.innerHTML = curriculumError[this.language];
+    this.title.innerHTML        = curriculumTitle[this.language];
+    this.subTitle.innerHTML     = curriculumSubTitle[this.language];
+    this.errorButton.innerHTML  = curriculumError[this.language];
     const topics = curriculumTopics[this.language];
     for (let i=0; i<topics.length; i++) {
       const topic = topics[i];
@@ -135,8 +182,11 @@ class CurriculumApp {
         this.subButtons.push(subButton);
       }
     }
-    if (this.currentTopic != null) {this.loadChapter(this.currentTopic);}
-    else {this.chapterContainer.innerHTML = curriculumPlaceholder[this.language];}
+    if (this.currentTopic != null) {
+      this.loadChapter(this.currentTopic);
+    } else {
+      this.chapterContainer.innerHTML = curriculumPlaceholder[this.language];
+    }
   }
 
   clearButtons() {
@@ -169,11 +219,9 @@ class CurriculumApp {
     fetch(`${this.path}html/${this.language}/${title}.html`)
     .then((response) => response.text())
     .then((html) => {
-      if (this.isStandalone) {
-        this.chapterContainer.innerHTML = html.replaceAll("curriculum/", "./");
-      } else {
-        this.chapterContainer.innerHTML = html;
-      }
+      html = this.fixPaths(html);
+      html = this.fixImageSizes(html);
+      this.chapterContainer.innerHTML = html;
       this.quiz.refresh(this.language, this.currentTopic);
       this.infoButtons = gCNs("curriculumInfoButton");
       for (let button of this.infoButtons) {
@@ -197,9 +245,9 @@ class CurriculumApp {
   highlightSubButton(button) {
     for (let b of this.subButtons) {
       if (b == button) {
-        button.highlight();
+        b.highlight();
       } else {
-        button.unHighlight();
+        b.unHighlight();
       }
     }
   }
