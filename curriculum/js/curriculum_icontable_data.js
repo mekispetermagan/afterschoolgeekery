@@ -1,4 +1,5 @@
 const iconTableTopicData = {
+  // Scratch projects
   "dance": {
     "age":  [1,2],
     "level": 1,
@@ -44,6 +45,7 @@ const iconTableTopicData = {
     "level": 3,
     "techniques": [""],
   },
+  // Scratch miniprojects
   "dressing": {
     "age":  [1,2],
     "level": 1,
@@ -88,6 +90,12 @@ const iconTableTopicData = {
     "age":  [2,3],
     "level": 2,
     "techniques": ["motion", "math"],
+  },
+  // Robotics
+  "humanbuild1": {
+    "age":  [1,2,3],
+    "level": 1,
+    "techniques": [""],
   },
 }
 

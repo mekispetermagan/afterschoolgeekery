@@ -1,7 +1,7 @@
 const curriculumTitle = {
-  "eng": "Scratch Curriculum",
-  "hun": "Scratch Tananyag",
-  "ukr": "Навчальний план Скретч"
+  "eng": "Curriculum",
+  "hun": "Tananyag",
+  "ukr": "Навчальний план"
 }
 
 const curriculumSubTitle = {
@@ -32,7 +32,7 @@ const curriculumTopics = {
       ["Messaging",           "messaging"    ],
       ["Cloning",             "cloning"      ],
     ]],
-    ["Projects (60-90 min)", [
+    ["Scratch projects (60-90 min)", [
       ["Dance",               "dance"        ],
       ["Chasing game",        "chasing"      ],
       ["Snowfall",            "snowfall"     ],
@@ -45,7 +45,7 @@ const curriculumTopics = {
       ["Simple quiz",         "simplequiz"   ],
       ["Advanced quiz",       "quiz"         ],
     ]],
-    ["Miniprojects (30-45 min)", [
+    ["Scratch miniprojects (30-45 min)", [
       ["Dressing game",       "dressing"     ],
       ["Bouncing ball",       "bouncing"     ],
       ["Heartbeat",           "heartbeat"    ],
@@ -55,7 +55,17 @@ const curriculumTopics = {
       ["Rolling eyes",        "eyeroll"      ],
       ["Birthday card",       "birthday"     ],
       ["Clock",               "clock"        ],
-    ]]
+    ]],
+    ["Robotics", [
+      ["Getting started",     "robotintro"   ],
+      ["Building: dog",       "dogbuild"     ],
+      ["Coding: dog 1",       "dogcode1"     ],
+      ["Coding: dog 2",       "dogcode2"     ],
+      ["Building: human 1",   "humanbuild1"  ],
+      ["Building: human 2",   "humanbuild2"  ],
+      ["Coding: human 1",     "humancode1"   ],
+      ["Coding: human 2",     "humancode2"   ],
+    ]],
   ],
 
   "hun": [
@@ -70,7 +80,7 @@ const curriculumTopics = {
       ["Üzenetküldés",        "messaging"    ],
       ["Klónozás",            "cloning"      ],
     ]],
-    ["Projektek (60-90 perc)", [
+    ["Scratch projektek (60-90 perc)", [
       ["Tánc",                "dance"        ],
       ["Kergetőzős",          "chasing"      ],
       ["Havazás",             "snowfall"     ],
@@ -82,7 +92,7 @@ const curriculumTopics = {
       // ["Történetmesélés",     "storytelling" ],
       ["Kvíz",                "quiz"         ],
     ]],
-    ["Miniprojektek (30-45 perc)", [
+    ["Scratch miniprojektek (30-45 perc)", [
       ["Öltöztetős",          "dressing"     ],
       ["Pattogó labda",       "bouncing"     ],
       ["Szívdobogás",         "heartbeat"    ],
@@ -92,7 +102,7 @@ const curriculumTopics = {
       ["Szemforgatás",        "eyeroll"      ],
       ["Szülinap",            "birthday"     ],
       ["Óra",                 "clock"        ],
-    ]]
+    ]],
   ],
 
   "ukr": [
@@ -107,7 +117,7 @@ const curriculumTopics = {
       ["Повідомлення",        "messaging"    ],
       ["Клонування",          "cloning"      ],
     ]],
-    ["Проекти (60-90 хв)", [
+    ["Скретч проекти (60-90 хв)", [
       ["Танець",              "dance"        ],
       ["Гра-переслідування",  "chasing"      ],
       ["Феєрверк",            "firework"     ],
@@ -119,7 +129,7 @@ const curriculumTopics = {
       // ["Розповідь",           "storytelling" ],
       ["Вікторина",           "quiz"         ],
     ]],
-    ["Міні-проекти (30-45 хв)", [
+    ["Скретч міні-проекти (30-45 хв)", [
       ["Гра Одягалка",         "dressing"     ],
       ["Підстрибування м'яча", "bouncing"     ],
       ["Серцебиття",           "heartbeat"    ],
@@ -129,7 +139,7 @@ const curriculumTopics = {
       ["Закочує очі",          "eyeroll"      ],
       ["День народження",      "birthday"     ],
       ["Годинник",             "clock"        ],
-    ]]
+    ]],
   ],
 }
 

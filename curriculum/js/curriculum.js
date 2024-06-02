@@ -110,7 +110,8 @@ class CurriculumApp {
   setImageSizes() {
     for (let i=5; i<100; i+=5) {
       const source = `width="${i}%"`;
-      const target = `max-width="${i*8}"`;
+      const target = `width="${i*8}"`;
+      // const target = `max-width="${i*8}"`;
       this.imageSizes.push([source, target]);
     }
     console.log(this.imageSizes);
