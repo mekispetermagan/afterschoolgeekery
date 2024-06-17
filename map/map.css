@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #1d2133;
+}
+
+.mapHeader {
+  margin: 24px auto 6px auto;
+  width: 720px;
+  font-size: 42px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mapPlayButton {
+  width: 60px;
+  height: 60px;
+  padding: 6px;
+  background-image: linear-gradient(0deg, #91A6FF, #FAFF7F);
+  border: none;
+  border-radius: 12px;
+}
+
+.map {
+  background-color: #b0b0d0;
+  width: 720px;
+  height: 480px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.mapBackground {
+  z-index: 0;
+  position: absolute;
+}
+
+.mapCountry {
+  z-index: 1;
+  /* filter: drop-shadow(0 0 3px #FAFF7F); */
+  filter: drop-shadow(0 0 3px #222222);
+  position: absolute;
+  /* visibility: hidden; */
+}
+
+/* .mapCountry:hover {
+  z-index: 2;
+  filter: drop-shadow(0 0 6px orange);
+} */
+
+.mapLocation {
+  width: 12px;
+  height: 12px;
+  background-color: #F94646;
+  /* border: 3px solid #F94646; */
+  /* background-color: yellow;
+  border: 3px solid #ff7a7a; */
+  box-shadow: 2px 2px 2px 0px #222222aa;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+  /* left: 224px;
+  top: 270px; */
+}
+
+.mapLocation:hover {
+  transform: translate(-50%,-50%) scale(1.5)
+}
+
+.mapLocationName {
+  visibility: hidden;
+  position: absolute;
+  /* left: -12px;
+  bottom: 3px; */
+  z-index: 4;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.mapLocationNameCard {
+  background-color: #222222;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px #00000033;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.mapPoi {
+  filter: drop-shadow(3px 3px 3px #00000033);
+}
+
+.mapInfo {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 270px;
+  /* height: 180px; */
+  z-index: 3;
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px #00000033;
+  background-color: #91A6FF;
+  border: 3px solid #7485cc;
+  padding: 6px;
+  visibility: hidden;
+  opacity: 0.9;
+}
+

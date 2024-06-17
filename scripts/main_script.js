@@ -3,6 +3,7 @@ class GadgetApp {
   apps = [
     ["html/whatwedo.html",    WhatWeDoApp],
     ["html/whoweare.html",    WhoWeAreApp],
+    ["map/map.html",          MapApp     ],
     ["curriculum/curriculum_main.html", CurriculumApp],
     ["html/literacy.html",    LiteracyApp]
   ]
