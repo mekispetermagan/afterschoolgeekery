@@ -51,11 +51,15 @@ class Location {
     this.info = document.createElement("div");
     this.info.classList.add("mapInfo");
     this.owner.map.appendChild(this.info);
-    this.info.innerHTML = `<p>${mapLocationInfo[this.name].join("</p><p>")}</p>`;
-  }
+    this.info.innerHTML = `<p>${mapLocationInfo[this.name].slice(0,-1).join("</p><p>")}</p>`;
+    }
 
-  createImage() {
-
+    createImage() {
+    this.image = new Image();
+    this.image.src = `${this.owner.path}/images/locations/${mapLocationInfo[this.name][3]}.jpg`;
+    this.image.classList.add("mapLocationImage");
+    this.image.width = 240;
+    this.owner.map.append(this.image);
   }
 
   showInfo(name = this.name) {
@@ -63,6 +67,7 @@ class Location {
       this.nameTag.style.visibility = "visible";
       this.nameTagOn = true;
       this.info.style.visibility = "visible";
+      this.image.style.visibility = "visible";
       setTimeout(() => {this.nameTagOn = false;}, 1000);
     }
   }
@@ -74,12 +79,15 @@ class Location {
       if (0 < opacity) {
         this.nameTag.style.opacity = opacity;
         this.info.style.opacity = opacity;
+        this.image.style.opacity = opacity;
         delay = setTimeout(() => fade(opacity-0.05), 25);
       } else {
         this.nameTag.style.visibility = "hidden";
         this.info.style.visibility = "hidden";
+        this.image.style.visibility = "hidden";
         this.nameTag.style.opacity = 1;
         this.info.style.opacity = 1;
+        this.image.style.opacity = 1;
       }
     }
     if (! this.nameTagOn) {

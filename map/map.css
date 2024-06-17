@@ -113,3 +113,13 @@ body {
   opacity: 0.9;
 }
 
+.mapLocationImage {
+  position: absolute;
+  left: 300px;
+  bottom: 12px;
+  z-index: 1;
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px #00000033;
+  border: 3px solid #7485cc;
+  visibility: hidden;
+}
