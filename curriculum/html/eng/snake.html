@@ -1,16 +1,170 @@
 <!-- This file is meant to be loaded in "curriculum.html". -->
 
 <div class="section">
-  <div class="section-title topicTitle"> Kígyós játék </div>
+  <div class="section-title topicTitle"> Snake game </div>
 
-  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="celltitle"> What is it about? </div>
   <div class="cell">
     <p>
-
+      This project is a Scratch remake of the Snake game familiar from old Nokia phones: <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/snake/snake_nokia.png" alt="figure"> <br>
     </p>
     <p>
-      <img class="figure" width="45%" src="curriculum/img/hun/dino/8_3.png" alt="figure">
+      You can see the end result here: <br>
+      <iframe src="https://scratch.mit.edu/projects/1104903245/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
     </p>
   </div> <!-- cell -->
+
+  <div class="celltitle"> Step 1: Drawing sprites </div>
+  <div class="cell">
+    <p>
+      The tricky part of this game is designing the snake, since it changes its shape in action: <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/snake/01.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/02.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/03.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/eng/snake/04.png" alt="figure"><br>
+      It is quite simply impossible to create a custome for every shape.
+    </p>
+    <p>
+      Instead, we create a sprite for the head, and another one for the segments of the snake's body; and we will create clones of the body segments to form the snake's body. It's simpler to show than to explain this.
+    </p>
+    <p>
+      Let's start with the head. You can start simply redrawing Scratchie's main costume: <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/snake/05.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/snake/06.png" alt="figure"><br>
+      The head can be simple or refined: <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/snake/07.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/snake/08.png" alt="figure"><br>
+      Or you can simply decide to reuse Scratchie's head. Careful though, cat-snake hybrids are weird! <br>
+      <img class="figure" width="25%" src="curriculum/img/eng/snake/09.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/10.png" alt="figure"><br>
+    </p>
+    <p>
+      Body segments are much simpler; they can be just circles that are somewhat smaller than the head: <br>
+      <img class="figure" width="15%" src="curriculum/img/eng/snake/11.png" alt="figure"><br>
+    </p>
+    <p>
+      Finally, make both the head and the body small enough that there will be enough space for them in the stage to move around.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 2: Moving the head </div>
+  <div class="cell">
+    <p>
+      Once the artwork is ready, you can turn to coding. How do we control the snake? The simplest way is to follow the "steering wheel" logic: we can turn the snake left or right <i>relative</i> to its current direction: <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/snake/12.png" alt="figure"><br>
+    </p>
+    <p>
+      Another option is the "joystick" logic: the four arrow keys turn Scratchie to the <i>absolute</i> directions of North, East, South, or West: <br> 
+      <img class="figure" width="80%" src="curriculum/img/eng/snake/13.png" alt="figure"><br>
+    </p>
+    <p>
+      Both choices are valid. Ask the kids, and implement the version they come up with.
+    </p>
+    <p>
+      Once we can turn the snake, it's time to move it. In this type of game, the main sprite is moving continuously, the playser only has control over its direction. So you can create a separate script for the movement: <br> 
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/14.png" alt="figure"><br>
+      When you test the code, you can see that the head is moving as it should, but way too fast. Slowing it doen will not be hard if you have done this before: <br>
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/15.png" alt="figure"><br>
+      If working with decimal fractions is new, slow down and ask a few questions: <i>Are there numbers between 0 and 1?</i> <i>How do we write them?</i> If the kids have absolutely no concept of fractions, just introduce the notation, no need to give them a math lesson. They will have an intuitive understanding of what's going on anyway. Make sure you use decimal dots instead of decimal commas, and play around with the new kind of numbers until the snake moves perfectly. Finally, you may add an initial "go to" block to make the snake always start from the center: <br>
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/16.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 3: Moving the body </div>
+  <div class="cell">
+    <p>
+      The body of the snake is, so to say, growing from its head. The many segments are created continuously as the head moves. Since this part is probably new to the participants, and it is not easy to guess, feel free to show them that one sprite can in fact create a clone of the other one: <br> 
+      <img class="figure" width="35%" src="curriculum/img/eng/snake/17.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/eng/snake/18.png" alt="figure"><br>
+    </p>
+    <p>
+      Now you can switch to the body sprite. The role of the body segments is simple: once they are created, they simply go to wherever the head is, and stay there. <br>
+      <img class="figure" width="35%" src="curriculum/img/eng/snake/19.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/20.png" alt="figure"><br>
+      And, tada!, the body starts following the snake, and the snake meandering around the stage.
+    </p>
+    <p>
+      But now the snake never stops growing. To ensure it has a fixed size, we segments should have a lifetime, being deleted after a few seconds. The higher the seconds, the longer the snake. Again, take your time playing around with numbers. <br>
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/21.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/22.png" alt="figure"><br>
+    </p>
+    <p>
+      If you have reached this point, you can safely quit the project work with a feeling of success. You have created something spectacular; be proud of yourselves!
+    </p>
+    <p>
+      But if you are still ready to continue, many great steps are left to take in the project work; and presumably many of those will already be familiar to the kids.
+    </p>
+  </div> <!-- cell -->
+    
+  <div class="celltitle"> Step 4: Only the clones are visible </div>
+  <div class="cell">
+    <p>
+      This is a small adjustment to the existing code, which is often necessary when working with clones. You can see that there is one extra body segment on the stage, which is not part of the snake's movement: <br>
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/23.png" alt="figure"><br>
+      It is a good exercise in logic to discuss with the kids what this extra body segment is. You will quickly conclude that this is the original sprite, staying idle on the stage while its clones follow the snake's head.
+    </p>
+    <p>
+      To get rid of the original, you simply gave to hide it: <br>
+      <img class="figure" width="15%" src="curriculum/img/eng/snake/24.png" alt="figure"><br>
+      But now the whole body, with all the cloned segments, became invisible. To get the clones back, you need to show them: <br>
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/25.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 5: Make the snake eat and grow </div>
+  <div class="cell">
+    <p>
+      The logic of the game is simple: when the snake eats, it grows. To implement it, first you need to introduce a new "food" sprite. you can draw it yourselves, or just use a ready-made sprite of Scratch, like an apple or a donut: <br>
+      <img class="figure" width="15%" src="curriculum/img/eng/snake/26.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/eng/snake/27.png" alt="figure"><br>
+    </p>
+    <p>
+      The food should appear at random points in the stage, waiting for being eaten. This sounds simple, but what does "being eaten" mean? Discuss this with the kids. You will conclude that the simplest way to implement this is that when food touches the snake's head, it disappears, and a bit later it appears again. This is now easy to code. We encourage you to use the "wait until" block here, because it is more intuitive and less error-prone than "if-then" in this context: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/snake/28.png" alt="figure"><br>
+    </p>
+    <p>
+      And how will the snake grow? We have already seen that the length of the snake depends on the lifetime of its segments; the longer the segments wait before being deleted, the longer the snake is. So, we need a variable to govern this. It may be a good idea to call it "length", but you can also call it "score", since it reflects the player's performance. Create the variable, change it every time the food hits the snake's head, and use it in the body clones' code: <br>
+      <img class="figure" width="35%" src="curriculum/img/eng/snake/29.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/snake/30.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/31.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/eng/snake/32.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 6: Game over when snake bites its tail </div>
+  <div class="cell">
+    <p>
+      The game ends when the meandering snake hits its own body. This code fits well in the body's code, and it will be similar to the snake's head hitting the apple. Since its independent of the rest of the body's code, it deserves its own script: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/snake/33.png" alt="figure"><br>
+      But careful: since body segments start their life cycle at the head's position, we should give them some time to first leave the head, before we test for hitting it again: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/snake/34.png" alt="figure"><br>
+    </p>
+    <p>
+      Finally, "Game Over" can be a whole new sprite: <br>
+      <img class="figure" width="30%" src="curriculum/img/eng/snake/35.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/eng/snake/36.png" alt="figure"><br>
+    </p>
+    <p>
+      The game ending code is simply showing the inscription when the message arrives (after hiding it when the game starts), and of course actually stopping the game: <br>
+      <img class="figure" width="40%" src="curriculum/img/eng/snake/37.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Step 7: Snake in ad out </div>
+  <div class="cell">
+    <p>
+      If you still have time left, and feel motivated to face a last challenge, you can make the snake come back from the other side when it leaves the stage, just like in the original game. This requires some familiarity with Scratch's coordinate system: <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/snake/38.png" alt="figure"><br>
+      The code itself is simple, but a bit math minded: <br>
+      <img class="figure" width="60%" src="curriculum/img/eng/snake/39.png" alt="figure"><br>
+      <img class="figure" width="60%" src="curriculum/img/eng/snake/40.png" alt="figure"><br>
+    </p>
+    <p>
+      ...Aaand here you are, you have reached the end of the universe! :) Congratulations, nice job fully completing another project work.
+    </p>
+  </div> <!-- cell -->
+
+  
 
 </div> <!-- section -->

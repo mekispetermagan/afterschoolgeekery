@@ -1,0 +1,170 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Kígyós játék </div>
+
+  <div class="celltitle"> Miről lesz szó? </div>
+  <div class="cell">
+    <p>
+      Ez a játék a Nokia telefonokról ismerős Snake játék Scratch-es változata: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/snake/snake_nokia.png" alt="figure"> <br>
+    </p>
+    <p>
+      Itt láthatod a végeredményt: <br>
+      <iframe src="https://scratch.mit.edu/projects/1104903245/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 1. lépés: Szereplőrajzolás </div>
+  <div class="cell">
+    <p>
+      Ebben a játékban a nagy kihívás a kígyó megtervezése, hiszen az menet közben folyton változtatja az alakját: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/snake/01.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/02.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/03.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/hun/snake/04.png" alt="figure"><br>
+      Egyszerűen lehetetlen minden alakhoz jelmezt rajzolni.
+    </p>
+    <p>
+      Ehelyett készítünk egy külön szereplőt a fejnek, és egyet a test szegmenseinek; és a szegmenseket klónozni fogjuk, hogy a klónok megformálják a kígyó testét. Ezt egyszerűbb megmutatni, mint elmagyarázni.
+    </p>
+    <p>
+      Kezdjük a fejjel. Egyszerűen újrarajzolhatjátok Scratchie cica fő jelmezét: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/snake/05.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/hun/snake/06.png" alt="figure"><br>
+      A fej lehet egyszerű vagy bonyolult: <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/snake/07.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/hun/snake/08.png" alt="figure"><br>
+      Vagy akár meg is hagyhatjátok Scratchie fejét a kígyónak. De vigyázzatok, a cica-kígyó hibridek elég bizarrul néznek ki! <br>
+      <img class="figure" width="25%" src="curriculum/img/hun/snake/09.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/10.png" alt="figure"><br>
+    </p>
+    <p>
+      A test szegmensei lehetnek egyszerűbbek; elég, ha a fejnél kicsit kisebbb kört rajzoltok: <br>
+      <img class="figure" width="15%" src="curriculum/img/hun/snake/11.png" alt="figure"><br>
+    </p>
+    <p>
+      Végül a fejet és a test-szegmenst is méretezzétek elég kicsire ahhoz, hogy sok hely legyen a színpadon mozogni.
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 2. lépés: A fej mozgatása </div>
+  <div class="cell">
+    <p>
+      Ha kész vagytok a műalkotásokkal, jöhet a kódolás. Hogy irányítjuk a kígyót? A legegyszerűbb megoldás, ha a "kormány" logikát követitek: balra és jobbra fordulhatunk a kígyóval a mindenkori irányához képest. <br>
+      <img class="figure" width="60%" src="curriculum/img/hun/snake/12.png" alt="figure"><br>
+    </p>
+    <p>
+      Egy másik lehetőség a "joystick" logika: a négy nyíl billentyű északnak, keletnek, délnek vagy nyugatnak fordítha a fejet. <br> 
+      <img class="figure" width="80%" src="curriculum/img/hun/snake/13.png" alt="figure"><br>
+    </p>
+    <p>
+      A két megoldás egformán jó. Kérdezzétek meg a gyerekeket, és azt kódoljátok le, amelyiket választják.
+    </p>
+    <p>
+      Ha kormányozni már tudjátok a kígyót, jöhet a mozgatás. Ebben a játéktípusban folyamatosan mozog a szereplő, amit irányítunk, a játékos csak az irányát tudja befolyásolni. A mozgásnak tehát új feladatot építhettek: <br> 
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/14.png" alt="figure"><br>
+      Ha elindítjátok a projektet, azt táthatjátok, hogy a fej megfelelően mozog, de sokkal gyorsabban a kelleténél. A lelassítás nem lesz nehéz, ha csináltatok már ilyesmit: <br>
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/15.png" alt="figure"><br>
+      Ha a tizedestörtek újak a gyerekeknek, lassítsatok le egy kicsit, és tegyetek fel pár kérdést: <i>Vannak számok 0 és 1 között?</i> <i>És azokat hogy írjuk le?</i> Ha a gyerekeknek semmilyen ismerete nincs a törtekről, akkor csak vezessétek be a tizedespontos jelölést, nem kell matekórát tartani. Így is ki fog alakulni egy kóintuitív kép a fejükben arról, hogy mi történik. Vigyázzatok, hogy angolosan tizedespontot használjatok a tizedesvessző helyett, és játsszatok addig a számokkal, amíg a kígyó a megfelelő tempóban nem mozog. Végül még betehettek egy kezdő "ugorj" blokkot a kódba, hogy a kígyó mindig középről induljon: <br>
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/16.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 2. lépés: A test mozgatása </div>
+  <div class="cell">
+    <p>
+      A kígyó teste úgyszólván a fejéből nő ki. A szegmensek folyamatosan et folyamatosan klónozzuk, és az új klónok a kígyó fejéhez kerülnek. Mivel ez a rész valószínűleg új a résztvevőknek, és nem is egyszerű kitalálni, nyugodtan mutassátok meg nekik, hogy tudja az egyik szereplő a másikat klónozni: <br> 
+      <img class="figure" width="35%" src="curriculum/img/hun/snake/17.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/hun/snake/18.png" alt="figure"><br>
+    </p>
+    <p>
+      Most átválthattok a test szereplőre. A test-szegmensek szerepe egyszerű: Amint elkészülnek, odakerülnek, ahol a fej van, és ott is maradnak. <br>
+      <img class="figure" width="35%" src="curriculum/img/hun/snake/19.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/20.png" alt="figure"><br>
+      És tatám!, a test máris kinő a kígyó fejéből, és mögötte kanyarog a színpadon.
+    </p>
+    <p>
+      De így túl nagyra nő a kígyó. Hogy legyen egy fix mérete, a szegmenseknek élettartamot kellene adni úgy, hogy néhány másodperc múlva töröljük őket. Minél több másodpercet élnek, annál hosszabb a kígyó. Most is nyugodtan játsszatok a számokkal, hogy megértsétek, hogy függ össze a várakozási idő és a kígyó hossza. <br>
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/21.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/22.png" alt="figure"><br>
+    </p>
+    <p>
+      Ha eddig a pontig eljutottatok, már sikerélménnyel fejezhetitek be a projektmunkát. Látványos interaktív animációt készítettetek, legyetek büszkék magatokra.
+    </p>
+    <p>
+      De ha még bírjátok szusszal, vár rátok néhány további klassz lépés a projektmunkában; és ezeknek a lépéseknek a többsége valószínűleg ismerős lesz a gyerekeknek.
+    </p>
+  </div> <!-- cell -->
+    
+  <div class="celltitle"> 4. lépés: Csak a klónok látszanak </div>
+  <div class="cell">
+    <p>
+      Ez egy apró igazítás a meglevő kódon, ami gyakran szükséges, ha klónokkal dolgoztok. A színpadon láthattok egy extra szegmenst, ami nem vesz részt a kígyó mozgásában: <br>
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/23.png" alt="figure"><br>
+      Jó kis agytorna megvitatni a gyerekekkel, mit keres ott az a magányos szegmens. Hamar rá fogtok jönni, hogy ez az eredeti szereplő, ami tétlenül álldogál a színpadon, amíg a klónjai követik a fejet.
+    </p>
+    <p>
+      Hogy megszabaduljatok ettől az eredeti szereplőtől, egyszerűen eltűntethetitek: <br>
+      <img class="figure" width="15%" src="curriculum/img/hun/snake/24.png" alt="figure"><br>
+      De így meg az egész test az összes klónnal eltűnik. Hogy a klónokat visszakapjuk, őket viszont érdemes megjeleníteni: <br>
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/25.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 5. lépés: A kígyó eszik és nő </div>
+  <div class="cell">
+    <p>
+      A játék logikája egyszerű: ahogy a kígyó eszik, úgy nő. Hogy ezt implementáljátok, mindenekelőtt érdemes létrehozni egy új, "étel" nevű szereplőt. Ezt meg is rajzolhatjátok, de használhattok egy kész szereplőt is, mondjuk almát vagy fánkot: <br>
+      <img class="figure" width="15%" src="curriculum/img/hun/snake/26.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/hun/snake/27.png" alt="figure"><br>
+    </p>
+    <p>
+      Az étel random helyeken fog megjelenni a színpadon,és várja, hogy megegyék. Ez nem hangzik bonyolultnak, de mit is jelent az, hogy "megegyék"? Beszéljétek meg ezt is a gyerekekkel. Arra fogtok jutni, hogy a legegyszerűbb, ha az étel eltűnik, amikor hozzáér a kígyó fejéhez; aztán kicsit később újra megjelenik máshol, hogy tovább menjen a játék. Ezt már tényleg egyszerű lekódolni. Szeretnénk bátorítani benneteket arra, hoy ilyen esetekben használjátok a "várj eddig" blokkot, mert ez intuitívabb is, és kevesebb hibaforrás is van benne, mint a "ha-akkor" blokkban: <br>
+      <img class="figure" width="30%" src="curriculum/img/hun/snake/28.png" alt="figure"><br>
+    </p>
+    <p>
+      De hogy fog nőni a kígyó? Már láttátok, hogy a kígyó hossza a szegmensek élettartamától függ; minél több másodpercet várnak a klónok törlés előtt, annál hosszabb a kígyó. Ehhez jól fog jönni egy változó. Ezt nevezhetitek "hossz"-nak, vagy esetleg "pont"-nak is, hiszen a játékos teljesítményét méri. Hozzátok létre ezt a változót, és állítsátok be úgy, hogy minden alkalommal, amikor a kígyó eszik, növekedjen eggyel. Végül használjátok ezt a test klónjainál: <br>
+      <img class="figure" width="35%" src="curriculum/img/hun/snake/29.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/hun/snake/30.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/31.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/hun/snake/32.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 6. lépés: Játék vége, ha farkába harap a kígyó  </div>
+  <div class="cell">
+    <p>
+      A játék akkor ér véget, ha a hoszú kígyó kanyargás közben saját testébe ütközik. Ezt a kódot legegyszerűbb a test szereplőhöz illeszteni. Kicsit hasonlítani fog arra, ahogy az alma várja, hogy a fejjel ütközzön. Mivel a test kódjának többi részétől független, új eseményblokkal kezdhettek neki: <br>
+      <img class="figure" width="30%" src="curriculum/img/hun/snake/33.png" alt="figure"><br>
+      De vigyázat: az új klónok a kígyó fejéhez kerülnek, ezért érdemes az érintésfigyelés előtt adni nekik egy kis időt, amíg a fej odébbhalad: <br>
+      <img class="figure" width="30%" src="curriculum/img/hun/snake/34.png" alt="figure"><br>
+    </p>
+    <p>
+      És végül a "Game Over" egy teljesen új szereplő lehet: <br>
+      <img class="figure" width="30%" src="curriculum/img/hun/snake/35.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/hun/snake/36.png" alt="figure"><br>
+    </p>
+    <p>
+      A játék befejezése annyi, hogy megjelenik a "Game Over" felirat (miután a játék elején eltűnt), és persze leállítjuk az összes szereplő összes feladatát: <br>
+      <img class="figure" width="40%" src="curriculum/img/hun/snake/37.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> 7.lépés: A kígyó ki-be jár a színpadon </div>
+  <div class="cell">
+    <p>
+      Ha még mindi van időtök és kedvetek egy utolsó kihíváshoz, lekódolhatjátok, hogy a kígyó bejöjjön a másik oldalon, ha kimegy az egyiken, mint az eredeti játékban. Ehhez már ismerni kell valamennyire a koordinátarendszert: <br>
+      <img class="figure" width="60%" src="curriculum/img/hun/snake/38.png" alt="figure"><br>
+      A kód pedig egyszerű, de kicsit matekos: <br>
+      <img class="figure" width="60%" src="curriculum/img/hun/snake/39.png" alt="figure"><br>
+      <img class="figure" width="60%" src="curriculum/img/hun/snake/40.png" alt="figure"><br>
+    </p>
+    <p>
+      ...Ééés megérkeztetek a kaland végéhez! :) Gratulálunk, még egy projektmunkát teljesen végigcsináltatok.
+    </p>
+  </div> <!-- cell -->
+
+  
+
+</div> <!-- section -->

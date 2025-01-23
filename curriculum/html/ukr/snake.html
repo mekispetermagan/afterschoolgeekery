@@ -1,0 +1,161 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+  <div class="section-title topicTitle"> Гра в змійку </div>
+
+  <div class="celltitle"> Про що вона? </div>
+  <div class="cell">
+    <p>
+      Цей проект - римейк гри Скретч, знайомої зі старих телефонів Nokia: <br>
+      <img class="figure" width="25%" src="curriculum/img/ukr/snake/snake_nokia.png" alt="figure"> <br>
+    </p>
+    <p>
+      Кінцевий результат можна побачити тут: <br>
+      <iframe src="https://scratch.mit.edu/projects/1104903245/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Крок 1: Малювання спрайтів </div>
+  <div class="cell">
+    <p>
+      Найскладніша частина цієї гри - створення змійки, адже вона змінює свою форму під час руху: <br>
+      <img class="figure" width="25%" src="curriculum/img/ukr/snake/01.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/02.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/03.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/ukr/snake/04.png" alt="figure"><br>
+      Просто неможливо створити індивідуальний дизайн для кожної форми.    </p>
+    <p>
+      Замість цього ми створимо спрайт для голови, а ще один - для сегментів тіла змії; і створимо клони сегментів тіла, щоб сформувати тіло змії. Це простіше показати, ніж пояснити.    </p>
+    <p>
+      Почнемо з голови. Ви можете почати з простого перемальовування основного костюма Скретчі: <br>
+      <img class="figure" width="25%" src="curriculum/img/ukr/snake/05.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/ukr/snake/06.png" alt="figure"><br>
+      Голова може бути простою або вишуканою: <br>
+      <img class="figure" width="25%" src="curriculum/img/ukr/snake/07.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/ukr/snake/08.png" alt="figure"><br>
+      Або ж ви можете просто вирішити використати голову Скретчі повторно. Але будьте обережні, гібриди котів та змій дуже дивні! <br>
+      <img class="figure" width="25%" src="curriculum/img/ukr/snake/09.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/10.png" alt="figure"><br>
+    </p>
+    <p>
+      Сегменти тіла набагато простіші, вони можуть бути просто колами, дещо меншими за голову: <br>
+      <img class="figure" width="15%" src="curriculum/img/ukr/snake/11.png" alt="figure"><br>
+    </p>
+    <p>
+      Нарешті, зробіть і голову, і тіло досить маленькими, щоб на сцені було достатньо місця для їхнього пересування.    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Крок 2: Переміщення голови </div>
+  <div class="cell">
+    <p>
+      Коли ілюстрація готова, можна переходити до кодування. Як керувати змійкою? Найпростіший спосіб - слідувати логіці "керма": ми можемо повернути змійку вліво або вправо <i>відносно</i> її поточного напрямку: <br>
+      <img class="figure" width="60%" src="curriculum/img/ukr/snake/12.png" alt="figure"><br>
+    </p>
+    <p>
+      Інший варіант - "джойстикова" логіка: чотири клавіші зі стрілками повертають Скретчі в <i>абсолютних</i> напрямках на північ, схід, південь або захід: <br> 
+      <img class="figure" width="80%" src="curriculum/img/ukr/snake/13.png" alt="figure"><br>
+    </p>
+    <p>
+      Обидва варіанти правильні. Запитайте дітей і реалізуйте ту версію, яку вони запропонують.    </p>
+    <p>
+      Після того, як ми змогли повернути змію, настав час її перемістити. У цьому типі ігор головний спрайт рухається безперервно, гравець може лише контролювати його напрямок. Тому ви можете створити окремий скрипт для руху: <br> 
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/14.png" alt="figure"><br>
+      Коли ви тестуєте код, то бачите, що голова рухається як треба, але занадто швидко. Уповільнити її буде не складно, якщо ви робили це раніше: <br>
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/15.png" alt="figure"><br>
+      Якщо робота з десятковими дробами є новою для вас, сповільніться і задайте кілька запитань: <i>Чи існують числа між 0 і 1?</i> <i>Як ми їх записуємо?</i> Якщо діти не мають жодного уявлення про дроби, просто познайомте їх з позначеннями, не потрібно давати їм урок математики. Вони все одно інтуїтивно зрозуміють, що відбувається. Переконайтеся, що ви використовуєте десяткові крапки замість десяткових ком, і пограйтеся з новим типом чисел, поки змійка не буде рухатися ідеально. Нарешті, ви можете додати початковий блок "go to", щоб змійка завжди починала рух з центру: <br>
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/16.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Крок 3: Переміщення тіла </div>
+  <div class="cell">
+    <p>
+      Тіло змії, так би мовити, виростає з голови. Численні сегменти створюються безперервно, коли голова рухається. Оскільки ця частина, ймовірно, є новою для учасників, і про неї нелегко здогадатися, не соромтеся показати їм, що один спрайт насправді може створювати клон іншого: <br> 
+      <img class="figure" width="35%" src="curriculum/img/ukr/snake/17.png" alt="figure">
+      <img class="figure" width="25%" src="curriculum/img/ukr/snake/18.png" alt="figure"><br>
+    </p>
+    <p>
+      Тепер ви можете перейти до спрайту тіла. Роль сегментів тіла проста: коли вони створені, вони просто йдуть туди, де знаходиться голова, і залишаються там. <br>
+      <img class="figure" width="35%" src="curriculum/img/ukr/snake/19.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/20.png" alt="figure"><br>
+      І, тада!, тіло починає слідувати за змією, а змія звивається по сцені.    </p>
+    <p>
+      Але тепер змійка не припиняє рости. Щоб вона мала фіксований розмір, наші сегменти повинні мати час життя і видалятися через кілька секунд. Чим більше секунд, тим довша змійка. Знову ж таки, не поспішайте гратися з числами. <br>
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/21.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/22.png" alt="figure"><br>
+    </p>
+    <p>
+      Якщо ви дійшли до цього етапу, можете сміливо завершувати роботу над проектом з відчуттям успіху. Ви створили щось вражаюче, пишайтеся собою!    </p>
+    <p>
+      Але якщо ви все ще готові продовжувати, то попереду ще багато важливих кроків у роботі над проектом; і, ймовірно, багато з них вже будуть знайомі дітям.    </p>
+  </div> <!-- cell -->
+    
+  <div class="celltitle"> Крок 4: Видно лише клони </div>
+  <div class="cell">
+    <p>
+      Це невелике коригування існуючого коду, яке часто необхідне при роботі з клонами. Ви бачите, що на сцені є один додатковий сегмент тіла, який не є частиною руху змії: <br>
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/23.png" alt="figure"><br>
+      Це гарна вправа на логіку - обговорити з дітьми, що це за додатковий сегмент тіла. Ви швидко дійдете висновку, що це оригінальний спрайт, який стоїть на сцені без діла, поки його клони рухаються за головою змії.    </p>
+    <p>
+      Щоб позбутися оригіналу, ви просто дали заховати його: <br>
+      <img class="figure" width="15%" src="curriculum/img/ukr/snake/24.png" alt="figure"><br>
+      Але тепер все тіло, з усіма клонованими сегментами, стало невидимим. Щоб повернути клони, потрібно їх показати: <br>
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/25.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Крок 5: Змусьте змію їсти і рости </div>
+  <div class="cell">
+    <p>
+      Логіка гри проста: коли змійка їсть, вона росте. Щоб її реалізувати, спочатку потрібно ввести новий "харчовий" спрайт. його можна намалювати самостійно, або просто використати готовий спрайт Скретча, наприклад, яблуко чи пончик: <br>
+      <img class="figure" width="15%" src="curriculum/img/ukr/snake/26.png" alt="figure">
+      <img class="figure" width="15%" src="curriculum/img/ukr/snake/27.png" alt="figure"><br>
+    </p>
+    <p>
+      Їжа повинна з'являтися у випадкових точках сцени і чекати, поки її з'їдять. Звучить просто, але що означає "бути з'їденою"? Обговоріть це з дітьми. Ви дійдете висновку, що найпростіший спосіб реалізувати це - коли їжа торкається голови змії, вона зникає, а трохи згодом з'являється знову. Тепер це легко запрограмувати. Ми рекомендуємо вам використовувати тут блок "wait until", тому що він більш інтуїтивно зрозумілий і менш схильний до помилок, ніж "if-then" в даному контексті: <br>
+      <img class="figure" width="30%" src="curriculum/img/ukr/snake/28.png" alt="figure"><br>
+    </p>
+    <p>
+      А як буде рости змійка? Ми вже бачили, що довжина змійки залежить від часу життя її сегментів; чим довше сегменти чекають на видалення, тим довшою буде змійка. Отже, нам потрібна змінна для керування цим процесом. Можна назвати її "довжина", але ви також можете назвати її "рахунок", оскільки вона відображає ефективність гравця. Створіть змінну, змінюйте її щоразу, коли їжа потрапляє в голову змії, і використовуйте її в коді клонів тіла: <br>
+      <img class="figure" width="35%" src="curriculum/img/ukr/snake/29.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/ukr/snake/30.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/31.png" alt="figure">
+      <img class="figure" width="20%" src="curriculum/img/ukr/snake/32.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Крок 6: Гра закінчена, коли змія кусає себе за хвіст </div>
+  <div class="cell">
+    <p>
+      Гра закінчується, коли змія, що звивається, вдаряється об власне тіло. Цей код добре вписується в код тіла, і він буде схожий на те, як голова змії вдаряється об яблуко. Оскільки він не залежить від решти коду тіла, він заслуговує на окремий сценарій: <br>
+      <img class="figure" width="30%" src="curriculum/img/ukr/snake/33.png" alt="figure"><br>
+      Але будьте обережні: оскільки сегменти тіла починають свій життєвий цикл у позиції голови, ми повинні дати їм деякий час, щоб вони покинули голову, перш ніж тестувати повторне зіткнення з нею: <br>
+      <img class="figure" width="30%" src="curriculum/img/ukr/snake/34.png" alt="figure"><br>
+    </p>
+    <p>
+      Нарешті, "Game Over" може бути абсолютно новим спрайтом: <br>
+      <img class="figure" width="30%" src="curriculum/img/ukr/snake/35.png" alt="figure">
+      <img class="figure" width="30%" src="curriculum/img/ukr/snake/36.png" alt="figure"><br>
+    </p>
+    <p>
+      Код завершення гри просто показує напис, коли надходить повідомлення (після того, як він ховається під час запуску гри), і, звичайно, фактично зупиняє гру: <br>
+      <img class="figure" width="40%" src="curriculum/img/ukr/snake/37.png" alt="figure"><br>
+    </p>
+  </div> <!-- cell -->
+
+  <div class="celltitle"> Крок 7: Засуньте змійку в оголошення </div>
+  <div class="cell">
+    <p>
+      Якщо у вас ще залишився час, і ви відчуваєте мотивацію для останнього випробування, ви можете змусити змію повернутися з іншого боку, коли вона покине сцену, як в оригінальній грі. Це вимагає певного знайомства з системою координат Скретча: <br>
+      <img class="figure" width="60%" src="curriculum/img/ukr/snake/38.png" alt="figure"><br>
+      Сам код простий, але трохи математичний: <br>
+      <img class="figure" width="60%" src="curriculum/img/ukr/snake/39.png" alt="figure"><br>
+      <img class="figure" width="60%" src="curriculum/img/ukr/snake/40.png" alt="figure"><br>
+    </p>
+    <p>
+      ...І ось ви досягли кінця Всесвіту! :) Вітаємо, гарна робота, повністю завершили чергову роботу над проектом.    </p>
+  </div> <!-- cell -->
+
+  
+
+</div> <!-- section -->

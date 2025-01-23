@@ -76,6 +76,8 @@ class CurriculumSubButton extends CurriculumButton {
   Both the page and the currently fetched chapter are displayed in one of
   three languages: English, Hungarian, or Ukrainian. If the language is
   changed, both the page and the current chapter are reloaded.
+
+  If the url contains a hash with a topic name, the corresponding topic is displayed.
 */
 
 class CurriculumApp {
@@ -85,15 +87,16 @@ class CurriculumApp {
   infoButtons   = [];
   path          = "";
   imageSizes    = [];
-
-  constructor(language="eng", isStandalone = false) {
+  
+  constructor(language, isStandalone) {
     this.isStandalone = isStandalone;
+    this.quiz = new CurriculumQuiz(language, null, isStandalone);
     this.setPath();
     this.setImageSizes();
     this.getDomElements();
-    this.quiz = new CurriculumQuiz(language, null, isStandalone);
     this.infoBox = new InfoBox(this.path);
     this.setLanguage(language);
+    this.setCurrentTopic();
   }
 
   setPath() {
@@ -102,7 +105,26 @@ class CurriculumApp {
     } else {
       this.path = "./curriculum/";
     }
+    return this;
   }
+
+  // if there is a hash corresponding to a topic, 
+  // it is set to the current topic
+  setCurrentTopic() {
+    const hash = window.location.hash.slice(1);
+    const topics = [];
+    curriculumTopics[this.language].forEach((subTopic) => {
+      subTopic[1].forEach((item) => {
+        topics.push(item[1]);
+      });
+    });
+    console.log(topics);
+    if (topics.includes(hash)) {
+      this.currentTopic = hash;
+      this.loadChapter(hash);
+    } 
+    return this;
+  } 
 
   // this is temporary
   // a further version should make images properly responsive
@@ -114,7 +136,7 @@ class CurriculumApp {
       // const target = `max-width="${i*8}"`;
       this.imageSizes.push([source, target]);
     }
-    console.log(this.imageSizes);
+    return this;
   }
 
   fixPaths(html) {
@@ -155,13 +177,16 @@ class CurriculumApp {
       })
       button.style.visibility = "visible";
     }
+    return this;
   }
 
   setLanguage(language) {
-    this.language = language;
+    this.language = language || localStorage.getItem("language") || "eng";
+    localStorage.setItem("language", this.language);
     this.loadPageContent();
     this.quiz.refresh(this.language, this.currentTopic);
     this.infoBox.setLanguage(language);
+    return this;
   }
 
   loadPageContent() {
@@ -235,6 +260,7 @@ class CurriculumApp {
         }
         );
       }
+      window.location.hash = `#${title}`;
       const iconTable = gCN("iconTable");
       iconTable.innerHTML = this.fixPaths(generateIconTable(this.language, this.currentTopic));
     })

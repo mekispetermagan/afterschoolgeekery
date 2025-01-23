@@ -4,7 +4,7 @@ const main = () => {
   .then((html) => {
     const container = gCN("curriculumStandaloneContainer");
     container.innerHTML = html.replaceAll("curriculum/", "./");
-    new CurriculumApp("eng", true);
+    new CurriculumApp(null, true);
   })
   .catch((error) => {
       console.warn(error);
