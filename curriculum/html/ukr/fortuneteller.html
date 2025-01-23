@@ -1,0 +1,46 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+    <div class="section-title topicTitle"> Ворожка </div>
+  
+    <div class="celltitle"> Про що вона? </div>
+    <div class="cell">
+        <p>
+            Це проста машина для ворожіння. Що ж... Оскільки паранормальне розширення Скретча ще не готове, ми схитруємо і будемо давати випадкові відповіді "так" або "ні" користувачеві, про що б він не запитав.        </p>
+        <p>
+            Ось кінцевий результат роботи над проектом: <br>
+            <iframe src="https://scratch.mit.edu/projects/1123047926/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Крок 1: Підготовка сцени </div>
+    <div class="cell">
+        <p>
+            Це проект без спрайтів. Усе, що у нас є - це три фони. Один для інструкцій, один для відповіді "так" і один для відповіді "ні". Попрощайтеся зі Скретчі і створіть три фони. Кожен може оформити їх так, як йому подобається. Тут ми використовуємо мінімальний підхід: <br>
+            <img class="figure" width="30%" src="curriculum/img/ukr/fortuneteller/01.png" alt="figure">
+            <img class="figure" width="30%" src="curriculum/img/ukr/fortuneteller/02.png" alt="figure">
+            <img class="figure" width="30%" src="curriculum/img/ukr/fortuneteller/03.png" alt="figure"> <br>
+            Не соромтеся слідувати своїм творчим ідеям і намалювати щось більш детальне та цікаве. 
+        </p>
+    </div> <!-- cell -->
+    
+    <div class="celltitle"> Крок 2: Написання коду </div>
+    <div class="cell">
+        <p>
+            Почнемо з вступного фону: <br>
+            <img class="figure" width="20%" src="curriculum/img/ukr/fortuneteller/04.png" alt="figure"> <br>
+            Тепер ми хочемо, щоб користувач набрав питання. Ми рідко це робимо, тому блок "запитати" може бути новим для дітей. Нам не потрібна текстова підказка, тому ви можете просто залишити блок порожнім: <br>
+            <img class="figure" width="20%" src="curriculum/img/ukr/fortuneteller/05.png" alt="figure"> <br>
+            Тепер, якщо ви запустите проект, ви побачите підказку, де ви можете ввести своє запитання: <br>
+            <img class="figure" width="50%" src="curriculum/img/ukr/fortuneteller/06.png" alt="figure"> <br>
+        </p>
+        <p>
+            Нам потрібно випадковим чином вибрати між "так" і "ні". Це схоже на підкидання монети або кидання грального кубика, який має лише дві грані. Оскільки блок "випадковий" у Скретчі працює лише з числами, скажімо, "так" - це 1, а "ні" - 2. Щоб перевірити, що саме так, вам знадобиться блок if-then-else, і відповідно змінити фон: <br> 
+            <img class="figure" width="20%" src="curriculum/img/ukr/fortuneteller/07.png" alt="figure"> <br>
+            Єдина складна частина - це умова. Відповідь "так", якщо число дорівнює 1. Ви пам'ятаєте з уроків математики, як ми пишемо "є" у виразі "Два плюс два буде чотири"? Звичайно ж, зі знаком рівності! Тепер це легко: <img class="figure" width="40%" src="curriculum/img/ukr/fortuneteller/08.png" alt="figure"> <br></p>
+        <p>
+            ...І ви готові! Це було легко, чи не так? :)  </p>
+    </div> <!-- cell -->
+    
+
+</div> <!-- section -->
