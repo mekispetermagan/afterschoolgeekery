@@ -143,9 +143,26 @@
   white-space: nowrap;
 }
 
+.curriculumButton.highlighted {
+  background-color: var(--bgcolor-main);
+}
+
+.curriculumButton.sub {
+  background-color: var(--bgcolor-main);
+}
+
+.curriculumButton.sub.highlighted {
+  background-color: var(--bgcolor-light);
+}
+
 .curriculumButton:hover {
   cursor:grab;
   background-color: var(--bgcolor-main);
+}
+
+.curriculumButton.sub:hover {
+  cursor:grab;
+  background-color: var(--bgcolor-light);
 }
 
 .curriculumErrorButton {

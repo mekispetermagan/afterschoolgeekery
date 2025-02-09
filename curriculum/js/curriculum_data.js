@@ -73,7 +73,8 @@ const curriculumTopics = {
       ["Building a helicopter",         "helicopterbuild"     ],
     ]],
     ["App Inventor", [
-      ["Getting started",               "ai_intro"            ]
+      ["Getting started",               "ai_intro"            ],
+      ["Click counter",                 "ai_clicks"           ],
     ]],
   ],
 
@@ -128,7 +129,8 @@ const curriculumTopics = {
       ["Helikopter-építés",             "helicopterbuild"     ],
     ]],
     ["App Inventor", [
-      ["Első lépések",                  "ai_intro"            ]
+      ["Első lépések",                  "ai_intro"            ],
+      ["Kattintásszámláló",             "ai_clicks"           ],
     ]],
   ],
 
@@ -183,7 +185,8 @@ const curriculumTopics = {
       ["Побудувати гелікоптер",         "helicopterbuild"     ],
     ]],
     ["App Inventor", [
-      ["Перші кроки",                  "ai_intro"            ]
+      ["Перші кроки",                   "ai_intro"            ],
+      ["Лічильник кліків",              "ai_clicks"           ],
     ]],
   ],
 }

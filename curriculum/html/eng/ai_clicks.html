@@ -1,0 +1,143 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+    <div class="section-title topicTitle"> Click Counter </div>
+
+    <div class="celltitle"> What is this project about? </div>
+    <div class="cell">
+      <p>
+        This is a fun first project for learning mobile app development. The app counts how many times the user presses a button in 30 seconds. After the project work, kids can compete with each other in who has the fastest hands. <br>
+        <img class="figure" width="40%" src="curriculum/img/eng/ai_clicks/001.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Step 1: First design </div>
+    <div class="cell">
+        <p>
+            Create a new project: <br>
+            <img class="figure" width="30%" src="curriculum/img/eng/ai_clicks/101.png" alt="figure">
+        </p>
+        <p>
+           Start the project work discussing what a UI interface is, and what elements your UI needs. First of all, you will need a button to click. Next, to display click count, you need a label. Use the Properties panel to stylize them as you saw in the introduction: <br>
+           <img class="figure" width="60%" src="curriculum/img/eng/ai_clicks/102.png" alt="figure">
+           <img class="figure" width="20%" src="curriculum/img/eng/ai_clicks/103.png" alt="figure">
+        </p>
+        <p>
+            An alternative is to display the clicks on the button itself. This version is equally good.
+        </p>
+        <p>
+            It would be nice not to place the UI elements in the upper left corner. This is not hard to achieve; you can set the screen component itself to align its child elements (the button and the label) to the center: <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_clicks/104.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_clicks/105.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Step 2: First code </div>
+    <div class="cell">
+        <p>
+            Now you can switch to the Blocks interface and discuss what actions to add to the app. Since we need to display the number of clicks, the first step looks easy: the event is the button being clicked, and the action assigned is changing the label's text: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_clicks/201.png" alt="figure">
+        </p>
+        <p>
+            Connect to AI Companion on your mobile devices to see whether the code works: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_clicks/202.png" alt="figure">
+        </p>
+        <p>
+            It does; but this only works once. At the next click, the label should show two, then three, then four, etc. Ask kids how you handled in Scratch numbers that keep changing. Of course, you used variables! These are also available here. Unlike in Scratch, variables need to be initialized in App Inventor: <br>
+            <img class="figure" width="35%" src="curriculum/img/eng/ai_clicks/203.png" alt="figure">
+        </p>
+        <p>
+            Now you don't need to hardcode the number to be displayed anymore; you can just use the variable: <br>
+            <img class="figure" width="55%" src="curriculum/img/eng/ai_clicks/204.png" alt="figure"> <br>
+            But how will the variable's value change? In Scratch, we used a "change" block for this. Unfortunately App Inventor doesn't have this; so you will have to set the variable's new value relative to the old one. This is a bit complicated at first, but you qill quickly get used to it: <br>
+            <img class="figure" width="65%" src="curriculum/img/eng/ai_clicks/205.png" alt="figure">
+        </p>
+        <p>
+            Now the app properly counts clicks: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_clicks/206.png" alt="figure">
+        </p>
+        <p>
+            This is the first point when you can celebrate success; don't miss the opportunity! :) Similarly, this is the first point when you can safely close the project work with a feeling of success in case you have run out of time due to technical difficulties. Good job! :) But if you have some time left, you can significantly imporve the app in a few more steps.
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Step 3: Second design with timer </div>
+    <div class="cell">
+        <p>
+            It would be nice to also measure time, so that kids can compete with each other. Discuss how you used to do this in Scratch. There it was supersimple: besides the built-in timer, the "wait" block also did the job of measuring time. In App Inventor, you don't have these. You need to add a clock component to your projects. The clock's ticking will be the event to assign timed code to.
+        </p>
+        <p>
+            Switch back to the Designer interface, and look for a clock component. You will find it in the "Sensing" category: <br>
+            <img class="figure" width="50%" src="curriculum/img/eng/ai_clicks/301.png" alt="figure"><br>
+            The clock has a "TimerIinterval" property. It tells how fast the clock is ticking. You can set it faster or slower, like a metronome. The number is in milliseconds; 1000 means a one second interval, which is exactly what you need. <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_clicks/302.png" alt="figure">
+        </p>
+        <p>
+            The clock is a hidden, invisible component. It's ticking in the background, triggering events for other components. But you will also need to display the time. Discuss with the kids how to do that. Another label will be a nice choice. A lot can be done with just buttons and labels. Discuss how many seconds you want to give the user to click, and set the label's text to that number. Avoid very large numbers to avoid spending too much time on testing. Like before, use the Properties panel to stylize the label. You may even use different colors for the clicks and the time labels: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_clicks/303.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Step 4: Second code with timer </div>
+    <div class="cell">
+        <p>
+            Now you can add code to your clock. Switch back to the Blocks interface. Just like clicks, time also keeps changing, except instaad of upwards, it goes downwards. So, you need to initialize a new variable: <br>
+            <img class="figure" width="30%" src="curriculum/img/eng/ai_clicks/401.png" alt="figure">
+        </p>
+        <p>
+            Time changes when the clock ticks. Based on the code of the click count, this will be easy: <br>
+            <img class="figure" width="60%" src="curriculum/img/eng/ai_clicks/402.png" alt="figure"> <br>
+            Now you can see the time going down while the clicks are going up.
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_clicks/403.png" alt="figure">
+        </p>
+        <p>
+            But the countdown doesn't stop at zero; instead, you will see negative numbers on the time label. You have to explicitely tell the app to stop counting at zero. Discuss with the kids how to do this. One way is to insert an "if" block with the condition that time is larger than zero: <br>
+            <img class="figure" width="45%" src="curriculum/img/eng/ai_clicks/404.png" alt="figure"><br>
+            And wheer should you use it: in the click counting code, or in the time countdown code? Of course, at both places! Duplicate it and reorganize your code. You will end up with something like this: <br>
+            <img class="figure" width="65%" src="curriculum/img/eng/ai_clicks/405.png" alt="figure"><br>
+            Now both countdown and clicking will stop when time reaches zero: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_clicks/406.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Step 5: Start at first click </div>
+    <div class="cell">
+        <p>
+            If you still have time left: It would be nice for the countdown to start at the first click. This part needs some thinking, so give yourselves some time clarifying how to achieve it.
+        </p>
+        <p>
+            One possible idea is to partition the game into three states:
+            <ol>
+                <li>before the game starts: ready state</li>
+                <li>while the game is going on: play state</li>
+                <li>when the game is over: done state</li>
+            </ol>
+            Of course, the naming of these states doesn't matter; you can even use the numbers 1, 2, and 3 for them. What matters is that you need to keep track of them. Probably the simplest way to do this is using a variable. You can initialize it to "ready": <br>
+            <img class="figure" width="45%" src="curriculum/img/eng/ai_clicks/501.png" alt="figure">
+        </p>
+        <p>
+            The "ready" state ends and the "play" state starts when the button is first clicked. You need to add this to the code of click counting. Also, you can replace the condition of counting to that of the game being in the "play" state: <br>
+            <img class="figure" width="65%" src="curriculum/img/eng/ai_clicks/502.png" alt="figure">
+        </p>
+        <p>
+            Finally, the game enters the "done" state when the time counter variable reaches zero. This suggests the following modification of the time countdown code, similarly to the one you did before on the one of counting clicks:
+            <img class="figure" width="65%" src="curriculum/img/eng/ai_clicks/503.png" alt="figure">
+        </p>
+        <p>
+            ...And you are ready! :) This last step was a bit more abstract than the ones before, but in return you have gained valuable insights on how you can use variables to keep track of states.
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Follow-ups </div>
+    <div class="cell">
+        <p>
+            If you still have time left, you can add many more features to your click counter:
+            <ul>
+                <li>A reset button that sets back click count to zero, the time to 30, and game state to "ready".</li>
+                <li>A high score variable, with its value displayed on another label.</li>
+                <li>Yet another label that displays the maximum number of clicks per second. Can anyone in the group go beyond 10? :)</li>
+            </ul>
+        </p>
+    </div> <!-- cell -->
+
+</div> <!-- section -->

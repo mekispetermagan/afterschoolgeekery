@@ -32,11 +32,13 @@ class CurriculumButton {
   }
 
   highlight() {
-    this.dom.style.backgroundColor = curriculumBgColor.main;
+    this.dom.classList.add("highlighted");
+    // this.dom.style.backgroundColor = curriculumBgColor.main;
   }
 
   unHighlight() {
-    this.dom.style.backgroundColor = curriculumBgColor.dark;
+    this.dom.classList.remove("highlighted");
+    // this.dom.style.backgroundColor = curriculumBgColor.dark;
   }
 }
 
@@ -51,6 +53,7 @@ class CurriculumMainButton extends CurriculumButton {
 class CurriculumSubButton extends CurriculumButton {
   constructor(owner, content, id) {
     super();
+    this.dom.classList.add("sub");
     this.setAction(() => owner.subButtonAction(this, id));
     this.setContent(content);
   }
@@ -87,7 +90,7 @@ class CurriculumApp {
   infoButtons   = [];
   path          = "";
   imageSizes    = [];
-  
+
   constructor(language, isStandalone) {
     this.isStandalone = isStandalone;
     this.quiz = new CurriculumQuiz(language, null, isStandalone);
@@ -108,7 +111,7 @@ class CurriculumApp {
     return this;
   }
 
-  // if there is a hash corresponding to a topic, 
+  // if there is a hash corresponding to a topic,
   // it is set to the current topic
   setCurrentTopic() {
     const hash = window.location.hash.slice(1);
@@ -122,9 +125,9 @@ class CurriculumApp {
     if (topics.includes(hash)) {
       this.currentTopic = hash;
       this.loadChapter(hash);
-    } 
+    }
     return this;
-  } 
+  }
 
   // this is temporary
   // a further version should make images properly responsive

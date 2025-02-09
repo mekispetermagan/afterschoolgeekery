@@ -1,0 +1,143 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+    <div class="section-title topicTitle"> Kattintásszámláló </div>
+
+    <div class="celltitle"> Miről lesz szó? </div>
+    <div class="cell">
+      <p>
+        Ez egy könnyed első projekt a mobilapp-fejlesztés tanulásában. Az app azt számlálja, hogy a játékos hányszor kattint 30 másodperc alatt egy gombra. A projektmunka után a gyerekek versenyezhetnek, hogy kinek gyorsabb a keze. <br>
+        <img class="figure" width="40%" src="curriculum/img/hun/ai_clicks/001.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 1. lépés: Az első design </div>
+    <div class="cell">
+        <p>
+            Hozzatok létre egy új projektet: <br>
+            <img class="figure" width="35%" src="curriculum/img/hun/ai_clicks/101.png" alt="figure">
+        </p>
+        <p>
+            A projektmunkát kezdjétek annak a megbeszélésével, hogy mit is jelent egy felhasználói felület, és hogy milyen elemek kellenek eennek a játéknak a felületéhez. Először is szükséges lesz egy gomb, amire kattinthattok. Aztán meg is kell jeleníteni a kattintások számát egy címkén. Miután megvan a két elem, használjátok a Tulajdonságok panelt a testre szabásukhoz az Első lépések fejezetből ismerős módon: <br>
+           <img class="figure" width="60%" src="curriculum/img/hun/ai_clicks/102.png" alt="figure">
+           <img class="figure" width="20%" src="curriculum/img/hun/ai_clicks/103.png" alt="figure">
+        </p>
+        <p>
+            Az is lehet, hogy a gyerekek a gombon magán szeretnék megjeleníteni a kattintások számát. Ez a megoldás semmivel sem rosszabb a másiknál.
+        </p>
+        <p>
+            Szebb lenne az app, ha a felhasználói felület két eleme nem a bal felső sarokban lenne. Ezt nem nehéz elérni: a képernyő komponensnél be tudjátok állítani, hogy a benne lévő komponenseket (a gombot és a címkét) középre rendezze: <br>
+            <img class="figure" width="20%" src="curriculum/img/hun/ai_clicks/104.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_clicks/105.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 2. lépés: Az első kód </div>
+    <div class="cell">
+        <p>
+            Most átválthattok a Parancsok felületre, és megbeszélhetitek, milyen viselkedést váértok az apptól. Mivel a kattintások számát kell kijelezni, az első lépés egyszerűnek tűnik: az esemény a gomb lenyomása, a hozzá tartozó feladat pedig a címke szövegének megváltoztatása: <br>
+            <img class="figure" width="45%" src="curriculum/img/hun/ai_clicks/201.png" alt="figure">
+        </p>
+        <p>
+            Kapcsolódjatok az AI Companion apphoz, hogy a mobilotokon is kipróbálhassátok, működik-e a kód:s: <br>
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_clicks/202.png" alt="figure">
+        </p>
+        <p>
+            Működik, de csak egyetlen kattintásig. A következő kattintásra kettőt, aztán hármat, négyet kellene mutatnia, és így tovább. Kérdezzétek meg a gyerekeket, hogy hogy szoktátok Scratchben kezelni az olyan számokat, amelyek folyton megváltoznak. Hát persze, változókat használtok! Az Appp Inventorban is vannak ilyenek. De egy kicsit máshogy használjuk őket, mint a Scratch-ben. Mindenekelőtt kezdőértéket kell adni nekik:: <br>
+            <img class="figure" width="50%" src="curriculum/img/hun/ai_clicks/203.png" alt="figure">
+        </p>
+        <p>
+            Most már nem kell nekünk beleírni a kódba a kiírandó számot, hanem ehelyett használhatjuk a változót: <br>
+            <img class="figure" width="75%" src="curriculum/img/hun/ai_clicks/204.png" alt="figure"> <br>
+            De mitől fog megváltozni a változó értéke? A Scratch-ben erre a "változzon" blokkot használtuk, de az App Inventorban sajnos ilyen nincs. Ehelyett egy kicsit körülményesen, a változó előző értékére hivatkozva tudjuk kimatekozni, hogy mennyi legyen a követlező érték. Ez elsőre bonyolultnak tűnhet, de hamar hozzászokik az ember: <br>
+            <img class="figure" width="75%" src="curriculum/img/hun/ai_clicks/205.png" alt="figure">
+        </p>
+        <p>
+            Most már annak rendje és módja szerint számlálja az app a kattintásokat: <br>
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_clicks/206.png" alt="figure">
+        </p>
+        <p>
+            Ez az első olyan pont, ahol megünnepelhetitek a közös munka sikerét; ne hagyjátok ki! :) És egyben ez az első alkalom arra is, hogy a sikertelenség érzete nélkül befejezhessétek a projektmunkát, ha technikai nehézségek miatt kifutottatok az időből. Szép munka volt! :) De ha maradt még időtök, akkor néhány további lépésben még sokat szépíthettek az appon.
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 3. lépés: Új dizájn órával </div>
+    <div class="cell">
+        <p>
+            Jó lenne mérni az időt is, hogy a gyerekek versenyezhessenek egymással. Beszéljétek meg, hogy ment Scratch-ben az időmérés. Nagyon egyszerű volt: a beépített időmérőn kívül a "várj" blokkal is lehetett időt mérni. Az App Inventorban nincsenek ilyen beépített blokkok. Helyettük egy óra komponenst kell a projekthez adni. Az óra tiktakkolása lesz az az esemény, amihez a kód többi részét igazíthatjátok.
+        </p>
+        <p>
+            Váltsatok vissza a Képernyő felületre, és keressétek meg az Óra komponenst. "z "Érzékelés" kategóriában lesz: <br>
+            <img class="figure" width="60%" src="curriculum/img/hun/ai_clicks/301.png" alt="figure"><br>
+            Az órának van egy titokzatos nevű "Időzítő intervallum" tulajdonsága. Ez határozza meg, hogy az óra milyen gyorsan ketyeg. Lehet lassabbra vagy gyorsabbra is állítani, mint a metronómot. A szám ezredmásodpercekben értendő, 1000 azt jelenti, hogy az óra pontosan 1 másodpercenként ketyeg. És pont erre van szükségünk. <br>
+            <img class="figure" width="20%" src="curriculum/img/hun/ai_clicks/302.png" alt="figure">
+        </p>
+        <p>
+            Az óra egy láthatatlan, rejtett komponens. A háttérben ketyeg, időzített eseményeket generálva a többi komponens számára. De az időt meg is szeretnénk jeleníteni. Beszéljétek meg, mivel lehetne ezt legjobban elérni. A címke például itt is jó választás. CÍmkékkel és gombokkal egész jól lehet felhasználói felületet építeni. Beszéljétek meg azt is, mennyi időt adtok a felhasználónak gombnyomogatásra. Túl sokat nem érdemes, mert sak elviszi az időt a projektmunkától. Ezt a számot tegyétek a címkére; és a stílusát állítsátok be úgy, ahogy korábban is. Jó ötlet a két számot különböző színűvé tenni; mondjuk az időt pirossá, a kattintásszámot meg zölddé: <br>
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_clicks/303.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 4. lépés: Második kód órával </div>
+    <div class="cell">
+        <p>
+            Az órának is jár egy kis programkód. Váltsatok vissza a Parancsok felületre. Ahogy a kattintások száma, úgy az idő is egy olyan szám, ami folyton változik, csak éppen lefelé. Érdemes tehát még egy változót bevezetni: <br>
+            <img class="figure" width="30%" src="curriculum/img/hun/ai_clicks/401.png" alt="figure">
+        </p>
+        <p>
+            Az idő akkor csökken, amikor az óra tiktakol. A kattintásszámlálás mintájára nem lesz nehéz ezt a kódot is összerakni: <br>
+            <img class="figure" width="60%" src="curriculum/img/hun/ai_clicks/402.png" alt="figure"> <br>
+            Most már egyszerre láthatjátok, ahogy a kattintások száma emelkedik, a hátralévő másodperceké meg csökken.
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_clicks/403.png" alt="figure">
+        </p>
+        <p>
+            De sajnos a visszaszámlálás nem áll meg nullánál, hanem továbbmegy mínuszba. Nyíltan meg kell mondani az appnak, hogy csak akkor menjen tovább, ha még van hátra az időből. Beszéljétek meg a gyerekekkel, hogy szoktátok az ilyesmit Scratchben megcsinálni. A legegyszerűbb a "ha" blokk használata; a feltétel pedig lehet az, hogy az idő nagyobb nullánál: <br>
+            <img class="figure" width="45%" src="curriculum/img/hun/ai_clicks/404.png" alt="figure"><br>
+            De hol kell ezt használni? A kattintásszámlálásban, vagy a másodpercek visszaszámlálásában? Hát persze, mindkettőben! Duplikáljátok a ha-akkort a feltétellel együtt, és rendezzétek újra a kódjaitokat. A végeredmény valami ilyesmi lesz:: <br>
+            <img class="figure" width="65%" src="curriculum/img/hun/ai_clicks/405.png" alt="figure"><br>
+            Most már mind a kattintásszámlálás, mind a visszaszámlálás véget ér, ha kifogyunk az időből: <br>
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_clicks/406.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 5. lépés: Indulás első kattintáskor </div>
+    <div class="cell">
+        <p>
+            Ha még mindig van idő a fogllkozásból: klassz lenne, ha a visszaszámlálás csak akkor indulna el, amikor először megnyomjuk a gombot. Ez igényel némi közös gondolkodást, úgyhogy szánjatok rá egy kis időt, hogy kitaláljátok közösen a megoldást.
+        </p>
+        <p>
+            Egy lehetséges ötlet az, hogy a játékot három szakaszra osztjuk:
+            <ol>
+                <li>mielőtt az óra elindul: várakozás</li>
+                <li>amíg az óra megy: játék</li>
+                <li>miután az óra megállt: vége</li>
+            </ol>
+            Természetesen a szakaszok neve nem számít; lehetne számokkal is hivatkozni rájuk, 1, 2, 3. Az számítm hogy nyomon kövessük, mikor melyik szakaszban vagyunk. Talán a legegyszerűbb ezt úg megtenni, ha bevezettek egy újabb változót, aminek "várakozás" a kezdő értéke: <br>
+            <img class="figure" width="45%" src="curriculum/img/hun/ai_clicks/501.png" alt="figure">
+        </p>
+        <p>
+            Az első gombnyomáskor a "várakozás" szakasz véget ér, és a "játék" szakasz elkezdődik. Ezt is hozzá kell tehát adni a kattintás kódjához. És a számlálás feltételét is lecserélhetitek arra, hogy a "játék" szakaszban vagyunk: <br>
+            <img class="figure" width="65%" src="curriculum/img/hun/ai_clicks/502.png" alt="figure">
+        </p>
+        <p>
+            Végül a játék akkor lép a "vége" szakaszba, ha az időszámláló eléri a nullát. Tehát a kattintáséhoz hasonlóan az idő kódját is módosítani kell:
+            <img class="figure" width="65%" src="curriculum/img/hun/ai_clicks/503.png" alt="figure">
+        </p>
+        <p>
+            ...És készen is vagytok! :) Ez az utolsó lépés kicsit absztraktabbb volt a szokásosnál, de cserébe sokat lehetett tanulni belőle arról, hogyan lehet állspotokat is leírni változókkal.
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Lehetséges folytatások </div>
+    <div class="cell">
+        <p>
+            Ha még mindig van időtök, vagy a következő foglalkozáson szeretnétek visszatérni a projektre, számos további funkciót adhattok az apphoz:
+            <ul>
+                <li>"Reset" gombot, amely a kattintásokat lenullázza, az időt visszaállítja 30-ra, és a játékot visszeteszi a "várakozás" szakaszba.</li>
+                <li>Egy "rekord" változót, ami számon tartja a legjobb eredményt.</li>
+                <li>Még egy címkét, ami kijelzi az eddigi legmagasabb másodpercenkénti kattintást! :)</li>
+            </ul>
+        </p>
+    </div> <!-- cell -->
+
+</div> <!-- section -->
