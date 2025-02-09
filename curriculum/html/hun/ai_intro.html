@@ -1,0 +1,151 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+    <div class="section-title topicTitle"> Ismerkedés az App Inventorral </div>
+
+    <div class="celltitle"> Bejelentkezés a webalkalmazásba </div>
+    <div class="cell">
+      <p>
+        Nyisd meg az <a href="https://ai2.appinventor.mit.edu/" target="_blank">App inventor oldalát</a> egy laptopon vagy asztali gépen: <br>
+        <img class="figure" width="60%" src="curriculum/img/hun/ai_intro/01.png" alt="figure"><br>
+        Kattints a "Create apps!" ("Készíts appokat!") gombra a belépéshez. <br>
+        <img class="figure" width="20%" src="curriculum/img/hun/ai_intro/02.png" alt="figure">
+      </p>
+      <p>
+        A bejelentkezéshez szükséged lesz egy Google fiókra. Belépés után néhányszor még kattints az "ok"-ra, és eljutsz a Projektek felületre. Itt fognak majd sorakozni a projektjeid, de kezdetben üres a lista: <br>
+        <img class="figure" width="60%" src="curriculum/img/hun/ai_intro/03.png" alt="figure">
+      </p>
+      <p>
+        Ha az angol nem komfortos neked, jobb oldalt felül válts át magyarra: <br>
+        <img class="figure" width="30%" src="curriculum/img/hun/ai_intro/04.png" alt="figure"> <br>
+        Számíts rá, hogy nem minden van jól lefordítva; a magyar változat régen készült és nincs karbantartva.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Projekt létrehozása </div>
+    <div class="cell">
+      <p>
+        Az első projekt létrehozásához kattints a "New project" gombra: <br>
+        <img class="figure" width="20%" src="curriculum/img/hun/ai_intro/05.png" alt="figure"><br>
+        Adj nevet a projektednek, és a "Toolkit" ("Eszköztár") és a "Theme" ("Téma") értékét ne változtasd meg. A projekt nevében sajnos nem hsználhatsz ékezetes betűket vagy extra szimbólumokat. csak az angol ábécé betűi, a számjegyek és az alulvonás karakter megengedett:<br>
+        <img class="figure" width="30%" src="curriculum/img/hun/ai_intro/06.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/hun/ai_intro/07.png" alt="figure"><br>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> A Képernyő felület </div>
+    <div class="cell">
+      <p>
+        Amint létrejött a projekted, a Képernyő (vagy Dizájner) felületen találod magadat. Ez több panelből áll:
+        <ol>
+            <li>
+                Középen a régimódi stilizált okostelefon (itt lilával jelöltük meg) a Megjelenítő. Ide tudod majd behúzni az app komponenseit.
+            </li>
+            <li>
+                Baloldalt van a Paletta (amit pirossal jelöltünk). Itt sorakoznak azok a komponensek, amiket majd behúzhatsz középre, és használhatsz az appodban.
+            </li>
+            <li>
+                A Megjelenítőtől jobbra található Komponensek panel (sötétkékkel jelöltük) mutatja az összes komponenst, amit eddig az appodba illesztettél, fa struktúrába rendezve. Itt tudod átnevezni és törölni is a komponenseket. Kezdetben egyetlen alapkomponensed van, az "Screen1", az app nyitóképernyője.
+            </li>
+            <li>
+                A Tulajdonságok panel a jobb szélen van (világoskékkel jelöltük). Itt tudod a Komponensek panelen kiválasztott komponensek stílusát alakítani. Beállíthatod a háttérszínt, a szélességet, a magasságot, és egy sor más tulajdonságot, a komponens jellegétől függően.
+            </li>
+            <li>
+                Felül van két fontos gomb: az "Adatkapcsolat" és az "Apk fájl létrehozása". Ezeknek a segítségével fog az appod mobileszközön is elindulni. Később visszatérünk rájuk.
+            </li>
+        </ol>
+        <img class="figure" width="80%" src="curriculum/img/hun/ai_intro/08.png" alt="figure">
+      </p>
+      <p>
+        Kezdésnek húzz be egy gombot a Palettából a Megjelenítőbe. A stilizált mobil bal felső sarkában fog megjelenni:<br>
+        <img class="figure" width="25%" src="curriculum/img/hun/ai_intro/09.png" alt="figure">
+        <img class="figure" width="25%" src="curriculum/img/hun/ai_intro/10.png" alt="figure"> <br>
+        A Tulajdonságok panelen testre szabhatod a gombodat. Például kikeverhetsz egy sötétkék háttérszínt az egyéni színre kattintva, a betűméretet harmincra állíthatod, a szélességet 50%-ra, a magasságot 30%-ra, a gomb alakját lekerekítettre, a felirt lehet "Katt ide!", a betűszín pedig fehér. <br>
+        <img class="figure" width="30%" src="curriculum/img/hun/ai_intro/11.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/hun/ai_intro/12.png" alt="figure">
+        <img class="figure" width="25%" src="curriculum/img/hun/ai_intro/13.png" alt="figure">
+        <img class="figure" width="25%" src="curriculum/img/hun/ai_intro/14.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/hun/ai_intro/15.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/hun/ai_intro/16.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/hun/ai_intro/17.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/hun/ai_intro/18.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> A Parancsok felület </div>
+    <div class="cell">
+        <p>
+            Ideje, hogy kóddal is ellássuk a gombot. Ahogy a Scratchben blokkokból összerakott kóddal animáljuk a szereplőket, az Ap Inventorban blokkokból összerakott kóddal mondjuk meg a komponensenek, hogy viselkedjenek. Válts a "Parancsok" felületre a jobb felső sarokban: <br>
+            <img class="figure" width="20%" src="curriculum/img/hun/ai_intro/19.png" alt="figure">
+        </p>
+        <p>
+            A Parancsok felület két fő panelből áll:
+            <ol>
+                <li>
+                    A Parancsok panel a bal oldalon (amit pirossal jelöltünk) számos rekeszben találsz blokkokat: a beépített rekeszekben általános blokkok, a komponensek rekeszeiben pedig speciális, külön nekik szánt blokkok vannak.
+                </li>
+                <li>
+                    Jobbra a Megjelenítő panelen (amit zölddel jelöltünk) tudod öszeilleszteni a blokkokat és felépíteni a kódodat.
+                </li>
+            </ol>
+            <img class="figure" width="60%" src="curriculum/img/hun/ai_intro/20.png" alt="figure">
+        </p>
+        <p>
+            A Scratch-hez hasonlóan a kód mindig eseményblokkal kezdődik. Minden komponensnek megvannak a maga eseményei. A gomb komponens fő eseménye a kattintés; vagyis amikor a gombot lenyomják. <br>
+            <img class="figure" width="25%" src="curriculum/img/hun/ai_intro/21.png" alt="figure">
+        </p>
+        <p>
+            Az egyszerűség kedvéért lenyomáskor változzon meg a gomb háttérszíne. Ehhez szükséges lesz egy "állítsd be" blokk a gomb rekeszéből, és egy szín a beépített "Színek" rekeszből: <br>
+            <img class="figure" width="55%" src="curriculum/img/hun/ai_intro/22.png" alt="figure">
+        </p>
+        <p>
+            Ha szeretél kísérletezni, komplexebb kódot is összerakhatsz, például létrehozhatsz színekből egy listát, amiből gombnyomásra kisorsolja az app az új háttérszínt. Ehhez a "Listák" rekeszből kell majd két blokk: <br>
+            <img class="figure" width="30%" src="curriculum/img/hun/ai_intro/23.png" alt="figure">
+            <img class="figure" width="80%" src="curriculum/img/hun/ai_intro/24.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Élő kapcsolat a mobiloddal </div>
+    <div class="cell">
+        <p>
+            Az app készen áll arra, hogy leteszteld a mobilodon vagy tableteden. Ehhez először telepítened kell az App Inventor Companion alkalmazást a Play Áruházból, ha Androidos vagy, vagy az App Store-ból, ha Apple-t használsz: <br>
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/25.png" alt="figure"> <br>
+            Amint az app települt a készülékedre, le fogod tudni olvasni a qr kódot a számítógéped képernyőjéről: <br>
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/26.png" alt="figure"> <br>
+        </p>
+        <p>
+            A qr kód generálásához pedig kattints a számítógép képernyőjén felül az "Adatkapcsolat" gombra, és válaszd az "AI Companion" opciót: <br>
+            <img class="figure" width="25%" src="curriculum/img/hun/ai_intro/27.png" alt="figure">
+            <img class="figure" width="30%" src="curriculum/img/hun/ai_intro/28.png" alt="figure"> <br>
+        </p>
+        <p>
+            Miután beolvastad a kódot, az app elindul a mobilodon. Próbáld ki, hogy a gomb valóban megváltoztatja-e a színét, ha megnyomod: <br>
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/29.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/30.png" alt="figure"> <br>
+            El kell ismerni, hogy nem ez a leghightechebb mobilalkalmazás, de működik! :)
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Telepítés mobileszközre </div>
+    <div class="cell">
+        <p>
+            Ahhoz, hogy fel is telepítsd az alkalmazást egy androidos mobilra, egy másik qr kódra lesz szükség. Először bonsd a kapcsolatot a számítógépről, az "Adatkapcsolat" menüben. Aztán az "Apk fájl létrehozása" alatt kattints az "Android App" menüpontra, hogy megkapd a qr kódot az app telepítéséhez: <br>
+            <img class="figure" width="25%" src="curriculum/img/hun/ai_intro/31.png" alt="figure">
+            <img class="figure" width="25%" src="curriculum/img/hun/ai_intro/32.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/33.png" alt="figure">
+        </p>
+        <p>
+            Miután beolvastad a qr kódot, a mobilod többször is figyelmeztetni fog a telepítés veszélyeire. Ez teljesen jogos; nagyon vigyázni kell azzal, hogy mit telepítesz a készülékedre ellenőrizetlen forrásból. Viszont ezt az appot te magad fejlesztetted az imént, és semmi ártalmasat nem tettél bele sem te, sem az App Inventor, amit ugyanaz az intézet fejleszt, mint a Scratchet, és felhasználók millióinak bizalmát élvezi. Nyugodtan biztosítsd a mobilodat arról, hogy telepíthet az appot. A telepítést követően az app ikonja megjelenik a képernyőn, és mostantól bármikor elindíthatod: <br>
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/34.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/35.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/36.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/37.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/hun/ai_intro/38.png" alt="figure">
+        </p>
+        <p>
+            Megjegyzés: Jelenleg az App Inventor projekteket csak tesztelni lehet Apple eszközökön, telepíteni nem. Abban a valószínűtlen esetben, ha a foglalkozás résztvevői iPhone-hoz hozzáférnek, de androidos mobilhoz nem, azt javasoljuk, hogy <a href="https://thunkable.com/" target="_blank">használjátok a Thunkable-t</a>, ami mindkét platformon működik.
+        </p>
+    </div> <!-- cell -->
+
+
+  </div> <!-- section -->

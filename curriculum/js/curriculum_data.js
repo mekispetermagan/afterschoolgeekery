@@ -65,20 +65,15 @@ const curriculumTopics = {
       ["Blooming flower",               "bloomingflower"      ],
     ]],
     ["Robotics", [
-      ["Getting started",               "robotintro"
-
-      ],
+      ["Getting started",               "robotintro"          ],
       ["Building a dog",                "dogbuild"            ],
       ["Building a human 1",            "humanbuild1"         ],
       ["Building a human 2",            "humanbuild2"         ],
       ["Building a car",                "carbuild"            ],
       ["Building a helicopter",         "helicopterbuild"     ],
-      ["Coding the dog 1",              "dogcode1"            ],
-      ["Coding the dog 2",              "dogcode2"            ],
-      ["Coding the human 1",            "humancode1"          ],
-      ["Coding the human 2",            "humancode2"          ],
-      ["Coding the car 1",              "carcode2"            ],
-      ["Coding the car 2",              "carcode2"            ],
+    ]],
+    ["App Inventor", [
+      ["Getting started",               "ai_intro"            ]
     ]],
   ],
 
@@ -131,12 +126,9 @@ const curriculumTopics = {
       ["Robotember-építés 2",           "humanbuild2"         ],
       ["Robotautó-építés",              "carbuild"            ],
       ["Helikopter-építés",             "helicopterbuild"     ],
-      ["A robotkutya kódja 1",          "dogcode1"            ],
-      ["A robotkutya kódja 2",          "dogcode2"            ],
-      ["A robotember kódja 1",          "humancode1"          ],
-      ["A robotember kódja 2",          "humancode2"          ],
-      ["A robotautó kódja 1",           "carcode2"            ],
-      ["A robotautó kódja 2",           "carcode2"            ],
+    ]],
+    ["App Inventor", [
+      ["Első lépések",                  "ai_intro"            ]
     ]],
   ],
 
@@ -189,12 +181,9 @@ const curriculumTopics = {
       ["Створення людини-робота 2",     "humanbuild2"         ],
       ["Побудова робота-автомобіля",    "carbuild"            ],
       ["Побудувати гелікоптер",         "helicopterbuild"     ],
-      ["Кодування собаки 1",            "dogcode1"            ],
-      ["Кодування собаки 2",            "dogcode2"            ],
-      ["Кодування людини 1",            "humancode1"          ],
-      ["Кодування людини 2",            "humancode2"          ],
-      ["Кодування автомобіля 1",        "carcode2"            ],
-      ["Кодування автомобіля 2",        "carcode2"            ],
+    ]],
+    ["App Inventor", [
+      ["Перші кроки",                  "ai_intro"            ]
     ]],
   ],
 }

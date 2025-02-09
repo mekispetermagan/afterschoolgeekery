@@ -1,0 +1,150 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+    <div class="section-title topicTitle"> Getting started with App Inventor </div>
+
+    <div class="celltitle"> Logging into the web app </div>
+    <div class="cell">
+      <p>
+        Open the <a href="https://ai2.appinventor.mit.edu/" target="_blank">App Inventor website</a> on a laptop or desktop computer: <br>
+        <img class="figure" width="60%" src="curriculum/img/eng/ai_intro/01.png" alt="figure"><br>
+        Click on the "Create apps!" button to log in. <br>
+        <img class="figure" width="20%" src="curriculum/img/eng/ai_intro/02.png" alt="figure">
+      </p>At the beginning,
+      <p>
+        You will need a Google account to log in. Once you are in, you will need to click "ok" a couple of times, until you get to the Projects interface. This is where your App Inventor projects will be, but right now it is empty: <br>
+        <img class="figure" width="60%" src="curriculum/img/eng/ai_intro/03.png" alt="figure">
+      </p>
+      <p>
+        If you're not comfortable with English, you can set the interface to your language: <br>
+        <img class="figure" width="30%" src="curriculum/img/eng/ai_intro/04.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Creating a project </div>
+    <div class="cell">
+      <p>
+        To create your first project, click on the "New project" button: <br>
+        <img class="figure" width="20%" src="curriculum/img/eng/ai_intro/05.png" alt="figure"><br>
+        Give your project a name, and use the default values for "Toolkit" and "Theme". Note that you can't use accented or cyrillic letters, or extra symbols in the project name. Only letters of the English alphabet, arabic numbers, and underscores are allowed:<br>
+        <img class="figure" width="30%" src="curriculum/img/eng/ai_intro/06.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/eng/ai_intro/07.png" alt="figure"><br>
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> The Designer interface </div>
+    <div class="cell">
+      <p>
+        Once your new project is created, you'll find yourself in the Designer interface. It has several parts:
+        <ol>
+            <li>
+                The old stylized smartphone in the middle (marked with purple here) is called the Viewer. This is where you will drag and organize your app's components.
+            </li>
+            <li>
+                On the left you find the Palette (marked with red). This is a list of components that you can drag to the middle and use in your app.
+            </li>
+            <li>
+                The Components area, right of the Viewer (marked with dark blue) shows all the components you've selected for your app, organized as a tree. You can also rename and delete components here. At the beginning, you have a single base component, "Screen1", the opening screen of your app.
+            </li>
+            <li>
+                The Properties area on the right (marked with light blue) is where you can stylize a component that you selected in the Components area. You can set background color, width, height, and various other properties, depending on your component.
+            </li>
+            <li>
+                There are two important buttons at the top: "Connect" and "Build". These will make your project actually work on a mobile device. We will discuss them later.
+            </li>
+        </ol>
+        <img class="figure" width="80%" src="curriculum/img/eng/ai_intro/08.png" alt="figure">
+      </p>
+      <p>
+        To begin with, drag a button from the Palette to the Viewer. It will appear at the top left corner of the stylized mobile: <br>
+        <img class="figure" width="25%" src="curriculum/img/eng/ai_intro/09.png" alt="figure">
+        <img class="figure" width="25%" src="curriculum/img/eng/ai_intro/10.png" alt="figure"> <br>
+        Use the Properties interface to set a few properties of the button. For example, set the background color to dark green clicking on "Custom color", the font size to 30, the width to 50%, the height to 30%, the shape to rounded, the text to "Click here!", and the text color to white. <br>
+        <img class="figure" width="30%" src="curriculum/img/eng/ai_intro/11.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/eng/ai_intro/12.png" alt="figure">
+        <img class="figure" width="25%" src="curriculum/img/eng/ai_intro/13.png" alt="figure">
+        <img class="figure" width="25%" src="curriculum/img/eng/ai_intro/14.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/eng/ai_intro/15.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/eng/ai_intro/16.png" alt="figure">
+        <img class="figure" width="20%" src="curriculum/img/eng/ai_intro/17.png" alt="figure">
+        <img class="figure" width="30%" src="curriculum/img/eng/ai_intro/18.png" alt="figure">
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> The Blocks interface </div>
+    <div class="cell">
+        <p>
+            It's time to add some behavior to your button with code. Just like we build code from blocks to animate sprites in Scratch, we builld code from blocks to add behavior to components in App inventor. You can switch to the Blocks interface at the top right: <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_intro/19.png" alt="figure">
+        </p>
+        <p>
+            The Blocks interface has two main parts:
+            <ol>
+                <li>
+                    The Blocks area on the left (marked with red) contains several drawers: built-in drawers for general blocks, and component-specific drawers for the components' blocks.
+                </li>
+                <li>
+                    The Viewer area on the right (marked with green) is where you can snap blocks together to build your code.
+                </li>
+            </ol>
+            <img class="figure" width="60%" src="curriculum/img/eng/ai_intro/20.png" alt="figure">
+        </p>
+        <p>
+            Just as in Scratch, the code always starts with an event block. Each component has its events. The main event of a button component is "click"; that is, the event that the button is pressed. <br>
+            <img class="figure" width="25%" src="curriculum/img/eng/ai_intro/21.png" alt="figure">
+        </p>
+        <p>
+            For simplicity, let's change the background color of the button on click. For this, you will need to add a "set" block from the button's drawer, and a color from the built-in "Colors" drawer: <br>
+            <img class="figure" width="55%" src="curriculum/img/eng/ai_intro/22.png" alt="figure">
+        </p>
+        <p>
+            If you feel like experimenting, you can create a more complex code, eg. creating a list of colors, and picking a random element, using blocks from the "Lists" drawer: <br>
+            <img class="figure" width="30%" src="curriculum/img/eng/ai_intro/23.png" alt="figure">
+            <img class="figure" width="80%" src="curriculum/img/eng/ai_intro/24.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Connect to your mobile device </div>
+    <div class="cell">
+        <p>
+            It's time to test your app on a mobile device. To do this, you will need the App Inventor Companion. You can find it in the Play Store if you use Android, or in the App Store if you use Apple: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/25.png" alt="figure"> <br>
+            Once the app is installed, you are ready to scan the qr code from your computer screen: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/26.png" alt="figure"> <br>
+        </p>
+        <p>
+            To get the qr code itself, click on the "Connect" button at the top of your computer screen, and select "AI Companion": <br>
+            <img class="figure" width="25%" src="curriculum/img/eng/ai_intro/27.png" alt="figure">
+            <img class="figure" width="30%" src="curriculum/img/eng/ai_intro/28.png" alt="figure"> <br>
+        </p>
+        <p>
+            Once you've scanned the code, the app will start on your mobile device. Check if whether button really changes its color when you tap on it: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/29.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/30.png" alt="figure"> <br>
+            Admittedly this is not the most high tech mobile app, but it works! :)
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Install on your mobile device </div>
+    <div class="cell">
+        <p>
+            To actually install the app on an Android device, you will need to scan another qr code. First, reset the Companion app from your computer, under "Connect". Then use "Build" to create the qr code to install the app: <br>
+            <img class="figure" width="25%" src="curriculum/img/eng/ai_intro/31.png" alt="figure">
+            <img class="figure" width="25%" src="curriculum/img/eng/ai_intro/32.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/33.png" alt="figure">
+        </p>
+        <p>
+            After scanning the qr code, your device will give you several warnings. These are absolutely justified; you should be extra careful installing an app downloaded from an untrusted location. However, this app was developed by you, and you didn't put anything harmful in it; neither did App Inventor, a web application maintained by the same institute as Scratch, and trusted by millions of users. Feel free to assure your device that th app is safe to install. After installlation, the app's icon will appear on your mobile screen, and you can run it whenever you want: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/34.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/35.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/36.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/37.png" alt="figure">
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_intro/38.png" alt="figure">
+        </p>
+        <p>
+            Note: currently App inventor apps can only be live tested, but not installed on Apple devices. In the unlikely case that some of your participants have access to an iPhone, but not to an Android device, we recommend to <a href="https://thunkable.com/" target="_blank">use Thunkable</a>, a cross-platform alternative.
+        </p>
+    </div> <!-- cell -->
+
+
+  </div> <!-- section -->
