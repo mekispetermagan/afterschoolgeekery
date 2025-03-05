@@ -1,0 +1,115 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+    <div class="section-title topicTitle"> Színkeverő </div>
+
+    <div class="celltitle"> Miről lesz szó? </div>
+    <div class="cell">
+      <p>
+        Ez a projekt azt mutatja meg, hogy tudunk bármilyen színt kikeverni három alapszínből: pirosból, zöldből és kékből. Az így kikevert színeket a színek angol neveinek (red, green, blue) rövidítésével RGB színeknek is nevezzük. A színeket három csúszka mozgatásával keverjük ki, és egy címkén jelenítjük meg. <br>
+        <img class="figure" width="40%" src="curriculum/img/eng/ai_colors/001.png" alt="figure">
+      </p>
+      <p>
+        Mivel mind a felhasználói felület, mind a kód rendkívül egyszerű, a projektmunkána egy jelentős része arról szól, hogy megbeszélitek és kipróbáljátok, hogy működi a színkeverés.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 1. lépés: Megbeszélés és kísérletezés </div>
+    <div class="cell">
+        <p>
+            Kezdésként beszéljétek meg a résztvevőkkel: Mik azok az RGB színek? Mit jelent az, hogy RGB? Akár hallottak már róla a gyerekek, akár nem, nyissátok meg a sok webalkalmazás egyikét, ahol a felhasználó három csúszka segÍtségével tud RGB színeket keverni. (Bár vannak más hasznos színkeverő eszközök is a neten, mint például a színkerék, maradjatok a csúszkánál, mert ezt fogjuk használni a projektmunka többi részében is.)
+        </p>
+        <p>
+            A weboldalak nem mindig hosszú életűek, úgyhogy három linket is adunk ilyan webalkalmazásokhoz.  Nem valószínű, de előfordulhat, hogy mire ezt a projektet tanítjátok, már egyik link sem működik. Ebben az esetben keressetek más ilyen alkalmazást a neten (és szóljatok nekünk, hogy ideje frissíteni a tananyagot).
+            <li>
+                <a href="https://www.csfieldguide.org.nz/en/interactives/rgb-mixer/"
+                    target="_blank">
+                    egyik
+                </a>
+            </li>
+            <li>
+                <a href="http://www.cknuckles.com/rgbsliders.html" target="_blank">
+                    másik
+                </a>
+            </li>
+            <li>
+                <a href="https://tuneform.com/tools/color/rgb-color-creator" target="_blank">
+                    harmadi
+                </a>
+            </li>
+        </p>
+        <p>
+            Fontos, hogy amikor bemutattok a résztvevőknek egy ilyen webalkalmazást, <i>csak a kivetített mentori gépen nyissátok meg</i>, a résztvevőkén ne. Így a gyerekek vágyni fognak arra, hogy maguk is kipróbálják, és ez extra motivációt ad nekik a projektmunkához.
+        </p>
+        <p>
+            Adjatok színkeverési kihívásokat a gyerekeknek: hogy jön létre a piros, a kék, a zöld (ezek a legkönnyebbek), a fehér, a szürke, a fekete, a sárga, a lila, a cián (ezek nehezebbek), a narancssárga, a barna, a rózsaszín (ezek a legnehezebbek). Ez egy meglepően izgalmas játék. <br>
+            <img class="figure" width="60%" src="curriculum/img/eng/ai_colors/101.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle"> 2. lépés: Minimális design </div>
+    <div class="cell">
+        <p>
+            Ideje, hogy megalkossátok a saját változatotokat is. Hozzatok létre új projektet: <br>
+            <img class="figure" width="30%" src="curriculum/img/eng/ai_colors/201.png" alt="figure">
+        </p>
+        <p>
+            Valószínűleg ez az első alkalom, hogy csúszkát használtok. Keressétek meg a felhasználói felület komponensek között: <br>
+            <img class="figure" width="50%" src="curriculum/img/eng/ai_colors/202.png" alt="figure"> <br>
+            A csúszkák szélsségét állítsátok elég nagyra ahhoz, hogy könnyű legyen kezelni őket. Kérdezzétek meg a gyerekeket, hogy emlékeznek-e, mi a három szín legkisebb és legnagyobb megengedet értéke. Ha nem emlékeznek rá, nézzétek meg újra a webalkalmazásban. <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/203.png" alt="figure"> <br>
+            Szükségetek lesz még egy címkére is a kikevert szín megjelenítéséhe. Ennek a méretét is állítsátok kellően nagyra: <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/204.png" alt="figure">
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/205.png" alt="figure">
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/206.png" alt="figure"> <br>
+            Már kész is van egy minimális felület, amivel az app már működni fog: <br>
+            <img class="figure" width="30%" src="curriculum/img/eng/ai_colors/207.png" alt="figure">
+        </p>
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 3. lépés: Egy finomabb dizájn </div>
+    <div class="cell">
+        <p>
+            Ha nincs elég időtök, vagy a gyerekeket nem annyira érdekli a dizájn, akkor ezt a lépést bátran ugorjátok át.
+        </p>
+        <p>
+            Sokféleképpen tovább fejleszthetitek a dizájnt. Először például beállíthatjátok a képernyő komponens tulajdonsáágait úgy, hogy a csúszka és a címke középre kerüljenek. A háttérszínt és a címsor szövegét is átállíthatjátok: <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/301.png" alt="figure">
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/302.png" alt="figure"> <br>
+            Az is jó ötlet, ha a csúszkák bal felét beszínezitek pirosra, zöldre és kékre, ezzel jelezve a funkciójukat: <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/303.png" alt="figure"> <br>
+            Végül üres címkéket tehettek a csúszkák közé, hogy ne legyenek olyan közel egymáshoz, és könnyebb legyen őket kezelni: <br>
+            <img class="figure" width="35%" src="curriculum/img/eng/ai_colors/304.png" alt="figure">
+        </p>
+        <p>
+            Most már sokkal szebb az app felülete, és csak arra vár, hogy kódot is adjunk hozzá: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_colors/305.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> 4. lépés: A kód </div>
+    <div class="cell">
+        <p>
+            A kód alapötlete nagyon egyszerű: valahányszor egy csúszka megmozdul, szeretnénk újrakeverni a címke színét. Ennek alapján a csúszka elem "pozíció megváltozott" eseményére lesz szükségünk: <br>
+            <img class="figure" width="50%" src="curriculum/img/eng/ai_colors/401.png" alt="figure">
+        </p>
+        <p>
+            De hogy tudtonk RGB színeket keverni kód segítségével? Találjátok ki közösen! Nézzetek körül a szín-blokkok között; találni fogtok egy "szín létrehozása" blokkot. Cseréljétek le a benne lévő három számot a három csúszka értékére: <br>
+            <img class="figure" width="70%" src="curriculum/img/eng/ai_colors/402.png" alt="figure">
+            <img class="figure" width="80%" src="curriculum/img/eng/ai_colors/403.png" alt="figure">
+        </p>
+        <p>
+            Természetesen a másik két csúszka eseményéhez is ugyanez a kód fog kerülni. De nem valami jó gyakorlat ugyanazt a kódot háromszor betenni egy programba, mert ha meg akartok változtatni valamit, kényelmetlen lesz mind a három helyen megváltoztatni. Ehelyett érdemes létrehozni egy eljárás-blokkot a szín beállításához. Ez olyan, mint a Scratch-ben a saját blokkok. (Nyugodtan hagyjátok ki az eljárás blokkot, ha ez már túl sok a gyerekeknek.) <br>
+            <img class="figure" width="80%" src="curriculum/img/eng/ai_colors/404.png" alt="figure">
+            <img class="figure" width="80%" src="curriculum/img/eng/ai_colors/405.png" alt="figure">
+            <img class="figure" width="80%" src="curriculum/img/eng/ai_colors/406.png" alt="figure">
+        </p>
+        <p>
+            ...És kész is vagytok, lehet tesztelni és installálni az appot! :)
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_colors/407.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+</div> <!-- section -->

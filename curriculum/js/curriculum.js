@@ -130,7 +130,7 @@ class CurriculumApp {
   }
 
   // this is temporary
-  // a further version should make images properly responsive
+  // a later version should make images properly responsive
   // Preares values for 'fixImageSizes'
   setImageSizes() {
     for (let i=5; i<100; i+=5) {

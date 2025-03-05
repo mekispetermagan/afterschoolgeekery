@@ -1,0 +1,11 @@
+Simple App Inventor projects:
++ click counter with timer
+- color mixer with sliders
+- translator with language choice and text to speech
+- whack-a-mole game
+- music instrument sound samples taken from Scratch
+- quiz (questions with 3 anwer options on buttons)
+- drawing
+
+
+

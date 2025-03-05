@@ -1,0 +1,115 @@
+<!-- This file is meant to be loaded in "curriculum.html". -->
+
+<div class="section">
+    <div class="section-title topicTitle"> Color Mixer </div>
+
+    <div class="celltitle"> What is this project about? </div>
+    <div class="cell">
+      <p>
+        This project demonstrates how to mix any color out of three basic components: red, green, and blue. Colors mixed this way are called RGB colors, after the first letters of the names of the three basic solors. Colors are mixed with three sliders, and displayed in a label. <br>
+        <img class="figure" width="40%" src="curriculum/img/eng/ai_colors/001.png" alt="figure">
+      </p>
+      <p>
+        Since both the interface and the code are rather simple, a significant part of the project work is about discussing how color mixing works, and experimenting with it.
+      </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Step 1: Discussion and experimenting </div>
+    <div class="cell">
+        <p>
+            Start asking the participants: What are RGB colors? What does RGB stand for? Whether or not kids have any idea about this, open one of the various web applications available that let users mix RGB colors with three sliders. (Although other methods, like color wheels, are also useful, please stick to RGB sliders, since the rest of the project work will use this method.)
+        </p>
+        <p>
+            Since websites come and go, we provide three alternatives. In the unlikely case that none of these works by the time you teach this project, search the internet for alternatives (and let us know that we should refresh this guide).
+            <li>
+                <a href="https://www.csfieldguide.org.nz/en/interactives/rgb-mixer/"
+                    target="_blank">
+                    one
+                </a>
+            </li>
+            <li>
+                <a href="http://www.cknuckles.com/rgbsliders.html" target="_blank">
+                    two
+                </a>
+            </li>
+            <li>
+                <a href="https://tuneform.com/tools/color/rgb-color-creator" target="_blank">
+                    three
+                </a>
+            </li>
+        </p>
+        <p>
+            It is important that you open one of these web apps <i>only on the mentor's device</i>, and not on the kids' devices. This way kids will be wanting to try color mixing themselves, which provides extra motivation for the projet work.
+        </p>
+        <p>
+            Challenge kids to mix various colors: red, green, blue (simplest), white, gray, black, yellow, purple, cyan (harder), orange, brown, pink (hardest). This is a surprisingly fun game. <br>
+            <img class="figure" width="60%" src="curriculum/img/eng/ai_colors/101.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+
+    <div class="celltitle"> Step 2: A minimal design </div>
+    <div class="cell">
+        <p>
+            It's time to develop your own version. Create a new project: <br>
+            <img class="figure" width="30%" src="curriculum/img/eng/ai_colors/201.png" alt="figure">
+        </p>
+        <p>
+            You will probably use sliders for the first time. Find them among the user interface elements: <br>
+            <img class="figure" width="50%" src="curriculum/img/eng/ai_colors/202.png" alt="figure"> <br>
+            Make the sliders wide enough to be easy to handle. Ask kids if they remember the minimum and maximum values from the web app. If they don't, go back and check it again. <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/203.png" alt="figure"> <br>
+            You will also need a label to display the resulting color. Make the label big enough: <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/204.png" alt="figure">
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/205.png" alt="figure">
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/206.png" alt="figure"> <br>
+            Now you have a design that is good enough for a usable app: <br>
+            <img class="figure" width="30%" src="curriculum/img/eng/ai_colors/207.png" alt="figure">
+        </p>
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Step 3: Refining the design </div>
+    <div class="cell">
+        <p>
+            If you don't have enough time or the kids are not into designing, feel free to skip this step.
+        </p>
+        <p>
+            There are several ways to improve the design. First, you can adjust the properties of the screen itself so that all visible components are in the center. You can also change the background color and the title of the screen: <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/301.png" alt="figure">
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/302.png" alt="figure"> <br>
+            You can also paint the left sides of the sliders red, green, and blue, to indicate their function: <br>
+            <img class="figure" width="20%" src="curriculum/img/eng/ai_colors/303.png" alt="figure"> <br>
+            Finally, you can insert empty labels between the sliders to create a gap for easier handling: <br>
+            <img class="figure" width="35%" src="curriculum/img/eng/ai_colors/304.png" alt="figure">
+        </p>
+        <p>
+            Now the app looks nice and ready to code: <br>
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_colors/305.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+    <div class="celltitle"> Step 4: Code </div>
+    <div class="cell">
+        <p>
+            The basic idea of the code is simple: whenever a slider moves, the background color of the label is adjusted. This suggests using the "position changed" event: <br>
+            <img class="figure" width="50%" src="curriculum/img/eng/ai_colors/401.png" alt="figure">
+        </p>
+        <p>
+            But how can you mix RGB colors with code? Find out together! Have a look at the "Color" drawer, and you will find a color maker block. Just use the values of the three sliders to fill the slots: <br>
+            <img class="figure" width="70%" src="curriculum/img/eng/ai_colors/402.png" alt="figure">
+            <img class="figure" width="80%" src="curriculum/img/eng/ai_colors/403.png" alt="figure">
+        </p>
+        <p>
+            Of course, the other two sliders require the same code. However, repeating the same code many times is not good practice, because if you want to modify something, now you will need to do it three times. Instead, you can create a procedure block for this purpose. It is similar to the custom blocks of Scratch. (Feel free to skip the procedure block if it's too much for the kids.) <br>
+            <img class="figure" width="80%" src="curriculum/img/eng/ai_colors/404.png" alt="figure">
+            <img class="figure" width="80%" src="curriculum/img/eng/ai_colors/405.png" alt="figure">
+            <img class="figure" width="80%" src="curriculum/img/eng/ai_colors/406.png" alt="figure">
+        </p>
+        <p>
+            ...And you're ready, enjoy testing and installing your app! :)
+            <img class="figure" width="40%" src="curriculum/img/eng/ai_colors/407.png" alt="figure">
+        </p>
+    </div> <!-- cell -->
+
+</div> <!-- section -->

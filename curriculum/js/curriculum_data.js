@@ -75,6 +75,11 @@ const curriculumTopics = {
     ["App Inventor", [
       ["Getting started",               "ai_intro"            ],
       ["Click counter",                 "ai_clicks"           ],
+      ["Color mixer",                   "ai_colors"           ],
+    ]],
+    ["Skill building games", [
+      ["Math skills",                   "skills_math"         ],
+      ["Reading and writing skills",    "skills_literacy"     ],
     ]],
   ],
 
@@ -131,6 +136,11 @@ const curriculumTopics = {
     ["App Inventor", [
       ["Első lépések",                  "ai_intro"            ],
       ["Kattintásszámláló",             "ai_clicks"           ],
+      ["Színkeverő",                    "ai_colors"           ],
+    ]],
+    ["Készségfejlesztő játékok", [
+      ["Matek készségek",               "skills_math"         ],
+      ["Írás-olvasás készségek",        "skills_literacy"     ],
     ]],
   ],
 
@@ -187,6 +197,11 @@ const curriculumTopics = {
     ["App Inventor", [
       ["Перші кроки",                   "ai_intro"            ],
       ["Лічильник кліків",              "ai_clicks"           ],
+      ["Змішувач кольорів",                    "ai_colors"           ],
+    ]],
+    ["Гра для розвитку навичок", [
+      ["Математичні навички",           "skills_math"         ],
+      ["Навички читання і письма",      "skills_literacy"     ],
     ]],
   ],
 }
