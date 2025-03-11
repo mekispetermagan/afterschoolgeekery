@@ -23,6 +23,7 @@ const curriculumTopics = {
   "eng": [
     ["Teaching", [
       ["Session plan",                  "session"             ],
+      ["Methodological cornerstones",   "cornerstones"        ],
     ]],
     ["Scratch basics", [
       ["Getting started",               "intro"               ],
@@ -49,7 +50,6 @@ const curriculumTopics = {
     ["Scratch miniprojects (30-45 min)", [
       ["Dressing game",                 "dressing"            ],
       ["Bouncing ball",                 "bouncing"            ],
-      ["Heartbeat",                     "heartbeat"           ],
       ["Flower Shower",                 "flowershower"        ],
       ["Butterfly",                     "butterfly"           ],
       ["Balloon",                       "balloon"             ],
@@ -63,6 +63,7 @@ const curriculumTopics = {
       ["Fortune teller",                "fortuneteller"       ],
       ["What's in the box?",            "whatsinthebox"       ],
       ["Blooming flower",               "bloomingflower"      ],
+      ["Heartbeat",                     "heartbeat"           ],
     ]],
     ["Robotics", [
       ["Getting started",               "robotintro"          ],
@@ -111,7 +112,6 @@ const curriculumTopics = {
     ["Scratch miniprojektek (30-45 perc)", [
       ["Öltöztetős",                    "dressing"            ],
       ["Pattogó labda",                 "bouncing"            ],
-      ["Szívdobogás",                   "heartbeat"           ],
       ["Virágeső",                      "flowershower"        ],
       ["Pillangó",                      "butterfly"           ],
       ["Lufifújás",                     "balloon"             ],
@@ -124,6 +124,7 @@ const curriculumTopics = {
       ["Jóslás",                        "fortuneteller"       ],
       ["Mi van a dobozban?",            "whatsinthebox"       ],
       ["Nyílik a virág",                "bloomingflower"      ],
+      ["Szívdobogás",                   "heartbeat"           ],
     ]],
     ["Robotika", [
       ["Első lépések",                  "robotintro"          ],
@@ -172,7 +173,6 @@ const curriculumTopics = {
     ["Скретч міні-проекти (30-45 хв)", [
       ["Гра Одягалка",                  "dressing"            ],
       ["Підстрибування м'яча",          "bouncing"            ],
-      ["Серцебиття",                    "heartbeat"           ],
       ["Квітковий душ",                 "flowershower"        ],
       ["Метелик",                       "butterfly"           ],
       ["Повітряна кульк",               "balloon"             ],
@@ -185,6 +185,7 @@ const curriculumTopics = {
       ["Ворожка",                       "fortuneteller"       ],
       ["Що в коробці",                  "whatsinthebox"       ],
       ["Квітуча квітка",                "bloomingflower"      ],
+      ["Серцебиття",                    "heartbeat"           ],
     ]],
     ["Робототехніка", [
       ["Початок роботи",                "robotintro"          ],

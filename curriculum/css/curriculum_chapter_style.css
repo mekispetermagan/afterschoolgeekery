@@ -60,3 +60,12 @@ li { font-size: 18px;}
   text-align: right;
   padding: 24px 12px;
 }
+
+.cornerstoneWord {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.cornerstoneSentence {
+  font-size: 18px;
+}
